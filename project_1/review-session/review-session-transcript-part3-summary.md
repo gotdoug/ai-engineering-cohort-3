@@ -265,3 +265,4 @@
 - Layer normalization video (Andrej Karpathy)
 - Cosine similarity in recommendation systems
 
+
