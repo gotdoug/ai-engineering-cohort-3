@@ -1,0 +1,318 @@
+include the coordinates so that later we can somehow index those images as well. We'll learn how we would index images. For now, this is how we're going to convert all our documents, all our PDFs, infrastructure output. And there are, um, different libraries and different algorithms for document parsing. One popular example is this SpeedDoc. It's basically a library for, uh, automate documents parsing and bringing it to a uniform format. Again, it's basically as the same thing. It's just a library. It goes from your documents to convert them and then it prints them and creates this structured output here. Then another very popular library, some of the use, is Layoutparser. Also a unified toolkit for deep learning based document image analysis. And, um, it's interesting, Let me click here to see zoom in a little bit. For example, if this is one arbitrary page of a PDF, this is the code. We can just easily import it, and then use some of these internal models to detect, for example, images and, uh, Dropbox for layout detection. And all those things, and also extract text using post CRX methods. And then you see the output can be something like this. We have And
+
+You
+17:35:17
+
+And then the second step is text extraction. So once you know the layout, there's some algorithm to apply. Like, and so on. And then those are used to, um, to extract actual text from these layouts, from these retentions. I just put them together in a structured output by text block, and it's like the actual text. And then it just keeps doing on doing something similar to all these different layouts, extracted text, and just create this structure tab. So if you look at this structure tab, it's just a bunch of text And also for images, we can just, uh, include the coordinates so that later we can somehow index those images as we'll learn how we would index images. As for now, this is how we're going to And our different libraries and different algorithms for document parsing. One popular example is is TDOC. It's basically a library for, uh, automate document parsing and bringing it to a uniform format. Again, it it basically does the same thing. It's just a library. It goes from your documents, congress name, then it prints them and creates this structured document here. And then another very popular library is Layoutparser. It's also a unified tool for deep learning based document image analysis. And, um, it's interesting, uh, Ripple, and I think there should be some, uh, demo videos here and full doc. Uh, let me click here to see zoom in a little bit. So for example, if this is one arbitrary page of a PDF, is the code. You can just easily import it, and then use some of its internal models to detect, for example, images and, uh, Dropbox or layout detection and all those things and also extract text using OCR test methods. And then you see the output can be something like this. We have these, um, red red rectangles and then if identify the titles, text, PDF, table, and so on. And it's not it also works with other types of, um, documents, not only PDF, but, you know, magazines, uh, magazine scans, websites. It can it can detect
+
+You
+17:35:26
+
+So, um, and these are some sample codes. But, again, my point is, some great document parsers out there, and they are commonly used, and we don't have to really implement all these budget.
+
+You
+17:35:29
+
+Can simply use it. It's going to be just a few lines of code to go from our documents
+
+You
+17:36:01
+
+So this is, um, document parsing. And the next thing I want to talk about is the message, which is document chunking. So, um, what is document chunking? Document chunking is basically going from the documents, the extracted contents, the structured output a structured output that they obtained from document parsing in the previous set, and then you just chunk it. So the reason for that is because a lot of these documents might be coming from an entire group or report. So you're too broad and, um, it may also exceed the context window if you reach with the entire document.
+
+AI Course
+17:36:04
+
+it's not it documents not only PDF. Like, you know, magazines, uh, magazines, hands, websites. It can it can detect regions, industries, and tailor region. And extract those. And same for historical documents. So, um, and these are some sample codes. But again, my point is, um, there are some great document parsers out there, and they are currently used, and we don't have to really implement all these logic can simply use it. It's going to be just a few lines of code to go from our documents into a structured output in the next format. And also if your images also, uh, extracted images as well. So this is, um, document parsing. And the next thing I wanna talk about is the next step, which is document chunking. So, um, what is document chunking? Document chunking is basically going from the documents, the extracted contents, structured output structured output that we obtained from document parsing in the previous step. And then you just chunk it. So the reason for that is because a lot of these documents, it might be coming from an entire book or report. So you're too broad, and, um, it may also exceed the the context window if you would treat the entire document. For example, if one document is book and the applied document parsing, can we get the all the text on it from the book?
+
+AI Course
+17:36:06
+
+Read
+
+You
+17:36:19
+
+Apply document parsing and you get the all the context contents on the book. It's going to be a huge document. And we usually don't want to return that as a retrieve relevant item to the users. Because it's just too broad, and also it's too long. So these are the two main problems of, um, if we do not chunk documents. And because of that, it's very common to chunk and
+
+AI Course
+17:36:19
+
+a retrieve, uh, relevant item to be used as query because it's just too broad, so it's too long. So these are the two main problems of um, if you do not chunk documents. And because of that, very common to chunk them. And chunking means breaking documents into smaller and more manageable pieces. And we call each piece chunk
+
+You
+17:36:42
+
+the advantages of doing this is there are a couple of advantages we said here. We can handle non uniform document in. So we have different documents, and these documents may have different And it's not usually good if you have, uh, some, um, very small or very, very non documents in our retreat. Ideally, we want our retreat content to have, um, somebody call in. Also improves precision because now we can really, um, find the actual, um, um, text content or smaller piece within a document that is relevant to the user's way.
+
+AI Course
+17:36:55
+
+There are different terminologies there. But, um, basically, we go from this into smaller chunks. And the advantage of doing this is there are a couple of advantages we set here. Document in. So we have different documents, and these documents we have different And it's not usually good if you have, uh, some, uh, very small or very, very long documents in our retrieve. Ideally, we want our retreat content to have, um, somebody call in. Doesn't improve precision because now we can really, um, find the actual, um, text content or smaller piece within a document that is relevant to the user's way. The third advantage is it overloading limitations. Again, that's because dependence requires certain, um, maximum context And by just tracking them, it's going to be more efficient, and we don't have to include parts of the document that is really not relevant or too helpful to answer either way. And it's also optimizing compression resources
+
+You
+17:37:09
+
+The third advantage is it it's programming, again, that's because requirements require certain maximum context window. And while the tracking them, it's going to be more efficient, and we don't have to include of the document that is really not too relevant or too helpful for answer users. Right? Optimizing computational resources because again, at the end, it's very effective. We don't have to include parts of the document that are. So this is document tracking, and there's some, um, different algorithms for document chunking. We have length based algorithm. In chunks based on their specific, uh, specified length. So we specify a particular length,
+
+AI Course
+17:37:09
+
+So this is document chunking and there are some different algorithms for document chunking. We have length based algorithm. Simply just list the text in which chunks place under a specific, uh, specified length. So we specify a particular length, and then it just
+
+AI Course
+17:37:31
+
+And this is very heuristic based, and the the problem with this is it may split in the middle of sentences because it's just purely based on an it. So a lot of these chunks or, um, yeah, a lot of these chunks may up somewhere that is not really meaningful for it to be a lot of sentence. The other algorithm is regular expression based. And they use regex to split the text based on some specific punctuations for instance, like
+
+AI Course
+17:37:36
+
+like, uh, dots or question marks, something like that. This might be slightly better than left face. Because we no longer speak something in some, like, middle of sentences. Another problem is it lacks
+
+You
+17:37:37
+
+And this is a very heuristic based, and the the problem with this is it may split in the middle of sentences because it's just purely based on the so a lot of these chunks or, um, yeah, a lot of these chunks may up somewhere that is not really meaningful or it's in the middle sentence. The other algorithm is regular expression base. Based, um, speech, and they use regex to split the text based on some specific punctuation for instance, like, uh, dots or question marks, things like that. This might be slightly better than left base. Because we no longer split something in in some, like, middle of sentences. But now the problem is it
+
+You
+17:37:40
+
+fixed.
+
+AI Course
+17:37:55
+
+Sometimes when you reach a a dot, the topic might become different. And just by, um, explaining the text based on the punctuations, it's it's not really handling the cement the the meanings of of, uh, different chunks of the text. So it lacks that semantic understanding. Then the third algorithm, um, or meta, which is more useful than I'm gonna use is, um,
+
+You
+17:37:57
+
+Might be about the same topic. Sometimes when you reach a a dot, the topic might become different. And just by, um, as we think the text based on the same punctuations, it's it's not really handling the cement the the meanings of, uh, different chunks of the text. So it lacks that semantic understanding. Then the third algorithm, um, or method, which is more useful, and I'm gonna use this, uh, basically, we use specialized SPSS
+
+You
+17:37:59
+
+So these are specialized
+
+You
+17:38:06
+
+such as there is high chance code plus. So they're already built with having those particular
+
+You
+17:38:15
+
+documents in mind, and they're built knowing that those documents can have very, um, complex structure. And they work well just because of how they're implemented. So this method is usually more useful in doc for documents in the structure formats. Again,
+
+You
+17:39:10
+
+again, we don't have to implement any of these, um, in general. Splitters out there. One popular example is x x x splitters by Nanjing. And this this this is the documentation and some overview, and it can be an interesting read or some, uh, guides and so on. But again, at the high level, what they do is they go from this document interest list. And there's also other lectures. This is just one example. So back to our lecture. And then other thing I wanna share is that that now there's some, uh, type parameters that you can tune. Uh, for example, in action, has this chunk size, chunk weight lab separator, and so on. And these are specifying how to, uh, split the text For example, the chunk size is, uh, 35. What it means is that, ideally, we want to chunk it such such that each chunk um, is has 35, um, characters, for instance. And then the other is overlap. This is because a lot of times we may want to overlap this chunks, so that, um, basically, um, we do not again cut somewhere in the middle that is not working on. So for example, this is a real example of mentioning going from, um, this text. It is, um, other parameters. You can see it out to become this smaller chunks. And it also overlaps. For example, here it tends with form of
+
+You
+17:39:26
+
+So, um, that's it. That's that's all about, um, document chunking. The next, uh, the next, uh, step is indexing, and that's what you're going to find. So I have indexing here, and, basically, up to this point, we
+
+You
+17:39:39
+
+structures, like HTMLs, and, um, PDFs, whatever into smaller chunks. And each chunk is either some, you know, sequence of characters or text. Or they can be like images coming from figures or tables and things like that. So for now, again, for simplification, let's focus on text.
+
+You
+17:41:00
+
+We'll cover how to handle images short. So the purpose of indexing is to store each of these chunks in a data structure that is easy to search. And it's just simply a data structure. It's it's nothing more. And there are different ways. We can do index. There are different, uh, methods. And then as a result, there are different search mechanisms depending on how index For example, we have, um, keyword based indexing, have full text index, have knowledge base knowledge graph based, and vector based indexing. Based. Let's briefly see keyboard based and full text, and then we'll focus on vector based because vector based is what's commonly used nowadays in practice, and it's very important. We'll just briefly discuss about this, which are a little bit more transactional. And then knowledge practice, there's some, uh, interesting reads out there. By building Pluto. You're gonna stick it because it's it's too specific, and there's certain only certain use cases that rely on knowledge base knowledge base indexing. And almost, uh, like, 90, 95% of uses that are available are relying on vector based indexing. So this is stuff. Text based, including keyword or food, is basically matching partial or exact query terms with the content of documents. So basically, during this indexing process, the index, um, like this example, if these are the text, they they can be follow some data structure. And one very good example is technologies. And then it fills an index. So then you want to search for me, and for example, you have a query. It can easily refer to this index and say, hey. These parts these chunks are including your query. Either it could be partial match or it could be exact query match. This is something again that the user can specify. For example, you can say, hey. You think all the chunks that has this particular or has this particular sentence in it. And text based, um, indexing methods would just enable you to do that. Again, these are good, and these are what traditionally been used, but the problem is that, um, you
+
+You
+17:41:27
+
+you no longer would be able to do any partial or even exact match. Even if there are some documents that having synonyms of your query. So these text based methods are again good for certain uses, but they lack the semantic understanding of documents. And because of that, vector based methods are, um, used commonly. So let's see what is vector based. Basically, the idea behind your vector based method is that instead of indexing the the text in inside each chunk, we use some pretrained models to encode text into some vectors. And these models are called embedding models. So let me step back a little bit.
+
+AI Course
+17:41:29
+
+that basically meet the text at element boundaries such as headers, items, code blocks. So they're already built with having, uh, those particular, um, documents in mind. And built knowing that those documents can have very, um, complex and they work well just because of how they're implemented. So this method is usually more useful in doc for documents in like video sessions and so on. And, again, we don't have to implement any of these, uh, in general. There are lots of sweaters out there. One popular example is Texas Texas sweaters by Langchain. And this is this is the documentation as an overview, and it can be interesting to read. There's some uh, guides and so on. But, again, at a high level, what they do is they go from this document in this speech. There's also other languages. This is just one example. So back to our lecture. And another thing I want to share is that is that now there's some, uh, hyperparameters that we can tune. Uh, for example, an action, uh, has this chunk size, chunker, ellapse, separator, and so on. And these are specifying how to, uh, split the text. For example, the chunk size is 35. What it means is that ideally we want to chunk it such such that each chunk um, is has 35, uh, characters, for instance. And then the other is overlap. And this is because a lot of times, we may want to overlap these chunks a little bit so that, um, basically, we do not again cut somewhere in the middle that is not too optimal. So for example, this is a real example of Nanjing going from, um, this text with these, um, upper parameters. Then you can see that would become these smaller chunks. And it also overlaps. For example, here, it ends with four months. It starts from four months. So four months is the overlap between these. So, um, that's it. That's that's all about, um, document chunking. Next, uh, next, um, step is indexing. And that's what we're going to do next. I have indexing here, and basically up to this point we event from all our documents and defend the structures like HTML and, um, PDFs, whatever into smaller chunks. And each chunk is either some, you know, sequence of characters or text. Or they can be like images coming from figures or tables and things like that. For now, again, for simplification, this is not text. We'll cover how to handle images shortly. The purpose of indexing is to store each of these chunks in a data structure that is easy to search. And it's just simply a data structure. It's nothing more. And there are different ways we can do indexing. There are different, uh, methods. And then as a result, there are different search mechanisms depending on how index. Example, we have, um, keyword based indexing. We have indexing. We have knowledge base knowledge graph based and vector based. Let's briefly see keyboard based and full text, and then we'll focus on vector based because vector based is is what's commonly used nowadays in practice, and it's very important. We'll just briefly discuss about these, which are a little bit more traditional. And then now this practice, there's some You're gonna see it because it's it's too specific and there's only it's second use cases that rely on knowledge base, knowledge base indexing. And almost, uh, like, 1995% of use cases that I'm aware of are all are relying on indexer based indexing. So let's start. Text based, including keyboard or food, is basically matching partial or exact query times with the content of documents. So basically during this indexing process, pre index, uh, like this. For example, if these are the text, we they can follow some data structure, and one very good example is Elasticsearch for instance, which takes care of all these functionalities. And then it fills an index. So then you want to search from it. And for example, you have a query. It can easily refer to this index and say, hey. These parts these chunks are including your query. Either it could be partial match or it could be exact query match. And this is something again that the user can specify. For example, you can say, hey, give me all the shots that has this particularity word or has this particular sentence in it. And text based, um, indexing methods would just enable you to do that. Again, these are good, and these are what traditionally been used, but the problem is that, not really capturing the semantic meaning of documents. For example, if you are using synonyms, then you're no longer able to do any partial or even exact match. Even if there are some documents that having Synapse off your query. So these text based methods are again good for certain use case or lack the semantic understanding of documents. And because of that, vector based methods are, um, used finally. So let's see what is vector based method. Basically, the idea behind vector based method is that instead of indexing the the text inside this chunk, we use some pre trained models to encode text into some vectors. And these models are called embedding models. So let me step back a little bit and first understand what is an embedding model, how it works.
+
+You
+17:41:29
+
+So
+
+You
+17:41:34
+
+the
+
+AI Course
+17:41:36
+
+Embedding model that maps some input, for example, text,
+
+AI Course
+17:41:42
+
+or their model set also map other modalities like images or even videos. So this basically map their input text
+
+You
+17:41:54
+
+this basically map their input text into a vector in high dimensional space. It's also called embedding space. Space. And the way that these models are trained is that when they map to text have similar meanings semantically, they would end up nearby and miss the embedding space.
+
+You
+17:42:17
+
+So the embedding can capture the semantic meaning of relations. The idea of this first time, there was this paper work today, and this is the first time, again, as far as I know, that, um, this was, uh, visually shown that, hey, you can train some word models or, um, embedding models. That after we map each word, after training, we map each word and we look at, um, its positioning in this embedding space, Similar words would have certain relationships. For example, um, synonyms would be end of
+
+You
+17:42:40
+
+some relationship. For example, going from, uh, woman to man, would be having the same direction of going from. So this vector is here, again, in case you are interested to to read, it's quite old down. Was the sort of, um, something very important, which later turn out to be converting models. And, um, they have all these diagrams that I just showed you, and also they explain how they train. And why after training, they get this, uh, meaningful embedding space as similar words are end up being nearby and so on. So, yeah, you can just take a look at this data. And, um, and after this, basically,
+
+AI Course
+17:42:42
+
+input vector work in high dimensional space. It's also called embedding space. And the way that these models are trained is that when they map text their embedding a space, it's a very semantically meaningful space. Meaning that if two texts have similar meanings semantically, they will end up nearby in this embedding space. Their their embedding their their vectors in high dimensional space would be nearby. So the embeddings can capture the semantic meaning of relationships. And the idea of this first time there was this paper of work today, and this is the first time, again, as as far as I know, that, uh, this was, uh, visually shown. That, hey, you can train some word models or, um, embedding models. That after we map each word after training, we map each word and we look at, um, its positioning in this embedding space, Similar words would have certain relationships. For example, um, synonyms would be end up near and there's some relationship, for example, going from, uh, woman to man, could be having the same direction of going from queen to king. So this is here. Again, in case you are interested to to read, it's quite old but it was a sort of, um, something very important, which later turned out to be editing models. And, um, they have all this diagram set I just showed you, and also they explain how they train. And why after training, they get this, uh, meaningful embedding space. That's in a lot of words are end up being nearby as well. So, yeah, you can just take a look at this paper. And, um, and after this, basically,
+
+AI Course
+17:42:56
+
+and encode them. So what that means is that we have a table like this. We have the one column is a text
+
+AI Course
+17:43:25
+
+text, each chunk to a vector, a numerical vector. And again remember, it's it's these these numerical vectors, um, are, you know, are semantically semantically meaning for the meetings. Right? So if two vectors are nearby, it means that their meanings close, or they're talking about something similar. So that's the part to go from the chunks to entities. Now again, I mentioned there are lots of editing models these days for example. And I had an embedding model which is quite good and
+
+You
+17:43:25
+
+this is what we can. We can just rely on some embedded models, not what you pay, some advanced models. There are lots of models available this days. We can use one embedding model, and then we can go from all the chunks that we have, text chunks, and encode. So what that means is that you have a table like this. Have the one column is the text. For example, to learn more about our products, contact this number. And then it just gets mapped to the submittal space. And there is a point in this slide by the general space, and this is the point. And So in other words, we are mapping each text each chunk to vector. A normal vector. And again, remember, it's it's these these normal vectors, um, are you know, are semantically like, the relation is semantically meaningful in the medicine. So if two vectors are nearby, it means that their meanings are close where they're talking about something similar. So that's the part to go from the chunks to an index table. Pending models these days. For example, OpenAir has an embedded model, which is quite good, and
+
+You
+17:43:27
+
+and, um, you can just have something under the embedding.
+
+You
+17:43:34
+
+And those embeddings can be stored and those can be used to format in text state. And again, there are bunch of other, uh, embedding others. I just search Google. I don't know if they're really the best ones
+
+AI Course
+17:43:38
+
+off use. It's called text embedding three. And, um, you can just add something into the embedding. And those embeddings can be used for and those can be used for now indexing. And again, there are a bunch of other, uh, embedding models. I just searched Google. I don't know if they're really the best ones or other better ones now. But just wanted to show some some examples. So we have open and I, text cleaning, pretty large,
+
+You
+17:43:40
+
+other bigger ones now, but just wanted to show some some examples. So we have open analytics embedding three large.
+
+AI Course
+17:44:14
+
+embed model, and there are all these different, uh, models available. And this is output time and time again, meaning that this is so after we map the this is going to be the the length of the embedding. So for now, the large has 3,072 numbers in it in their embedding vector. So back to the lecture, um, this is the idea behind embedding model. And also how we use, um, an embedding model to convert this these chunks and build an index. Again, in the next video, we will talk about how this enables us to search from at one time. But for now, our focus is on only building index. So and this is how we are going to build index. We are going to use something and just do this data. Alright. So we talked about text and another question is what if
+
+AI Course
+17:44:18
+
+text and what if some parts of our extracted content or some of the chunks are not text, they're images. And it's a big comment because a lot of PDFs
+
+You
+17:44:24
+
+This is output dimension dimension, meaning that this is so after we map the text, this is going to be the the length of the the embedding. So for example, open and large has 3,072 numbers. Anything they're embedding vector. So actually, lecture, um, this is the idea behind embedding model. And also how we use, um, an embedding model under this this chance and do that index. Again, in the next video, we will talk about how this enable us to search from at one time. But for now, our focus is on only building the index. This is how we are going to do index. We are going to use some text and reading and just build this data. Alright. So we talked about text, and now the question is what if some parts of our, uh, extracted content or some of the chance are not textured images? And it's great, because I love videos about these days or even, uh, HTML. Or might have diagrams or some figures or some images. And it's very important to somehow encode those images as
+
+AI Course
+17:44:35
+
+And it's very important to somehow encode those images as well so that when a user asks a question, we can also on those images as well to answer the question. How do we do that? Your, um, your tool base. There are two options. First option is to use an, um, image embedding model. Very similar to text embedding models,
+
+You
+17:44:36
+
+How do we do that? There are, um, there are two ways. There are two options. First option is we use an, um, image embedding model. Very similar to text embedding models. We have some image embedding
+
+You
+17:44:40
+
+So they're
+
+You
+17:44:59
+
+We have cars here, so they're nearby, and truck here. And then, like, animals seems to be here, like dog, cats, and so on. So these are these are image embedding models. And, um, it also started, uh, the the first model that was widely used in in our industry was the OpenAir screen button. And what they did was they, um,
+
+AI Course
+17:45:01
+
+here, you can see auto. Uh, we have cars here, so they're nearby and truck here. And then, like, animals seems to be here, like dog, cats, and so on. Um, so these are these are image editing models. And it also started, uh, the the first model that was, um, widely used in in our industry was the MNS three button. And what they did was they, um, they trained a model using some contrastive pre trained method
+
+You
+17:45:04
+
+train.
+
+You
+17:45:08
+
+And they train all these
+
+AI Course
+17:45:15
+
+able to see the result. They explain exactly how they train. But at the very high level, image encoder. And they train all these both these hex encore and image encoder. Yep. Yep. And their data is basically pairs of images and they corresponding caption or or, uh, corresponding title. And then, um, this is strange such
+
+You
+17:45:23
+
+caption or or, uh, corresponding title. And then, um, is trained such that they learned embedding space is also meaningful. It's basically shared embedding space, meaning that now you map a text to this embedding space, and also an image which is relevant or similar to the
+
+AI Course
+17:45:47
+
+So this is another example of, um, using an image embedding model. And one thing to note is that, um, it's very important if you want to map images into some embedding space, it's very important to use a model such as clip that has a shared embedding space. And use exact text encoder for for, um, indexing our text text raw chunks. Because otherwise, there is no, um, relation between image embedding and text embedding. So if we want to also map images, we use for SaaS
+
+AI Course
+17:45:58
+
+Text embedding is being used to map our in our text, um, index And then its image and body part is built is used to map to build our image embedding index. So that's about it, and that's about how to handle, uh, images.
+
+AI Course
+17:46:20
+
+The second option they have is we use some captioning model, and captioning model are the ones that you pass some image to them. And then they describe the image. And they they generate a caption for it in a textual format. This way, they can basically first go from image to caption using this caption model. You can see in this example, we have the image that shows a cat sitting on a whatever under a subject. And now we use this chunk instead of this image to index. And now we can use our original text encoder to encode this image.
+
+AI Course
+17:46:24
+
+Because now we only encode its its corresponding caption. So both options are available to build our
+
+AI Course
+17:46:27
+
+what option one, which was using a a model which shared embedding space.
+
+You
+17:46:37
+
+So this is another example of, uh, using an image embedding model. And one thing to note is that, um, it's very important. If you want to map images into some embedding space, it's very important to use a model such as grid has a shared embedding space and use the exact text encoder for for, um, indexing our text text watch chunks. Because otherwise, there is no, um, relation between image and text and images. So if we want to also map images, we use for instance, encoder is being used to map our in our text, um, index. And then its image in order part is built is used to map to build our image embedding index. So that's about it, and that's about how to handle, uh, images. This is option one. There's also another option instead of relying on image embedding models. Second option we have is we use some captioning model, and captioning model are the ones that you have some image and then they describe the image, and they they generate the caption for it in a text format. This way, we can basically first go from image to caption using this caption model. You can see in this example, we have image shows a cat sitting on a whatever under a sofa. And now we use this chunk instead of this image to index. And now we can use our original text encoder to encode this image. Because now we only import its its corresponding caption. So both options are available to use our index data. We discussed what option one, which was using the model, the shared embedding space. Use the imaging color to and to map images and build the index, and use text in order for textual chunks. We can also use option two, which means that we can use any text, uh, embedding model that we want. And for images, we can use image captioning to go from image to text
+
+AI Course
+17:46:38
+
+Use the image encoder to and to map images and build the index, and use text encoder for textual chunks. We can also use option two, which means that you can use any text, uh, every model that you want. And for images, we can use image that can go from
+
+You
+17:46:53
+
+But regardless of the option views, at the end, we would end up with something like this. We have, um, converted all our images and chunks that are extracted from the documents into two in indexes. Is image index, another is text index. And these are under the HOTA status.
+
+AI Course
+17:46:54
+
+and for images, we can use image tracking to go from image to text, and then from text, we can just encode it to the, uh, to to the lengths. So But regardless of which option you use, at the end, we will end up with something like this. We have, uh, unrected all our images and chunks that are extracted from the documents into two in indices. One is image index, another is text index. And these are under the Huddl's tables.
+
+AI Course

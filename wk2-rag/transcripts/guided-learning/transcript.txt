@@ -1,0 +1,954 @@
+AI Course
+16:45:18
+
+Which we saw in week one, two specialized elements. And we would learn various techniques and, um, topics here such as fine tuning, prompt engineering, and retrieval augmented generation or RAG. And then we'll zoom in to RAC and learn all the components of it, how it can be built, and, uh, its system design. And finally, we'll have project two, which is a hands on exercise
+
+You
+16:46:54
+
+Which we saw in week one to a specialized elements. And we would learn various techniques and, um, topics here such as fine tuning, prompt engineering, and retrieval augmented generation, or RAC. And then we'll zoom in to RAC and learn all the components of it, how it can be built, and, uh, its system design. And finally, we'll have project two, which is a hands on exercise to build a customer support chatbot using all the techniques we learned and available tools and libraries. So let's just start. The first question that we want to answer is why should we bother our ourselves? Why even adaptation is needed? And to better understand that, let's see some examples. So imagine this is a general purpose LLM, and we have some general purpose use case. Cases. For example, we can ask this LLM some, uh, math quiz. Like what is two plus two? Or we can ask brainstorming questions like help me write an email to my manager to ask for time off. Or we can also ask coding questions. Like, my code is not running. Read it and fix a bug with the code. And then the LMM would process these inputs and it's very likely to answer these questions correctly. And the reason for that is because it has seen a lot of similar examples in its training data, so it already knows how to answer these questions. Now imagine we use the same general purpose LLM and ask some specific use case. So let's say we have a retail store, and we want to have an LLM and offer it as a chatbot to our customers so the customers can easily ask relevant questions, and the LLM should answer that. Now if a customer for a retail store ask our LLM a question like, what is your refund policy? The LLM is very likely to hallucinate, meaning that it would generate something that is not accurate or correct. Let me go to Chargebee t. And see a real example. Uh, let me let's um, let me ask a question, like, what is your refund policy?
+
+AI Course
+16:46:55
+
+the available tools and libraries. So let's start. The first question that we want to answer is why should we bother ourselves? Why even adaptation is needed? And to better understand that, let's see some example. So imagine this is a general purpose LLM and we have some general purpose use cases. For example, we can ask this LLM some, uh, math questions, like what is two plus two? Or we can ask Brandon so many questions, like help me write an email to my manager to ask for a time off. Or we can also ask coding questions, like, my code is not running. Read it and fix a bug with the code. And then the LLM would process these inputs and it's very likely to answer these questions correctly. And the reason for that is because it has seen a lot of similar examples in its training data, so it already knows how to answer these questions. Now imagine we use this same general purpose LLM and ask some specific use case. So let's say we have a retail store, and we want to have an LLM and offer it as a chatbot to our customers. So the customers can easily ask relevant questions, and the LLM should answer that. Now if a customer for a retail store ask our L and M a question like, what is your refund policy? The LLM is very likely to hallucinate, meaning that it will generate something that is not accurate or correct. Let me go to ChargebeePT and see a real example. Uh, let me let's, um, let me ask you a question. Like, what is your refund policy?
+
+You
+16:47:42
+
+And this is basically a common question that our customers may want to ask us. So our element is very important to be able to answer them answer it correctly. Now if we use a model like Chargebee T to serve up customers, this is what Charge 50 would respond. Open annualized refund policy depends on the situation and how the purchase was made. So basically, this model is answering this question um, and assuming that my question is about OpenAI. So it's not going to really answer the question based on the retailer store that we have in mind. Now if I ask another question, like, what is, uh, how long shipping How long does the shipping take?
+
+AI Course
+16:47:44
+
+And this is basically a common question that our customers may want to ask us. So our limit is very important to be able to answer them answer it correctly. Now if we use a model like Chargebee to serve our customers, This is what Chargebee would respond. Open annualized refund policy depends on the situation and how the purchase was made. So basically, this model is answering this question um, and assuming that my question is about OpenAI. So it's not going to really answer the question based on the retailer store that we have in mind. Now if I ask another question, like, what is, uh, how long shipping take? How long does the shipping take?
+
+AI Course
+16:48:02
+
+Could you clarify what you are referring to? For example, so basically, it's OpenAir model is very smart. So it asks for clarification because it knows that this prompt is ambiguous. But a lot of LLMs may not even ask that and may just start hallucinating and just just
+
+AI Course
+16:49:38
+
+Store. So when these questions come to the LLM, like what is the return policy? How long does the shipping take? And what is the contact of customer service? The LLM can respond to this. More formally, we have a problem statement, which is adapt a general purpose LLM it can accurately answer questions in a specific domain using additional documents. So basically, let's say we have a retail store, and we have a bunch of internal documents or knowledge base. And then this can be anything like PDFs. It could be images. HTMLs, Wiki PDFs, and so on. And then we want this to use to start from this general purpose LLM and somehow adapt it So when questions come, the LLM can use this information to answer the question. For example, if a question come like, what is the refund policy? The LLM should, um, answer based on the document database. You can return items for any reason within thirty days of your purchase. So this is the goal. And there are different techniques that this adaptation is possible. Three main techniques that we would learn is, first, fine tuning, Second, prompt engineering. And third, retrieval augmented generation or RAG. For short. We would learn about each of these, and we discuss the limitations and uh, strength of each technique.
+
+You
+16:49:40
+
+Could you clarify what you are referring to? For example so, basically, it's open area model is very smart. So it asks for clarification because it knows that this prompt is ambiguous. But a lot of LLMs may not even ask that and may just start hallucinating and just Telestore. So when these questions come the LLM, like, what is their return policy, how long does the shipping take, and what is the contact of customer service, the LLM can respond to this. More formally, we have a problem statement, which is adapt a general purpose element so it can accurately answer questions in a specific domain using additional documents. So, basically, let's say we have a retail store and we have a bunch of internal documents or knowledge base. And then this can be anything like PDFs, it could be images, HTMLs, Wiki PDFs, and so on. And then we want this to use to start from this general purpose LLM and somehow adapt it So when questions come, the LLM can use this information to answer the question. For example, if a question come like, what is the refund policy? The LLM should, um, answer based on the document database. You can return items for any reason within thirty days of your purchase. Purchase. So this is the goal. And there are different techniques that this adaptation is possible. Three main techniques that we would learn is first, fine tuning, second, prompt engineering, and third, retrieval augmented generation or RACS for short. We would learn about each of these, and we discuss the limitations and, uh, strength of each technique.
+
+You
+16:49:53
+
+Alright. The first way to adapt an LLM is fine tuning, and it's basically the most obvious way to adapt a general purpose LLM into a specialized
+
+AI Course
+16:53:29
+
+Alright. The first way to adapt an LLM is fine tuning, and it's basically the most obvious way to adapt a a general purpose LLM into a specialized LLM. And the idea behind it is to continue training the general purpose element on our document database. And document database is basically our uh, internal knowledge base, or it could be a bunch of PDFs, images, HTMLs, weekly videos, and things like that. Which we want to ultimately the LLM to learn from and can answer according to them. So after we train, um, the general purpose LLM on this document database, we would get this output, which is a specialized LLM. Now this specialized LLM is ready to be used. It's basically having the tuned weights and those tuned weights allows it to produce responses according to this provided document database. So after it's trained, it can be used. For example, if we ask questions like, what is the return policy, it would be able to answer um, you can return items for any reason within thirty days of your purchase. And basically, this answer is coming directly from its learned weight or in other words, from its compressed knowledge of the new training data that we need. If we also ask questions like how long does the shipping take? It may answer typically fourteen days. And so on. Now there are two options to fine tune the LMM. And we have them here. Option one is we update all the parameters of the LLM And option two is not is basically parameter efficient fine tuning. Which refers to a set of techniques that do not update all the parameters of the parameter of the element. So we would learn about both of these in a second. So updating all the parameters, as the name suggests, is very obvious. We allow the training algorithm and the optimizer to tune all the weights inside the LMM as it's being trained on the training data. So remember, LLM has these blocks and, um, each block has attention layer, MLP layer, and so on. And then each NLP is basically two linear layers. And each linear layer has their own weight. When we are updating all the parameters, the optimizer may go back and just change or tune a little bit each of these weights. So that the model can better answer given its new dataset. However, the problem with this approach is that it can be very expensive. Remember, LLMs might have billions of parameters, So training an LLM and allowing the training algorithm to update all these parameters, it means that it can be computationally very, very expensive. And because of that, we have the second option, which is parameter efficient fine tuning. Parameter efficient fine tuning is basic referring to a set of techniques that allows us to adapt an LLM and fine tune it without updating all its parameters. Basically, the idea is to add, uh, to only update a subset of parameters or a small number of parameters. And, again, there are different techniques. That allows us to do that. For example, we have adapters. We have LoRa, prompt tuning, activation scalers, but it's only sparse weight, deltas, and so on. And then the first two are very popular and widely used. Adapters and LoRa. So we'll we'll zoom in into these two and understand how it they work internally. Um, and then there are some other papers and interesting reads for other methods. So which you can, uh, refer to later. So let's just start with adapters.
+
+You
+16:53:29
+
+And the idea behind it is to continue training the general purpose LLM on our document database. And document database is basically our um, internal knowledge base, or it could be a bunch of PDFs, images, HTMLs, wikipedias, and things like that. Which we want to ultimately the LLM to learn from and can answer according to them. So after we train, um, the general purpose LLM on this document database, we would get this output, which is a specialized LLM. Now this specialized LLM is ready to be used. It's basically having the tuned rates and those tune rates allows it to produce responses according to this provided document database. So after it's trained, it can be used. For example, if they ask questions like, what is the return policy, it would be able to answer um, you can return items for any reason within thirty days of your purchase. And basically, this answer is coming directly from its learned rates or in other words, from its compressed knowledge of the new training data that we if we also ask questions like how long does the shipping take may answer typically fourteen days and so on. Now there are two options to fine tune the LMS, and we have them here. Option one is we update all the parameters of the LLM and option two is not is basically parameter efficient fine tuning. Which refers to a set of techniques that do not update all the parameters of the parameter of the element. So we would learn about both of these in a second. So updating all the parameters, as the name suggests, is very obvious. We allow the training algorithm and the optimizer to tune all the weights inside the LLM as it's being trained on the training data. So remember, LLM has these blocks, and, um, each block has a attention layer, NLP layer, and so on. And then each NLP is basically two linear layers. And each linear layer has their own weight. When we are updating all the parameters, the optimizer may go back and just change or tune a little bit each of these weights. So that the model can better answer given its new dataset. However, the problem with this approach is that it can be very expensive. Remember, LLMs might have billions of parameters, so training an LLM and allowing the training algorithm to update all its parameters, it means that it can be computationally very, very expensive. And because of that, we have the second option, which is parameter efficient fine tuning. Parameter efficient fine tuning is basically referring to a set of techniques that allows us to adapt an LLM and fine tune it without updating all its parameters. Basically, the idea is to add, uh, to only update a subset of parameters or a small number of parameters. And, again, there are different techniques. That allows us to do that. For example, we have adapters. We have LoRa, prompt tuning, activation scalars, BIOS only, sparse weight deltas, and so on. And then the first two are very popular and widely used, adapters and LoRa. So we'll we'll zoom in into these two and understand how it they work internally. Um, and then there are some other papers and interesting grades for other methods, so which you can, uh, refer to later. So let's just start with adapters.
+
+AI Course
+16:57:41
+
+So the idea behind adapters is very simple. It says that instead of updating all the parameters of the element, we just freeze them, meaning that we do not allow the optimizer to update them during training. So this is gray means that they are frozen. We are not really updating their weights. And then we inject some new trainable layers inside this, um, architecture. So, for example, between these, we can add three more layers in red. And red means we allow the optimizer to update its weights. And then we train this model on their training data. So all these weights of the original l l m, which remain unchanged, And then everything new would be learned such that whenever we have a new prompt, the prompt now can be answered according to the data set using these newly learned weights. And then this is the initial paper. It was, um, it was released in 2019, parameter efficient transfer learning for NLP. If you are interested to understand the details of it, you can take a look at this paper And but what they're doing basically, they are just injecting these adaptive layers inside the transformer architecture, and then they train it under new data to adapt the LLM for a new task. So it's going to be an interesting grid. You can take a look at it, but high level idea is the same. It just goes into the transformer architecture and then after attention and MLP, it just adds an adapter layer. So that's all the change. And only adapter layers are learned during fine tuning, and everything else is frozen. So this is adapters. Now the other approach is LoRa. This is basically another technique, which was introduced after adapters. And it's kind of following a very similar style The idea is to add some new weights such that we can freeze the rest of the model and only learn those new weights. And the way it does this is by introducing two LoRaHS matrices, and it refers to them as the LoRa layers. So let's understand what that means. Again, an an MLP layer has two linear layers. And and if we now zoom in into this linear layer, it's, uh, it transforms some input to output. And then internally, it stores a bit. And it's just a bit matrix of size d out by d in. D out is the dimension of the output. D in is the dimension of the input. Now what LoRa does is injects layers here. So it basically targets all the linear layers inside the model, and then it keeps it frozen. So everything in this branch is as normal. X goes still into the same, um, linear transformation. The weight is frozen, so it's not being changed. And then the output is w x. But now it also adds two, uh, low rank matrices. B and a. And then the idea is to also pass the x in this branch, and this branch also transforms x. And the output is ABX. If we just think of it mathematically, And then this a b x would have the same shape of w x. So we can just, um, add them up, and then it forms their final output. And these two newly introduced matrices are learnable, meaning that the parameters can be tuned during the training. So these are LoRa layers. And it's very powerful technique It also has some advantages over adapters. And if you're interested, this is their original paper LoRa, LoRa and Adaption of Large Language Models. And then they talk in detail about this. But again, the high level idea is to target all the linear layers and just add the this branch. Uh, the two low rank matrices and only learn those matrices and freeze everything else. And, again, they discuss why this method has some advantages over adaptive adapters and why at inference time is faster. But um, but that's but that's a high level idea, and it's very powerful technique.
+
+You
+16:57:42
+
+So the idea behind adapters is very simple. It says that instead of updating all the parameters of the LLM, we just freeze them, meaning that we do not allow the optimizer to update them during training. So this is gray means that they are frozen. We are not really updating their weights. And then we inject some new trainable layers inside this, um, architecture. So, for example, between these, we can add three more layers in red, and red means we allow the optimizer to update its rates. And then we train this model on their training data. So all these weights of the original LLM would remain unchanged. And then everything new would be learned such that whenever we have a new prompt, the prompt now can be answered according to the dataset. Using these newly learned rates. And then this is the initial paper. It was, um, it was released in 2019, parameter efficient transfer learning for NLP. If you are interested to understand the details of it, you can take a look at this paper. And but what they are doing basically, they are just injecting these adapter layers inside the transformer architecture, and then they train it under new data to adapt the LLM for a new task. So it's going to be an interesting grid You can take a look at it, but high level idea is the same. It just goes into the transformer architecture, and then after attention and MLP, it just adds an adapter layer. So that's all the change, and only adapter layers are learned during fine tuning, and everything else is frozen. So this is adapters. Now the other approach is LoRa. This is basically another technique which was introduced after adapters. And it's kind of following a very similar style. The idea is to add some new weights such that we can freeze the rest of the model and only learn those new weights. And the way it does this is by introducing two low rank matrices, and it refers to them as the LoRa layers. So let's understand what that means. Again, an an MLP layer has two linear layers, And and if we now zoom in into this linear layer, it's, um, it transforms some input to output. And then internally, it stores a weight. And it's just a weight matrix of size d out by d in. D out is the dimension of the output. D in is the dimension of the in. Now what Laura does is injects layers here. So it basically targets all the linear layers inside the model. And then it keeps it frozen. So everything in this branch is as normal. X goes still into the same, um, linear transformation. The weight is frozen, so it's not being changed. And then the output is w x. But now it also adds two, uh, low rank matrices. B and a. And then the idea is to also pass the x in this branch. And this branch also transforms x and the output is a b x if we just think of it mathematically. And then this a b x would have the same shape of w x. So we can just, um, add them up, and then it forms their final output. And these two newly introduced matrices are learnable, meaning that the parameters can be tuned during the training. So these are LoRa layers. And it's very powerful technique. It also has some advantages over adapters. And if you are interested, this is their original paper, LoRa, LoRa Inc adaptation of large language models. And then they talk in detail about this, but again, the high level idea is to target all the linear layers and just add the this branch uh, with two lower rank matrices and only learn those matrices and freeze everything else. And, again, they discuss why this method has some advantages over adapters and why at inference time it's faster. But, um, but that's that's a high level idea, and it's very powerful to
+
+AI Course
+16:58:55
+
+Now there are lots of libraries that allows us to apply some of these, uh, parameter efficient fine tuning techniques One popular library is, um, hugging face, um, PEFT. And it basically just gives you a set of tools that you can easily um, wrap a model and introduce new layers or new parameters to it and train only and train the model such that only those layers gets updated. So this is just we can take a look at it. It's it has some numbers and, you know, talks about advantages and so on. And then here, I have also a very, um, short, demo to see how it looks like in practice. So this is my Jupyter Notebook. And here, basically, I can use the um, you I can rely on PIFT and import some configs. Again, these are not important. What is important here is I can use the transformers library to pull a model. For example, here I'm pulling uh, coin 2,530,000,000 instruct. It's basically a post trained model by Coin, and it has 3,000,000,000 parameters. So let me load this.
+
+You
+16:58:56
+
+Now are lots of libraries that allows us to apply some of these uh, parameter efficient fine tuning techniques. One popular library is um, Hugging Face, um, PFT. And it basically just gives you a set of tools that you can easily, um, wrap a model and introduce new layers or new parameters to it and train only and train the model such that only those layers gets updated. So this is just you can take a look at it. It's it has some numbers and, you know, talks about advantages and so on. And then here, I have also a very, um, short demo to see how it looks like in practice. So this is my Jupyter notebook, and here, basically, I can use the, um, you I can rely on theft and import some configs. Again, these are not important. What is important here is I can use the transformers library to pull a model. For example, here, I'm pulling a coin 2,530,000,000 instruct. It's basically a post trained model by Quinn, and it has three big billion parameters. So let me load this.
+
+You
+16:58:59
+
+It may take a while.
+
+AI Course
+16:59:00
+
+It may take a while.
+
+You
+16:59:51
+
+Okay. So now we have this model. And this model, again, it's, um, an instructive model. So we can inspect it here if we print a model. It would show us all the layers. Uh, it has these layers, embed tokens, and these are the shapes, and it has layers and self attention, you know, things that are very um, like, very normal things in in a decoder only transformer. And we have n MLP here with some linear layers and so on. We can also inspect these parameters to see if they are, um, to make sure they are 3,000,000,000. So for that, if if we print parameters, we would
+
+AI Course
+17:00:03
+
+Okay. So now we have this model. And this model, again, it's, um, an instruct model. So we can inspect it here. If we print a model, it would show us all the layers. Uh, it has these layers. Embed tokens, and these are the shapes. And it has layers. And self attention, you know, things that are very, um, like, very normal things in in, uh, decoder only transformer. And we have MLP here with some linear layers and so on. We can also inspect these parameters to see if they are, um, to make sure there are 3,000,000,000. So for that, if if it print parameters, we would it would give us a kind of to just see the actual numbers if we do something like this. P four p in model dot parameters. Let's just print this.
+
+You
+17:00:03
+
+it would give us a and then to just see the actual numbers, if we do something like this, p for p in model dot parameters, let's just print this
+
+You
+17:00:20
+
+Layers in in the model. And in order to get the actual the sum of all these weights, we can just do, um,
+
+AI Course
+17:00:20
+
+In in the model. And in order to get the actual the sum of all these weights, we can just do, um,
+
+You
+17:02:11
+
+sum of all these. And this number is basically 3,000,000,000 um, 3,085,000,000 and so on. And so it it it is consistent with the 3,000,000,000 naming. Now let's say we want to, uh, we loaded this model. Now we want to train it. But we want to use parameter efficient fine tuning, meaning that we don't want to really update all the parameters of this model. And for that, we can apply, uh, f two. So, again, you can refer to, um, um, the documentations to understand all the details and inputs. But at a very high level, what I'm doing here is basically I'm creating a config for LoRa And, uh, once I have that, I have this uh, wrapper, give get test model I passed the initial model and the config that I created to get this new model. And now this new model is basically have this newly added LoRa layers and only transduced. So everything else is frozen. So if I print trainable parameters, it would say total parameters is this, and, um, note that this is higher than this, and that's because now we are adding LoRa layers. Um, sorry. This is not the trend. So all parameters is this and now note that this is higher than this slightly. And that's because we are having this additional LoRa layers. And only these many parameters are trainable. So it's very small compared to the 3,000,000,000 parameters. It's only 3,000,000. So only, um, 0.1. Um, this is the training wheel percentage. Only 10% of the original not 10%.
+
+AI Course
+17:02:26
+
+sum of all these. And this number is basically 3,000,000,000 um, 3,085,000,000 and so on. And so it it it is consistent with the 3,000,000,000 naming. Now let's say we want to, uh, we loaded this model. Now we want to train it. We want to use parameter efficient fine tuning, meaning that we don't want to really update all the parameters parameters of this model. And for that, we can apply, uh, PFT. So, again, you can refer to, um, the documentations to understand all the details and inputs. But at a very high level, what I'm doing here is basically I'm creating a config for LoRa And, uh, once I have that, I have this, uh, wrapper give get model. I pass the initial model and the config that I created to get this new model. And now this new model is basically have this newly added LoRa layers and only trains those. So everything else is frozen. So if I print trainable parameters, it would say total parameters is this, and um, note that this is higher than this. And that's because now we are adding lower layers. Um, sorry. This is not the trend. So the all parameters is this. And now note that this is higher than this. Slightly. And that's because we are having this additional LoRa layers. And only these many parameters are trainable. So it's very small compared to the 3,000,000,000 parameters. It's only 3,000,000. So only, um, 0.1. Um, this is the training with percentage. Only 10% of the original 10%, um, 0.1% of the original parameters are trainable. So that's why it's a lot more efficient. We only need to learn these these many parameters during training. And then now the model is ready. We can just simply use some dataset to train it. Then once it's trained, we can
+
+You
+17:02:28
+
+0.1% of the original parameters are trainable. So that's why it's a lot more efficient. We only need to learn these these many parameters during training. And then now the model is ready. We can just simply use some dataset to train it. Then once it's trained, we can
+
+You
+17:02:42
+
+We can save it, and we
+
+You
+17:09:10
+
+We can just name it something. We can have the same name and then Laura at the end. And then later at inference, we can just load this model instead of the original LoRa model. And it it could be as easy as this So we have f model from free train and then load our model. Then we can pass whatever input we have, what is the refund policy. And if we generate and decode, we would get responses. And those responses now are more consistent with the new data that were used to train this model. So I just showed this example to say that it's it's very easy in practice to to utilize some of these methods and algorithms to fine tune LLMs. Um, Yeah. So let's back to our lecture. We talked about fine tuning. And we saw our two options, updating all parameters, and parameter efficient fine tuning like adapters and LoRa. The next lecture, we will switch to the second way of adapting LILO. Which is prompt engineering.
+
+AI Course
+17:09:10
+
+We can just name it something. We can have the same name and then Laura at the end. And then later at inference, we can just load this model instead of the original LoRa model. And it it could be as easy as this. So we have that model from pretrained and then load our model. And then we can pass whatever input we have, what is the refund policy. And if we generate and decode, we would get responses. And those responses now are more consistent with the new data that were used to train this model. So I just showed this example to say that it's it's very easy in practice. To to utilize some of these methods and algorithms to fine tune LLMs. Um, Yeah. So let's back to our lecture. We talked about fine tuning, and we saw our two options, updating all parameters and parameter efficient fine tuning like adapters and LoRa. In the next lecture, we will switch to the second way of adapting which is prompt engineering.
+
+You
+17:09:51
+
+Hey, everyone. We'll continue learning about different techniques adapt a general purpose LLM to a domain specific LLM. In the last lecture, we learned about fine tuning, and we saw that how by continue training the base model, on our documents or knowledge base, we can get a specialized model that is capable of answering various specific questions. In this lecture, we'll focus on another important and very popular technique called prompt engineering. And we'll discuss various techniques under prompt engineering, and also we'll learn how prompt engineering can be used to adapt the LLM to our specific use case, which is a retail retailer store. So let's just start.
+
+You
+17:11:37
+
+So what is prompt engineering? At a very high level, prompt engineering is basically a way to craft or design prompts so that we can extract the desired output from the LMM. So it's very simple. Normally, a workflow is like this. We have a prompt, which is a user's query, and it goes directly to the LMM. And then the LMM processes that prompt and output some, uh, response. And this is the response that is being shown to the user. Now in order to incorporate prompt engineering, we'll change this simple workflow by adding this, uh, yellow rectangle here. We'll call it prompt engineering, and it's just a logic that changes the user's query prompt It takes that as a input, makes some changes or additions to that, and the output is another prompt. And now this new prompt goes into the LLM, and then the LLM generates response. So the only difference is that we are not going to pass the raw user's query to the element, but we are going to, uh, make some changes to it for uh, make some additions to it and then pass the new prompt to the element. Now this is the the very high level what prompt engineering is, but there are a lot of techniques under prompt engineering. For example, we have few shot prompting, zero shot prompting, chain of thought for COT prompting, which is very powerful. Role specific user context, and probably there are other examples too. And there are also more advanced algorithmic algorithmic prop prompt optimizations, which makes this process more, um, automatic. So in this lecture, we're going to focus on very popular techniques, including, uh, few shot, zero shot, and c o t to better understand
+
+AI Course
+17:13:15
+
+Hey, everyone. We'll continue learning about different techniques to adapt a general purpose LLM to a domain specific LLM. In the last lecture, we learned about fine tuning, and we saw that how by continue training the base model on our documents or knowledge base, we can get a specialized model that is capable of answering various specific questions. In this lecture, we'll focus on another important and very popular technique, called prompt engineering. And we'll discuss various techniques under prompt engineering, and also we'll learn how prompt engineering can be used to adapt the LLM to our specific use case, which is a retail retailer store. So let's start. So what is prompt engineering? At a very high level, prompt engineering is basic a way to craft or design prompts. So that we can extract the desired output from the LLM. So it's very simple. Normally, a workflow is like this. We have a prompt, which is a user's query, and it goes directly to the LMM. And then the LLM processes that prompt and outputs some, uh, response. And this is the response that is being shown to the user. Now in order to incorporate product engineering, we'll change this simple workflow by adding this, um, yellow rectangle here. We'll call it prompt engineering, and it's just a logic. That changes the user's query prompt It takes that as an input, makes some changes or additions to that. And the output is another prompt. And now this new prompt goes into the LLM, and then the LLM generates response. So the only difference is that we are not going to pass the raw user's query to the element, but we are going to, uh, make some changes to it or uh, make some additions to it and then pass the new prompt to the element. Now this is the the very high level of what prompt engineering is. But there are a lot of techniques under prompt engineering. For example, we have few shot prompting, few shot prompting, chain of thought or c o t prompting, which is very powerful. Role specific user context, and probably there are other examples too. And there are also more advanced algorithmic algorithmic prompt prompt optimizations. Which makes this process more, um, automatic. So in this lecture, we're going to focus on very popular techniques, including uh, few shot, zero shot, and c o t to better understand, um, what they do, how they do it, and why they're why they are very powerful. And then after that, we'll see how we can use some of these techniques to for our use case, which is a re retailer store. So let's start with few shot prompting. To better understand few shot prompting, I have some real examples, and I want to show how in practice it works. Again, I have hyperbolic service open here. And we saw that in previous lectures. It's basically a service that allows us to use some pre trained models. And, um, send some questions and get some responses. And here, I continue to use the base model, which we used in the previous lectures. And the reason for that is because base model is just a continuation model. It continues the prompt. And I want to show that how powerful prompt engineering can be. And even in base model, it can help It can influence their generation process. And then after that, we'll also switch to some post train models and see how prompt engineering helps there. So let's just start with a prompt. Like, how can I learn machine learning? So and let me also reduce this to 60. So before I press this, we expect to see here is that it's just going to mimic what it has seen on Internet. So it may just ask more questions, or it may not even directly answer my question. It may include something that are irrelevant. Let me see how it responds. Okay. It's just it's just very irrelevant. It's it's coming from somewhere probably on the Internet, and it a few years ago, I was wondering the same thing. I had just started my PhD and and so on. It's obviously not answering my questions. And, again, we were, um, in this case, it responded this way. It may be ask again. It may just, um, generate more questions. Let me run a second. I have another email.
+
+You
+17:13:15
+
+understand, um, what they do, how they do it, and wider why they are very powerful. And then after that, we'll see how we can use some of these techniques to for our use case, which is, uh, retailers. So let's just start with few shot prompting. To better understand few shot prompting, I have some real example. And I want to show how in practice it works. Again, I have hyperbolic service open here. And we saw that in previous lectures. It's basically a service that allows us to use some pretrained models and, um, send some questions and get some responses. And here, I continued to use the base model, which we used in the previous lectures. And the reason for that is because base model is just a continuation model. So it continues the prompt. And I want to show that how powerful prompting engineering can be. And even in base model, it can help it can influence the generation process. And then after that, we'll also switch to some post train models and see how prompt engineering helps them. So let's just start with a prompt. Like, how can I learn machine learning? So and let me also reduce this to 60. So before I press this, what you expect to see here is that it's just going to mimic what it has seen on Internet. So it may just ask more questions, or it may not even directly answer my question. It may include something that already relevant. Let me see how it responds. Okay. It's just it's just very irrelevant. It's it's coming from somewhere probably on the Internet, and it says a few years ago, I was wondering the same thing. I had just started my PhD and and so on. So it's obviously not answering my questions. And again, we were, um, in this case, it responded this way. If we if we ask again, it may just generate more questions. Let me run this again. I can add another email.
+
+AI Course
+17:14:18
+
+What are the prerequisites? How can I learn MSC? Again, um, it just asking more questions. Now what I want to show next is that if this is a feature prompt, we can actually force this model and influence its generation, uh, regenerated response. To follow the format that we want. So for that, I have, um, um, examples here and let me just copy paste this here. So what I'm entering here this time is I'm actually showing some examples to the model in the app prompt. And then this way, I hope that the model will just follow the same format. So what I'm having here is that I have here this this particular format, q a q a, and then a couple of random questions, like, what is a good place to eat? And then the answer is Berkeley has lots of good restaurants. Another question is what is the process of leaving a car? You can go to dealership and talk with a salesman. What is the account of France? Paris. And then on the last line, I have my actual question that I want the model to answer. How can I learn ML? Now this time, difference is that the model does not really have all this capability to generate however it It's going to follow this particular format, and this particular format is designed, Sascha, actually answer my last question. So let me send this to see if it works now.
+
+You
+17:14:18
+
+Um, it just asking more questions. Now what I want to show next is that if we switch to a few shot prompt, we can actually force this model and influence its generation, uh, with regenerated response. To follow the format that we want. So for that, I have uh, examples here, and let me just copy paste this here. So what I'm entering here this time is I'm actually showing some examples to the model in that prompt. And then this way, I hope that the mother would just follow the same format. What I'm having here is that I have here this this particular format, q a q a, and then I have a couple of random questions, but what is a good place to eat? And then the answer is Berkeley has lots of good restaurants. Another question is, what is the process of leasing a car? You can go to dealership and talk to a salesman. Is the capital of France, Paris? And then on the last line, I have my actual question that I want the model to answer. How can I learn ML? Now this time, the difference is that the model does not really have all this flexibility to generate however it wants. Going to follow this particular format, and this particular format is designed, Sascha, actually answered my last question. So let me send this to see if it works now.
+
+You
+17:14:29
+
+I don't know why this has been happening.
+
+You
+17:15:37
+
+Alright. It's answering, and it says take the class. And the reason that it's such a, um, useless answer is because examples that we showed are also not too comprehensive or not too helpful. Example, we say just go to the lecture and talk to the session. And then as a result, the model is also telling us to take the class. And but basically, the important part is that even a base model can respond to our questions we use few short content here, meaning that we show some actual examples to the model. Now let me switch to a post train model, and I can choose lemma here. Four zero five four zero five. So it's the post trained equivalent of the base model. And then what I'm going to do here, I'm going to send this example. So this is what we'd be normally uh, ask our questions. We would say, for example, if you have a math questions, we can have this. Like, John has four books and voice three more. Many books does it have? Now in this example, the model would respond however it wants. We have no control over the generation process. For example, we may want the model to answer, um, short format and just say seven or something like that, but we have no control over So now if I send this, the mother would probably say, easy one, join our sports, initially, and buy three more. So four plus three seven. John now has, uh, seven books, which is great. It's very relevant, and it it's really helpful. But, um, let's say I don't want the model to answer this, and I have another prompt here.
+
+AI Course
+17:15:37
+
+I don't know why this keeps happening. Alright. It's answering, and it says take the class. And the reason that it's such a, um, useless answer is because the examples that we showed are also not too comprehensive or not too helpful. Example, they say just go to dealership and talk to the salesman. And then, uh, as a result, the model is also telling us take the class. And but basically, the important part is that even a base model can respond to our questions when we use few short talk engineering, meaning that we show some actual examples to the model. Now let me switch to a post train model, and I can choose LAMA here. Four four five. So it's a post trained mod equivalent of the base model. And then what I'm going to do here, I'm going to send this example. So this is what would we normally, um, ask our questions. We would say, for example, if you have a math questions, we can have this, like, ask four books and voice three more. How many books does he have? Now in this example, the model would respond however it wants. We have no control over the generation process. For example, we may want the model to answer, um, short format and just say seven or something like that, but we have no control over it. So now if I send this, the model would probably say easy one. John has four voice initiator and voice three more. So four plus three is seven. John now has seven. Which is great. It's very relevant, and it it's really helpful. But, um, let's say I don't want the model to answer this way. And I have another prompt here.
+
+You
+17:16:12
+
+What I want is that the model? I want the model to answer in a particular and I have it here as an example. So I only show the model one example, that, like, if you have three apples and get two more, how many apples do you have? And it just follows this format, answer and five year. Now next, I ask my real question. And what I expect to see is that the model would generate something like So it no longer would say easy one and lots of explanations and thinkings and logics. So let's see if it actually works. Alright. It exactly followed what I was hoping. So it it's following this format. And this is why a few short prompting can be very helpful because it can basically
+
+You
+17:17:27
+
+generation process and guide the element to generate something in the format that we want. Now let me go back to, um, to the lecture. So we saw few short pumping. Then the next thing the next thing we want to talk about is zero shot prompting. Okay. So few shot prompting was showing some examples. Zero shot prompting is not showing any any example. And is still quite the generation process. So how does that work? Let's go back to the base model again. And then I ask the same question, how can I learn ML? And let me just decrease this to even lower, like, 20. For this, let's see if it asks more questions or not. Alright. It's exactly asking more questions we were expecting. Where do I start? I want to learn ML. Where should I start? Now let's say I want to ask the same question. But now I want to use zero shot counting technique to guide the model to answer my question. Instead of just asking more questions. It's very simple. What I'm going to do is here, I'm going to say, hey. This is queue. And then here is a. So it's such a simple change. It's very likely now that the model would actually start responding to it. Let me try Alright. Exactly as we were hoping. You can learn ML by reading books, watching videos, taking online courses, or attending boot camps. So with some very, very minor changes, and applying zero shot counting, you see that how we can change a base model to a model that actually answer questions. Now let's also go to the post rate model.
+
+AI Course
+17:18:58
+
+What I want is that the model want the model to answer in a particular format, and I have it here as an example. So I only show the model one example that, like, if you have three apples and get two more, how many apples do you have? And it just follows this format, answer and five year. Now next I ask my real question, and what I expect to see is that model would generate something like this. So it no longer would say easy one and lots of explanations and thinking and logic. So let's see if it actually works. Alright. It exactly followed what I was hoping. So it it's following this format. And the by few short prompting can be very helpful because it can basically, um, guide the generation process and guide the element to generate something in the format that we want. Now let me go back to, um, to the lecture. So we saw few shot prompting, and then the the next thing the next thing we want to talk about is zero shot pronging. Okay. So few shot pronging, but showing some examples. Zero shot prompting is not showing any any example, and it's still got the generation process. So how does that work? Let's go back to the base model again. And then I ask the same question, how can I learn ML? And let me just decrease this to even though I like 20. So for this, let's see if it asks more questions or not. Alright. It's exactly asking more questions as we were expecting. Where do I start? I want to learn ML? Where should I start? Now let's say I want to ask the same question, but now I want to use zero sharp pruning technique. To guide the model to answer my question instead of just asking more questions. It's very simple. What I'm going to do is here, I'm going to say, hey. This is queue. And then here is a. So with such a simple change, it's very likely now that the model would actually start responding to it. Let me try. Alright. Exactly as we were hoping. You can learn ML by reading books, watching videos, taking online courses, or adding boot camps. So with some very, very minor changes, and applying zero shot prompting, we see that how we can change a base model to a model that can actually answer questions. Now let's also go to the clustering model. Like lama, free, four, five. And I have another pound here ready. And actually, let me not enter that because it's very obvious. So we'll just go over it. Another example of, um, zero shot routing is that, for example, let's say we have a like, res can resume of some candidates, and then we want the LLM to extract the years of experience. So one way we can, uh, prompt the model is something like x. Extract the candidate's years of experience from this resume. However, in this example, they have no control over the output. Output. So we can rely on zero shot routing and enforce the model to output in a in a structured format. For example, we can say something like return only JSON like, and in this format, year's experience, number, from the resume or for the resume. Now by by just a simple change, now the model is capable of generating responses in the exact format that we want. So this is at the very high level zero shot prompting. We basically just write write in the prompt as the instruction that we want the model to follow. We either include some formats as a hint or we actually explain it in a in a text that, hey. Do this in this format. And and make sure your output always follows this particular format. And this is zero shot prompting, and it is very popular and used a lot. Now the next thing that we want to talk about is chain of thought prompting. So chain of thought prompting is probably the most popular technique under a prompt engineering. And later, it was a starting point for thinking models, which we would discuss in future weeks. But, um, it is very powerful, and also it not only helps at inference a prompt engineering format, but it can also help the model to actually learning to think, uh, during training. So, again, for the training part, we'll we'll learn that in future weeks. And in this lecture, we'll only focus on the problem technique.
+
+You
+17:22:27
+
+Three, four, or five. And I have another already. And let me not interrupt because it's very obvious. So we'll just go over it. Another example of, um, zero shot counting is that, for example, let's say we have a risk hand a resume of some candidates, and then we want the LLM to extract the years of experience. So one way we can, uh, prompt the model is something like this, extract years of experience from this resume. However, in this example, they have no control over it. So we can rely on zero shot counting and enforce the model to output in a in a structured form. For example, we can say something like return only JSON byte, and in this format, years experience, number, from the resume or for the resume. Now by by just this simple change, now the model is capable of, um, generating responses in the exact format that we want. So this is at a very high level, zero shot counting. It basically just write write in the prompt as the instruction that we want the model to follow. We either include some formats as a hint, or we actually explain it in a in a text that, hey. Do this in this format and and make sure your output always follows this particular format. And this is zero shot counting, and it is very popular and used a lot. Now the next thing that we want to talk about is chain of thought prompting. So chain of thought prompting is probably the most popular technique under prompt engineering. And later, it was a starting point for thinking models, which we would discuss in future weeks. But, um, it is very powerful, and also it not only helps inference time in a prompt engineering format, but it can also help the model to actually learning to think, uh, during training. So again, for the training part, we'll we'll learn that in future weeks. And in this lecture, we'll only focus on the prompting technique. So everything was started from this paper paper, chain of thought prompting. It was, um, it was, uh, released into '23, uh, January 10. By Google Brain. And then, basically, the idea here is that if the mod if you ask the model to answer something that is difficult, the model is probably going to fail. But if we show some examples to the model, and in the examples, we show how to think, um, a logical step by step way, the model would probably follow that. And if the model followed that, it would be able to answer it. And this is the example that they have, um, some mathematical question, um, and then basically future counting here. It's it's they say standard counting. So what they mean is that they're not using chain of thought counting. They're just using few shot counting. Meaning that they are joined the model, uh, a question and an answer, and then they ask their question. And then the question is basically the cafeteria has, uh, had 23 apples If they use 20 to make lunch and about six more, how many apples, um, do they have? So the correct answer is nine, but the model is outputting the answer is 27. Because it's exactly following this format, the answer is. And then it it it doesn't get enough time to think and, um, reason, therefore, it just throw a number. It's just 27 here. Now the idea behind chain of thought counting is that instead of showing the model is very small, short kind of answer, we show the model how to reason and how to think. So the only change here is that instead of saying answer is three, they change this answer to something more more, um, logical. For example, they say it started with five balls, two cans of three tennis balls, each is, uh, six tennis balls, five plus six equal 11, cancer is 11. So this way, the model would learn to follow the same format and it follows this as it's following the same format, it basically pushes the model to think. And and, um, figure out the correct answer, like, step by step in this model, uh, uh, smaller computations. So here, you can see exact same question, and then now the output is had 23 applicants originally. They used 20 to make lunch, so they had 23 minus 23. They bought six more apples, so they have three plus six equal nine. The answer is nine. So that's why it's very powerful because it basically somehow indirectly teaches the model to to think. And to reason. So, um, this is very powerful, and here they're having some evaluation metrics, and they're saying that this is all great. It was especially mathematical problems, it it it becomes significantly better. So here, yellow is basically their five forty building model, and they're using a standard counting. And then the solve rate is 18%. And just switching to chain of learning, meaning that the model is exactly the same, all the base and parameters are the same. We are not training anything. We are just just using the same old model. But now instead of asking our questions, normally, we would show an example of a chain of thought answer. By just this single change, the model would be able to improve its performance, and solve rate now becomes suddenly 57%. So, um, this is the this is very general thought started initially, and it's very interesting paper. You can you can take a look at more examples in different benchmarks, how they are teaching the model to think and reason. Um, and then so yeah. So that's that's chain of thought. Um, prompting. And we saw the examples in the paper. Also more examples here. For example, at least to show the model have some mathematic questions with one one letter or one token answer, the model will follow that so it may fail, especially if the questions become more difficult. But if you have some reasoning traces and, um, some, uh, logical explanations, the model is very likely to do better. And then, um, remember, so this this paper came out on on January 10, and it was basically a few shot chain of that company. Because we are showing some examples in the prompt, so it's few shot. And it's chain of that because those answers are having increase and increases. Now nine days later, this paper came out, uh, sorry, nineteen days later. This paper came out from, um, Google ranking. Now the only difference is that they're saying that they can also chain of thought, but in a zero shot format, not much, uh, future. Basically, what they're saying is that we are we we we don't necessarily need to show um, some examples with the model, so it resend. And again, it's very interesting paper. You can take a look. Let me go back to our lecture because I have I have that here. So the
+
+You
+17:24:59
+
+them ask that question, and we can just say, let's think of the by step. And that's it. And just by this simple change, we are guiding the generation process of the element, and we are pushing the model to think this device. And what that means is that the model would try to, uh, break the task into smaller, logical pieces or reasonings, and then it tries to just, uh, just come up with the calculation step by step. So it's it's very interesting observation that just by adding this this line of, like, five, uh, five words at the end of each month, they would be able to get um, a lot better, uh, responses. Here you can see they're saying that this is view shot. And then, uh, ZeroShot. And this is ViewShot chain of thought, which was this previous paper. And then they are proposing zero shot, uh, chain of thought, which the only change is let's bring this device And now by this change, you can see how the model is actually generating the response with some reason. And, again, this is the zero shot version of that. So, uh, same question, just zero shot, so the model only outputate. But now here, the the model just keep, uh, presenting over, uh, this question. So that's, uh, very interesting observation, and this is zero shot Ciopti. And, again, later, this became the foundation to build thinking models and training models such that they can think. And we'll we'll we'll go over that in future, please. Um, but again, yeah, that that's chain of thought, and it's very, very popular and very, very powerful. Because it it makes a big difference. With that chain of thought, for many difficult questions, the model may not be able to answer. With just chain of thought, the model would be able to answer because it can just break down the task into smaller pieces and then solve the task as the best way step by step. So we also covered chain of thought, and there are also more. For example, we have role specific content, which we would briefly cover, but we are not gonna cover every single different day of project engineering. There are lots of different methods. If you search Google, um, it's project engineering. There would be lots of uh, articles, papers, and so on. These first two links are pretty interesting. It's one is a git repo pump engineering guide, and it has lots of, uh, resources and, um, information. And then they have also the version which goes over all these things, um, serial shot printing, future shot fronting, chain of thought. And you can see there are a bunch of other ways of prompting, echo fronting, and prompt chaining, three of those. Again, many of these we would cover later, but this could be an interesting documentation to take a look at. Echo. Um, let's go to their role as specific funding and understand why it can be helpful. So role specific prompting is also very simple. Basically, the key idea is to assign a role to the element. Let's say, normally, when you have a question, let's say, a tax kind of question. We can ask it, like, how can I and whatever our question is, and just pass it to the element? Now role specific prompting, just adds this sentence before that and assigns a role to the element. And it says something like you are an expert high adviser, and then it includes the user's query. And just this simple change make it make the element work a lot better. So that's it. That's role specific prompt. Now we've discussed various such of prompting like, um, few shot, zero shot, um, instructions, um, you know, providing
+
+You
+17:27:28
+
+as part of the zero shot, and then we saw chain of thought and role specific prompting. And there are other kinds of prompting. And then all of these basically make, um, the prompt a lot of additions to it, the initial user query. And because of that, prompts are generally having two components, the final prompts that are going to LMS. One is the system prompt, and one is user prompt. System prompt is hidden instructions provided to the LMS and these are basically as a result of all these, um, prompt engineering efforts. And then user count is basically visible query that the user types. So whatever the user types, it becomes the user prompt, and then all the prompt engineering works that we have, it becomes part of the system prompt. So it's going to look something like this. We have a system prompt, and system prompt can prompt can do, um, specify roles, give instructions, provide future examples, also ask for a chain of thought, uh, thinking, and so on. Then whatever the user types is going to become the user query, and these two will get combined and then pass to develop. And if you go to chat, JPG and also all other major, um, chatbots, they have a place to specify your system prompt. Also here in hyperbolic, if we switch to a model, like, uh, number four or 5,000,000,000, there should be a place where you kinda specify a system prompt. And I think here it's here. So it says it describe your system prompt, and then you can just uh, include all your instructions and what is specific prompting and examples and anything that you have in mind here. And then each time, you would enter something here. Your question would get combined with system prompt and then passed to the LMS under the So the LMM would know about all these instructions every time you ask a question. So that system prompt just to make things more organized, and you don't have to each time, um, include all those prompts as users query. And then you can just have it fixed, have it once in a system prompt, and then start the conversation. The user can start the conversation by just asking the question without any additional handling. So and that's about their prompts. And thing I want to talk about is we talked about all these pumping techniques, but let's now get back to our, um, original problem. Our original problem was that we wanted to use prompt engineering to adapt a general purpose element to our, um, very specific use case, which was a weekly install. See how we can do that. It's very simple. We can have some software here and logic here, which is mostly focused on comp engineering, and then we have a system And this basically, pump engineering is going to just, uh, make this question, combine it with the system prompt. In a very particular format, and then pass it to the agent. And then how is it going to do that? We're going to do, how we're going to write this is basically, we are going to say, okay. Whenever the user's query comes, contact or company with the system instruction. And what is the system instruction? Basically, we manually create this, and they say something like read the following documents and respond to the question. What are these following documents? These are all the PDFs and, um, you know, knowledge base that we have internally. For our company or for our retail store. So basically, in package engineering, we manually go over all our documents for, knowledge base. We include all those information and policies and whatever is basically listed there as part of the system prompt here.
+
+AI Course
+17:28:33
+
+Technique. So everything was started from this paper, chain of thought prompting. It was, um, it was, um, releasing to '23, uh, January 10. By Google Brain. And then, basically, the idea here is that if if we ask a model to answer something that is difficult, the model is probably going to fail. But if we show some examples to the model, and in the examples, we show how to think um, in a logical step by step way, the model would probably follow that. And if the model followed that, it would be able to answer correctly. And this is the example that they have. Um, some mathematical question, um, and then basically a few shot counting here. It's it says standard counting, so what they mean is that they're not using chain of accounting. They're just using free shot counting. Meaning that they are showing the model a question and an answer, and then they ask their question. And then the question is basically the cafeteria has, um, had 23 apples. They used 20 to make lunch and, what, six more, how many apples, um, do they have? The correct answer is nine, but the model is outputting the answer is 27. Because it's exactly following this format, the answer is. And then it it it doesn't get enough time to think and, um, reason. Therefore, it just throw a number, which is 27 here. Now the idea behind chain of thought content is that instead of showing the model this very small uh, short kind of answer, you show the model how to reason and how to think. So the only change here is that instead of saying the answer is three, they changed this answer to something more and more, um, logical. So for example, they said started the five bugs two cans of three lines of balls, each is, uh, six lines of balls, five plus six equal 11. The answer is 11. This way, the model would learn to follow the same format. And as it follows the it's following the same format, it basically pushes the model to think and and, um, figure out the correct answer, like, a step by step in a smaller, uh, uh, smaller computations. So here, you can see exact same question. And then now the output is cafeteria had 23 apples originally. They used 20 to make lunch, so they had 23 minus 20 They bought six more apples, so they have three plus six equal nine. The answer is nine. So that's why it's very powerful because it basically somehow indirectly teaches the model to to think. And do a reason. So, um, this is very powerful. And here, they're having some, um, evaluation metrics. And they're saying that the solve rate, it was especially mathematical problems, it it it becomes significantly better. So here, yellow is basically their call, uh, five forty billing model, and they're using a standard prompting. And then the solve rate is 18%. And just switching to chain of thought prompting, meaning that the model is exactly the same. All the dates and parameters are the same. We are not training anything. We are just just using the same old model. But now instead of asking our questions, normally, we would show an example of the chain of thought answer. And by just a simple change, the model would be able to, um, improve its performance. And solve rate now becomes suddenly 57%. So, um, this is the this is where I thought I started initially, and it's very interesting. You can you can take a look. There are more examples in different benchmarks, how they are teaching the model to think and reason. Um, and then so yeah. So that's that's chain of thought. Prompting. And beside the examples in the paper, I have also more examples here. For example, if you show the model you have some automatic questions with one one letter or one token answer, the model would follow that so it may fail. Especially if the questions become more difficult. But if we have some reasoning phrases and, um, some, um, logical explanations, the model is very likely to do better. And then, um, remember, so this this pair came out on on January 10, and it was basically a few shot chain of photonic because we are showing some examples in the prompt. So it's few shot. And it's chain of thought because those answers are having reasoning traces. Now, nine days later, this paper came out. Uh, sorry. Nineteen days later. This paper came out from, um, Google Brain. Now the only difference is that they're saying that we can also have chain of thoughts but in a zero shot format, not, uh, few shot. Basically, what they're saying is that we are we we we we don't necessarily need to show examples to the model. So it resents. And again, it's very interesting paper. You can take a look. Let me go back to our lecture because I have I have that here. So they propose a very simple change. They're saying that we don't have to show all these examples. What we can do instead, we can ask our question. And we can just say, let's think this device step. And that's it. And just by this simple change, we are guiding the generation process of development, and we are pushing the model to think as the best. And what that means is that the model would try to, uh, break the task into smaller, logical pieces or reasonings, and then it tries to just just come up with the calculation step by step. So it's it's very interesting observation that just by adding this this line of, like, five, uh, five words at the end of each month, they would be able to get, uh, a lot better, uh, responses. Here you can see they're saying that this is screenshot and then, uh, zero shot. And this is free shot chain of thought, which was this previous paper. And then they are proposing zero shot. Uh, chain of thought, which the only change is let's take it step by step. By this change you can see how the model is actually generating a response with some resins. So And again, this is the zero shot version of that. So, uh, same question, just zero shot. So the model only outputs eight. But now here, the the model just keep, uh, reasoning over, uh, this question. So that's, uh, very interesting observation, and this is your and again, later, this became the foundation to build thinking models and training models such that they can think And we'll we'll we'll go over that in future weeks. Again, yeah, that that chain of thought, and it's very, very popular and very, very powerful. Because it it makes a big difference without chain of thought. For many difficult questions, the model may not be able to answer. With just chain of thought, the model would be able to answer because it can't just break down the task into smaller and then solve the task step by step. So we also cover chain of thought. And there are also more. For example, we have role specific content which we would briefly cover. But we're not gonna cover every single different way of punctuation. There are lots of different methods. If you search Google, Um, with punct engineering, there will be lots of, um, articles, papers, and so on. These first two links are pretty interesting. It's, uh, this one is a digital prompt engineering guide, and it had lots of, uh, resources and, um, information. And then they have also a web version. It's goes over all these things, uh, zero shot prompting, uh, future prompting, chain of thought. And you can see there are a bunch of other ways of prompting. Meta prompting, and now prompt chaining, tree of thought. Again, many of these we will cover later. But this could be an interesting documentation to take a look. Um, let's go to their role specific content and understand why it can be helpful. So role specific prompting is also very simple. Basically, the key idea is to assign a role to the element. So let's say normally, when you have a question, let's say a tax kind of question. They can ask you, like, how can I and whatever our question is, and just pass it to the element? Now role specific prompting just adds this sentence before that and assigns a role to the element. And it says something that you are an expert tax adviser. And then it includes the user's query. And just this simple change make it make it elegant work a lot better. That's it. That's the role of specific prompting. Now we've discussed values that of prompting like, um, few shot, zero shot, um, instructions, um, you know, providing instructions part of the zero shot. And then they saw chain of thought and a roll of specific routing. And there are other kinds of routing. And then all of these basically make, um, the prompt a lot of additions to the initial user query. And because of that, prompts are generally coming two components. The final prompts that are going to the One is a system prompt and one is user prompt. System prompt is hidden instructions provided to the LMS. And these are basically as a result of all these, um, prompt engineering efforts. And then user prompt is basically visible query that the user typed. So whatever the user types, it becomes a user prompt, and then all the prompt engineering at the app, it becomes part of the system prompt. So it's going to look something like this. We have a system prompt and system prompt can prompt can do, um, specify roles, give instructions. Provide future check examples, also ask for a chain of thought, uh, thinking, and so on. And then whatever the user types is going to become the user query, and these two will get combined. And then pass to the element. And if you go to chat g p t and also all other major, um, chatbots, have a place to specify your system prompt. Also here in hyperbolic, if we switch to a model, like, uh, four zero five, there should be a place where you can specify a system prompt. And I think here it's here. So it says it describe your system prompt, and then you can just uh, include all your instructions and rule specific prompting and examples and anything that you have in mind here. And then each time we would enter something here, your question would get combined with system prompt and to the LMS on your So the element would know about all these instructions every time you ask a question. That's system prompts just to make things more organized and you don't have to each time, um, include all those, um, prompts. As the user's query. And then you can just have it fixed, have it once in a system prompt, and then start the conversation. The user can start the conversation by just asking a question without any additional handling. So and that's about their prompts. And the next thing I want to talk about we talked about all these prompting techniques, but let's now get back to our, uh, original problem. Original problem was that we wanted to use prompt engineering to adapt a general curriculum. To our, um, very specific use case, which was a refiner store. Let's see how we can do that. It's very simple. We can have some software here, the logic here, which is mostly focused around prompt engineering. And then we have a system prompt. And then, basically, prompt engineering is going to just, uh, pick this question, combine it with a system prompt in a very particular format, and then ask it to data. And then how is it going to do that? What we are going to do, how we are going to write this is basically we're going to say, okay. Whenever the user's query comes, um, I'm getting or combine it with the system instruction. And what is the system instruction? Basically, I'm gonna create this, and you say something like read the following documents and respond to the question. What are these following documents? These are all the details and, uh, you know, knowledge base that we have internally. For our company or for our retail store. So basically, in Rankin, we manually go over all our documents or, um, knowledge base. We include all those information and policies and whatever is basically said there. As part of the system prompt here. Or it could be also as part of their actual users prompt. We can manually add a software to to append it to the user prompt. But regardless of that, whether it's going to be in the system prompt by user prompt, basically by using front end, we can include everything. Every important information we have in our, uh, documents. And then include it in the context. So when the question comes, what is the refund policy? Now the LLM does not need to, uh, does not have to hallucinate, but it's not, um, ambiguous anymore because very likely that whatever the question is, it can be found somewhere in these documents that are uh, that is basically the knowledge base of the company. So this is simply how prompt engineering works and how we can use prompt engineering to make a element, rely on our internal documents and data, and answer questions. But there's one major problem with punct engineering. The major problem is that in many use cases, for example, if a big company wants to, uh, build an element, adapt it for answering employees' questions, Big companies may have millions of documents or millions of pages. So including or even thousands of pages. Including all those, um, information inside the prompt, is very costly. And a lot of times, it's not even possible. Because NMLS when they are trained, they are expecting, uh, a maximum length of, um, number of tokens in their input. So if we go beyond that, it's computationally not possible to, uh, for the element to process that and output it. It's not going to be going to be computationally very, very expensive. So all the elements have some maximum length. It's of of every thread to ask context
+
+You
+17:28:33
+
+But regardless of that, whether it's going to be the system prompt or user prompt, Basically, by using front end engineering, we can include everything, every important information we have in our, uh, documents and then include it in the context. So when the question comes, what is the refund policy? Now the LLM does not need to, uh, does not have to hallucinate, or it's not ambiguous anymore. Because it's very likely that whatever this question is, it can be found somewhere in these documents that are specific the knowledge base of the company. So this is simply how prompt engineering works and how we can use prompt engineering to make a, uh, intelligent, regarding our internal documents and data. And answer questions. But there is one major problem with Compugenie. Major problem is that in many use cases, for example, this could be company wants to, uh, build an element at a for answering employees' questions, big companies may have millions of documents or millions of pages. So including or even thousands of pages, including all those, um, information inside the pump. Is very costly. And a lot of times, it's not even possible. Because LMS event, when they are trained, they are expecting, uh, a maximum length of, uh, number of tokens in their input. So if we go beyond that, it's computationally not possible to, uh, for the element to process that. And now it's not going to really going to be computationally very, very expensive. So all these elements have some maximum length. It's of of every thread to ask context then.
+
+AI Course
+17:29:03
+
+If we go beyond that, the element can no longer process it. So the an issue. If our use case has just a few PTFs, it's fine. Contingent can work perfectly fine. If you're having a use case with thousands of PDFs and pages and documents, this approach may not be a good work because this, um, this unstructured prompt would be very, very long. And maybe beyond the maximum context window. So, um, because of that, yeah, we're going to, um, switch to the React, which is Vollebot generation in the next lecture, and we'll see how RAC can, uh, mitigate this, uh, issue. Hey, everyone. In this section, we focus on the third technique to adapt an element.
+
+You
+17:29:05
+
+If we go beyond that, the element can no longer process. So that's the main issue If our use case has just a few PDFs, it's fine. ContingDNA can work perfectly fine. If you are having a use case with thousands of PDFs and pages and documents, this approach may no longer work because this, uh, this unchecked account would be very, very long and maybe beyond the maximum context window. So, um, and because of that, we have we're going to, um, switch with the RAC, which will allow the generation in the next lecture, and you'll see how RAC can mitigate this issue. Hey, everyone. So this picture, we focus on the third technique to adapt an element for a general purpose element into a domain specific element. And that's
+
+You
+17:29:54
+
+In the previous lecture, we talked about also saw that how we can use engineering and put together all the internal documents that we have in our company, let's say. Inside the prompt, and then pass this new prompt to the element. So this way, has access not only to the user's query, but also all the available internal documents and knowledge base in our company. So this way, the purpose is that or the, uh, assumption is that the LLM should be now able to answer user's query ID based on the information given. However, the key limitation of this approach is that elements have maximum context, you know, meaning that the input prompt cannot exceed beyond the second limit. And most companies, most use cases, we have a lot of PDF files, and, uh, knowledge base is very, very, uh, big. So by putting together all the documents, it simply exceeds the maximum context left that, uh, is practical. So because of this function, function engineering is not going to really work. Especially in cases where there are thousands or even millions of PDFs available. So So RAC is solving that issue. And having started focus of this lecture, it is on RAC. Components, and how it solves that limitation.
+
+AI Course
+17:29:57
+
+This In the previous lecture, we talked about congienering, and we also saw that how we can use congienering and put together all the internal documents that we that we have in our company, let's say, inside the prompt, and then pass this new prompt to the LM. So this way, the element has access not only the user's way, but also all the available internal documents and all the face, you know, company. So this way, the purpose is that or the, um, assumption is that the element should be now able to answer user query directly based on information given. However, the key limitation of this approach is that element have maximum context window, meaning that the input prompt cannot exceed beyond the second length. And most companies, most use cases we have a lot of PDF files, and, uh, knowledge base is very, very, um, big. So putting together all the documents, it simply exceeds the maximum context length that that, uh, is practical. Because of this, prompt engineering is not going to really work, especially in cases where there are thousands or even millions of PDFs PDFs available. So RAC is solving that issue. And I'm gonna focus on this lecture is on back, its components, and how it solves that limitation.
+
+You
+17:30:07
+
+So what rank does is again, remember, previously, we had LLM and we had this what is refund policy, and Compugenie was just putting together all these document database. It was
+
+You
+17:30:57
+
+But the problem is there are thousands of PDFs and, uh, files here, so it becomes not ranking. Now what rank does is rank adds a new component here called retrieval. And the purpose of retrieval is that it has only the relevant documents to to the generation or to the element. Basically, what it does is that retrieval to type all these documents here also looks at the question and figures out which documents or which parts of each document can be helpful or can be used by service question. And which one just outputs those pieces of text here. Retrieve one basically narrows down, uh, from this huge document database, two pieces of text called retrieve one, retrieve two, and retrieve two, and retrieve which we stay that are potentially useful for answering this question. Now along with the user query, is passed to the generation or the LLM, and the LLM outputs. This way, you just narrow down the entire document database to responder set, then you're you're no longer gonna see the maximum of of elements. This is the high level idea. There are a lot of details in the original and also in the generation, and we'll talk about each of these in more detail.
+
+You
+17:31:07
+
+And we also talk about how to optimize and work out the efficiency, um, you know, optimizations that we can have. This is the high level picture of our brands. It has two main components, receiver generation,
+
+You
+17:31:13
+
+Which one just searches over the document database and just narrows it down into relevant pieces.
+
+AI Course
+17:31:31
+
+So what React does is again, remember, previously, we had LLM and we had this wise refund policy, and front end engineering was just putting together all these document database. And included as part of the input prompt. In other words, it was it was just contacting all these text, with this user query and But the problem is there are thousands of PDFs and, um, files here, so it becomes not practical. Now what Rag does is Rag adds a new component here called Retrieval. And the purpose of retrieval is that it has only the relevant documents. To to the generation or to the element. Basically, what it does is that retrieval looks at all these documents It also looks at the question and figures out which documents or which parts of each document can be helpful or can be used by scientific question. And retrieval just outputs those pieces of text here. So Archivald basically narrows down, uh, from this huge document database to pieces of called Retrieve one, Retrieve two, and Retrieve two, and Retrieve two that are potentially useful for answering this question. Now this, along with the user query, is passed to the generation or the element, and the element outputs. This way, we just narrow down the entire document database to a smaller set, and then we are we are no longer gonna exceed the maximum window size of elements. So this is the high level idea. There are a lot of details in the retrieval and also in the generation. And we talk about each of these in more detail. And we also talk about how to optimize and measure the efficiency optimizations that we can have. But this is the hardware picture of Max. It has two main components, which is called generation. Generation is nothing but the element. Maybe it's some additions which we'll talk about, but it's at its core, it's element. Which we call just such as over the document data. It's user's way by the element to answer. So So, um, let's just start by focusing on the retrieval. Again, retrieval is just equivalent of a search problem. It's it's what we want if we want to from our document database and find all the relevant pieces of text. That can be potentially helpful to answer a question. And in order to do this retrieval, there are two steps.
+
+You
+17:31:31
+
+So So, um, let's just start by focusing on the retrieval. Again, retrieval is just a command of the search problem. It's it's what we want if we want to search from our document database and find all the relevant pieces of fixed. That can be potentially helpful to answer a question. And in order to build this retrieval, there are two steps.
+
+You
+17:31:33
+
+One is to build the searchable index from documents. That is more a preprocessing step. We have documents
+
+AI Course
+17:31:33
+
+We build a special index from documents. That is more a preprocessing step,
+
+You
+17:31:47
+
+firstly process. We have some, uh, basic data structures in place. We go over those, preprocess those, and make sure we have a good index. And then the second part is when we actually want to use every single. And in that step, the problem is search because now we have a user query, and we want to go to this index type build and just retrieve all the relevant
+
+You
+17:32:28
+
+for chunks of text. So we'll be talking about all of this. I have a more, uh, some visuals here. Is the first step. We want to build a searchable index from documents. So we have some code or logic for data structure here. It takes all these document database and it builds an index. And this index is searchable. Meaning that it is following some data structures that are very efficient and and effective to search for. And then the second part is searching from the index hash one way. So when the user has a query, like, what is the refund policy? It goes to this, uh, second, uh, part of the issue one, which is search. Then this search component interacts with the index that we built in previous step. And then it outputs all the, um, relevant chunks or relevant pieces of text from the from the index. So these are the key two steps. And what we're going to do now, we're going to focus on this uh, building decks. We'll see how can we really go from this huge document database of PDF
+
+You
+17:33:04
+
+So this is typically done in three steps to go from, um, document, uh, to go from, basically, this document database to The first step is document parsing. Then we have document chunking, and finally, we have indexing. So all these three, if there if we follow them sequentially, they would be able to build evidence. So let's see what is document parsing. So document parsing is simply to go from documents which you can find the PDF, HTML, or things like that into the extracted dot text file content. So that's the whole purpose of parsing. They document parsing. We have documents. We have PDFs, and PDFs are not the kind of At the end, we signed the previous week that editor expect, uh, uh, number of documents can be obtained by having
+
+You
+17:33:15
+
+So the purpose of this document passing is to go from all these PDFs to actual, uh, sequence of text. And we'll also talk about other modalities like what is your image in the videos. But but just for simplification, let's assume videos are text only.
+
+You
+17:33:43
+
+There are two main methods for document parsing. One is rule based, which is less commonly is less common. And, um, to the best of my knowledge, it's not really popular these days. And then we have tailor based models. So are doing something that's very similar, and their pain is the same. Basically, they want to go from this PDF First, they identify all their, uh, the layout, all the different, uh, components. So this is the first thing that is document parsing, whatever algorithm is does. So first, layout detection. For example, here we have the layout. So we know that here is the title. Here is title. Here is text. Here is text. Here is
+
+AI Course
+17:34:11
+
+We go over to preprocess those and make sure we have a good index. And then the second part is when we actually want to use the retrieval. And in that step, the problem is search because now we have a user square and we want to go to this index that we built and just retrieve all the relevant, um, details or chunks of text. So we'll be talking about all of this. I have a more, uh, some visuals here. This is the first step. We want to build a searchable index from documents. So we have some code or logic or a structure here. It takes all these document database, and it builds an index. And this index is searchable. Meaning that it is following some data structures that are very efficient and and effective to search one. And then the second part is searching from index at runtime So when the user has a query, like, what is the refund policy? It goes to this second, uh, part of the retrieval. Which is search. And then the the search component interacts with the index that we built in previous step. And then it outputs all the, um, relevant chunks or relevant pieces of text from the from the index. So these are the key two steps. And what you're gonna do now, you're going to focus on this build index. We'll see how can we really go from this huge document database of PDF and possibly diagrams, tables, images, HTML into our index. So this is typically done in three steps. To go from, um, document, um, to go from, basically, this document database to the index. First set is document parsing. Then we have document chunking, and finally, we have indexing. So all these three, if they're if you follow the sequentially, you would be able to build index. So let's see what is document parsing. So document parsing is simply to go from documents which I can add the PDF, HTMLs, or things like that into the extracted dot text file content. So next, the whole purpose of parsing, a document parsing. We have documents. We PDFs, and PDFs are not we can actually provide the PDF to an editor. At the end, we signed the previous week, that editor expect, uh, not the the purpose of this document parsing is to go from all these PDFs to actual, uh, sequence of text. And we'll also talk about audio modalities like what if your image in the PDFs But just for simplification, let's assume PDFs are text only. We'll extend we'll talk about how to extend it to images. There are two main methods for document parsing. One is rule based, which is less common. It's less common, and, um, to my knowledge, it's not really popular these days. And then you have database models. So what are doing is something that's very similar, and their aim is the same. Basically, they want to go from this PDF first identify all the, um, the layout, all the different, uh, components. So this is the first thing that this document parsing, whatever algorithm is does. So first, layout detection. For example, here we have the layout. So in that here is the title. Here is title. Here is text. Here is text. This is a figure. Um, title, text. Figure is image, and there is a subtotal text. And then the second step is text extraction. So once you know the layout, there's some algorithm to apply. Like, you know, base, and so on. On. And then those are used to, um, to extract actual text from these layouts, from these rectangles. And you just put them together in a structured output like text block, and it's like the actual text. And then it just keeps doing on all, uh, doing something similar to all these different detected layouts, extract the text, and just create this structured output. So if you'll get this also for images, we can just
+
+AI Course
+17:35:07
+
+include the coordinates so that later we can somehow index those images as well. We'll learn how we would index images. For now, this is how we're going to convert all our documents, all our PDFs, infrastructure output. And there are, um, different libraries and different algorithms for document parsing. One popular example is this SpeedDoc. It's basically a library for, uh, automate documents parsing and bringing it to a uniform format. Again, it's basically as the same thing. It's just a library. It goes from your documents to convert them and then it prints them and creates this structured output here. Then another very popular library, some of the use, is Layoutparser. Also a unified toolkit for deep learning based document image analysis. And, um, it's interesting, Let me click here to see zoom in a little bit. For example, if this is one arbitrary page of a PDF, this is the code. We can just easily import it, and then use some of these internal models to detect, for example, images and, uh, Dropbox for layout detection. And all those things, and also extract text using post CRX methods. And then you see the output can be something like this. We have And
+
+You
+17:35:17
+
+And then the second step is text extraction. So once you know the layout, there's some algorithm to apply. Like, and so on. And then those are used to, um, to extract actual text from these layouts, from these retentions. I just put them together in a structured output by text block, and it's like the actual text. And then it just keeps doing on doing something similar to all these different layouts, extracted text, and just create this structure tab. So if you look at this structure tab, it's just a bunch of text And also for images, we can just, uh, include the coordinates so that later we can somehow index those images as we'll learn how we would index images. As for now, this is how we're going to And our different libraries and different algorithms for document parsing. One popular example is is TDOC. It's basically a library for, uh, automate document parsing and bringing it to a uniform format. Again, it it basically does the same thing. It's just a library. It goes from your documents, congress name, then it prints them and creates this structured document here. And then another very popular library is Layoutparser. It's also a unified tool for deep learning based document image analysis. And, um, it's interesting, uh, Ripple, and I think there should be some, uh, demo videos here and full doc. Uh, let me click here to see zoom in a little bit. So for example, if this is one arbitrary page of a PDF, is the code. You can just easily import it, and then use some of its internal models to detect, for example, images and, uh, Dropbox or layout detection and all those things and also extract text using OCR test methods. And then you see the output can be something like this. We have these, um, red red rectangles and then if identify the titles, text, PDF, table, and so on. And it's not it also works with other types of, um, documents, not only PDF, but, you know, magazines, uh, magazine scans, websites. It can it can detect
+
+You
+17:35:26
+
+So, um, and these are some sample codes. But, again, my point is, some great document parsers out there, and they are commonly used, and we don't have to really implement all these budget.
+
+You
+17:35:29
+
+Can simply use it. It's going to be just a few lines of code to go from our documents
+
+You
+17:36:01
+
+So this is, um, document parsing. And the next thing I want to talk about is the message, which is document chunking. So, um, what is document chunking? Document chunking is basically going from the documents, the extracted contents, the structured output a structured output that they obtained from document parsing in the previous set, and then you just chunk it. So the reason for that is because a lot of these documents might be coming from an entire group or report. So you're too broad and, um, it may also exceed the context window if you reach with the entire document.
+
+AI Course
+17:36:04
+
+it's not it documents not only PDF. Like, you know, magazines, uh, magazines, hands, websites. It can it can detect regions, industries, and tailor region. And extract those. And same for historical documents. So, um, and these are some sample codes. But again, my point is, um, there are some great document parsers out there, and they are currently used, and we don't have to really implement all these logic can simply use it. It's going to be just a few lines of code to go from our documents into a structured output in the next format. And also if your images also, uh, extracted images as well. So this is, um, document parsing. And the next thing I wanna talk about is the next step, which is document chunking. So, um, what is document chunking? Document chunking is basically going from the documents, the extracted contents, structured output structured output that we obtained from document parsing in the previous step. And then you just chunk it. So the reason for that is because a lot of these documents, it might be coming from an entire book or report. So you're too broad, and, um, it may also exceed the the context window if you would treat the entire document. For example, if one document is book and the applied document parsing, can we get the all the text on it from the book?
+
+AI Course
+17:36:06
+
+Read
+
+You
+17:36:19
+
+Apply document parsing and you get the all the context contents on the book. It's going to be a huge document. And we usually don't want to return that as a retrieve relevant item to the users. Because it's just too broad, and also it's too long. So these are the two main problems of, um, if we do not chunk documents. And because of that, it's very common to chunk and
+
+AI Course
+17:36:19
+
+a retrieve, uh, relevant item to be used as query because it's just too broad, so it's too long. So these are the two main problems of um, if you do not chunk documents. And because of that, very common to chunk them. And chunking means breaking documents into smaller and more manageable pieces. And we call each piece chunk
+
+You
+17:36:42
+
+the advantages of doing this is there are a couple of advantages we said here. We can handle non uniform document in. So we have different documents, and these documents may have different And it's not usually good if you have, uh, some, um, very small or very, very non documents in our retreat. Ideally, we want our retreat content to have, um, somebody call in. Also improves precision because now we can really, um, find the actual, um, um, text content or smaller piece within a document that is relevant to the user's way.
+
+AI Course
+17:36:55
+
+There are different terminologies there. But, um, basically, we go from this into smaller chunks. And the advantage of doing this is there are a couple of advantages we set here. Document in. So we have different documents, and these documents we have different And it's not usually good if you have, uh, some, uh, very small or very, very long documents in our retrieve. Ideally, we want our retreat content to have, um, somebody call in. Doesn't improve precision because now we can really, um, find the actual, um, text content or smaller piece within a document that is relevant to the user's way. The third advantage is it overloading limitations. Again, that's because dependence requires certain, um, maximum context And by just tracking them, it's going to be more efficient, and we don't have to include parts of the document that is really not relevant or too helpful to answer either way. And it's also optimizing compression resources
+
+You
+17:37:09
+
+The third advantage is it it's programming, again, that's because requirements require certain maximum context window. And while the tracking them, it's going to be more efficient, and we don't have to include of the document that is really not too relevant or too helpful for answer users. Right? Optimizing computational resources because again, at the end, it's very effective. We don't have to include parts of the document that are. So this is document tracking, and there's some, um, different algorithms for document chunking. We have length based algorithm. In chunks based on their specific, uh, specified length. So we specify a particular length,
+
+AI Course
+17:37:09
+
+So this is document chunking and there are some different algorithms for document chunking. We have length based algorithm. Simply just list the text in which chunks place under a specific, uh, specified length. So we specify a particular length, and then it just
+
+AI Course
+17:37:31
+
+And this is very heuristic based, and the the problem with this is it may split in the middle of sentences because it's just purely based on an it. So a lot of these chunks or, um, yeah, a lot of these chunks may up somewhere that is not really meaningful for it to be a lot of sentence. The other algorithm is regular expression based. And they use regex to split the text based on some specific punctuations for instance, like
+
+AI Course
+17:37:36
+
+like, uh, dots or question marks, something like that. This might be slightly better than left face. Because we no longer speak something in some, like, middle of sentences. Another problem is it lacks
+
+You
+17:37:37
+
+And this is a very heuristic based, and the the problem with this is it may split in the middle of sentences because it's just purely based on the so a lot of these chunks or, um, yeah, a lot of these chunks may up somewhere that is not really meaningful or it's in the middle sentence. The other algorithm is regular expression base. Based, um, speech, and they use regex to split the text based on some specific punctuation for instance, like, uh, dots or question marks, things like that. This might be slightly better than left base. Because we no longer split something in in some, like, middle of sentences. But now the problem is it
+
+You
+17:37:40
+
+fixed.
+
+AI Course
+17:37:55
+
+Sometimes when you reach a a dot, the topic might become different. And just by, um, explaining the text based on the punctuations, it's it's not really handling the cement the the meanings of of, uh, different chunks of the text. So it lacks that semantic understanding. Then the third algorithm, um, or meta, which is more useful than I'm gonna use is, um,
+
+You
+17:37:57
+
+Might be about the same topic. Sometimes when you reach a a dot, the topic might become different. And just by, um, as we think the text based on the same punctuations, it's it's not really handling the cement the the meanings of, uh, different chunks of the text. So it lacks that semantic understanding. Then the third algorithm, um, or method, which is more useful, and I'm gonna use this, uh, basically, we use specialized SPSS
+
+You
+17:37:59
+
+So these are specialized
+
+You
+17:38:06
+
+such as there is high chance code plus. So they're already built with having those particular
+
+You
+17:38:15
+
+documents in mind, and they're built knowing that those documents can have very, um, complex structure. And they work well just because of how they're implemented. So this method is usually more useful in doc for documents in the structure formats. Again,
+
+You
+17:39:10
+
+again, we don't have to implement any of these, um, in general. Splitters out there. One popular example is x x x splitters by Nanjing. And this this this is the documentation and some overview, and it can be an interesting read or some, uh, guides and so on. But again, at the high level, what they do is they go from this document interest list. And there's also other lectures. This is just one example. So back to our lecture. And then other thing I wanna share is that that now there's some, uh, type parameters that you can tune. Uh, for example, in action, has this chunk size, chunk weight lab separator, and so on. And these are specifying how to, uh, split the text For example, the chunk size is, uh, 35. What it means is that, ideally, we want to chunk it such such that each chunk um, is has 35, um, characters, for instance. And then the other is overlap. This is because a lot of times we may want to overlap this chunks, so that, um, basically, um, we do not again cut somewhere in the middle that is not working on. So for example, this is a real example of mentioning going from, um, this text. It is, um, other parameters. You can see it out to become this smaller chunks. And it also overlaps. For example, here it tends with form of
+
+You
+17:39:26
+
+So, um, that's it. That's that's all about, um, document chunking. The next, uh, the next, uh, step is indexing, and that's what you're going to find. So I have indexing here, and, basically, up to this point, we
+
+You
+17:39:39
+
+structures, like HTMLs, and, um, PDFs, whatever into smaller chunks. And each chunk is either some, you know, sequence of characters or text. Or they can be like images coming from figures or tables and things like that. So for now, again, for simplification, let's focus on text.
+
+You
+17:41:00
+
+We'll cover how to handle images short. So the purpose of indexing is to store each of these chunks in a data structure that is easy to search. And it's just simply a data structure. It's it's nothing more. And there are different ways. We can do index. There are different, uh, methods. And then as a result, there are different search mechanisms depending on how index For example, we have, um, keyword based indexing, have full text index, have knowledge base knowledge graph based, and vector based indexing. Based. Let's briefly see keyboard based and full text, and then we'll focus on vector based because vector based is what's commonly used nowadays in practice, and it's very important. We'll just briefly discuss about this, which are a little bit more transactional. And then knowledge practice, there's some, uh, interesting reads out there. By building Pluto. You're gonna stick it because it's it's too specific, and there's certain only certain use cases that rely on knowledge base knowledge base indexing. And almost, uh, like, 90, 95% of uses that are available are relying on vector based indexing. So this is stuff. Text based, including keyword or food, is basically matching partial or exact query terms with the content of documents. So basically, during this indexing process, the index, um, like this example, if these are the text, they they can be follow some data structure. And one very good example is technologies. And then it fills an index. So then you want to search for me, and for example, you have a query. It can easily refer to this index and say, hey. These parts these chunks are including your query. Either it could be partial match or it could be exact query match. This is something again that the user can specify. For example, you can say, hey. You think all the chunks that has this particular or has this particular sentence in it. And text based, um, indexing methods would just enable you to do that. Again, these are good, and these are what traditionally been used, but the problem is that, um, you
+
+You
+17:41:27
+
+you no longer would be able to do any partial or even exact match. Even if there are some documents that having synonyms of your query. So these text based methods are again good for certain uses, but they lack the semantic understanding of documents. And because of that, vector based methods are, um, used commonly. So let's see what is vector based. Basically, the idea behind your vector based method is that instead of indexing the the text in inside each chunk, we use some pretrained models to encode text into some vectors. And these models are called embedding models. So let me step back a little bit.
+
+AI Course
+17:41:29
+
+that basically meet the text at element boundaries such as headers, items, code blocks. So they're already built with having, uh, those particular, um, documents in mind. And built knowing that those documents can have very, um, complex and they work well just because of how they're implemented. So this method is usually more useful in doc for documents in like video sessions and so on. And, again, we don't have to implement any of these, uh, in general. There are lots of sweaters out there. One popular example is Texas Texas sweaters by Langchain. And this is this is the documentation as an overview, and it can be interesting to read. There's some uh, guides and so on. But, again, at a high level, what they do is they go from this document in this speech. There's also other languages. This is just one example. So back to our lecture. And another thing I want to share is that is that now there's some, uh, hyperparameters that we can tune. Uh, for example, an action, uh, has this chunk size, chunker, ellapse, separator, and so on. And these are specifying how to, uh, split the text. For example, the chunk size is 35. What it means is that ideally we want to chunk it such such that each chunk um, is has 35, uh, characters, for instance. And then the other is overlap. And this is because a lot of times, we may want to overlap these chunks a little bit so that, um, basically, we do not again cut somewhere in the middle that is not too optimal. So for example, this is a real example of Nanjing going from, um, this text with these, um, upper parameters. Then you can see that would become these smaller chunks. And it also overlaps. For example, here, it ends with four months. It starts from four months. So four months is the overlap between these. So, um, that's it. That's that's all about, um, document chunking. Next, uh, next, um, step is indexing. And that's what we're going to do next. I have indexing here, and basically up to this point we event from all our documents and defend the structures like HTML and, um, PDFs, whatever into smaller chunks. And each chunk is either some, you know, sequence of characters or text. Or they can be like images coming from figures or tables and things like that. For now, again, for simplification, this is not text. We'll cover how to handle images shortly. The purpose of indexing is to store each of these chunks in a data structure that is easy to search. And it's just simply a data structure. It's nothing more. And there are different ways we can do indexing. There are different, uh, methods. And then as a result, there are different search mechanisms depending on how index. Example, we have, um, keyword based indexing. We have indexing. We have knowledge base knowledge graph based and vector based. Let's briefly see keyboard based and full text, and then we'll focus on vector based because vector based is is what's commonly used nowadays in practice, and it's very important. We'll just briefly discuss about these, which are a little bit more traditional. And then now this practice, there's some You're gonna see it because it's it's too specific and there's only it's second use cases that rely on knowledge base, knowledge base indexing. And almost, uh, like, 1995% of use cases that I'm aware of are all are relying on indexer based indexing. So let's start. Text based, including keyboard or food, is basically matching partial or exact query times with the content of documents. So basically during this indexing process, pre index, uh, like this. For example, if these are the text, we they can follow some data structure, and one very good example is Elasticsearch for instance, which takes care of all these functionalities. And then it fills an index. So then you want to search from it. And for example, you have a query. It can easily refer to this index and say, hey. These parts these chunks are including your query. Either it could be partial match or it could be exact query match. And this is something again that the user can specify. For example, you can say, hey, give me all the shots that has this particularity word or has this particular sentence in it. And text based, um, indexing methods would just enable you to do that. Again, these are good, and these are what traditionally been used, but the problem is that, not really capturing the semantic meaning of documents. For example, if you are using synonyms, then you're no longer able to do any partial or even exact match. Even if there are some documents that having Synapse off your query. So these text based methods are again good for certain use case or lack the semantic understanding of documents. And because of that, vector based methods are, um, used finally. So let's see what is vector based method. Basically, the idea behind vector based method is that instead of indexing the the text inside this chunk, we use some pre trained models to encode text into some vectors. And these models are called embedding models. So let me step back a little bit and first understand what is an embedding model, how it works.
+
+You
+17:41:29
+
+So
+
+You
+17:41:34
+
+the
+
+AI Course
+17:41:36
+
+Embedding model that maps some input, for example, text,
+
+AI Course
+17:41:42
+
+or their model set also map other modalities like images or even videos. So this basically map their input text
+
+You
+17:41:54
+
+this basically map their input text into a vector in high dimensional space. It's also called embedding space. Space. And the way that these models are trained is that when they map to text have similar meanings semantically, they would end up nearby and miss the embedding space.
+
+You
+17:42:17
+
+So the embedding can capture the semantic meaning of relations. The idea of this first time, there was this paper work today, and this is the first time, again, as far as I know, that, um, this was, uh, visually shown that, hey, you can train some word models or, um, embedding models. That after we map each word, after training, we map each word and we look at, um, its positioning in this embedding space, Similar words would have certain relationships. For example, um, synonyms would be end of
+
+You
+17:42:40
+
+some relationship. For example, going from, uh, woman to man, would be having the same direction of going from. So this vector is here, again, in case you are interested to to read, it's quite old down. Was the sort of, um, something very important, which later turn out to be converting models. And, um, they have all these diagrams that I just showed you, and also they explain how they train. And why after training, they get this, uh, meaningful embedding space as similar words are end up being nearby and so on. So, yeah, you can just take a look at this data. And, um, and after this, basically,
+
+AI Course
+17:42:42
+
+input vector work in high dimensional space. It's also called embedding space. And the way that these models are trained is that when they map text their embedding a space, it's a very semantically meaningful space. Meaning that if two texts have similar meanings semantically, they will end up nearby in this embedding space. Their their embedding their their vectors in high dimensional space would be nearby. So the embeddings can capture the semantic meaning of relationships. And the idea of this first time there was this paper of work today, and this is the first time, again, as as far as I know, that, uh, this was, uh, visually shown. That, hey, you can train some word models or, um, embedding models. That after we map each word after training, we map each word and we look at, um, its positioning in this embedding space, Similar words would have certain relationships. For example, um, synonyms would be end up near and there's some relationship, for example, going from, uh, woman to man, could be having the same direction of going from queen to king. So this is here. Again, in case you are interested to to read, it's quite old but it was a sort of, um, something very important, which later turned out to be editing models. And, um, they have all this diagram set I just showed you, and also they explain how they train. And why after training, they get this, uh, meaningful embedding space. That's in a lot of words are end up being nearby as well. So, yeah, you can just take a look at this paper. And, um, and after this, basically,
+
+AI Course
+17:42:56
+
+and encode them. So what that means is that we have a table like this. We have the one column is a text
+
+AI Course
+17:43:25
+
+text, each chunk to a vector, a numerical vector. And again remember, it's it's these these numerical vectors, um, are, you know, are semantically semantically meaning for the meetings. Right? So if two vectors are nearby, it means that their meanings close, or they're talking about something similar. So that's the part to go from the chunks to entities. Now again, I mentioned there are lots of editing models these days for example. And I had an embedding model which is quite good and
+
+You
+17:43:25
+
+this is what we can. We can just rely on some embedded models, not what you pay, some advanced models. There are lots of models available this days. We can use one embedding model, and then we can go from all the chunks that we have, text chunks, and encode. So what that means is that you have a table like this. Have the one column is the text. For example, to learn more about our products, contact this number. And then it just gets mapped to the submittal space. And there is a point in this slide by the general space, and this is the point. And So in other words, we are mapping each text each chunk to vector. A normal vector. And again, remember, it's it's these these normal vectors, um, are you know, are semantically like, the relation is semantically meaningful in the medicine. So if two vectors are nearby, it means that their meanings are close where they're talking about something similar. So that's the part to go from the chunks to an index table. Pending models these days. For example, OpenAir has an embedded model, which is quite good, and
+
+You
+17:43:27
+
+and, um, you can just have something under the embedding.
+
+You
+17:43:34
+
+And those embeddings can be stored and those can be used to format in text state. And again, there are bunch of other, uh, embedding others. I just search Google. I don't know if they're really the best ones
+
+AI Course
+17:43:38
+
+off use. It's called text embedding three. And, um, you can just add something into the embedding. And those embeddings can be used for and those can be used for now indexing. And again, there are a bunch of other, uh, embedding models. I just searched Google. I don't know if they're really the best ones or other better ones now. But just wanted to show some some examples. So we have open and I, text cleaning, pretty large,
+
+You
+17:43:40
+
+other bigger ones now, but just wanted to show some some examples. So we have open analytics embedding three large.
+
+AI Course
+17:44:14
+
+embed model, and there are all these different, uh, models available. And this is output time and time again, meaning that this is so after we map the this is going to be the the length of the embedding. So for now, the large has 3,072 numbers in it in their embedding vector. So back to the lecture, um, this is the idea behind embedding model. And also how we use, um, an embedding model to convert this these chunks and build an index. Again, in the next video, we will talk about how this enables us to search from at one time. But for now, our focus is on only building index. So and this is how we are going to build index. We are going to use something and just do this data. Alright. So we talked about text and another question is what if
+
+AI Course
+17:44:18
+
+text and what if some parts of our extracted content or some of the chunks are not text, they're images. And it's a big comment because a lot of PDFs
+
+You
+17:44:24
+
+This is output dimension dimension, meaning that this is so after we map the text, this is going to be the the length of the the embedding. So for example, open and large has 3,072 numbers. Anything they're embedding vector. So actually, lecture, um, this is the idea behind embedding model. And also how we use, um, an embedding model under this this chance and do that index. Again, in the next video, we will talk about how this enable us to search from at one time. But for now, our focus is on only building the index. This is how we are going to do index. We are going to use some text and reading and just build this data. Alright. So we talked about text, and now the question is what if some parts of our, uh, extracted content or some of the chance are not textured images? And it's great, because I love videos about these days or even, uh, HTML. Or might have diagrams or some figures or some images. And it's very important to somehow encode those images as
+
+AI Course
+17:44:35
+
+And it's very important to somehow encode those images as well so that when a user asks a question, we can also on those images as well to answer the question. How do we do that? Your, um, your tool base. There are two options. First option is to use an, um, image embedding model. Very similar to text embedding models,
+
+You
+17:44:36
+
+How do we do that? There are, um, there are two ways. There are two options. First option is we use an, um, image embedding model. Very similar to text embedding models. We have some image embedding
+
+You
+17:44:40
+
+So they're
+
+You
+17:44:59
+
+We have cars here, so they're nearby, and truck here. And then, like, animals seems to be here, like dog, cats, and so on. So these are these are image embedding models. And, um, it also started, uh, the the first model that was widely used in in our industry was the OpenAir screen button. And what they did was they, um,
+
+AI Course
+17:45:01
+
+here, you can see auto. Uh, we have cars here, so they're nearby and truck here. And then, like, animals seems to be here, like dog, cats, and so on. Um, so these are these are image editing models. And it also started, uh, the the first model that was, um, widely used in in our industry was the MNS three button. And what they did was they, um, they trained a model using some contrastive pre trained method
+
+You
+17:45:04
+
+train.
+
+You
+17:45:08
+
+And they train all these
+
+AI Course
+17:45:15
+
+able to see the result. They explain exactly how they train. But at the very high level, image encoder. And they train all these both these hex encore and image encoder. Yep. Yep. And their data is basically pairs of images and they corresponding caption or or, uh, corresponding title. And then, um, this is strange such
+
+You
+17:45:23
+
+caption or or, uh, corresponding title. And then, um, is trained such that they learned embedding space is also meaningful. It's basically shared embedding space, meaning that now you map a text to this embedding space, and also an image which is relevant or similar to the
+
+AI Course
+17:45:47
+
+So this is another example of, um, using an image embedding model. And one thing to note is that, um, it's very important if you want to map images into some embedding space, it's very important to use a model such as clip that has a shared embedding space. And use exact text encoder for for, um, indexing our text text raw chunks. Because otherwise, there is no, um, relation between image embedding and text embedding. So if we want to also map images, we use for SaaS
+
+AI Course
+17:45:58
+
+Text embedding is being used to map our in our text, um, index And then its image and body part is built is used to map to build our image embedding index. So that's about it, and that's about how to handle, uh, images.
+
+AI Course
+17:46:20
+
+The second option they have is we use some captioning model, and captioning model are the ones that you pass some image to them. And then they describe the image. And they they generate a caption for it in a textual format. This way, they can basically first go from image to caption using this caption model. You can see in this example, we have the image that shows a cat sitting on a whatever under a subject. And now we use this chunk instead of this image to index. And now we can use our original text encoder to encode this image.
+
+AI Course
+17:46:24
+
+Because now we only encode its its corresponding caption. So both options are available to build our
+
+AI Course
+17:46:27
+
+what option one, which was using a a model which shared embedding space.
+
+You
+17:46:37
+
+So this is another example of, uh, using an image embedding model. And one thing to note is that, um, it's very important. If you want to map images into some embedding space, it's very important to use a model such as grid has a shared embedding space and use the exact text encoder for for, um, indexing our text text watch chunks. Because otherwise, there is no, um, relation between image and text and images. So if we want to also map images, we use for instance, encoder is being used to map our in our text, um, index. And then its image in order part is built is used to map to build our image embedding index. So that's about it, and that's about how to handle, uh, images. This is option one. There's also another option instead of relying on image embedding models. Second option we have is we use some captioning model, and captioning model are the ones that you have some image and then they describe the image, and they they generate the caption for it in a text format. This way, we can basically first go from image to caption using this caption model. You can see in this example, we have image shows a cat sitting on a whatever under a sofa. And now we use this chunk instead of this image to index. And now we can use our original text encoder to encode this image. Because now we only import its its corresponding caption. So both options are available to use our index data. We discussed what option one, which was using the model, the shared embedding space. Use the imaging color to and to map images and build the index, and use text in order for textual chunks. We can also use option two, which means that we can use any text, uh, embedding model that we want. And for images, we can use image captioning to go from image to text
+
+AI Course
+17:46:38
+
+Use the image encoder to and to map images and build the index, and use text encoder for textual chunks. We can also use option two, which means that you can use any text, uh, every model that you want. And for images, we can use image that can go from
+
+You
+17:46:53
+
+But regardless of the option views, at the end, we would end up with something like this. We have, um, converted all our images and chunks that are extracted from the documents into two in indexes. Is image index, another is text index. And these are under the HOTA status.
+
+AI Course
+17:46:54
+
+and for images, we can use image tracking to go from image to text, and then from text, we can just encode it to the, uh, to to the lengths. So But regardless of which option you use, at the end, we will end up with something like this. We have, uh, unrected all our images and chunks that are extracted from the documents into two in indices. One is image index, another is text index. And these are under the Huddl's tables.
+
+AI Course
+17:47:39
+
+These are And then for text, So this is how we pre process the entire documents and we go from the raw documents such as Html or PDF into an actual, um, images, image index and text index. So we've we've created all, uh, sets of let me go back here. Okay. We talked about this building a searchable index on documents. Now next, what you're going to talk about is now how can we how can this index help us for to schedule an action item? Alright. So far we talked about ritual, and we also saw that ritual is a search problem. And so how can we build a scalable index from our documents? Once we have this a scalable index from the documents, now the retrieval is ready to be used, meaning that we can now use some algorithm to search this index at runtime whenever there is a query. So let's zoom into that and understand the data.
+
+You
+17:48:42
+
+These are for images. And then for text, very similar chunk one, this vector, chunk two, this vector, and so on. So this is how we preprocess the entire documents, and we go from the raw documents such as HTML or PDF into an actual, um, images, image, and text image. So we've we've covered all, uh, sets of let me go back here. Okay. We talked about this building a searchable index on documents. Now next what you're going to talk about is now how can we how can this index help us for for searchable at runtime? Alright. So far, we talked about which we want, and we also saw that which we want is a search problem. And we saw how can we build scalable index from our documents. Once we have this scalable index from the documents, now the retrieval is ready to be used, meaning that we can now use some algorithm to search from this index at one whenever there is a query. So let's zoom into that and better understand it better. Again, in the first step, the index. Now the focus is going to be on the session understand how SIS works. Meaning that when there is a prompt, like, what is the refund policy and this and this algorithm, this component has access to the index. How can it efficiently find most relevant chunks from this index relevant to this and output. So that's the focus of this lecture. So how do we really search? For a given input text, we want is we want to, again, retrieve relevant chance of document efficiently. Do that, you can use the same text input that we use to encode the text and firstly encode the user's way. Which is what is your response price. And output of this is just a vector and embedding. Now remember, we use model we use the text model model that is trained such that similar sentences are going to be nearby, meaning that their embedding vector is going to be nearby in that embedding space. Now now that we have this embedding of the user's query, it's time to find the which other embeddings are very similar to this. So that's why it's called the search problem. And it's basically a nearest neighbor search. Meaning that even a query input or a query point, you want to look at all other points which are associated with text chunks or even image chunks and find the ones that are closest to this point. And we define some distance, um, measure or, uh, some similarity measure. And a lot of times, you can use things like Euclidean distance, cosine distance, and those, uh, formulations to find the distance between 2.2 points in this embedding distance.
+
+You
+17:48:53
+
+So we use something like cosine distance, and then we just compare every single embedding from the index, big square embedding, and we find the closest one.
+
+You
+17:48:55
+
+Process.
+
+You
+17:49:05
+
+For example, this could be some different chunks that are extracted from the original documents. Something like a refund policy to return or replace an item and blah blah blah.
+
+You
+17:49:26
+
+These are um, basically, chunks, objects, obtained from documents that they're embedding or very similar to embedding of switch, which is what is open source. So this is how we run search, and this is ideal because now we can simply pass this along with the user's way to the generation, which we'll talk in future. News. But now let's let's, um, inspect this nearest neighbors so you understand how can you really find the most similar images to query a meeting.
+
+You
+17:49:33
+
+This is a very traditional and common, uh, problem in computer science. Basically, the problem is given a bunch of
+
+You
+17:49:35
+
+dimension for simplicity.
+
+You
+17:51:13
+
+We're also given an p of q, which is the query, uh, ending for the point. Uh, representing the query vector. And what we want is that we want to find the top k, uh, most, uh, like, nearest points. In this example, if k is three, we want to return these three points. Now there are two different categories of algorithms for nearest neighbor search. One is exact nearest neighbor, and then another is approximate nearest neighbor or ANN. And there are also other, um, like, categories between ANN. Let's just start with ex exact nearest neighbor, and then we'll talk about ANN. So exact nearest neighbor is basically, um, I think I don't have any visual for that. It's very obvious. Basically, this is this is the exact nearest neighbor. Neighbor. Basically, here, the goal is to find look at all other points in this space and find the top three closest points. This is basically, uh, guaranteeing that the return points are exactly the top three closest points to this query. Now the problem with exact nearest neighbor is that it's computationally expensive, especially if there are lots of points. So lots of points means that you have lots of chance and as a result, they're, like, um, very large number of points in our bidding history. And that's usually the case in irons because, again, the knowledge base for the internal documents that we have after we do chunking and the map is chunking a bit. There might be millions or even billions of, um, data points. And comparing query, the billions of data points each time is going to be very expensive. And that's why we have approximate nearest neighbor, uh, algorithms. And basically, the idea behind approximate nearest neighbor is that um, we don't need to necessarily return the the absolute closest, um, points. But if you return something, uh, reasonable and reasonably close to e e q, even if they are not the top three, it should be still fine. So, um, basically, it's an approximate version of the exact nearest neighbor. So let's see how, um, some of these big category of algorithm works. You have, um, lots of different algorithms, and all of those can be, um, categorized into one of these four buckets. One is clustering based. Another is tree based. We have also locality sensitive caching. There are also other methods like graph based and so on, which we're not covering because of their very specific spaces. Um, but but let's let's understand how, um, how basically these, um, categories of
+
+You
+17:51:39
+
+uh, approximate nearest nearest nearest nearest nearest neighbor algorithm works. Clustering based and then basically, um, cluster to point. Once. So we have all these clusters. For example, we have cluster here, this cluster, this cluster, and we have all these five clusters. And then we also have a representative point from each cluster. It can be usually the central. So, um, let's say, you have a representative of each of these clusters. Now when a new query comes and you want to find the top closest point to it, first, we find the which cluster it belongs to. And then we only search within those cluster. So this way, we sacrifice accuracy a little bit.
+
+AI Course
+17:52:13
+
+Again, in the first step we click our index. Now the focus is going to be on the search and understand how search works. Meaning that vendor is a pump, like, where's the refund policy and the and this algorithm. This component has access to index. How can it efficiently find most relevant chunks from this index, relevant to this, and output it? That's the focus of this lecture. So how do we really search? For a given input text, what we want is we want to again retrieve relevant chunks of documents efficiently. To do that, we can use the same text input that we used to encode the text. And firstly encode the user's way, which is what is your refined parsing. And out of this is just a vector animating. Now remember, we use model the text model model that is trained such that similar sentences are going to be nearby, meaning that your embedding vector is going to be nearby in that embedding space. Now now that we have this embedding of the user's weight, it's time to find a which other embeddings are very similar to this. So that's why it's called the search button. And it's basically the nearest neighbor search. Meaning that even a query input or a query point, we want to look at all other points which are associated with text chunks or even image chunks and find the ones that are closest to this point. And if I find some distance, um, measure or, uh, some similarity measure, a lot of times, you can use things like Euclidean distance, cosine distance, and those, uh, formulations. Find the distance between two two points in this embedding distance. And cosine distance is a is anometric we use to measure the distance of two points. So we use something like cosine distance. And then we just compare every single m being from the index with this query embedding, and we find the closest ones. And once we have the closest ones, we can now go back to the original chunk of x x and include those as the output of this process. For example, this could be some different chunks that are extracted from the original documents. Something like a refund policy to return or replace an item store credit and the rest. And it is important to note that I can shoot. So these are, um, basic elements of text coming from documents that they're embedding or very similar to the embedding of this question, which is what is your refund policy. So this is how we run search. And this is ideal because now we can simply pass these along to the user's way to the generation, which we'll be talking future use. But now let's let's, um, inspect this nearest neighbor search. We understand how can we really find the most, uh, similar embeddings to a query embedding. So this is a very traditional and common, um, nonlinear science. Basically, the problem is given a bunch of points in high dimensional space. This example is just two dimension for simplicity. And we're also given an e of q, which is the query, everything for the point. Representing the query vector. And what we want is that we want to find them okay, uh, most, uh, the nearest points. In this example, if k is three, we want to return these three points. Now there are two different categories of accidents for nearest neighbor search. One is exactly nearest neighbor, and then another is approximate nearest neighbor, four a and m. And there are also other, um, like, categories within ANN. Let's just start with ex, uh, exact nearest neighbor, and then we'll talk about ANN. So exact nearest neighbor is basically, um, I think I don't have any new. Just very obvious. Basically, this is this is here, the goal is to find look at all other points in this space. And find the top three, uh, closest points. This is basically, uh, guaranteeing that the return points are exactly the top three closest points to this point. Now the problem with exact nearest neighbor is that computationally expensive, especially if there are lots of points. So lots of points means that we have lots of chance As a result, they're, like, um, very large number of points in our embedding space. And that's usually the case in in Rax because, again, the knowledge base or the the internal documents that you have after a video chunking and the map is chunking and everything, there might be millions or even billions of, um, database. And concurrent query, the billions of data points each time is going to be very expensive. And that's why we have approximate nearest neighbor algorithms. And basically the idea behind approximate nearest neighbor is that we don't need to necessarily return the the absolute closest, um, points. But if we return something, uh, reasonable and reasonably close to e e q, even if they are not the top three, it should be still fine. So, um, basically, it's an approximate version of the exact user snippet. So let's see how, um, some of these big category of algorithm works. Works. We have, um, lots of different algorithms, and all of those can be, um, categorized into one of these four buckets. One is clustering based. Um, another is tree based. We have also locality sense detection. And there are other methods like graph based, masson, we're not covering because of their very specific use cases. Um, but let's let's understand how, um, how basically these, um, categories of, um, approximate nearest neighbor near neighbor agronomist. Clustering based and then basically, uh, cluster the point once. We have all these clusters. For example, we have cluster here, this cluster, this cluster, and we have all these five clusters. And then we also have a representative point from each cluster. It can be usually different. So, um, let's say you have a representative of each of these clusters. Now when a new query comes and you want to find a top close to point to it, first, we find, uh, which cluster it belongs to. And then we only search within those cluster. So this way, we sacrifice accuracy and limit. Instead, we don't have to go over all data points or billions of data points. We can only go over the data points within that cluster. For example, if an a query comes, let's say here, which I have my, uh, I'm just, uh, mickey here. So it first we would discover that this query point belongs to r one or region one or cluster one. And then we would search for the top three points, which is going to be this, this, and this. However, this point in r two might be even closer, but again, we are sacrificing a little bit of accuracy for efficiency. And in practice, it it works usually fine, and it's in in most use cases, it's fine to sacrifice that little bit of accuracy. So this is clustering based and the other category is tree based approximative
+
+You
+17:52:41
+
+We don't have to go over all data points or billions of data points. We can only go over the data points within that cluster. Example, if an if query comes, let's say here, which I have my, uh, I'm just my cursor here. So at first, we would discover that this query point belongs to r one or region one or cluster one. Then we would search for the top three points, which is going to be this, this, and this. However, this point in r two might be even closer, but, again, you are sacrificing the data accuracy for actions. And in practice, it's it's it works usually fine, and it's in in most use cases, it's fine to sacrifice that little bit of accuracy. So this is clustering based, and the other category is tree based approach, median search. And these algorithms are available basically partition the data and form a So basically, they go from the entire data space into sub spaces. And then this way, they have these, uh, leave notes, which corresponds to regions. Now when a query comes, they can just, uh, traverse history, and they see which, um, region it ends up with. And that that region is basically the region where we can just do over all the points. Kinda be related somehow because when you're following the tree in some sense, we're just dividing the space, uh, high dimensional space. Into regions. Uh, but there are different algorithms, and some of them are more purely focused on tree based structures. And then the other category is located sensitive fashion. And basically this method
+
+AI Course
+17:52:41
+
+basically, they go from the entire data space into subspaces. And then this way, then they have these, uh, leaf nodes. Which corresponds to regions. Now when a query comes, they can just, uh, traverse history, and they see which, um, region it ends up with. And that region is basically the region where we can just loop over all the points. And, you know, this can be related somehow because when you are forming the tree in some sense, we are just dividing the space, uh, high dimensional space. Into billions. Uh, but there are different aggregates, and some of them are more purely focused on tree based structures. Then the other category is locative sensitive fashion. And basically this method
+
+AI Course
+17:53:00
+
+the way that they're different is that if two points are if two inputs are similar, their hash function will be out there. The outline of the hash would be also now similar. So these functions are designed Again, they are designed such that when two inputs are close or similar or relatively similar, Their hash output totally similar. And this way, if you have such
+
+You
+17:53:10
+
+the way that they're different is that if two points are if two inputs are similar, the hash function would be those there. The outcome of the hash would be also, uh, similar. So these functions are designed again, they are designed such as when two inputs are close or similar or relatively similar, their hash output would also be similar. And this way, if you have such function, this very Now let's say that the space of hash function is, uh, five buckets, let's say, uh, one, two, three, four, five, six buckets. And then as a preprocessing step, we can just, um, apply the hash function to each of our data points, billions of data points.
+
+You
+17:53:16
+
+And define their, um, data bucket by applying the hash function to these points.
+
+AI Course
+17:53:17
+
+And then as a preprocessing step, we can just, um, apply a hash function to each of our attributes of data points. And we find their, um, data byte by applying the hash function to these points. And once we have this script,
+
+You
+17:53:23
+
+So, again, all of these algorithms are following something very similar. They just try
+
+You
+17:53:50
+
+try to find a way to, um, organize the the the points, such that at very time, we can only look for nearest neighbors between a certain, uh, customer or bucket. So that's how we can, um, efficiently run nearest neighbor. Find the most possess like, most similar chunks to a query or text route. And this is the overall, um, workflow. Basically, the text prompt comes here. It goes to the same text input there. And then the embedding gear goes into the search, um, algorithm. And then, again, there could be different com complexities. It depends on how we design our searching system.
+
+AI Course
+17:54:35
+
+something very similar. They just try to find a way to, um, organize the the the points. Such as at query time, we can only, um, look for nearest neighbors within a certain cluster or bucket. So that's how we can, um, efficiently run nearest neighbor. Find the most closest, like, most similar chunks to a query or text prompt. And this is the overall, um, workflow. Basically, the text prompt comes here, it goes to the same text mode there. And then the embedding here goes into this search, um, algorithm. And then, again, there could be different comp complexities. It depends on how we design our searching system. So let's say we have inter cluster search. It's kind of cluster index method. And then these methods, first try to find the clusters that this embedding. Basically, this x branch belongs to. And let's say that we find out that it's here. Now the next step is this interrupt cluster search which such as only this class and finds the most relevant, uh, or closest points. Then once it knows the closest points, it can, um, return their their corresponding data. So here we see retrieve doc one, retrieve doc two, retrieve doc k, and each of these are the basic feature chunk of that document. And all these are based on the, uh, points are are coming from the index image and index text. Which are the result of our data preparation process to go from our documents to index. So that's that's all all I wanted to cover for search. Search. And the main thing to, um, preview with ACP, just, um, efficiency discussions, That's, you know, exactly your neighbor is not optimal, so we'll try we can use various algorithms of active person in your neighbor. Then we can efficiently find most relevant text pieces and image pieces, and then we can just return them as a retreat item.
+
+AI Course
+17:54:39
+
+Now as always, we don't have to really implement these approximate nearest neighbors, native
+
+You
+17:54:40
+
+Let's say we have inter cluster search, we find out clustering based method. And then these methods, first, try to find the clusters that is embedding. Basically, this x branch belongs to. And let's say, if if find out that it's here, now the next step is this intro of clusters, which searches only this cluster and finds the most relevant, uh, or closest points. Once it knows the closest points, it can, um, return their their corresponding data chunk. So here we see retrieve dot one, retrieve dot two, retrieve dot k. And each of these are basically chunk of that document. And all these are based on the, uh, these points are are coming from the index images and index six. Which are the result of our data preparation process to go from our documents to index. So that's that's all about all I wanted to cover for search. And the main thing to, um, review is basically just, um, efficiency discussions that's, you know, is not optimal. So we try to use various algorithms or approximate nearest neighbor. Then we can if we can find more relevant text pieces and image pieces, and then we can just return them as they retreat. Now as always, we don't have to really implement these approx many years. There are lots of libraries, different companies have implemented those.
+
+AI Course
+17:54:50
+
+basic face is exactly that library. It's basically library for efficiency, in light research, and costing of the inspectors. These inspectors are those meetings or
+
+You
+17:54:58
+
+Basically face is exactly that library. It's basically library for efficiency, smart to search. And clustering of dense vectors. This these dense vectors are those endgame score, um, representation of our data sets. So basically, there are lots of algorithms, and we can easily use them, and there is a documentation here on, uh, face.ai. It explains, you know, similarity search. They talk about various distance metrics metrics that you discussed.
+
+You
+17:55:27
+
+As equating distance, plus distance, and so on. And then here, they mention how to install dependent how, you know, various documentations and, um, So So, um, that's it. That's all I wanted to, uh, cover for search. You also learn, um, building power pipeline. At this point, we are over with the risk reward component program. So we exactly back to the original. Right? We exactly know how this retrieval works and how we can build an index and also later efficiently use some search algorithms to retrieve relevant documents. Now the next thing that we wanna talk about in the next lecture is the generation component. Now we understand what are some details about it and how can we even improve it.
+
+AI Course
+17:55:27
+
+I they talk about various distance metrics metrics that we discussed, such as Euclid and distance, cosign, distance, and so on. And then here, they mentioned how to, um, install it and then how, you know, various augmentations and, um, buttons. So, um, that's it. That's all I wanted to uh, cover. Search. We also learned, um, building our Python. So at this point, we are over with the receiver component of React. We exactly back to the original. Right? We exactly know how this retrieval works and how we can build an index. Also later efficiently use some search algorithms to retrieve relevant documents. Now the next thing that we want to talk about in the next lecture is the generation component. Now we understand what are some details about it and how can we even improve it.
+
+AI Course
+17:55:48
+
+Hey. We are getting closer to wrap up brand. And in this video, we focus on the generation component. So we'll just, uh, ignore this part, which we already learned about every feature, and we assume that every feature can retrieve some relevant chunks. And now we focus on the generation piece. And it's very simple, so it's going to be, um, short. So its core, again, the generation is. Just.
+
+AI Course
+17:55:55
+
+What we do is that once you have the retrieve content from the original, it gets, um, added and combined with the user's
+
+AI Course
+17:56:15
+
+which is what is the refund policy. And this way, we form our prompt. The prompt simply goes into the LLM, and LLM, uh, generates some output. However, in practice, we can make, uh, this generation a little bit more advanced. And that's going to be this workflow. So we can just combine it with the prompt engineering, which we then as the second technique for adaptation. Basically, the main difference is that now this generation has these both components, prompt engineering and element. First, the widget content as well as the user query goes into prompt engineering.
+
+You
+17:56:15
+
+Hey. We are getting closer to wrap up, and in this video, we focus on the generation So we'll just, uh, ignore this part, which we already learned about the retrieval, and we assume that the retrieval and retrieve some relevant chunks And now we focus on the generations. And it's very simple, so it's going to be, um, short. So at its core, again, the generation is step 11. Just step thirteen eleven, the general purpose 11. You do is that once you have to retrieve content from the retrieval, it gets and combined with the users' query, which is what what is their refund policy. And this way, we form our prompt. The prompt simply goes into the LMM, and the LMM, uh, generates some help. However, in practice, we can make, uh, this generation and that's going to be this workflow. So we can just combine it with the prompt engineer, which we learn as a second technique for adaptation. Basically, the main difference here is that now element. First, the retrieve content as well as the user query goes into the front engineering.
+
+You
+17:56:22
+
+And and other things depending on the use case.
+
+You
+17:56:34
+
+And then content engineering, again, the output would be a new prompt as we learn. And now that's, um, enhance prompt or the engineer prompt would go into the element, and element would just normally process that and output the response. And again,
+
+AI Course
+17:56:43
+
+Prompting. We can add chain auth our prompting and and other things depending on the use case. And then prompting again the output would be a new prompt as we learned last time. And now that enhanced prompt or the engineer prompt, we're going to the element, and element would just normally process that and output the response. And again, prompt engineering, we can combine all different techniques that we learned. This this can be one example, but this is just an example. For example, the, uh, prompt engineering can just convert all those switching functions as well as, um, a user's way. Something like this. This is an example. This is not necessarily related to reachable or rags.
+
+You
+17:56:43
+
+For example, the, uh, prompt engineering can just convert all those written patterns as well as, uh, the user's way. Something like this. This is an example. This is not necessarily related to reaching out or ranks.
+
+You
+17:57:03
+
+Basically, we can have users initial query here. We can have context from search if we are doing some searches. This case, it's basically probably the the rich feed items. And then here, we do all the specific content that you are helpful who answers, uh, company name, internal questions. And then here's some instructions or ask is to deliver concise and accurate response and so on. It can also do future promptings, show some examples that this is how you cite. Or things like that. We can do, uh, general dot, um, zero dot, general dot.
+
+AI Course
+17:57:04
+
+But, basically, we can have users in a short way here. We can have context from search if we are doing some searches. This case, it's basically probably the the rich quick attempt. And then here we do role specific routing, but you are a helpful assistant we roll a specific prompt that you are helpful, assistant who answers, uh, company name internal questions. And then here's some instructions you'll ask us to be very very concise and accurate response and so on. And how to do future talking, show some examples that this is how you cite or things like that. We can do, uh, channel.
+
+You
+17:57:43
+
+After we have the content, we convert those raw, rich content as well as user way into something more structured and more specific and helpful for the element to generate response. So that's it. That's the generation. It simply an element, and we can come on if we want engineering to improve it. Now one important thing that I want to note here is that, um, remember, this is the general representative. So if our retrieved items are not really accurate or is not too helpful, instead of them being fake. So for example, let's say we have a retrieval and a retrieval or embedding model that you're using are not too accurate. So that means that some of these retrieve retrieve items are not necessarily too helpful to answer this question or maybe irrelevant. Now LEM has no idea
+
+AI Course
+17:58:07
+
+So that's it. That's the generation. It's simply an LML, and we can combine it with content engineering to improve it. Now one important thing that I want to note here is that, um, remember, this is the general So if our retrieved items are not really accurate or is not too helpful, this LMM may fail. So for example, let's say we have a retriever and a retriever or embedment method that you're using are not too accurate. So that means that some of these retrieve retrieve items are not necessarily too helpful to answer this question or maybe irrelevant. Now Aiden has no idea basically has all this information, and he thinks that all these are helpful or can be helpful to answer this. So it may just, uh, produce some answers that are not necessarily, um, accurate. So one step we can go one step further and, um, also fine tune this element. Basically, this letter, combining all these methods that we learned, font tuning and font engineering and rag to improve our generation process. And this is a very, um, tricky training, and there is a very good paper called AFT. I think it stands for retrieval augmented fine tuning. So the idea is
+
+AI Course
+17:58:10
+
+So
+
+You
+17:58:17
+
+So So it may just, uh, produce some answers that are not necessarily, um, accurate. So one step we can go one step further and, uh, also fine tune this model. Basically, this way, you're combining all these methods that we learned fine tuning and fine engineering and bank to improve our generation process. And this is a very, um, tricky training, and there is a very good paper called BAST I think it stands for, uh, retrieval augmented point training. So the idea is basically, again, the motivation is if if retrieval quality is not good, then it generates some optimal outputs. So we want to fine tune an element to distinguish between relevant and irrelevant documents.
+
+AI Course
+17:58:22
+
+want to fine tune an element to distinguish between relevant and irrelevant documents. So that's the key idea. Basically, the idea is that we label some document some relevant and irrelevant rich content. And then continue training that Dell EIM that we have. And during this fine tuning Dell EIM
+
+You
+17:58:35
+
+Which we find in And then we continue training that data that we have. And during this fine tuning, data is basically trained to generate responses based on relevant documents while minimizing the influence of the relevant documents. Level what it tries to do. It tries to learn which which documents are relevant, which ones are irrelevant. So during the generation, it would only it would rely more on relevant.
+
+AI Course
+17:58:37
+
+And you can see the the workflow here. Again, I describe at the very high level what it tries to do. It tries to learn which retrieve documents are relevant, which ones are irrelevant. So during the generation, it would only it would rely more on relevant documents and ignore irrelevant documents. And if you're interested to learn more about
+
+You
+17:58:46
+
+And if you're interested to learn more about it, this is the paper. It it was published in '24. And, um, it explains all the details how they're training the model, and, uh, it's an interesting I also discuss, you know, training time and how they prepare the data and, you know,
+
+You
+17:59:23
+
+and how it why it improves, uh, the performance of that. So that's it. That's all we can do, and we can push the generation to, uh, get the best possible response that you're hoping for. We can combine it with project engineering, and we can also fine tune so that it knows which which documents are relevant and which ones are relevant. So that's generation, and, um, we are done with the with the, um, architecture and design of racks. In the next, um, lecture, we'll learn about evaluation. Of racks and how should we evaluate and what are some of the important metrics. Alright. We are getting closer to wrap up rank, and in this picture, we focus on the evaluation. You can imagine, um, there are different components involved in racks, and therefore, their evaluation is, uh, more complicated. There's not a single or multiple metrics that they can easily use to evaluate Racks. There is this retrieval component
+
+AI Course
+17:59:23
+
+And, uh, it explains all the details how they are training the model and interesting with and it also discusses, you know, training time and how they prepare the data and, you know, rack update and how weight improves, uh, their performance over rack. So that's it. That's all we can do, and we can push the generation to, uh, get the best possible, uh, response that we're hoping for. Combine as a prompt in general, and we can also fine tune so that it knows which which documents are relevant and which ones are irrelevant. So that's generation, and, um, we are done with the with the, uh, architecture and design of racks. In the next lecture, we'll learn about evaluation of Racks and how should we evaluate and what are some of the important metrics. Alright. We are getting closer to wrap up rack. And in this lecture, we'll focus on evaluation. So As you can imagine, uh, there are different components involved in racks, and therefore the evaluation is, uh, more complicated. There's not the single or multi metrics that you can easily use to evaluate Racks. There is the switchable component and how
+
+AI Course
+18:00:34
+
+accurate the retrieval item are items are. And then the LMM generates something. There are different aspects. Like, how accurate the generation is. Is it hallucinating? Is it actually correct? Or is the generation aligned with what was given in the context or it's different? All these different aspects basically makes the evaluation more complicated. But um, the evaluation can be, um, described in this video. We have query. We have the result or the generation, and then we have the given context to the element. And then can evaluate these practices from different perspectives. And each perspective is involving some of these components. Um, so these are some of the key aspects that we generally evaluate racks is context relevance. One is faithfulness. One is answer relevance and answer correctness. We should relate them within the result I create. And again, by just looking at this figure, it should it should, um, you should have some idea about why each of these, uh, aspects are important. Um, so let's just quickly go over it in. Firstly, we have context relevance. And, again, here we have context relevance between query and context. So basically here, what we are trying to measure that accurately, the retrieval component selects relevant documents based on the query. So, um, this is basically trust to evaluate in a ranking lexicon. Basically, what we wanna know is that if, um, basically, given the query, are they retrieved components relevant or not? And this is actually measuring the quality of the retrieval component. And for that, we have this evaluation metrics which are more used mostly using rank system. And again, because context relevance is signed of ranking, we want to know that given the correct answer, we're able to retrieve those in the context
+
+You
+18:00:37
+
+aspects. Like, how accurate the generation is. Is it? Is it actually correct? Or is the generation aligned with what was given in the context, or it's different? So all these different aspects basically makes the evaluation more complicated. But the evaluation can be, um, described in this figure. We have great. We have result order the the generation, and then we have the given context to the element. And then we can evaluate this right system from different perspective. And each perspective is involving some of these components. Um, so these are some of the key aspects that we generally evaluate rights. Is context relevance. One is faithfulness. One is answer relevance and answer It should relate it in the result and weight. And again, by just looking at this figure, it should should, um, you should have some idea about why each of these aspects are important. Um, so let's just quickly go over them. First, we have context relevance. And again, here we have context relevance between query and context. So basically, here, what we are trying to measure is that how accurately that we see what components selects relevant documents based on the query. So, um, this is basically choice we evaluate in a ranking system. Basically, what we want to know is that if, um, basically, given the query, are they rich with components relevant or not? And this is actually measuring the quality of the rich components. And for that, we have this evaluation metrics, which are more used mostly using ranking again, because context relevance is kind of ranking, we want to know that given the correct answer, be able to retrieve those in the context or not. These metrics are also ranking metrics, each rate, MRR, NCCG, and precision at
+
+AI Course
+18:01:12
+
+or not. These metrics are also ranking metrics, hitch rate, MRR, MVCG, and precision. Okay? If you are interested to learn more about the details of these metrics, each of them have really great, you know, Viki's and there are some papers for some of these. And feel free to take a look to understand how they are designed, what is the formula and so on. But at a high level, these are ranking metrics. So they try to measure how how, um, good our green flag tens are. Given the correct answer or or given the query. Um, basically, it depends on how how we find it. It. So this is context relevance, and then we have faithfulness. Let's go back to here. Faithfulness is to measure if the results are faithful to the context, meaning that if the generated response is actually coming from the provided context or it's just something different or hallucination. And this is a difficult type of evaluation so it's very
+
+AI Course
+18:01:13
+
+So
+
+You
+18:01:16
+
+really great, you know, VTs and there are some takers for some of these. And feel free to take a look to understand how they are designed, what is the formula and so on. But at a high level, these are ranking measures. So they try to measure how how, um, good our visual effects are. Given their cardiac cancer or or given the query. Um, basically, it depends on how how we define it. So this is context relevance, and then we have faithfulness. Let's go back to here. Faithfulness is to measure if the results are faithful to the context, meaning that if the generated response is actually coming from a provided context or it's just something different or hallucination. And this is a difficult type of evaluation, so it's very subjective. So humans are usually needed part of the evaluation, or we can rely on fact checking tools and consistency checks. We're gonna have some example here.
+
+You
+18:01:59
+
+We want to know that if the generation is aligned with this context at their given together. And then finally, you have answer crisis. Again, let's go back to here. Answer crisis is trying to measure if the result is correct. Given the query. If the generation is relevant to this query. So here, basically, it's a uh, the metrics we use are basically the ones that are used to measure the quality of generating systems like caption generation, like those kind of systems. And these metrics are mostly used for that those purposes. So here, again, we have the prompt. And then the goal is that we compare the generated response with the correct response, and we see how aligned they are, how how close they are. Then these are some of the metrics to compare two different sentences or paragraphs and measure how similar they are. So this is all about the evaluation of ranks and, uh, different aspects of it, and for which aspect we also saw various
+
+You
+18:02:22
+
+Hello, everyone. This is the last lecture of week two, and this lecture, we'll just put everything together and, uh, review the overall system design of the right system. And it's basically just, um, you're basically just putting together everything that you've learned. So we saw the indexing process. During the indexing process, we go from our document database
+
+You
+18:02:33
+
+So a bunch of PDFs and it could be different structures or, like, HTML, smart accounts, anything like that. We have document parsing and chunking, and then we apply a a text encoder or
+
+You
+18:02:35
+
+model.
+
+AI Course
+18:02:38
+
+We want to know that if the generation is aligned with this context. That they're, uh, given to the editor. And then finally, we have answer correctness. Again, let's go back to here. Answer correctness is trying to measure if the result is correct given the query if the generation is relevant to this query. So here, basically, it's a uh, the metrics we use are basically the ones that I use to measure generated systems, like caption generation, like those kind of systems. And these metrics are mostly used for that those purposes. So here again, we have the prompt. And then the goal is that we compare the the generated response with the correct response, and to see how aligned they are, how how close they are. Then these are some of the metrics to compare two different sentences or paragraphs and measure how similar they are. This is all about the evaluation of RACs and, uh, different aspects of it, and for which aspect we also saw various, um, metrics. If you're interested, for most of those metrics, they're they're, uh, they did the papers, and that's tutorial online. If you're not familiar with, you can just preview those. But this is how we evaluate our existing data. Hello, everyone. This is the lecture of video, and this lecture, we'll just put everything together and, uh, review the overall system design of the WAC system. And it's basically just, um, we are basically just putting together everything that we've learned. So we saw the indexing process. During the indexing process, we go from our document database, and these are the internal, um, knowledge base. For our retailers. So let's say, it's part of PDFs and it could be different structures or like HTML, smart accounts, anything like that. We have document parsing and chunking, and then we apply the texting code or text encoder and image encoder. These are coming from the model like, uh, OpenAir split model.
+
+You
+18:03:11
+
+Indices, um, indices for index for text and index for images. And this is just a data. It's nothing it's not too complicated. It's just a table with, uh, ID of the chunk and the actual editing of that chunk. That is the indexing process we do it once offline on our data and we do this. Now every time there is a query by user, first, we have some, uh, guardrails, I think here, or we can call it safety different terminologies. This is mostly referred to as input codlets, and we have also another output codlet, codlet. But, again, the purpose of these two is to just ensure that the system is going to be safe. And in that case, there is a request that is not going to be safe to process, the the system do not, uh, assist with that. Similarly, if the request is safe, but somehow the output is not safe or it's not, uh, it's wireless point,
+
+You
+18:03:25
+
+it would, uh, uh, uh, So these are these two companies these two components. Then we have, uh, query rewrite or also query expansion. The purpose of this is to, um, improve and enhance the provided query by the user.
+
+You
+18:03:59
+
+Because a lot of times, the initial query may have some problems. It may be ambiguous. There might be missing punctuations. There might be some grammatical problems. So this is what this component does. And then after we have this final, uh, enhanced user grade here, first, it goes to the text border to get the embedding. Then this nearest neighbor search, which is typically an approximate nearest neighbor. Finds all most closest embeddings to this user query, like enhanced user query coming from here. And find all those relevant chunks, and that those can be text or image chunks. And then all of them are passed as they reach with content to the generation along with the enhanced prompt. So first on engineering at whatever, like, roller specific conking, future conking, chain of thought, and make it a very nice comprehensive background. And in 02/2000, which is Python.
+
+AI Course
+18:04:02
+
+Indices for index for text and index for images. And this is just a data. It's nothing it's not too complicated. It's just a data with, uh, ID of the chunk and the actual embedding of that chunk. So that is the indexing process. We do it once offline on our data and rebuild these. Now every time there is a query by user. First, we have some, uh, guardrails I can hear. We can call it safe if you think there are different technologies. This is it's mostly very direct to us input guardrails. And we also another output quadrate, quadrate. But again, the purpose of these two is to just ensure that the system is going to be safe. Meaning that if there is a request that is not going to be safe to process, the system will not, uh, assist with that. And similarly, if a request is safe, it is not safe or it's not, uh, it's by us. It would, uh, the app would go to this or safe configuring would discard the request and not show the the final response to these. So these are these two comments these two comments. Then we have, uh, query rewrite. Or also query expansion. The purpose of this is to, um, improve and enhance the provided query by the user. Because a lot of times, the initial query may have some problems. Maybe ambiguous there might be missing punctuations. There might be some, uh, grammatical problems. So this is what this component does. And then after we have this final, uh, enhanced user query here, first, it goes to the text border to get embedding. Then this nearest neighbor search, which is typically an approximate nearest neighbor, um, finds almost, uh, closest embeddings to this user query, like, enhanced user query coming from here, and find all those relevant chunks. And that those can be text chunk or image chunk. And then all of them are passed as the retrieve content to the generation along with the enhanced prompt. So first prompt engineering, add whatever, like, role specific content, free shot content, change of thought, and make it a very nice comprehensive, uh, prompt. And it would also include all the rich content.
+
+You
+18:04:22
+
+Will also include the which is fine. And then the which is fine, then we go into the element. And this element would be a general direct seven where we can fine tune that using graph method. To have a more, um, accurate element. But regardless of that, we just use our element here by the event prompt and have and then we find the resources to to things. So this way, we have control already this element, meaning that we can just whenever we have more PDFs or more um, new knowledge, you know, knowledge base, we can just add everything here. We can index it. And then from that point on,
+
+You
+18:04:43
+
+similarly, bags are also useful to get, um, light data. And we'll learn more about that in the next, uh, week when we talk about two calling and search. But basically, still, frankly, very very useful because when the request comes here, if you have another component, that searches the data and get some light data, very similar way, that light data can also come
+
+You
+18:04:52
+
+get to this switchable component and relevant parts can come here. And this way, everyone would always have access to light data. But again, you learn about search and tooling in in the next week. And, uh, this week, we can just wrap up our, uh, rag topic. So, yeah, that's it.
+
+AI Course
+18:04:52
+
+To have a more, uh, accurate LN. But regardless of that, we'll just use our LN here, either the finding one. And element would just, uh, process a given prompt and output So this way, we have control over PDFs or more, uh, knowledge in our knowledge base. We can just add everything here. We can index it. And then from that point on, anytime there is a user query, this whole system will take you straight on those newly added documents as well. So it's very easy to just add or bring some documents from the system. And still early, bags are also useful to get, um, live data. And learn more about that in the next, uh, week when we talk about tool culling and search. But, basically, still, Magna will be very very useful because when, uh, request comes here, if you have another component and get some light data, in a very similar way, that light data can also come get to this rich UI component, and relevant parts can come here. And this way, the element would always have access to light data. But again, you'll learn about search, uh, tool called in in the next week. And, uh, this week, we can just wrap up our, uh, ride topic. So yeah. That's it.

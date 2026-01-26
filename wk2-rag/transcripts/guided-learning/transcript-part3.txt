@@ -1,0 +1,318 @@
+17:47:39
+
+These are And then for text, So this is how we pre process the entire documents and we go from the raw documents such as Html or PDF into an actual, um, images, image index and text index. So we've we've created all, uh, sets of let me go back here. Okay. We talked about this building a searchable index on documents. Now next, what you're going to talk about is now how can we how can this index help us for to schedule an action item? Alright. So far we talked about ritual, and we also saw that ritual is a search problem. And so how can we build a scalable index from our documents? Once we have this a scalable index from the documents, now the retrieval is ready to be used, meaning that we can now use some algorithm to search this index at runtime whenever there is a query. So let's zoom into that and understand the data.
+
+You
+17:48:42
+
+These are for images. And then for text, very similar chunk one, this vector, chunk two, this vector, and so on. So this is how we preprocess the entire documents, and we go from the raw documents such as HTML or PDF into an actual, um, images, image, and text image. So we've we've covered all, uh, sets of let me go back here. Okay. We talked about this building a searchable index on documents. Now next what you're going to talk about is now how can we how can this index help us for for searchable at runtime? Alright. So far, we talked about which we want, and we also saw that which we want is a search problem. And we saw how can we build scalable index from our documents. Once we have this scalable index from the documents, now the retrieval is ready to be used, meaning that we can now use some algorithm to search from this index at one whenever there is a query. So let's zoom into that and better understand it better. Again, in the first step, the index. Now the focus is going to be on the session understand how SIS works. Meaning that when there is a prompt, like, what is the refund policy and this and this algorithm, this component has access to the index. How can it efficiently find most relevant chunks from this index relevant to this and output. So that's the focus of this lecture. So how do we really search? For a given input text, we want is we want to, again, retrieve relevant chance of document efficiently. Do that, you can use the same text input that we use to encode the text and firstly encode the user's way. Which is what is your response price. And output of this is just a vector and embedding. Now remember, we use model we use the text model model that is trained such that similar sentences are going to be nearby, meaning that their embedding vector is going to be nearby in that embedding space. Now now that we have this embedding of the user's query, it's time to find the which other embeddings are very similar to this. So that's why it's called the search problem. And it's basically a nearest neighbor search. Meaning that even a query input or a query point, you want to look at all other points which are associated with text chunks or even image chunks and find the ones that are closest to this point. And we define some distance, um, measure or, uh, some similarity measure. And a lot of times, you can use things like Euclidean distance, cosine distance, and those, uh, formulations to find the distance between 2.2 points in this embedding distance.
+
+You
+17:48:53
+
+So we use something like cosine distance, and then we just compare every single embedding from the index, big square embedding, and we find the closest one.
+
+You
+17:48:55
+
+Process.
+
+You
+17:49:05
+
+For example, this could be some different chunks that are extracted from the original documents. Something like a refund policy to return or replace an item and blah blah blah.
+
+You
+17:49:26
+
+These are um, basically, chunks, objects, obtained from documents that they're embedding or very similar to embedding of switch, which is what is open source. So this is how we run search, and this is ideal because now we can simply pass this along with the user's way to the generation, which we'll talk in future. News. But now let's let's, um, inspect this nearest neighbors so you understand how can you really find the most similar images to query a meeting.
+
+You
+17:49:33
+
+This is a very traditional and common, uh, problem in computer science. Basically, the problem is given a bunch of
+
+You
+17:49:35
+
+dimension for simplicity.
+
+You
+17:51:13
+
+We're also given an p of q, which is the query, uh, ending for the point. Uh, representing the query vector. And what we want is that we want to find the top k, uh, most, uh, like, nearest points. In this example, if k is three, we want to return these three points. Now there are two different categories of algorithms for nearest neighbor search. One is exact nearest neighbor, and then another is approximate nearest neighbor or ANN. And there are also other, um, like, categories between ANN. Let's just start with ex exact nearest neighbor, and then we'll talk about ANN. So exact nearest neighbor is basically, um, I think I don't have any visual for that. It's very obvious. Basically, this is this is the exact nearest neighbor. Neighbor. Basically, here, the goal is to find look at all other points in this space and find the top three closest points. This is basically, uh, guaranteeing that the return points are exactly the top three closest points to this query. Now the problem with exact nearest neighbor is that it's computationally expensive, especially if there are lots of points. So lots of points means that you have lots of chance and as a result, they're, like, um, very large number of points in our bidding history. And that's usually the case in irons because, again, the knowledge base for the internal documents that we have after we do chunking and the map is chunking a bit. There might be millions or even billions of, um, data points. And comparing query, the billions of data points each time is going to be very expensive. And that's why we have approximate nearest neighbor, uh, algorithms. And basically, the idea behind approximate nearest neighbor is that um, we don't need to necessarily return the the absolute closest, um, points. But if you return something, uh, reasonable and reasonably close to e e q, even if they are not the top three, it should be still fine. So, um, basically, it's an approximate version of the exact nearest neighbor. So let's see how, um, some of these big category of algorithm works. You have, um, lots of different algorithms, and all of those can be, um, categorized into one of these four buckets. One is clustering based. Another is tree based. We have also locality sensitive caching. There are also other methods like graph based and so on, which we're not covering because of their very specific spaces. Um, but but let's let's understand how, um, how basically these, um, categories of
+
+You
+17:51:39
+
+uh, approximate nearest nearest nearest nearest nearest neighbor algorithm works. Clustering based and then basically, um, cluster to point. Once. So we have all these clusters. For example, we have cluster here, this cluster, this cluster, and we have all these five clusters. And then we also have a representative point from each cluster. It can be usually the central. So, um, let's say, you have a representative of each of these clusters. Now when a new query comes and you want to find the top closest point to it, first, we find the which cluster it belongs to. And then we only search within those cluster. So this way, we sacrifice accuracy a little bit.
+
+AI Course
+17:52:13
+
+Again, in the first step we click our index. Now the focus is going to be on the search and understand how search works. Meaning that vendor is a pump, like, where's the refund policy and the and this algorithm. This component has access to index. How can it efficiently find most relevant chunks from this index, relevant to this, and output it? That's the focus of this lecture. So how do we really search? For a given input text, what we want is we want to again retrieve relevant chunks of documents efficiently. To do that, we can use the same text input that we used to encode the text. And firstly encode the user's way, which is what is your refined parsing. And out of this is just a vector animating. Now remember, we use model the text model model that is trained such that similar sentences are going to be nearby, meaning that your embedding vector is going to be nearby in that embedding space. Now now that we have this embedding of the user's weight, it's time to find a which other embeddings are very similar to this. So that's why it's called the search button. And it's basically the nearest neighbor search. Meaning that even a query input or a query point, we want to look at all other points which are associated with text chunks or even image chunks and find the ones that are closest to this point. And if I find some distance, um, measure or, uh, some similarity measure, a lot of times, you can use things like Euclidean distance, cosine distance, and those, uh, formulations. Find the distance between two two points in this embedding distance. And cosine distance is a is anometric we use to measure the distance of two points. So we use something like cosine distance. And then we just compare every single m being from the index with this query embedding, and we find the closest ones. And once we have the closest ones, we can now go back to the original chunk of x x and include those as the output of this process. For example, this could be some different chunks that are extracted from the original documents. Something like a refund policy to return or replace an item store credit and the rest. And it is important to note that I can shoot. So these are, um, basic elements of text coming from documents that they're embedding or very similar to the embedding of this question, which is what is your refund policy. So this is how we run search. And this is ideal because now we can simply pass these along to the user's way to the generation, which we'll be talking future use. But now let's let's, um, inspect this nearest neighbor search. We understand how can we really find the most, uh, similar embeddings to a query embedding. So this is a very traditional and common, um, nonlinear science. Basically, the problem is given a bunch of points in high dimensional space. This example is just two dimension for simplicity. And we're also given an e of q, which is the query, everything for the point. Representing the query vector. And what we want is that we want to find them okay, uh, most, uh, the nearest points. In this example, if k is three, we want to return these three points. Now there are two different categories of accidents for nearest neighbor search. One is exactly nearest neighbor, and then another is approximate nearest neighbor, four a and m. And there are also other, um, like, categories within ANN. Let's just start with ex, uh, exact nearest neighbor, and then we'll talk about ANN. So exact nearest neighbor is basically, um, I think I don't have any new. Just very obvious. Basically, this is this is here, the goal is to find look at all other points in this space. And find the top three, uh, closest points. This is basically, uh, guaranteeing that the return points are exactly the top three closest points to this point. Now the problem with exact nearest neighbor is that computationally expensive, especially if there are lots of points. So lots of points means that we have lots of chance As a result, they're, like, um, very large number of points in our embedding space. And that's usually the case in in Rax because, again, the knowledge base or the the internal documents that you have after a video chunking and the map is chunking and everything, there might be millions or even billions of, um, database. And concurrent query, the billions of data points each time is going to be very expensive. And that's why we have approximate nearest neighbor algorithms. And basically the idea behind approximate nearest neighbor is that we don't need to necessarily return the the absolute closest, um, points. But if we return something, uh, reasonable and reasonably close to e e q, even if they are not the top three, it should be still fine. So, um, basically, it's an approximate version of the exact user snippet. So let's see how, um, some of these big category of algorithm works. Works. We have, um, lots of different algorithms, and all of those can be, um, categorized into one of these four buckets. One is clustering based. Um, another is tree based. We have also locality sense detection. And there are other methods like graph based, masson, we're not covering because of their very specific use cases. Um, but let's let's understand how, um, how basically these, um, categories of, um, approximate nearest neighbor near neighbor agronomist. Clustering based and then basically, uh, cluster the point once. We have all these clusters. For example, we have cluster here, this cluster, this cluster, and we have all these five clusters. And then we also have a representative point from each cluster. It can be usually different. So, um, let's say you have a representative of each of these clusters. Now when a new query comes and you want to find a top close to point to it, first, we find, uh, which cluster it belongs to. And then we only search within those cluster. So this way, we sacrifice accuracy and limit. Instead, we don't have to go over all data points or billions of data points. We can only go over the data points within that cluster. For example, if an a query comes, let's say here, which I have my, uh, I'm just, uh, mickey here. So it first we would discover that this query point belongs to r one or region one or cluster one. And then we would search for the top three points, which is going to be this, this, and this. However, this point in r two might be even closer, but again, we are sacrificing a little bit of accuracy for efficiency. And in practice, it it works usually fine, and it's in in most use cases, it's fine to sacrifice that little bit of accuracy. So this is clustering based and the other category is tree based approximative
+
+You
+17:52:41
+
+We don't have to go over all data points or billions of data points. We can only go over the data points within that cluster. Example, if an if query comes, let's say here, which I have my, uh, I'm just my cursor here. So at first, we would discover that this query point belongs to r one or region one or cluster one. Then we would search for the top three points, which is going to be this, this, and this. However, this point in r two might be even closer, but, again, you are sacrificing the data accuracy for actions. And in practice, it's it's it works usually fine, and it's in in most use cases, it's fine to sacrifice that little bit of accuracy. So this is clustering based, and the other category is tree based approach, median search. And these algorithms are available basically partition the data and form a So basically, they go from the entire data space into sub spaces. And then this way, they have these, uh, leave notes, which corresponds to regions. Now when a query comes, they can just, uh, traverse history, and they see which, um, region it ends up with. And that that region is basically the region where we can just do over all the points. Kinda be related somehow because when you're following the tree in some sense, we're just dividing the space, uh, high dimensional space. Into regions. Uh, but there are different algorithms, and some of them are more purely focused on tree based structures. And then the other category is located sensitive fashion. And basically this method
+
+AI Course
+17:52:41
+
+basically, they go from the entire data space into subspaces. And then this way, then they have these, uh, leaf nodes. Which corresponds to regions. Now when a query comes, they can just, uh, traverse history, and they see which, um, region it ends up with. And that region is basically the region where we can just loop over all the points. And, you know, this can be related somehow because when you are forming the tree in some sense, we are just dividing the space, uh, high dimensional space. Into billions. Uh, but there are different aggregates, and some of them are more purely focused on tree based structures. Then the other category is locative sensitive fashion. And basically this method
+
+AI Course
+17:53:00
+
+the way that they're different is that if two points are if two inputs are similar, their hash function will be out there. The outline of the hash would be also now similar. So these functions are designed Again, they are designed such that when two inputs are close or similar or relatively similar, Their hash output totally similar. And this way, if you have such
+
+You
+17:53:10
+
+the way that they're different is that if two points are if two inputs are similar, the hash function would be those there. The outcome of the hash would be also, uh, similar. So these functions are designed again, they are designed such as when two inputs are close or similar or relatively similar, their hash output would also be similar. And this way, if you have such function, this very Now let's say that the space of hash function is, uh, five buckets, let's say, uh, one, two, three, four, five, six buckets. And then as a preprocessing step, we can just, um, apply the hash function to each of our data points, billions of data points.
+
+You
+17:53:16
+
+And define their, um, data bucket by applying the hash function to these points.
+
+AI Course
+17:53:17
+
+And then as a preprocessing step, we can just, um, apply a hash function to each of our attributes of data points. And we find their, um, data byte by applying the hash function to these points. And once we have this script,
+
+You
+17:53:23
+
+So, again, all of these algorithms are following something very similar. They just try
+
+You
+17:53:50
+
+try to find a way to, um, organize the the the points, such that at very time, we can only look for nearest neighbors between a certain, uh, customer or bucket. So that's how we can, um, efficiently run nearest neighbor. Find the most possess like, most similar chunks to a query or text route. And this is the overall, um, workflow. Basically, the text prompt comes here. It goes to the same text input there. And then the embedding gear goes into the search, um, algorithm. And then, again, there could be different com complexities. It depends on how we design our searching system.
+
+AI Course
+17:54:35
+
+something very similar. They just try to find a way to, um, organize the the the points. Such as at query time, we can only, um, look for nearest neighbors within a certain cluster or bucket. So that's how we can, um, efficiently run nearest neighbor. Find the most closest, like, most similar chunks to a query or text prompt. And this is the overall, um, workflow. Basically, the text prompt comes here, it goes to the same text mode there. And then the embedding here goes into this search, um, algorithm. And then, again, there could be different comp complexities. It depends on how we design our searching system. So let's say we have inter cluster search. It's kind of cluster index method. And then these methods, first try to find the clusters that this embedding. Basically, this x branch belongs to. And let's say that we find out that it's here. Now the next step is this interrupt cluster search which such as only this class and finds the most relevant, uh, or closest points. Then once it knows the closest points, it can, um, return their their corresponding data. So here we see retrieve doc one, retrieve doc two, retrieve doc k, and each of these are the basic feature chunk of that document. And all these are based on the, uh, points are are coming from the index image and index text. Which are the result of our data preparation process to go from our documents to index. So that's that's all all I wanted to cover for search. Search. And the main thing to, um, preview with ACP, just, um, efficiency discussions, That's, you know, exactly your neighbor is not optimal, so we'll try we can use various algorithms of active person in your neighbor. Then we can efficiently find most relevant text pieces and image pieces, and then we can just return them as a retreat item.
+
+AI Course
+17:54:39
+
+Now as always, we don't have to really implement these approximate nearest neighbors, native
+
+You
+17:54:40
+
+Let's say we have inter cluster search, we find out clustering based method. And then these methods, first, try to find the clusters that is embedding. Basically, this x branch belongs to. And let's say, if if find out that it's here, now the next step is this intro of clusters, which searches only this cluster and finds the most relevant, uh, or closest points. Once it knows the closest points, it can, um, return their their corresponding data chunk. So here we see retrieve dot one, retrieve dot two, retrieve dot k. And each of these are basically chunk of that document. And all these are based on the, uh, these points are are coming from the index images and index six. Which are the result of our data preparation process to go from our documents to index. So that's that's all about all I wanted to cover for search. And the main thing to, um, review is basically just, um, efficiency discussions that's, you know, is not optimal. So we try to use various algorithms or approximate nearest neighbor. Then we can if we can find more relevant text pieces and image pieces, and then we can just return them as they retreat. Now as always, we don't have to really implement these approx many years. There are lots of libraries, different companies have implemented those.
+
+AI Course
+17:54:50
+
+basic face is exactly that library. It's basically library for efficiency, in light research, and costing of the inspectors. These inspectors are those meetings or
+
+You
+17:54:58
+
+Basically face is exactly that library. It's basically library for efficiency, smart to search. And clustering of dense vectors. This these dense vectors are those endgame score, um, representation of our data sets. So basically, there are lots of algorithms, and we can easily use them, and there is a documentation here on, uh, face.ai. It explains, you know, similarity search. They talk about various distance metrics metrics that you discussed.
+
+You
+17:55:27
+
+As equating distance, plus distance, and so on. And then here, they mention how to install dependent how, you know, various documentations and, um, So So, um, that's it. That's all I wanted to, uh, cover for search. You also learn, um, building power pipeline. At this point, we are over with the risk reward component program. So we exactly back to the original. Right? We exactly know how this retrieval works and how we can build an index and also later efficiently use some search algorithms to retrieve relevant documents. Now the next thing that we wanna talk about in the next lecture is the generation component. Now we understand what are some details about it and how can we even improve it.
+
+AI Course
+17:55:27
+
+I they talk about various distance metrics metrics that we discussed, such as Euclid and distance, cosign, distance, and so on. And then here, they mentioned how to, um, install it and then how, you know, various augmentations and, um, buttons. So, um, that's it. That's all I wanted to uh, cover. Search. We also learned, um, building our Python. So at this point, we are over with the receiver component of React. We exactly back to the original. Right? We exactly know how this retrieval works and how we can build an index. Also later efficiently use some search algorithms to retrieve relevant documents. Now the next thing that we want to talk about in the next lecture is the generation component. Now we understand what are some details about it and how can we even improve it.
+
+AI Course
+17:55:48
+
+Hey. We are getting closer to wrap up brand. And in this video, we focus on the generation component. So we'll just, uh, ignore this part, which we already learned about every feature, and we assume that every feature can retrieve some relevant chunks. And now we focus on the generation piece. And it's very simple, so it's going to be, um, short. So its core, again, the generation is. Just.
+
+AI Course
+17:55:55
+
+What we do is that once you have the retrieve content from the original, it gets, um, added and combined with the user's
+
+AI Course
+17:56:15
+
+which is what is the refund policy. And this way, we form our prompt. The prompt simply goes into the LLM, and LLM, uh, generates some output. However, in practice, we can make, uh, this generation a little bit more advanced. And that's going to be this workflow. So we can just combine it with the prompt engineering, which we then as the second technique for adaptation. Basically, the main difference is that now this generation has these both components, prompt engineering and element. First, the widget content as well as the user query goes into prompt engineering.
+
+You
+17:56:15
+
+Hey. We are getting closer to wrap up, and in this video, we focus on the generation So we'll just, uh, ignore this part, which we already learned about the retrieval, and we assume that the retrieval and retrieve some relevant chunks And now we focus on the generations. And it's very simple, so it's going to be, um, short. So at its core, again, the generation is step 11. Just step thirteen eleven, the general purpose 11. You do is that once you have to retrieve content from the retrieval, it gets and combined with the users' query, which is what what is their refund policy. And this way, we form our prompt. The prompt simply goes into the LMM, and the LMM, uh, generates some help. However, in practice, we can make, uh, this generation and that's going to be this workflow. So we can just combine it with the prompt engineer, which we learn as a second technique for adaptation. Basically, the main difference here is that now element. First, the retrieve content as well as the user query goes into the front engineering.
+
+You
+17:56:22
+
+And and other things depending on the use case.
+
+You
+17:56:34
+
+And then content engineering, again, the output would be a new prompt as we learn. And now that's, um, enhance prompt or the engineer prompt would go into the element, and element would just normally process that and output the response. And again,
+
+AI Course
+17:56:43
+
+Prompting. We can add chain auth our prompting and and other things depending on the use case. And then prompting again the output would be a new prompt as we learned last time. And now that enhanced prompt or the engineer prompt, we're going to the element, and element would just normally process that and output the response. And again, prompt engineering, we can combine all different techniques that we learned. This this can be one example, but this is just an example. For example, the, uh, prompt engineering can just convert all those switching functions as well as, um, a user's way. Something like this. This is an example. This is not necessarily related to reachable or rags.
+
+You
+17:56:43
+
+For example, the, uh, prompt engineering can just convert all those written patterns as well as, uh, the user's way. Something like this. This is an example. This is not necessarily related to reaching out or ranks.
+
+You
+17:57:03
+
+Basically, we can have users initial query here. We can have context from search if we are doing some searches. This case, it's basically probably the the rich feed items. And then here, we do all the specific content that you are helpful who answers, uh, company name, internal questions. And then here's some instructions or ask is to deliver concise and accurate response and so on. It can also do future promptings, show some examples that this is how you cite. Or things like that. We can do, uh, general dot, um, zero dot, general dot.
+
+AI Course
+17:57:04
+
+But, basically, we can have users in a short way here. We can have context from search if we are doing some searches. This case, it's basically probably the the rich quick attempt. And then here we do role specific routing, but you are a helpful assistant we roll a specific prompt that you are helpful, assistant who answers, uh, company name internal questions. And then here's some instructions you'll ask us to be very very concise and accurate response and so on. And how to do future talking, show some examples that this is how you cite or things like that. We can do, uh, channel.
+
+You
+17:57:43
+
+After we have the content, we convert those raw, rich content as well as user way into something more structured and more specific and helpful for the element to generate response. So that's it. That's the generation. It simply an element, and we can come on if we want engineering to improve it. Now one important thing that I want to note here is that, um, remember, this is the general representative. So if our retrieved items are not really accurate or is not too helpful, instead of them being fake. So for example, let's say we have a retrieval and a retrieval or embedding model that you're using are not too accurate. So that means that some of these retrieve retrieve items are not necessarily too helpful to answer this question or maybe irrelevant. Now LEM has no idea
+
+AI Course
+17:58:07
+
+So that's it. That's the generation. It's simply an LML, and we can combine it with content engineering to improve it. Now one important thing that I want to note here is that, um, remember, this is the general So if our retrieved items are not really accurate or is not too helpful, this LMM may fail. So for example, let's say we have a retriever and a retriever or embedment method that you're using are not too accurate. So that means that some of these retrieve retrieve items are not necessarily too helpful to answer this question or maybe irrelevant. Now Aiden has no idea basically has all this information, and he thinks that all these are helpful or can be helpful to answer this. So it may just, uh, produce some answers that are not necessarily, um, accurate. So one step we can go one step further and, um, also fine tune this element. Basically, this letter, combining all these methods that we learned, font tuning and font engineering and rag to improve our generation process. And this is a very, um, tricky training, and there is a very good paper called AFT. I think it stands for retrieval augmented fine tuning. So the idea is
+
+AI Course
+17:58:10
+
+So
+
+You
+17:58:17
+
+So So it may just, uh, produce some answers that are not necessarily, um, accurate. So one step we can go one step further and, uh, also fine tune this model. Basically, this way, you're combining all these methods that we learned fine tuning and fine engineering and bank to improve our generation process. And this is a very, um, tricky training, and there is a very good paper called BAST I think it stands for, uh, retrieval augmented point training. So the idea is basically, again, the motivation is if if retrieval quality is not good, then it generates some optimal outputs. So we want to fine tune an element to distinguish between relevant and irrelevant documents.
+
+AI Course
+17:58:22
+
+want to fine tune an element to distinguish between relevant and irrelevant documents. So that's the key idea. Basically, the idea is that we label some document some relevant and irrelevant rich content. And then continue training that Dell EIM that we have. And during this fine tuning Dell EIM
+
+You
+17:58:35
+
+Which we find in And then we continue training that data that we have. And during this fine tuning, data is basically trained to generate responses based on relevant documents while minimizing the influence of the relevant documents. Level what it tries to do. It tries to learn which which documents are relevant, which ones are irrelevant. So during the generation, it would only it would rely more on relevant.
+
+AI Course
+17:58:37
+
+And you can see the the workflow here. Again, I describe at the very high level what it tries to do. It tries to learn which retrieve documents are relevant, which ones are irrelevant. So during the generation, it would only it would rely more on relevant documents and ignore irrelevant documents. And if you're interested to learn more about
+
+You
+17:58:46
+
+And if you're interested to learn more about it, this is the paper. It it was published in '24. And, um, it explains all the details how they're training the model, and, uh, it's an interesting I also discuss, you know, training time and how they prepare the data and, you know,
+
+You
+17:59:23
+
+and how it why it improves, uh, the performance of that. So that's it. That's all we can do, and we can push the generation to, uh, get the best possible response that you're hoping for. We can combine it with project engineering, and we can also fine tune so that it knows which which documents are relevant and which ones are relevant. So that's generation, and, um, we are done with the with the, um, architecture and design of racks. In the next, um, lecture, we'll learn about evaluation. Of racks and how should we evaluate and what are some of the important metrics. Alright. We are getting closer to wrap up rank, and in this picture, we focus on the evaluation. You can imagine, um, there are different components involved in racks, and therefore, their evaluation is, uh, more complicated. There's not a single or multiple metrics that they can easily use to evaluate Racks. There is this retrieval component
+
+AI Course
+17:59:23
+
+And, uh, it explains all the details how they are training the model and interesting with and it also discusses, you know, training time and how they prepare the data and, you know, rack update and how weight improves, uh, their performance over rack. So that's it. That's all we can do, and we can push the generation to, uh, get the best possible, uh, response that we're hoping for. Combine as a prompt in general, and we can also fine tune so that it knows which which documents are relevant and which ones are irrelevant. So that's generation, and, um, we are done with the with the, uh, architecture and design of racks. In the next lecture, we'll learn about evaluation of Racks and how should we evaluate and what are some of the important metrics. Alright. We are getting closer to wrap up rack. And in this lecture, we'll focus on evaluation. So As you can imagine, uh, there are different components involved in racks, and therefore the evaluation is, uh, more complicated. There's not the single or multi metrics that you can easily use to evaluate Racks. There is the switchable component and how
+
+AI Course
+18:00:34
+
+accurate the retrieval item are items are. And then the LMM generates something. There are different aspects. Like, how accurate the generation is. Is it hallucinating? Is it actually correct? Or is the generation aligned with what was given in the context or it's different? All these different aspects basically makes the evaluation more complicated. But um, the evaluation can be, um, described in this video. We have query. We have the result or the generation, and then we have the given context to the element. And then can evaluate these practices from different perspectives. And each perspective is involving some of these components. Um, so these are some of the key aspects that we generally evaluate racks is context relevance. One is faithfulness. One is answer relevance and answer correctness. We should relate them within the result I create. And again, by just looking at this figure, it should it should, um, you should have some idea about why each of these, uh, aspects are important. Um, so let's just quickly go over it in. Firstly, we have context relevance. And, again, here we have context relevance between query and context. So basically here, what we are trying to measure that accurately, the retrieval component selects relevant documents based on the query. So, um, this is basically trust to evaluate in a ranking lexicon. Basically, what we wanna know is that if, um, basically, given the query, are they retrieved components relevant or not? And this is actually measuring the quality of the retrieval component. And for that, we have this evaluation metrics which are more used mostly using rank system. And again, because context relevance is signed of ranking, we want to know that given the correct answer, we're able to retrieve those in the context
+
+You
+18:00:37
+
+aspects. Like, how accurate the generation is. Is it? Is it actually correct? Or is the generation aligned with what was given in the context, or it's different? So all these different aspects basically makes the evaluation more complicated. But the evaluation can be, um, described in this figure. We have great. We have result order the the generation, and then we have the given context to the element. And then we can evaluate this right system from different perspective. And each perspective is involving some of these components. Um, so these are some of the key aspects that we generally evaluate rights. Is context relevance. One is faithfulness. One is answer relevance and answer It should relate it in the result and weight. And again, by just looking at this figure, it should should, um, you should have some idea about why each of these aspects are important. Um, so let's just quickly go over them. First, we have context relevance. And again, here we have context relevance between query and context. So basically, here, what we are trying to measure is that how accurately that we see what components selects relevant documents based on the query. So, um, this is basically choice we evaluate in a ranking system. Basically, what we want to know is that if, um, basically, given the query, are they rich with components relevant or not? And this is actually measuring the quality of the rich components. And for that, we have this evaluation metrics, which are more used mostly using ranking again, because context relevance is kind of ranking, we want to know that given the correct answer, be able to retrieve those in the context or not. These metrics are also ranking metrics, each rate, MRR, NCCG, and precision at
+
+AI Course
+18:01:12
+
+or not. These metrics are also ranking metrics, hitch rate, MRR, MVCG, and precision. Okay? If you are interested to learn more about the details of these metrics, each of them have really great, you know, Viki's and there are some papers for some of these. And feel free to take a look to understand how they are designed, what is the formula and so on. But at a high level, these are ranking metrics. So they try to measure how how, um, good our green flag tens are. Given the correct answer or or given the query. Um, basically, it depends on how how we find it. It. So this is context relevance, and then we have faithfulness. Let's go back to here. Faithfulness is to measure if the results are faithful to the context, meaning that if the generated response is actually coming from the provided context or it's just something different or hallucination. And this is a difficult type of evaluation so it's very
+
+AI Course
+18:01:13
+
+So
+
+You
+18:01:16
+
+really great, you know, VTs and there are some takers for some of these. And feel free to take a look to understand how they are designed, what is the formula and so on. But at a high level, these are ranking measures. So they try to measure how how, um, good our visual effects are. Given their cardiac cancer or or given the query. Um, basically, it depends on how how we define it. So this is context relevance, and then we have faithfulness. Let's go back to here. Faithfulness is to measure if the results are faithful to the context, meaning that if the generated response is actually coming from a provided context or it's just something different or hallucination. And this is a difficult type of evaluation, so it's very subjective. So humans are usually needed part of the evaluation, or we can rely on fact checking tools and consistency checks. We're gonna have some example here.
+
+You
+18:01:59
+
+We want to know that if the generation is aligned with this context at their given together. And then finally, you have answer crisis. Again, let's go back to here. Answer crisis is trying to measure if the result is correct. Given the query. If the generation is relevant to this query. So here, basically, it's a uh, the metrics we use are basically the ones that are used to measure the quality of generating systems like caption generation, like those kind of systems. And these metrics are mostly used for that those purposes. So here, again, we have the prompt. And then the goal is that we compare the generated response with the correct response, and we see how aligned they are, how how close they are. Then these are some of the metrics to compare two different sentences or paragraphs and measure how similar they are. So this is all about the evaluation of ranks and, uh, different aspects of it, and for which aspect we also saw various
+
+You
+18:02:22
+
+Hello, everyone. This is the last lecture of week two, and this lecture, we'll just put everything together and, uh, review the overall system design of the right system. And it's basically just, um, you're basically just putting together everything that you've learned. So we saw the indexing process. During the indexing process, we go from our document database
+
+You
+18:02:33
+
+So a bunch of PDFs and it could be different structures or, like, HTML, smart accounts, anything like that. We have document parsing and chunking, and then we apply a a text encoder or
+
+You
+18:02:35
+
+model.
+
+AI Course
+18:02:38
+
+We want to know that if the generation is aligned with this context. That they're, uh, given to the editor. And then finally, we have answer correctness. Again, let's go back to here. Answer correctness is trying to measure if the result is correct given the query if the generation is relevant to this query. So here, basically, it's a uh, the metrics we use are basically the ones that I use to measure generated systems, like caption generation, like those kind of systems. And these metrics are mostly used for that those purposes. So here again, we have the prompt. And then the goal is that we compare the the generated response with the correct response, and to see how aligned they are, how how close they are. Then these are some of the metrics to compare two different sentences or paragraphs and measure how similar they are. This is all about the evaluation of RACs and, uh, different aspects of it, and for which aspect we also saw various, um, metrics. If you're interested, for most of those metrics, they're they're, uh, they did the papers, and that's tutorial online. If you're not familiar with, you can just preview those. But this is how we evaluate our existing data. Hello, everyone. This is the lecture of video, and this lecture, we'll just put everything together and, uh, review the overall system design of the WAC system. And it's basically just, um, we are basically just putting together everything that we've learned. So we saw the indexing process. During the indexing process, we go from our document database, and these are the internal, um, knowledge base. For our retailers. So let's say, it's part of PDFs and it could be different structures or like HTML, smart accounts, anything like that. We have document parsing and chunking, and then we apply the texting code or text encoder and image encoder. These are coming from the model like, uh, OpenAir split model.
+
+You
+18:03:11
+
+Indices, um, indices for index for text and index for images. And this is just a data. It's nothing it's not too complicated. It's just a table with, uh, ID of the chunk and the actual editing of that chunk. That is the indexing process we do it once offline on our data and we do this. Now every time there is a query by user, first, we have some, uh, guardrails, I think here, or we can call it safety different terminologies. This is mostly referred to as input codlets, and we have also another output codlet, codlet. But, again, the purpose of these two is to just ensure that the system is going to be safe. And in that case, there is a request that is not going to be safe to process, the the system do not, uh, assist with that. Similarly, if the request is safe, but somehow the output is not safe or it's not, uh, it's wireless point,
+
+You
+18:03:25
+
+it would, uh, uh, uh, So these are these two companies these two components. Then we have, uh, query rewrite or also query expansion. The purpose of this is to, um, improve and enhance the provided query by the user.
+
+You
+18:03:59
+
+Because a lot of times, the initial query may have some problems. It may be ambiguous. There might be missing punctuations. There might be some grammatical problems. So this is what this component does. And then after we have this final, uh, enhanced user grade here, first, it goes to the text border to get the embedding. Then this nearest neighbor search, which is typically an approximate nearest neighbor. Finds all most closest embeddings to this user query, like enhanced user query coming from here. And find all those relevant chunks, and that those can be text or image chunks. And then all of them are passed as they reach with content to the generation along with the enhanced prompt. So first on engineering at whatever, like, roller specific conking, future conking, chain of thought, and make it a very nice comprehensive background. And in 02/2000, which is Python.
+
+AI Course
+18:04:02
+
+Indices for index for text and index for images. And this is just a data. It's nothing it's not too complicated. It's just a data with, uh, ID of the chunk and the actual embedding of that chunk. So that is the indexing process. We do it once offline on our data and rebuild these. Now every time there is a query by user. First, we have some, uh, guardrails I can hear. We can call it safe if you think there are different technologies. This is it's mostly very direct to us input guardrails. And we also another output quadrate, quadrate. But again, the purpose of these two is to just ensure that the system is going to be safe. Meaning that if there is a request that is not going to be safe to process, the system will not, uh, assist with that. And similarly, if a request is safe, it is not safe or it's not, uh, it's by us. It would, uh, the app would go to this or safe configuring would discard the request and not show the the final response to these. So these are these two comments these two comments. Then we have, uh, query rewrite. Or also query expansion. The purpose of this is to, um, improve and enhance the provided query by the user. Because a lot of times, the initial query may have some problems. Maybe ambiguous there might be missing punctuations. There might be some, uh, grammatical problems. So this is what this component does. And then after we have this final, uh, enhanced user query here, first, it goes to the text border to get embedding. Then this nearest neighbor search, which is typically an approximate nearest neighbor, um, finds almost, uh, closest embeddings to this user query, like, enhanced user query coming from here, and find all those relevant chunks. And that those can be text chunk or image chunk. And then all of them are passed as the retrieve content to the generation along with the enhanced prompt. So first prompt engineering, add whatever, like, role specific content, free shot content, change of thought, and make it a very nice comprehensive, uh, prompt. And it would also include all the rich content.
+
+You
+18:04:22
+
+Will also include the which is fine. And then the which is fine, then we go into the element. And this element would be a general direct seven where we can fine tune that using graph method. To have a more, um, accurate element. But regardless of that, we just use our element here by the event prompt and have and then we find the resources to to things. So this way, we have control already this element, meaning that we can just whenever we have more PDFs or more um, new knowledge, you know, knowledge base, we can just add everything here. We can index it. And then from that point on,
+
+You
+18:04:43
+
+similarly, bags are also useful to get, um, light data. And we'll learn more about that in the next, uh, week when we talk about two calling and search. But basically, still, frankly, very very useful because when the request comes here, if you have another component, that searches the data and get some light data, very similar way, that light data can also come
+
+You
+18:04:52
+
+get to this switchable component and relevant parts can come here. And this way, everyone would always have access to light data. But again, you learn about search and tooling in in the next week. And, uh, this week, we can just wrap up our, uh, rag topic. So, yeah, that's it.
+
+AI Course
+18:04:52
+
+To have a more, uh, accurate LN. But regardless of that, we'll just use our LN here, either the finding one. And element would just, uh, process a given prompt and output So this way, we have control over PDFs or more, uh, knowledge in our knowledge base. We can just add everything here. We can index it. And then from that point on, anytime there is a user query, this whole system will take you straight on those newly added documents as well. So it's very easy to just add or bring some documents from the system. And still early, bags are also useful to get, um, live data. And learn more about that in the next, uh, week when we talk about tool culling and search. But, basically, still, Magna will be very very useful because when, uh, request comes here, if you have another component and get some light data, in a very similar way, that light data can also come get to this rich UI component, and relevant parts can come here. And this way, the element would always have access to light data. But again, you'll learn about search, uh, tool called in in the next week. And, uh, this week, we can just wrap up our, uh, ride topic. So yeah. That's it.
