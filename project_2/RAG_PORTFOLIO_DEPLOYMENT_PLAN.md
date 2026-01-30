@@ -12,22 +12,52 @@ To see it working, you will open the deployed Streamlit app URL, optionally uplo
 
 **This plan uses an automated multi-agent workflow.** Three agents work in sequence using Git work trees: one develops the app and upload-and-index feature, one reviews code quality, and one verifies plan alignment and merges. The workflow runs against a separate GitHub repository you create for this deployment, keeping the course project untouched.
 
+### How this document is organized
+
+Different sections serve different roles; they are complementary, not redundant:
+
+- **Plan of Work (Parts 1–4):** *What* to build — the **scope** (Streamlit UI, upload/index, default docs + LLM, deployment artifacts). “Parts” = deliverables.
+- **Concrete Steps:** *How* to build it — the **implementation procedure** (Steps 1.1–1.6 for Agent 1, 2.x for Agent 2, 3.x for Agent 3). “Steps” = actions.
+- **Workflow Orchestration and Agent Coordination:** *How* agents work together — **sequence, checkpoints, handoffs**, iteration, and recovery. Who does what *when*, and how they signal readiness.
+- **Progress:** A **tracking checklist** in execution order. It mirrors the workflow sequence and aligns with Concrete Steps; use it to check off work as you go.
+
+**Review model:** Agent 1 implements *all* of the plan (Parts 1–4, i.e. Steps 1.1–1.6), then opens **one** pull request. Agent 2 reviews that PR, then Agent 3 verifies plan alignment and merges. Review and alignment happen **once per PR**, not after each development step. If changes are requested, Agent 1 updates the PR and the cycle repeats until the PR is merged.
+
 ## Progress
 
-- [ ] User creates separate GitHub repository for the RAG deployment project
-- [ ] User initializes repository with this ExecPlan and source references (notebook and project_2)
-- [ ] Agent 1 (Development): Set up git work tree and feature branch
-- [ ] Agent 1 (Development): Implement Streamlit UI from notebook Step 6 and extend for upload/index
-- [ ] Agent 1 (Development): Add document upload, chunking, and in-session FAISS indexing
-- [ ] Agent 1 (Development): Make LLM backend configurable (Ollama local / API-based on Cloud)
-- [ ] Agent 1 (Development): Add “use default docs” path and session-state index switching
-- [ ] Agent 1 (Development): Add requirements.txt and README with setup and deployment instructions
-- [ ] Agent 1 (Development): Create pull request with full implementation
-- [ ] Agent 2 (Code Review): Review PR for code quality, best practices, and correctness
-- [ ] Agent 3 (Plan Alignment): Review PR against this ExecPlan for completeness and alignment
-- [ ] Agent 3 (Plan Alignment): Resolve merge conflicts if any and merge when checks pass
-- [ ] Agent 1 (Development): Address review feedback and update PR as needed
-- [ ] Final verification: Test deployment readiness and document live URL
+This checklist follows the **Workflow Orchestration** sequence. Check off items as you complete them.
+
+**Initial trigger (Human — one time)**
+
+- [ ] Create separate GitHub repository for the RAG deployment project
+- [ ] Initialize repository with this ExecPlan and source references (notebook and project_2)
+- [ ] Ensure agents have repo URL, source paths, and main branch name
+
+**Agent 1 (Development) — implement then open one PR**
+
+- [ ] Set up git work tree and feature branch (Step 1.1)
+- [ ] Implement core app and Step 6 UI (Step 1.2)
+- [ ] Add document upload, chunking, and in-session FAISS indexing (Step 1.3)
+- [ ] Add default index and configurable LLM (Step 1.4)
+- [ ] Add requirements.txt and README (Step 1.5)
+- [ ] Commit, push, and open PR (Step 1.6) → **Checkpoint: PR ready for review**
+
+**Agent 2 (Code Review)**
+
+- [ ] Review PR for structure, error handling, safety (Steps 2.1–2.2) → **Checkpoint: approved or change requests**
+
+**Agent 3 (Plan Alignment)**
+
+- [ ] Verify implementation matches ExecPlan; resolve conflicts if any; merge when satisfied (Steps 3.1–3.2) → **Checkpoint: merged or fixes requested**
+
+**Iteration (if needed)**
+
+- [ ] Agent 1 addresses feedback, updates PR; Agent 2 and Agent 3 repeat until PR is merged
+
+**Completion**
+
+- [ ] Main branch has deployable app; work tree removed; repo ready for Streamlit Cloud
+- [ ] Final verification: test deployment readiness and document live URL (Human)
 
 ## Surprises & Discoveries
 
@@ -86,6 +116,8 @@ Relevant notebook concepts used in this plan:
 
 ## Workflow Orchestration and Agent Coordination
 
+This section describes *how* agents coordinate: sequence, checkpoints, handoffs, and recovery. The **Progress** checklist above mirrors this sequence for tracking. The detailed *what* to build is in **Plan of Work (Parts 1–4)**; the detailed *how* to implement it is in **Concrete Steps** below.
+
 **Initial Trigger (Human Action — One Time):**
 
 1. Create a new GitHub repository for this deployment (e.g. `rag-chatbot-portfolio`).
@@ -98,22 +130,16 @@ Relevant notebook concepts used in this plan:
 **Agent Execution Sequence:**
 
 1. **Agent 1 (Development)**  
-   - Creates a git work tree and feature branch (e.g. `feature/streamlit-rag-upload`).  
-   - Implements the Streamlit app per “Plan of Work” and “Concrete Steps” below (Step 6 UI + upload/index + configurable LLM + default-docs path).  
-   - Adds `requirements.txt` and `README.md` with local and Streamlit Cloud instructions.  
-   - Commits, pushes, and opens a pull request targeting main.  
+   - Follow **Concrete Steps 1.1–1.6** (work tree, UI, upload/index, default index + LLM, requirements + README, commit + PR). Implements *all* of Parts 1–4, then opens **one** pull request targeting main.  
    - **Checkpoint:** PR created and ready for review.
 
 2. **Agent 2 (Code Review)**  
-   - Reviews PR for code quality, correctness, error handling, and maintainability.  
-   - Leaves PR comments and either approves or requests changes.  
+   - Follow **Concrete Steps 2.1–2.2**: review PR for structure, error handling, safety; approve or request changes via PR comments.  
    - **Checkpoint:** PR approved or change requests documented.
 
 3. **Agent 3 (Plan Alignment)**  
    - If Agent 2 requested changes, waits for Agent 1 to update the PR.  
-   - Verifies that the implementation matches this ExecPlan (upload, indexing, RAG on uploaded/default docs, configurable LLM, deployment docs).  
-   - Checks for merge conflicts and resolves them if needed.  
-   - Merges the PR when aligned and approved.  
+   - Follow **Concrete Steps 3.1–3.2**: verify implementation matches ExecPlan, resolve conflicts if any, merge when satisfied.  
    - **Checkpoint:** PR merged to main or specific fixes requested from Agent 1.
 
 4. **Iteration:** If Agent 2 or Agent 3 request fixes, Agent 1 pushes new commits; review and alignment repeat until the PR is merged.
@@ -127,6 +153,8 @@ Relevant notebook concepts used in this plan:
 **Recovery:** If any agent fails, work remains in Git. Resume from the last checkpoint: re-run the same agent or continue with the next one after Agent 1 addresses feedback.
 
 ## Plan of Work
+
+*What* to build — the scope. Implementation procedure is in **Concrete Steps**; coordination is in **Workflow Orchestration**; tracking is in **Progress**.
 
 The work has four main parts: implementing the Step 6 Streamlit UI, adding document upload and in-session indexing, making the LLM configurable for local vs cloud, and preparing deployment.
 
@@ -160,6 +188,8 @@ Add a `requirements.txt` that mirrors the notebook/app stack: streamlit, langcha
 Implementation can live in a single `app.py` or be split into modules (e.g. `rag.py` for chain/retriever building, `app.py` for Streamlit). The ExecPlan assumes one deployable entrypoint `app.py` that Streamlit Cloud can run.
 
 ## Concrete Steps
+
+*How* to implement — the detailed procedure. Scope is in **Plan of Work (Parts 1–4)**; coordination is in **Workflow Orchestration**; tracking is in **Progress**.
 
 **Prerequisites (Human — One Time)**
 

@@ -1,0 +1,1448 @@
+You
+23:30:21
+
+I come to the office hour of week two. As always, similar to that week, in the office hour, we would over questions. Most of the questions you might have throughout the week, whether it's another project or the people that got their learnings from the lecture. And I have the
+
+ByteByteGo
+23:30:22
+
+I come to the office hour of week two. Um, as always, similar to that week, in the office hour, we would go over questions. Whatever questions you might have throughout the week, whether it's another project or the from the nature. I have the hat open. So if you have questions about the guided learning, uh, if you could help me navigate the right place.
+
+You
+23:30:26
+
+if we do, And this is, um, just one interesting brief
+
+ByteByteGo
+23:30:30
+
+And this is, um, just one interesting read that I found this week. So if somebody might be interested, I this question, if you're about device items.
+
+You
+23:30:41
+
+this this article talks about some of the techniques that were used last year to make
+
+ByteByteGo
+23:30:42
+
+Interested to learn about how to make elements more efficient and how to adapt them to work on device, this this particle pass about some of the techniques that were used last year to make make. So yeah. So with that, we can start with the questions.
+
+You
+23:30:46
+
+So yeah. So we have to be trying to start with the questions.
+
+ByteByteGo
+23:30:47
+
+Awesome.
+
+You
+23:30:49
+
+Awesome?
+
+ByteByteGo
+23:31:01
+
+Sure. So, um, so there was an announcement about the Apple product, and the feedback is here.
+
+ByteByteGo
+23:31:09
+
+Here
+
+You
+23:31:11
+
+Sure. So, um, so there was an announcement about the Exxon project, and if he gave his year, if you click on the video, you can see first, you can see the main dashboard that you can add your projects there for for for the demo day. Link here for past budgets. And both of these are also listed here. So if I click on the completed budgets, it will go to this page.
+
+ByteByteGo
+23:31:30
+
+Second question, um, in the RAD systems, when we're talking about was there something in the project? Very well about chat history. When we look at the chat history, is that just the output that is fed into the next as input?
+
+ByteByteGo
+23:31:33
+
+Exactly. So, for example, here if I ask, um,
+
+You
+23:31:33
+
+When we look at the chat history, is that just the output that is fed into the next as input? Exactly. So know, for example, if I pass, um,
+
+ByteByteGo
+23:31:35
+
+like, how is the
+
+You
+23:31:37
+
+like, how is the
+
+You
+23:32:12
+
+Can you put a summary in the week two directory?
+
+You
+23:32:18
+
+Of the guided learning summary markdown just the key
+
+You
+23:32:23
+
+bullets to refresh my memory on everything.
+
+You
+23:32:28
+
+Don't want it to be too long.
+
+ByteByteGo
+23:32:48
+
+How is that better in San Francisco today?
+
+ByteByteGo
+23:33:00
+
+And now if I ask, um, is it cool? If you don't pass the previous conversation history, may ask the question, like, is it cool? It's great because you are not necessarily in there. The
+
+You
+23:33:02
+
+How is the better in San Francisco today? Take it. And now if I ask um, is it cool? So if you don't pass the previous conversation or history, they ask the question like, is it cold? It's it's vague because you are not specifying there. Um, so it's a common practice in most chatbots. In in a single session, all your previous conversations are being included as part of the
+
+You
+23:33:05
+
+and
+
+ByteByteGo
+23:33:06
+
+being included as part of the context. Each round of the question. So now when I if it all it already happens, these previous
+
+ByteByteGo
+23:33:12
+
+Yep.
+
+You
+23:33:31
+
+So it's going to work for every time a number of iterations, same on a second conversation.
+
+ByteByteGo
+23:33:59
+
+Also here, um, has a nice logout on my next expansion if you are interested.
+
+You
+23:34:12
+
+So
+
+You
+23:34:26
+
+And then last question, in this project, how will we evaluate? Evaluate the the rescission? Mhmm. So
+
+ByteByteGo
+23:34:29
+
+So most elements
+
+You
+23:34:34
+
+So
+
+ByteByteGo
+23:34:35
+
+So
+
+You
+23:34:50
+
+And 128 is also
+
+You
+23:35:09
+
+So regarding the evaluation of back
+
+You
+23:35:11
+
+evaluation of back, it's a it's a very deep topic, and also it's very important. And there's a
+
+You
+23:35:20
+
+And
+
+ByteByteGo
+23:35:53
+
+in the matrix work if you got that.
+
+You
+23:35:55
+
+I'm in matrix board. Matrix board hand.
+
+You
+23:36:19
+
+You also want to evaluate the entire end to end system as well that happens with agents too. For those, the process typically is based on dataset.
+
+You
+23:36:55
+
+With respect to of this project, then we will actually have a great supervised output and then compare it. If if you want to evaluate, yes. But many of the companies, you you, uh, may not need to evaluate for another
+
+ByteByteGo
+23:36:55
+
+With respect to office project, then we actually have a great supervisor about, and then okay. If if you want to evaluate, yes. But if you have a component, you you, uh, cannot think about it for another
+
+ByteByteGo
+23:37:14
+
+So when it gets you can
+
+You
+23:37:15
+
+So maybe because you can parties see all the numbers.
+
+You
+23:37:22
+
+Can have access to all the metrics here. And it's a semicolon, so it's just a matter of connecting them and, uh,
+
+ByteByteGo
+23:37:40
+
+In the future, do we have an example where we'll be able to work on both?
+
+You
+23:38:26
+
+That was nice. Thank you. Yeah. Thanks for the questions. Next question. Uh, Sal? Hey. Um, okay. My question is related to chatbot.
+
+ByteByteGo
+23:38:26
+
+Um, I have another questions related to chunk domains.
+
+ByteByteGo
+23:38:47
+
+And it's what happened to be table. I mean, we showed the table into two, three different chunks. So then we are going to embed those chunks and the technology is split. If we ask something to do with the system, uh, we have to lose information to the table, which probably
+
+You
+23:38:49
+
+And it's what happened when we, for example, we have a document with a unique table, and we we shunt the table into, for example, let's say, it's too difficult to do two, three different times. So then we are going to embed those chunks, and the table is going to be split. If we ask something to to the system, we're able to move information from the table. For example, if if the how to put the information
+
+ByteByteGo
+23:38:55
+
+Mhmm. My responses.
+
+You
+23:39:01
+
+improve my responses on the tables for. Okay. Um, just to make sure my understanding is correct, I'm actually rephrase your question. Um, so your question is when you are chunking documents,
+
+You
+23:39:12
+
+Uh, then we may miss some other similar chunks. Right? Is that the case? Yeah. That's that's true. And this part, it requires a lot of, uh, experiments.
+
+ByteByteGo
+23:39:12
+
+Nearest chunks. Um, then you may need some other similar chunks. Right? Is that a yes? Yeah. That's that's true. And this part, it requires a lot of,
+
+You
+23:39:14
+
+These
+
+ByteByteGo
+23:39:15
+
+uh, experiments and trial and error and
+
+You
+23:39:19
+
+that allow you to figure out the right configuration.
+
+You
+23:39:25
+
+Is also important with respect to what you're asking because when you include some overlap, you make sure
+
+You
+23:39:27
+
+not
+
+ByteByteGo
+23:39:47
+
+So the rich log won't be accurate. Um, so the practice chunk size is large enough so that you you get meaningful
+
+ByteByteGo
+23:39:49
+
+thing.
+
+You
+23:39:51
+
+Um, so in practice, chunk size is large enough so that you you get meaningful chunks of your document. The main purpose of this chunking is not to chunk
+
+You
+23:39:55
+
+the
+
+ByteByteGo
+23:39:57
+
+Two different paragraphs or for two different topics as one, um,
+
+You
+23:39:57
+
+two different topics as one, uh, as one entity.
+
+ByteByteGo
+23:40:30
+
+the. Okay.
+
+You
+23:40:45
+
+Um, then then are you going to implement, uh, which you all? Frank, which you all, like, which you all? Come on in. Right? Is that the question? Uh, no. They tried some
+
+ByteByteGo
+23:40:47
+
+Um, when is it good to bring something for that? Um, then probably you can comment ritual? Right? Ritual, like, ritual common event. Right? Is that the question? Uh, no. There there are some, like, a possible
+
+ByteByteGo
+23:40:56
+
+Sure. Uh, yeah. Please tell me if it's something that, um,
+
+ByteByteGo
+23:40:58
+
+helps to add content to product. I would you would see it. Okay.
+
+ByteByteGo
+23:41:05
+
+Alright. Thanks. Um, next question. Alright. Um, we have two different question.
+
+You
+23:41:07
+
+Sure. Uh, yeah. Please send me if it's something that, um, have Slack content, the product that would would consume. Okay. Thanks. Alright. Thanks. Um, next question. And, um, we created two different question. Um, my is, uh, you're waiting on to getting a
+
+ByteByteGo
+23:41:29
+
+Sure. You're asking for the best package only for the, um, documentating parts. Right?
+
+You
+23:41:51
+
+Um, it so I think it is still stuck with document processing as one one one one.
+
+You
+23:42:09
+
+So
+
+ByteByteGo
+23:42:20
+
+Is that if you are dealing with documents and resources that are simple to parse, robust ones are more reliable and also faster. So they are less costly. If you are dealing with the complex layouts and the documents you have also come within text,
+
+ByteByteGo
+23:42:27
+
+iOS. Um, so this is this is, um, this is usually the only
+
+You
+23:42:30
+
+practice for document parsing is that if you are dealing with, uh, documents and other sources that are simple to parse, or more reliable and also faster. So they are less hassle. If you are dealing with the complex layouts and the documents you have also completing text, under multimedia, images, raw base are not going to be like the So you have to use database. Um, so this is this is this is usually the only, uh, think about the net parsing when you want to keep it in this tool. Um, for chunking, I've already covered this.
+
+ByteByteGo
+23:42:43
+
+Uh, this this is still changing. Um, so I think it's always best to do some research ready for you want to use it. Um, matching has
+
+You
+23:42:43
+
+Want to use an AI based approach? Um, these these things keep changing. Um, so I think it's always best to do some research before you want to use it. Nextgen has
+
+You
+23:42:46
+
+that. They also include all other packages, and they build backers around there.
+
+You
+23:42:55
+
+So if I
+
+ByteByteGo
+23:43:06
+
+it, um, there's lots of different packages that can use. Um, but, again, it's all the best to do some research right before you give you
+
+ByteByteGo
+23:43:17
+
+Last year, there was a lot of different things. Then I wrote the agenda book. I I back in there was
+
+You
+23:43:17
+
+Like last year, there was a lot of different things. Um, then I wrote the then I wrote, I I back end, there was
+
+You
+23:43:29
+
+uh, the rest of your oh, actually. Um, so cognitive loaders is the one that your
+
+ByteByteGo
+23:43:33
+
+So, you know, um, I think
+
+You
+23:43:34
+
+So, you know,
+
+You
+23:44:33
+
+so the best practice guarantee is to use that smallest model at work
+
+ByteByteGo
+23:44:34
+
+the best package here is to use the, um, so the best practice here is to use the smallest model at work, good enough for your users. System.
+
+You
+23:44:42
+
+In general, you may want to use the smallest model that delivers the quality that much.
+
+ByteByteGo
+23:45:02
+
+So
+
+ByteByteGo
+23:45:11
+
+So I'm just going to
+
+You
+23:45:12
+
+So just wondering how can I improve it? So maybe, you know,
+
+You
+23:45:25
+
+The the best practice is to have an evaluation. So as you know, what is the impact on your on on the quality of your system,
+
+ByteByteGo
+23:45:48
+
+Yeah. Yeah. I I have
+
+You
+23:45:58
+
+Yeah. Um, I I have have some things, some open source. I'll I'll find a manager. Please ping me if I if I. Sure. Thank you. First, any other part of Rack that you have, uh, questions?
+
+ByteByteGo
+23:46:00
+
+I think I might be able to find that. Okay.
+
+ByteByteGo
+23:46:07
+
+Hey, Ali. Um, thank you. So I, um, missed a couple of, uh, previous sessions. I'm trying to catch up with the.
+
+You
+23:46:07
+
+Thank you. So I, uh, missed a couple of, uh, the previous sessions on that. I'm trying to catch up with the data
+
+ByteByteGo
+23:49:09
+
+Okay.
+
+You
+23:49:09
+
+Okay. And what what is the other first method you you mentioned? Communicate my best
+
+ByteByteGo
+23:49:17
+
+And, uh, if it are once the post signs, uh, if we have any questions, is is is this still going to work?
+
+You
+23:49:17
+
+And and, uh, if it all once the post ends, uh, if you have any questions, is is this still going to work?
+
+ByteByteGo
+23:49:50
+
+That's more pricey. Yep. That's a good question. Because sometimes, uh, in scenarios, it is that.
+
+You
+23:49:50
+
+That's more pricey. Yeah. That's a very good question because sometimes raglan board, uh, in civil answer, it is that.
+
+You
+23:50:05
+
+Or you may want to tune it to
+
+ByteByteGo
+23:50:16
+
+Yeah. I mostly think of point tuning as as something that you call short
+
+You
+23:50:23
+
+you are sure that the general representative of data find it. Uh, you know, I think it was like or, um, or if you have a very niche
+
+You
+23:50:42
+
+is a very interesting application, um, I would say. Not too different. Like, foundation wise, if you think of Glabox, it's not different. It's just, um, a software layer on top of this whole agent setup.
+
+ByteByteGo
+23:50:42
+
+Um, Clubhouse is a very interesting application, um, I would say. Not too different. Like, foundation wise, if you think of Clubbot, it's not different. It's just, um, a software layer on top of this whole agent setup.
+
+ByteByteGo
+23:50:54
+
+Because, um, again, it's it's going to be all around agents, and agents are going to be covered next week.
+
+ByteByteGo
+23:51:00
+
+Too clear. Um, basically, agents, they equip
+
+You
+23:51:02
+
+So some of the things that I say may may may sound, um, unhealthy. Too clear. Uh, basically, agents, they equip and develop these additional components. One is tools.
+
+ByteByteGo
+23:51:23
+
+ask something like, uh, how's it better again? Right? How is that better? Um, and it doesn't really better. It is so the but, like, today's better is not stored in internal So it really cannot as a party, such as that. So it has to have access to some back channels.
+
+You
+23:51:23
+
+You ask something like, uh, how is it better again? Right? How is that better? Um, and it doesn't really matter in in so the but, like, today's better is not stored in internal. It's So it really cannot answer you quietly until it searches it. So it has to have access to some kind of
+
+You
+23:51:35
+
+Right? Now so far everything was published. So if I for example, if I say, um, do something like email, this person using my Gmail, something like that.
+
+ByteByteGo
+23:51:35
+
+Right. Now so far everything was that is so if I for example, if I say, um, do something like email this person using my Gmail, something like that. Now Clockbot is bringing this whole agent
+
+You
+23:51:38
+
+Breathing this whole agent set up on your system. So basically, it sees everything. It has access
+
+You
+23:51:57
+
+Yeah.
+
+You
+23:52:02
+
+But it's a very interesting application because it's the first sign that agents are actually coming up on a on your, um, system.
+
+ByteByteGo
+23:52:15
+
+Um, next question, Juliet? Uh, thank you. My first question is,
+
+You
+23:52:16
+
+Stories, like, you know, like, lost money. But yeah. Next question, Ju kay? Uh, thank you, My first question is, um, in what kind of situation is better suited for a long time window?
+
+ByteByteGo
+23:52:16
+
+um, in what kind of situations that are suited for a long time window versus back?
+
+ByteByteGo
+23:52:36
+
+So, um, so the question is if the model quality supports very long next window, then what's the point of hang back? They can't just put everything in context. So the problem is models may drift or they may lose
+
+ByteByteGo
+23:52:42
+
+And it happens in package a lot. Um, as soon as the context goes beyond a certain length,
+
+You
+23:52:43
+
+Like, you potentially are able to attach lots of content. I mean, there's a cost saving component beside that in terms of performance. So, um, so the question is if their model already supports very long, unless we know then what's the point of adding back? You can just put everything in context, something like that. Right? So the problem is models may drift or they may hallucinate. Even even if theoretically they support long distance campaigns. Um, as soon as the context goes beyond the second, uh, length,
+
+ByteByteGo
+23:52:47
+
+And if you can get pain on using when you are
+
+You
+23:52:54
+
+So short answer is, yes. There are degree models as support long as you can just
+
+ByteByteGo
+23:52:55
+
+use.
+
+You
+23:53:03
+
+And that's why each of the skills
+
+ByteByteGo
+23:53:20
+
+Yeah. Uh, skills. Right? Could you you always have a really good way of explaining complex concepts
+
+You
+23:53:21
+
+Yep. Uh, skills. Right. Could you you want to tell the rig of explaining complex concepts?
+
+ByteByteGo
+23:53:22
+
+concept into very
+
+You
+23:53:36
+
+In a prompt, you create folders, and separate them. So for example, one is about certain, like, start, another is about
+
+ByteByteGo
+23:53:39
+
+certain, like, the style. Another thing is about, um, analytics. So think about that. So I have lots of different skills. And
+
+ByteByteGo
+23:53:51
+
+So they are they are
+
+You
+23:54:04
+
+Now the agent decides which skill can be relevant at this point as it's completing the tasks. It looks at the skill, and then only now it puts it in the configuration. Um, so this way,
+
+ByteByteGo
+23:54:04
+
+Now the agent decides which the scale can be relevant at this point as it's completing the task. It loads that scale, and then only now it puts it in a context mode. Um, so this way,
+
+You
+23:54:08
+
+skill it's so I don't know if you're fine. So it's it's I really need to talk about this because next week is going to be, uh, about
+
+You
+23:54:41
+
+Thank you. Amiib, the agent um, live session, you can maybe do a little bit example. Yeah. What time do we share a quick, uh, video is Okay. Cool. Um, so for, like, do you think we still need some sort of grounding or because lots of people in tiny, right, can get a degree hype, like, almost close to different receptor. You don't need to worry about those things as much.
+
+ByteByteGo
+23:54:44
+
+Got you. Thank you. Um, maybe the agent, um, live session, you can maybe do a little bit example. Yeah. What is something we share with, um, everybody. Okay. Cool. Um, so for that, do you think we still need some sort of brownie or not? Lots of people in tiny rabbit can get pretty high like, almost close to different receptors. Like, you don't need very hot as much. That's right. Um, with Ravi, you you worry less about translation because now
+
+You
+23:54:44
+
+That's right. Um, with Ravi, if you worry less about optimization because now
+
+You
+23:54:48
+
+if you follow the
+
+ByteByteGo
+23:54:48
+
+you only
+
+ByteByteGo
+23:54:55
+
+So
+
+You
+23:54:56
+
+So
+
+ByteByteGo
+23:54:59
+
+It's called
+
+You
+23:55:00
+
+It's called
+
+You
+23:55:11
+
+found somewhere in the store, and, uh, it matches. Sometimes it doesn't match, so it just drops those those parts of fans. We ask the other end to rewatch it sensor.
+
+ByteByteGo
+23:55:22
+
+That's all. So if you're access some produce some inaccuracy, what would be the area that could do that? If rec is not accurate, not the colors. Mhmm. Because I know those before. So
+
+You
+23:55:22
+
+If back is not accurate for particular Mhmm. Just in it goes before. So
+
+ByteByteGo
+23:55:30
+
+now
+
+You
+23:55:33
+
+I think this was covered somewhere
+
+ByteByteGo
+23:55:34
+
+support videos. I think this was covered on there.
+
+You
+23:55:59
+
+Yeah. Oh, this other more fundamental question that I'm trying to, uh, make sure I understand correctly. So so when you retrieve the relevant chunks for knowledge information, are you doing like, is that a case where you use, uh, natural search? And if it's not natural search,
+
+ByteByteGo
+23:56:00
+
+That I'm trying to, uh, make sure I understand correctly. So so when you retrieve the rabbit traps or knowledge information, are you doing like, if I use, uh, vector search. And if it's not vector search,
+
+ByteByteGo
+23:56:04
+
+there's no text search, full text search, keyword search. Those are just a situational way of searching. Mhmm. You don't need involve, um, into it.
+
+You
+23:56:05
+
+it's not text search, full text search keyword search. Those are just a traditional way of searching. Mhmm. You don't really involve, uh, into it.
+
+ByteByteGo
+23:56:35
+
+It matches your query. So there is not really any machine learning component in it. Mean, the downerachim pieces where, um, I mean, to play. Yeah. So just to be just to be clear, in modern AI systems, that's where the case anymore. Because in an exact search or exact matches or even
+
+You
+23:56:38
+
+It matches your query. So there is not really any machine learning. Only the data region piece that's more about, um, on to Yeah. So But just to be just to be clear, it in modern data systems, it has rarely the case anymore. Because, again, exact search or exact matches or the partial matches may not work in complex system. Many many cases may not work because you're not
+
+You
+23:56:47
+
+So when you're talking about machine learning, is it more product relevant now relevant?
+
+You
+23:56:47
+
+You mean that for the indexing, you use better search?
+
+ByteByteGo
+23:56:48
+
+So when you talk about machine learning, it's more palette now palette, Do you mean that for the indexing, you use vector search for scenarios?
+
+ByteByteGo
+23:57:17
+
+Text. Yes. So for text, you typically end it
+
+ByteByteGo
+23:57:18
+
+this chunk. Speech chunk separately going to the edit model and then get vector.
+
+You
+23:57:20
+
+I assume you're talking about text. Right? Text embed? Per personalized. Yes. So for text, you typically embed this chunk. Each chunk separately go into the embed model and then get a vector. You don't embed this entire document.
+
+You
+23:57:30
+
+Right? Ideally, we want to identify, like, independent
+
+You
+23:57:31
+
+topics. So as as you know,
+
+ByteByteGo
+23:57:39
+
+Like, I don't know, um, a bank statement. It could be a driver's license.
+
+ByteByteGo
+23:57:56
+
+Into its corresponding. But what I'm all the kinda showing up on the each document? For example, the best statement. Every detail on the best statement will also cover those feedbackings. Yep. You typically wanna do unless there are parts that can seem a reason. I mean, for kind of the
+
+You
+23:57:56
+
+be, like, I don't know, um, a bank statement. It could be a driver's license. Index. And when index, so you all cover the index. Into its corresponding value. But what about with the with all the counters showing up on the each document? For example, the best thing. Like, every detail, I would have to estimate. We also cover those. Yeah. You typically want to do unless there are parts that can see no reason. I mean, for example, the documents that
+
+ByteByteGo
+23:59:00
+
+to do a back to search, and you still don't reuse out of box API? Right? I mean, I just try you unless you have the out like, the return without a full vector search, and then use natural language and that's all an issue something. That's
+
+You
+23:59:02
+
+I mean, try you once you have the out like, the return, we dial out of the vector search, and then use natural language as a model into something else. Yeah. So yeah. So again, assume that
+
+ByteByteGo
+23:59:06
+
+and then use natural language and assemble it into something else. Yeah. So yeah. So, again, assume that for the segment, there is a query coming from user, and the query is is payment methods.
+
+ByteByteGo
+23:59:13
+
+And then you request the
+
+You
+23:59:28
+
+Yeah. Thanks, Ali. My question is. So, uh,
+
+You
+23:59:36
+
+and if
+
+ByteByteGo
+23:59:41
+
+and if I I get a different element, uh, about about question. But if I have the same question or the same question like that, how does, uh, the people they go to the same cycle of retrieving and send me to found and
+
+ByteByteGo
+23:59:49
+
+Yeah. That's it.
+
+You
+23:59:49
+
+Yeah. That's it.
+
+You
+23:59:59
+
+The reason for that is because mostly, which is not the bottleneck from which was our very fast compared to the other generation. I think the reason for that is because mostly, which is not the bottleneck from which was our very fast compared to the other generation.
+
+ByteByteGo
+00:00:28
+
+You generally don't mind if you send, like, some, uh,
+
+You
+00:00:29
+
+You generally don't mind if you send, like, some, uh,
+
+You
+00:01:08
+
+Again, I have not seen that it it just it just
+
+ByteByteGo
+00:01:09
+
+Again, I have not seen that it it just just a completely
+
+You
+00:01:12
+
+gonna I'm gonna give you a thought for the for the
+
+ByteByteGo
+00:01:14
+
+find the bug, anything, uh, the code.
+
+You
+00:01:31
+
+No. I do that. Okay. Promptaching is the best thing to save cost on those kind of things.
+
+ByteByteGo
+00:01:45
+
+A new prompt to the mother, um, equals to a cache. And if, um, if the prefix of some
+
+ByteByteGo
+00:01:52
+
+specific idea from action you send you have a prompt, and then it it sees if there's a
+
+ByteByteGo
+00:01:57
+
+prefix of it, it's already been cached before, and if that's the case, you know your preference on the package.
+
+You
+00:02:04
+
+It goes to a cache, and if, um, it is a prefix of some, um, basically, if it has some, like, so, basically, the idea is in production, you send you had a prompt, and then it it sees if there is a a prefix of it, it's already been cached before, and if that's the case, it no longer becomes a catalyst. Um, if you want to understand the details of the other them has a nice prefetching, um, content here. It did explains how it divides the prompting to blocks
+
+ByteByteGo
+00:02:20
+
+Perfect stand. Content here. It explains how it divides the property to plus, and then it caches in. So whenever you send any prompt, if it hits cache and it report or the credit software prompt into cache, you will just use those calculations. We use instead of calculating them. So here, this is the open ID, prompt caching bit. And I think somewhere, they mentioned that this can save up to 80 or 90% of your tokens. So by
+
+You
+00:02:21
+
+just use those calculations instead of calculating everything. Um, So here, this is the OpenAI Compression guide. And I think it's on there. Mentioned that this can save up to 80 or 90% of your tokens. So I would suggest you to do it.
+
+You
+00:02:28
+
+And
+
+You
+00:02:36
+
+What happens when, uh, the top k is not having the exact or some some technical
+
+You
+00:02:37
+
+issue is.
+
+ByteByteGo
+00:02:38
+
+look for top k, uh, percentage of the data and then, uh, send you element and then the data is coming. What happens when, uh, the top a is not having that or something, the is that you're looking for. Mhmm. Go and resolve the issues.
+
+You
+00:03:01
+
+Back to your question. Uh, let me so is here. So you're right. There might be cases where when there when you reach with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with with
+
+ByteByteGo
+00:03:02
+
+Let me so is here. So you're right. There might be cases where when when when you reach me,
+
+ByteByteGo
+00:03:11
+
+let me see if so I'm gonna check something top k 19.
+
+You
+00:03:11
+
+let me see if sorry. One. Let me check something. Top k land chain.
+
+ByteByteGo
+00:03:32
+
+You should choose the right maximum distance, um, such as if there are some discrete contents, they are good enough
+
+You
+00:03:33
+
+Right? That is not if you can if you should choose the right maximum distance, um, that if there are some
+
+ByteByteGo
+00:03:39
+
+that if there are some retreat contents, they are close enough. They are close enough for the embedding to query such that you are it's very like an iterative. But that makes sense for you. So so
+
+ByteByteGo
+00:03:44
+
+the two, um, partners that is specified for your. Right? Why is that your key?
+
+You
+00:03:46
+
+So so there are two, um, parameters I have to specify for your setup. Right? What is the value of and
+
+ByteByteGo
+00:04:07
+
+So that's one way you can fix Photoshop. You
+
+You
+00:04:16
+
+So that's one way you can fix. You evaluate your setup. It's different values okay in the topic and see what works out. The other rate is based on the distances of in the many cases. So when there's a query, let's say, the query is what is your finalize. Right?
+
+ByteByteGo
+00:04:18
+
+out. The other way is based on the distances of in the. So when there's a query, let's say, the query is what is your. Right?
+
+You
+00:04:19
+
+Gets
+
+You
+00:04:35
+
+So you say that if the distance of nearest nearest far uh, more penetrative, you do not receive that. Right? So what works best in practice is a hybrid approach. You can publish by default, let's say, you extract or retrieve the top 10 or 20, no single chunks.
+
+ByteByteGo
+00:04:36
+
+So you say that if the distance of near neighbors are uh, more beneficial, you do not reach even. Right? So what works best practice is hybrid approach. You can follow it by default. Let's say you extract or retrieve that 10 or 20 single chunks. And then you go ahead and drop the ones
+
+You
+00:04:38
+
+So
+
+ByteByteGo
+00:04:47
+
+not relevant or relevant compared to the query. Yep. Makes sense? Yep.
+
+You
+00:04:48
+
+Yep. Makes sense? Yep. Uh, uh, these are I think we know I was going through. I
+
+You
+00:05:11
+
+Yeah. It's it's very common in my I research, um, especially in search systems. So let's say you want to have your search system to find similar videos.
+
+ByteByteGo
+00:05:24
+
+Exact search exact text.
+
+You
+00:05:25
+
+Exact matches to the to the item of the video or parts that are more to be more sense to be sure based on the exact search exact text. Um, but usually, the
+
+You
+00:05:47
+
+Sorry.
+
+ByteByteGo
+00:05:47
+
+So how we can, uh, avoid the biting of the interest?
+
+ByteByteGo
+00:05:51
+
+Yeah. Like, let me just uh, we see the bicing
+
+You
+00:05:52
+
+Yeah. But, like, let me just uh, we see the bicing bicing by column when the and the
+
+ByteByteGo
+00:05:52
+
+buying by
+
+ByteByteGo
+00:06:11
+
+Uh, I'm not sure if I have for some reason, my brother you see, hear me? I see it. Right? And you see the browser. Right? Yeah. I I can hear you. Or not, uh, for some reason.
+
+You
+00:06:14
+
+they can buy to their own, uh, or of their own advantages. How we can go down with this pricing? Uh, I'm not sure if I have for some reason, my brother see you hear me? I'm just seeing me. Right? I'm just seeing the browser. Right? Yeah. I I can hear you. We're not for some reason. I don't know what to do with it. Might be falling. My my screen is frozen.
+
+ByteByteGo
+00:06:14
+
+I don't know how to do it. Like, before, the entire screen is frozen.
+
+ByteByteGo
+00:06:23
+
+Yeah.
+
+You
+00:06:26
+
+Yeah. I don't know what to do because I cannot click on on Zoom. Uh,
+
+You
+00:06:59
+
+you know, I recently, I spent a lot of my time on using LMM as a judge to make it work for some evaluation setups. And a lot of it goes into figuring out the right system out. Uh, I've really seen that the issue is a bias. It's more like lack of precise, uh, instruction in the system. But in some cases, yes, the model might be biased,
+
+ByteByteGo
+00:07:00
+
+You know, I we said I spent a lot of my time on using to make it work for some integration setups. And a lot of it was due to feeling at the right system. Now I've rarely seen that issue with the iOS. It's more like precise instruction in the system. But in some cases, yes, the model might be Bios.
+
+You
+00:07:11
+
+you may want to replace your model b. I did replace the model and if you're making features models a lot. But at some point, you once you pick the best element for your task that is out there, there is not much you can do about its inherent points. Um, so, yeah, I think that's the best answer I can share for now. My observation and my experience is that
+
+ByteByteGo
+00:07:11
+
+At some point, you you mean, once you pick a test, element for your task that is out there, there is not too much you can do about its inherent parts. So, yeah, I think that's the best answer I can share for now. But my observation and my experience is that
+
+You
+00:07:24
+
+yeah, probably, I don't know why is the best approach for you. Um, there's nothing there's nothing you can do about it.
+
+ByteByteGo
+00:07:35
+
+evaluate how accurate the caption is in terms of describing the scene or describing the light or describing the motion. Right?
+
+You
+00:07:36
+
+You want to evaluate how accurate caption is in terms of describing the scene, or describing the light, or describing the motion.
+
+ByteByteGo
+00:07:57
+
+Okay. I got it. Okay. Now I could do the issue at my screen as well.
+
+You
+00:08:02
+
+So next question, I
+
+ByteByteGo
+00:08:02
+
+So in the next question, I next question.
+
+You
+00:08:11
+
+Sorry. I think, uh, is it from last time? Okay. No problem. Okay. So next question is, Suki.
+
+ByteByteGo
+00:08:12
+
+Sorry. I think I it's not last time. Okay. No.
+
+ByteByteGo
+00:08:26
+
+So I'll just ask some, uh, you know, philosophical high level question, uh, looking at all the elements like any other system that we have developed over the last many years. So all of that, I think everything that depends on a post feedback loop.
+
+You
+00:08:47
+
+Looking at all the alarms like any other, uh, system that we have developed over the last many years, So, ultimately, I think everything depends on a post feedback loop. Like, you need to look at how can you manage high quality input. Right? So the data comes in those. Is there audio systems where somebody pumps? And it finds the prompt even before, uh, it gets embedded, you know, like, it doesn't. And number two, once a bank is happening, who's deciding what's the corpus? Because literally, you you have a corpus that has the very large, uh, dimensional space, meaning in, uh, similarity space or distance space.
+
+ByteByteGo
+00:09:03
+
+And you, uh, look at how to manage high quality input. Right? So then they might ask those, uh, is there audio systems where city pumps, and it controls the pump even before, uh, he gets ahead. You know? Like, uh, and number two, once embedding is happening, who's deciding what's the purpose? Because literally, you have a purpose that has been placed in a very large, uh, dimensional space, meaning in, uh, similarity space or distance space. Right? To me, that's supposed to cool things. Right? So who decide, uh, that creating that environment with thousands of dimensions of meaning and all so that when new wakes are, uh, new tokens are created, then the model places you in that space closer to other tokens that are very similar and close to you. Right? So how how does that happen? If once it happens place there, then it becomes a little more difficult.
+
+You
+00:09:08
+
+Constraints. Right? So who decide that creating that environment with thousands of dimensions of meaning and all so that when new wakes up, our new tokens are created, then the model places you in that space closer to other patterns that are very similar and close to you. Right? So how how does that happen? Because once it happens place there, it becomes a little bit more predictable. Right? There's hockey, hockey, or whatever. High level is just fine. A new step now.
+
+You
+00:09:34
+
+Uh, And then I'm assuming once you've done that, as as people are prompting, uh, I'm assuming in a higher quality system, you also have some kind of feedback mechanism where people can come and grade the answers, and that will force, uh, the algorithm, uh, to fine tune the weight waiting system. Right? Or are you saying that doesn't happen? There's no need for that. We just need allowance to, uh, rewrite and refine for themselves, uh, and move move to the intentions. Right? Because in this one to last phase,
+
+You
+00:09:37
+
+corpus, all the words are vocabulary in some sort of dimension. I can't visualize that.
+
+ByteByteGo
+00:09:41
+
+Just replacing how do you place how do you create that ecosystem? That's on a huge spot. Again, so in my acceptance phase, from you don't see in that, uh, you know, uh, perspective. And then I'm assuming once you have done that, as as people are prompting, uh, I'm assuming in a high quality system, you also have some kind of feedback mechanism where people can come and grade the answers, and that will force the alum, uh, to find whom the wait waiting system. Right? Uh, or are you saying that doesn't happen? There's no need for that. We just leave airlines to, uh, rewrite and refine to themselves, uh, and move move through dimensions. Right? Because initial development is all the focus, all the words, all the category, uh, in some form of dimension, I can't visualize that. And then as it learns, it's finding new. Right? It's moving around. That's what I'm saying.
+
+You
+00:10:14
+
+Optimizing. Meaning that you take these two points. You already know, for instance, if these two
+
+ByteByteGo
+00:10:21
+
+If they are not nearby, but they have to be nearby, you define the last step is going to be large and it's not nearby.
+
+You
+00:10:24
+
+two. And because of this large loss, optimizer will update the parameters of the model such that next time,
+
+ByteByteGo
+00:10:38
+
+That's that's the main
+
+ByteByteGo
+00:11:12
+
+essentially similar. People Yeah. I look at capturing a loss and trying to a feedback in the backward propagation and all that. But I'm still trying to visualize it. How can the thing that's realized that this burden is not on its developer You know, it's like, uh, the developers don't have to worry about this. This is already taken care. It's a black box. I don't have to imagine that thousands of developers even in the company, and everybody's trying to find tools themselves. So how will we come to standard? Yeah. I can I can go back to the theory of back propagation?
+
+You
+00:11:12
+
+You know, it's like, uh, the developers don't have to worry about this. This is all taken care of. It's a black box. Or else just imagine that thousands of developers even a company, and everybody's fine fine. So how will we accomplish data? Yeah. I think I can now go back to the theory of application.
+
+ByteByteGo
+00:12:05
+
+Okay. And I have a second question. Uh, that can be a short one. You know, we build lock applications in organizations, all teams I, uh, in my own. And the journey of time, I'll say, about seven or eight years ago, uh, we built in health care compliance organization. A process that was almost, like, 94% is able to, you know, accurately predict decisions. And at that time, we didn't had explainability and auditability. So using these beyond simple chatbots, especially when you're making health health care decisions or maybe legal decisions. How you maintain what is the direction? How are uh, how's the field find some kind of governance platforms where people can say, hey. Yesterday, you gave this decision, and it can be traced back to these factors, these weights. And in two days, the model has slightly different
+
+You
+00:12:07
+
+Okay. And I have a second question. Uh, that can be a short one. You know, we build a lot of applications in organizations, all the teams I, uh, you know, I own. The journey for time, I'll say about seven or eight years ago, uh, we built a health care compliance organization. A process that was almost like 94%, it was able to, you know, accurately predict. Decisions. And at that time, we didn't had explainability and auditability. So using these beyond simple chatbots, especially when you're making health health care related decisions or maybe legal decisions, How do you maintain what's the direction? How are uh, how's the field, uh, providing some kind of governance platforms? Where people can say, hey. Yesterday, it gave the decision, and it can be traced back to these factors. These weights. I've been saying that in two days, the model looks like it different, and that's the reason it's giving you a slightly different answer.
+
+ByteByteGo
+00:12:29
+
+Yeah. Thanks for the question. Um, uh, uh, I have two questions.
+
+ByteByteGo
+00:13:02
+
+I see. I don't know. I can't even pick
+
+ByteByteGo
+00:13:18
+
+Okay. So the second question is that when you are having some text
+
+You
+00:13:18
+
+Okay. So the same question is that when you are having some text
+
+You
+00:13:22
+
+11? Yes. Also, the the
+
+ByteByteGo
+00:13:23
+
+Yes. Also, the the the
+
+ByteByteGo
+00:13:30
+
+your target. So if there are some bugs or some issues, then your text
+
+You
+00:13:30
+
+So if there are some
+
+ByteByteGo
+00:14:02
+
+in that
+
+You
+00:14:12
+
+I see. Um,
+
+You
+00:14:15
+
+That's also a portion that I don't know. I haven't heard that. So I know there's some in how you domain in general, there are techniques that it
+
+ByteByteGo
+00:14:27
+
+generator. For models, I have never heard that there is there are things to ensure that
+
+You
+00:14:27
+
+I know most of the companies, they add some hidden kind of watermarks For models, I have never heard that there is there are things to ensure that
+
+You
+00:14:30
+
+Sure. That's it. Yeah.
+
+ByteByteGo
+00:15:16
+
+So, uh, I would like to have more hands on on the thank you. Uh, and also while, uh, we'll be searching out
+
+You
+00:15:20
+
+And also, while little searching about, uh, Luna, I just wanted to ask something called Cuemath as well.
+
+You
+00:15:21
+
+So, uh, what are these, uh, throw some light on? What is LUNA?
+
+ByteByteGo
+00:15:38
+
+Right. So first, I'm making sure that if you look up
+
+ByteByteGo
+00:16:26
+
+matter because
+
+You
+00:16:31
+
+Because you keep seeing the variance as you want. I think the the core foundation is lower.
+
+You
+00:16:32
+
+Like, the updates to Lora. For variance of Lora is more like it's like in a very different thing. Say, we have to quit mother.
+
+ByteByteGo
+00:16:40
+
+Yeah. Also, um, I'd like to have a bit of
+
+You
+00:16:41
+
+Also, um, I'd like to have a bit of hands on on, Raj, so you can
+
+ByteByteGo
+00:16:50
+
+answer myself. And, uh, so along with that, I have a follow-up question. So, uh, say, uh, I just need, uh, in my organization, say, I have to
+
+You
+00:16:55
+
+train an animal. I'm trying to make a a animal to learn the current code.
+
+You
+00:16:56
+
+Correct. So where how how do I start? You have your references that you share me?
+
+ByteByteGo
+00:16:56
+
+train an Alright. So where how how do I start? Do you have any references that you share me?
+
+You
+00:17:18
+
+That allows you to
+
+ByteByteGo
+00:17:18
+
+That allows you to
+
+ByteByteGo
+00:17:21
+
+So once you
+
+You
+00:17:21
+
+So once you
+
+You
+00:17:58
+
