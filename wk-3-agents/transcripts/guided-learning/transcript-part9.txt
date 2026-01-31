@@ -1,0 +1,300 @@
+ByteByteGo
+17:00:31
+
+And these three assets are happening a loop. Basically, this is the which keeps happening until at some point, the element believes that it has the it accomplishes it as and it has the final So this is still a little abstract. So let's see how these, um, like, three modules we need translates in practice. So basically, this continuous loop, uh, in practice, it's just, um, a component using
+
+You
+17:00:32
+
+Basically, this continuous loop, uh, in practice, it's just, um, a combination reasoning and it's called it. It's a combination of. So
+
+You
+17:00:39
+
+which has the system and user prompt. The LLM resents and processes the prompt.
+
+You
+17:01:07
+
+Create, how to, um, think, and how to iteratively try to improve.
+
+ByteByteGo
+17:01:09
+
+and how to iteratively try to improve it. So assistant appears you're an AIS system joined up users,
+
+ByteByteGo
+17:01:19
+
+And then here is basically the part where we're defining that, uh, we want to we want you to operate in another step. As a
+
+ByteByteGo
+17:01:27
+
+And here we say
+
+You
+17:01:38
+
+If necessary call, it will be the proper JSON format thing, and then follow this format action, um, JSON block.
+
+ByteByteGo
+17:01:45
+
+So this is how really in practice these models.
+
+You
+17:01:45
+
+So this is how we really practice these models.
+
+You
+17:02:23
+
+And over over the years, there have been multiple competitors, and they were proposing different ways or different parts. To make this plan that that happen. So these are this is just a small, uh, but not comprehensive list. React, Reflection, uh, and some other methods. And this list is probably more. React is probably the most popular one to make this an act that happened. And, um, so we briefly go over React, uh, Reflection, and these two. After that, we would, um, basically wrap up this model estimation as we should, um, regulation. So React, basically, what it does is just a similar prompting ticket. Each combines reasoning connection.
+
+ByteByteGo
+17:02:26
+
+To make this plan. So these are this is just a small, uh, but not comprehensive list. React, perfection, um, and some other methods, and dismiss is probably more. React is probably the the most popular one. To make this plan act that happen. And, um, so we briefly go over React, uh, Reflection, and DSU. Basically wrap up this modalization and switch to, um, private. So React basically what it does is just it's a similar prompting technique. Which combines resending connection. Basically, in the video, they're saying that it's, um, they're adding resending connection. It's just a
+
+You
+17:02:29
+
+Saying that it's they are adding reasoning and acting a loop. It's just a loop, and then it has two steps. Reasoning which traces
+
+You
+17:02:56
+
+So and this is on your paper. Here, have the paper open. It was published in, um, '23. And you're just using a pumping technique to make this monetize the agent a, or basically creating this, um, multistep agent system. And they are following a certain day of creating the system prompt and then showing different examples to interleave, uh, thoughts and actions and observations. Um, they're also comparing it with different, uh, other setups, like standard, uh, COD recently. So only things and any passengers and also. So it it resource
+
+ByteByteGo
+17:02:59
+
+So and this is on the open. It was published in, um, twenty three. They're just using a hunting technique to make this a modified agent, um, or basically creating this we have thoughts and actions and observations. And, um, they're also pairing it to different, um, other setups like standard COT with only things and any answers. Also activity. So it it requests for some tools, see observation, and then it requests for some tools, see observation. And, finally, it
+
+ByteByteGo
+17:03:01
+
+So
+
+You
+17:03:13
+
+to to, um, build this loop that we saw here.
+
+You
+17:03:17
+
+So, um, back here. So, again, you're following something like this.
+
+ByteByteGo
+17:03:19
+
+So, um, back here. So, again, you're following something like this to the model.
+
+You
+17:03:33
+
+Of from the model. It just reasons, and then some actions are called by the agent then the result of this agent, um, to call is going back to element based observation. Agent, after this observation, element ticket, and plans, and request for more actions. Here, it says do more search.
+
+You
+17:03:36
+
+You can have observations that is the result of search, could not find, is similar, and so on. And then again, we think based on that,
+
+ByteByteGo
+17:03:40
+
+So It's just reasons, and then some actions are called by the agent. And then the result of this agent um, is going back to the element with this observation. So again, after this observation, the element thinking and plans. And request for more actions. Here it says do more search. And then you can have observations that this result search could not find it similar and so on. And then again, we think based on that, and you can see based on all these context now, top three
+
+You
+17:03:44
+
+and so on. And then again, if we think based on that, and then see this on all these findings now, three is clearly mistaken that front row is not found, and that's because observations that could not find. And then it says, I need to search, uh, front row software. And then if requested in the search tool, you get a new updated prompt.
+
+ByteByteGo
+17:03:47
+
+then it says, I need to search, uh, front row software. And then every question in the session, update it quick. And now beside the automation,
+
+ByteByteGo
+17:04:01
+
+So then it's ready to, um, produce final answer. So then here it says, so the answer is and then at four, finish keyboard function keys. So I took this. They have a lot other, uh, different examples and more details
+
+ByteByteGo
+17:04:03
+
+how it's
+
+You
+17:04:10
+
+So then here it says, so the answer is, in the next four, finish keyboard functions. So I took this. They have a lot better different examples and more details about and also evaluation, how it's configured in different models as one. So it's interesting. And, basically, it's one way to make this model estimation happens. Now there are also different papers after that. I mean, there's this classification. It's basically based on linguistic data.
+
+ByteByteGo
+17:04:17
+
+this, uh, monetize agent types. Now there are also different papers after I mean, there is this is friction is basically based on linguistic feedback. So now you have here's have improved agent to set friction. Feedback from natural language. So basically, ideas and whatever the fact is used to convert it, uh, to a natural language.
+
+You
+17:04:26
+
+Like, um, the natural language feedback or summary. And and it has some similarities to React, has also some differences, and
+
+You
+17:04:31
+
+again, I have the data here. Uh, open. It's interesting to take a look, and it's also comparing comparing this method to different methods.
+
+ByteByteGo
+17:04:33
+
+Again, I have the paper here, uh, open. It's interesting to take a look. And it's also comparing comparing this method with different methods.
+
+ByteByteGo
+17:04:41
+
+You may get some errors or, um, failures or some warnings. And then another thing we'll go over that and convert it to a nice
+
+ByteByteGo
+17:04:47
+
+agent.
+
+ByteByteGo
+17:05:06
+
+Basically, they are separating these two and allow two different models to get to, uh, do these different tasks. Basically, it hides the reasoning from the external observations. And you can look at the data again here. I think this is the one. Yes. They are proposing three components
+
+You
+17:05:07
+
+Basically, they are separating these two and allow two different models to get to, uh, do these different tasks. Basically, it has the resulting from the external observations. And if I look at the bigger again here, I think this is the Yes. They're proposing three components
+
+You
+17:05:42
+
+says that, you know, we can start with something, and then we can run DFS or some searchable way then to see, uh, which plans is
+
+You
+17:05:51
+
+strategies to create monetized agents. But at the core, they're they're all doing the same.
+
+ByteByteGo
+17:05:52
+
+strategies to create monetization agents. But at the core, they are they all are doing the same. Basically, uh, following something like React. They are having different components, and then all of them are put together in
+
+You
+17:06:03
+
+If in workflow and model set agents, not that they learn about. They have differences in different aspects. For example, in terms of predictability, workflow software, predictable, and more consistent. For example, in terms of
+
+ByteByteGo
+17:06:13
+
+outputs for relevant tasks. And that makes sense because for tasks that can easily define it and sum up with some predefined usually works there and more understand because the everyone does not have to, uh, now plan or come up with
+
+You
+17:06:13
+
+And that makes sense because for tasks that we can easily define it and some of it's some predefined path. Usually works there and we're not stand because they're telling us does not have to, uh, now plan or come up with
+
+ByteByteGo
+17:06:26
+
+some reason needs to plan. They already know what predefined, uh, workflow works for those kind of tasks, and they create those. But agents are there when we want more flexibility, and basically want the model to make decisions autonomously. And then how's that activity? It just can add to new situations, but workflow is not. For example, if there is a question and if if it
+
+ByteByteGo
+17:06:34
+
+But agents, they can, uh, they have autonomy. They can plan and make decisions at one time. So this is a quick
+
+You
+17:06:34
+
+But agents, they can, uh, they have autonomy. They can can make decisions. I find like So this is a quick, um,
+
+ByteByteGo
+17:06:57
+
+So, yeah, this is also another article I wanna show. Now the next thing, uh, that I have here is meant to use mother's day mother's day business.
+
+You
+17:06:58
+
+Now the next thing, uh, that I have here is meant to use, uh, multistate multistate maintenance.
+
+You
+17:07:04
+
+And also
+
+ByteByteGo
+17:07:06
+
+And also the other down or, um, complex
+
+You
+17:07:14
+
+unreliable. They can be logical where they make, uh, stuck in some infinite loops and so on.
+
+You
+17:07:16
+
+So
+
+ByteByteGo
+17:07:32
+
+have, like, um, very different range in terms of different questions may come, then agents might be more suitable because agents can be used for opening the property.
+
+You
+17:07:32
+
+have, like, um, very different range in terms of different questions may come, then agents might be might be more suitable because agents can use for more open ended problems.
+
+ByteByteGo
+17:07:37
+
+Which, um, it's not easy to predict a number of steps or the exact workflow ahead of time. It. So in
+
+You
+17:07:38
+
+Those cases usually agents work better. And then some companies that are
+
+ByteByteGo
+17:08:09
+
+used frequently is when they are dealing with the structured information synthesis. And a good example is when you want to, uh, you want to
+
+ByteByteGo
+17:08:11
+
+to
+
+You
+17:08:13
+
+So we saw on Typekit there is this tool called deep research.
+
+ByteByteGo
+17:08:27
+
+create a detailed report about that particular topic. So those are also, um, good problems and good fit for monetize the agents. Alright. So passing about modalized evidence. Um, we have some, um, coding examples in project
+
+ByteByteGo
+17:08:38
+
+some good coding practice there. And then the next thing I went to switch page which is modified. So let's go to modified settings here.
+
+You
+17:08:41
+
+So those are also, um, good problems and good fit for monetized meetings. Alright. So, Cassie, about. We have some, um, coding examples in project. And there we do practice how to really create some of these workflows and use them. So, um, so some good coding practices there. And then the next thing I want to switch you is the next level for the final development, which is stage. So let's go to Basically, it's going to be brief because you already learned about all the key components.
+

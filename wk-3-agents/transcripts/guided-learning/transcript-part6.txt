@@ -1,0 +1,300 @@
+You
+16:39:53
+
+So for generic questions, it's not designed to be used. Now let me say what is, um, is plus this.
+
+You
+16:39:57
+
+Piece. You can ask that you can use the app tool to calculate some.
+
+You
+16:40:08
+
+That generation would learn about this. It would run the add to add to add to, get the response back.
+
+You
+16:40:12
+
+Add to add to add to, get the response back, append it to here, something like this. This is the response. And then it passes this response and continue the generation to. So
+
+ByteByteGo
+16:40:12
+
+useful. Now let me say what is, um, is plus s. You can ask that you can use the add tool if you like this one. And if here it's just, um, I think it's easier to use this tool. At this point, again, it's just housing because it doesn't have access to tools. But if you have if you modify the generation group, it's usually one If after this part, that generation would we learn about this. It would run the add to add to get the response back, append it to here, something like this exit response. And then when it passes this response, continue the generation to.
+
+ByteByteGo
+16:40:19
+
+Now let me also chat ask a question about it. How is it better in San Francisco?
+
+ByteByteGo
+16:40:23
+
+So now again, this is tricky because the data tool usage was defined was based on 92.2, and here we're asking a question about our city.
+
+You
+16:40:24
+
+now
+
+You
+16:40:31
+
+Also, more capable models, they are generally able to go from some city or country or
+
+You
+16:40:46
+
+and I think it stopped, uh, the generation. So probably it's because it's 60. If I change this to, like, 90, ask this question again, it's probably going to complete the answer.
+
+ByteByteGo
+16:40:52
+
+And I think it stopped, um, generation. So probably it's because it's 60. If I change this to, like, 98, ask this question again, it's probably going to completely censor. Alright. So it says, hey. Use this tool. And, again, that's all we want because the generation can just use
+
+ByteByteGo
+16:40:57
+
+that's all we want because the generation can just use the tool. So now we are easily allowing this element to use two tools. But remember, this system prompt is becoming more and more complicated.
+
+You
+16:40:57
+
+Alright. So it says, hey. Use this tool. And, again, that's all we want. You guys end the generation. We can just use it that's all we want because in the generation, you can just use it. So now they are easily allowing this cell and to use tools. But remember, the system prompt is becoming more and more complicated.
+
+ByteByteGo
+16:41:06
+
+And then, um, it's just getting more and more and more complicated. I want to introduce the two or four two.
+
+You
+16:41:08
+
+And then, um, it's just getting more and more and more complicated as you want to introduce. Now imagine I want to introduce the tech to four four two.
+
+ByteByteGo
+16:41:19
+
+So it's not really, um, best practices. It's not it's it's, um, not a standard way to do this.
+
+You
+16:41:23
+
+It's, uh, not the standard way to do this. Now beside this example, and demo, now let's go to the lecture.
+
+ByteByteGo
+16:41:24
+
+Now besides example, and demo, now let's go over to the lecture. So we thought we had this all. Um, we have better idea.
+
+You
+16:41:26
+
+So before we set this up, uh, we have a better idea. So we can simply add this better idea and let us off every day already.
+
+You
+16:41:46
+
+And after we write these two functions, we can have this
+
+ByteByteGo
+16:42:04
+
+So
+
+ByteByteGo
+16:42:21
+
+And here is when this whole onset of standardization or standardizing this process come into play. Basically, the idea is manually creating the system prompt from each tool is not scalable. It's not effective, and it's not the standard.
+
+You
+16:42:26
+
+tool. And here is when this whole concept of standardization or standardizing is processed. So Basically, the idea is manually creating a system from each tool is not sustainable, it's not effective, and it's not a standard. So you may want to provide the element a 100 as opposed at some point and really explaining each tool in the system prompt and it's super annoying.
+
+You
+16:42:36
+
+And it's it's just not not really easy and scalable. So what can we do to make this more standard? Basically, there's this, uh, concept of auto phonetic.
+
+ByteByteGo
+16:42:40
+
+It's it's just not not really easy and scalable way of doing this. So what can we do to make this more standard? Basically, there's this, uh, concept of auto formatting, and it's very simple. The idea is
+
+ByteByteGo
+16:42:42
+
+very simple. The idea is that we all agree an often
+
+You
+16:42:50
+
+Explanation of
+
+ByteByteGo
+16:42:57
+
+And then I put a textural description or explanation of this function.
+
+You
+16:42:58
+
+extracted important information from this function. And then I could text you a description or explanation of this function.
+
+You
+16:42:59
+
+And this
+
+You
+16:43:17
+
+As long as these things are present,
+
+ByteByteGo
+16:43:41
+
+And you see this is now coming from Get Morecast, and it's calling the exact same structure.
+
+You
+16:43:52
+
+And you see this is now coming from this forecast, and it's following the exact same structure. So it's very it's a standard. And it says two name desk forecast description, we kinda full forecast is coming from here, and then it put up. So that's for the format. Now we can suddenly scale to, uh, 100 or even thousand of tools.
+
+ByteByteGo
+16:43:52
+
+So that's all the form factor. Now we can start this scale to, uh, 100 or even thousand of tools. To
+
+You
+16:43:53
+
+Have
+
+ByteByteGo
+16:44:35
+
+So automatically, you're going from thousands of, um, functions to a system prompt that is explaining each of those tools. So, um, this is awesome, but then still there is a problem. It requires, um, manual integration. So what that means is that I have this here. What manual integration means is that now let's say for the same For example, let's say I want to use the Slack API for as one of our tools. You know, different companies are providing these APIs.
+
+You
+16:44:38
+
+So automatically, we are going from thousands of, um, functions to a system prompt that is explaining each of those tools. So, um, is this awesome? But then, still, there is a problem. It requires, um, manual integration. So what that means is that I have this here. What manual integration means is that now let's say for the same use case. For example, let's say they call one to use a socket for as one of our tools. You know, different companies are providing these APIs, so we can use them. And then we can
+
+You
+16:44:45
+
+So now let's say they are a company one.
+
+ByteByteGo
+16:44:52
+
+So now let's say we are a company one, and divide this graphic, we call this And then we use all our automation, like, other format and everything to introduce these tools.
+
+ByteByteGo
+16:44:55
+
+This is called a manual integration because we write a wrapper or function to use those, um, write on some external APIs.
+
+You
+16:44:57
+
+And then we use all our automation, the auto format, and everything to introduce these tools, you know, in this Now this is called a manual integration because we write the wrapper function to use those on some external APIs, and then integrate it into our set of tools by
+
+You
+16:45:08
+
+And this data then would be able to generate generation. These would be able to use, uh, these things. Now, um, now the second thing
+
+ByteByteGo
+16:45:08
+
+And this way, Ellen would be able to generate These would be able to use, uh, these things. Now, um, now let's take a company to one
+
+ByteByteGo
+16:45:12
+
+Now in this case, um,
+
+You
+16:45:13
+
+Now in this case, um, company two also has to write their own letters, and then they call something different like tech
+
+ByteByteGo
+16:45:21
+
+So
+
+ByteByteGo
+16:45:30
+
+still not as efficient. I mean, they're they're successfully able to automate this here we are able to, uh, standardize this process of introducing tools to elements in the system prompt.
+
+You
+16:45:35
+
+So this is still not as efficient. And if they're if they're successfully able to automate this here, we're able to, uh, standardize this process of introducing tools to LMS in the system. Still, this integration part is not standard. Meaning that different people may write different better than Poly or slightly used.
+
+ByteByteGo
+16:45:48
+
+So if there are any different companies, there would be a different, uh, integration. Now the next topic we wanna talk about is, uh, MCP or module context virtual introduced by.
+
+You
+16:45:50
+
+Now the next topic we want to talk about is, um, MCP or model hunt is portable introduced by Humbert.
+
+ByteByteGo
+16:45:57
+
+This level at the at this
+
+You
+16:46:01
+
+Sorry. You had this, um, creating system on the integration. So we'll go over that in the next video.
+
+ByteByteGo
+16:46:03
+
+So we'll go over that in the next video. Hello, everyone.
+
+You
+16:46:07
+
+Previous session, we saw that, um, in order to add
+
+ByteByteGo
+16:46:09
+
+Let's continue our discussion and focus on MCP in this session. In the previous session, we saw that, um, in order to add tools,
+
+ByteByteGo
+16:46:21
+
+And
+
+You
+16:46:21
+
+And for each hour, it's basically showing one required indication.
+
+You
+16:46:23
+
+They would call data.
+
+You
+16:46:30
+
+So this was before.
+
+ByteByteGo
+16:46:35
+
+let's see what that is.
+

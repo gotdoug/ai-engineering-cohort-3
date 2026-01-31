@@ -1,0 +1,300 @@
+ByteByteGo
+16:19:05
+
+So that's all I wanted to share for. The next pattern that we would talk about is revision. So what is Reflection? It's also called evaluate optimizer.
+
+You
+16:19:10
+
+Us. So that's all I wanted to share for adding. The next pattern that we would talk about is research. So what is reflection? It's also called evaluator optimizer where you may see different, um, terminology here. But basically, the intuition is that the editing should not be optimal or accurate or incomplete.
+
+You
+16:19:24
+
+Workloads that you've seen, if LMM generates something that is not correct or that's not there is no way that the workload can fix that. The purpose of refreshment is to address that that limitation. Basically, reflection puts generation and evaluation in your loop. So there is this feedback loop and then there are two components.
+
+ByteByteGo
+16:19:25
+
+Or you may see different, um, terminology here. But, basically, the impression is that the LMS engine light might not be more accurate or it might be incomplete. In previous workload that you've seen, if LMM generates something that is not correct or that's not, um, popping on, there is no way that the workflow can fix that. Reflection is to address that that negation. Basically, reflection puts generation and evaluation loop. There is this feedback loop and the nodes components, a generator and evaluator where it's also called critic.
+
+You
+16:19:34
+
+So this loop
+
+ByteByteGo
+16:19:39
+
+So this loop
+
+You
+16:19:45
+
+In other words, this projection is a four month satisfaction for self improvement.
+
+ByteByteGo
+16:19:52
+
+So that's the idea behind reflection. It's more, um, it makes the workflow more dynamic instead of
+
+You
+16:19:54
+
+That's the idea of refinement. It's more, um, it makes the workflow more dynamic instead of
+
+You
+16:19:55
+
+following a various static fixed workflow. So this will post as long as needed, and a better mind to
+
+ByteByteGo
+16:20:03
+
+let's talk more about issues generate and predict. Again, you may see different terminologies on highlight.
+
+You
+16:20:03
+
+let's talk more about Higgs generate handprints. Again, you may see different technologies on online.
+
+ByteByteGo
+16:20:05
+
+Responsibility.
+
+You
+16:20:06
+
+So it has a very clear responsibility.
+
+You
+16:20:10
+
+It process the conversation and generate the correct solution at its score, at its final responsibility.
+
+ByteByteGo
+16:20:20
+
+Recent n minus one solution and feedback. So that basically creates a memory
+
+You
+16:20:22
+
+Feedback. So that basically creates a memory
+
+You
+16:20:36
+
+And identify the potential issues for last and provide a feedback. So basically, it checks for things like factual accuracy, coherence, confidence,
+
+ByteByteGo
+16:20:41
+
+basically checks for things like factual accuracy, coherence, completeness, um, following instruction, followings, like adherence to instruction as
+
+You
+16:21:00
+
+And that's because it basically, um, basically, there might be some bias if the same element of choice be value at its own proper solution.
+
+ByteByteGo
+16:21:00
+
+And that's because it basically, um, basically, there might be someone else if you're saying that in first to evaluate its own proposal.
+
+You
+16:21:14
+
+Also more robust. So this setup would generally lead to more robust responses. That's all about perfection and then we use perfection. Prefection is good in tasks where we have a clear evaluation criteria. And also, we know that this
+
+ByteByteGo
+16:21:15
+
+And also more robust. So instead of generally lead to more robust responses. So that's all about perfection and event to user perfection. Reflection is doing tasks where we have a clear evaluation criteria. And also, we know that these
+
+You
+16:21:18
+
+not
+
+You
+16:21:23
+
+So for those kind of tasks, reflection, reflection usually
+
+You
+16:21:25
+
+So
+
+ByteByteGo
+16:21:30
+
+And examples are for instance code generation. Evaluator run tests and identify errors in the generated code by the generator.
+
+You
+16:21:38
+
+Another very popular example is vendor task which require complex, um, searches.
+
+ByteByteGo
+16:21:41
+
+A lot of times we have tasks that
+
+You
+16:21:56
+
+Again, another example is creating data plans because
+
+You
+16:22:13
+
+But again, there are also other types of workflows. After this, we are going to talk about a parallelization.
+
+ByteByteGo
+16:22:15
+
+So parallelization is another, um, pattern in computer data workflows.
+
+You
+16:22:17
+
+So parallelization is another, um, pattern in compute data warehouses.
+
+ByteByteGo
+16:22:28
+
+So
+
+ByteByteGo
+16:22:41
+
+So this is more efficient because there's no, uh, sequential processing.
+
+ByteByteGo
+16:22:45
+
+No sequential processing. Basically, we don't have to wait on one task to be complete in order to start another task. Everything is happening in parallel. So
+
+You
+16:22:46
+
+This is a topic is more efficient because there's no, um, sequential process in the input. Basically, you don't have to wait on one
+
+You
+16:22:52
+
+And another value of that parallelization constraint is robustness.
+
+ByteByteGo
+16:22:53
+
+And another value
+
+You
+16:23:20
+
+And there are two variations in parallelization pattern. As I just explained, basically, one is sectioning and the other is
+
+ByteByteGo
+16:23:22
+
+And there are, um, two variations in parallelization. As I just explained, basically, one is section and the other is moving. Sectioning will be great to ask into independent tasks, and then run the.
+
+ByteByteGo
+16:23:41
+
+Basically, we have two RL, f of 21, one for gen f or one for. The faster.
+
+You
+16:23:42
+
+So
+
+ByteByteGo
+16:23:51
+
+Same prompt goes into two different branches. And each branch try to, uh, solve this task and
+
+ByteByteGo
+16:23:53
+
+this
+
+You
+16:24:13
+
+So it's faster. And for booking, basically, the same question. Let's say research and give me summary of current state of the. Now in this case, the same prompt goes into two different branch. And each branch try to solve this task and collect information and generate some responses. Wonderful. So the main the main of this voting setup is that if one branch is missing something or doing something wrong, the other branch might capture that or not miss that final information during this conversation. So these are two bijection top parallelization. And then last thing is going to use, uh, parallelization. Sorry. This has to be realization. Basically, we can use parallelization in tasks where we can divide them into sub tasks. The other, um, scenario of
+
+ByteByteGo
+16:24:14
+
+is that if one branch is missing something or doing something wrong, the other branch might capture that or not to miss that line of information during its own research. So these are evaluation top correlation. And then the last name is when to use parallization. Sorry. This has to be parallelization. Basically, we can use parallelization in tasks where we can divide them into sub tasks. And we can then paralyze them for speed. The other, um, scenario where.
+
+ByteByteGo
+16:24:38
+
+So
+
+ByteByteGo
+16:24:43
+
+generally for use cases like, information gathering or, uh, multi idea interactions were two points.
+
+You
+16:24:44
+
+Additionally, for use cases like information gathering or, uh, multi API interactions were two times.
+
+ByteByteGo
+16:25:09
+
+So let's say we have a prompt that requires a lot of, uh, requests to some external APIs for using a lot of, um, tools. So this request, this API request to external services might be, uh, slow and requires, uh, as latency. By parallelizing, you find out problems. Basically, we are trying to make things faster by And then finally for code generation, let's say you wanna review some code for one one while nearly a bit. Um, and that's because, again, for the same code, we can just create multiple branches and send the error abilities in that code.
+
+You
+16:25:09
+
+So let's say we have a prompt, and we request a lot of requests to some external APIs for using a lot of tools. So this request, this ticket request which channel services might be, um, slow and requires, uh, as maintenance. By parallelizing this kind of problems, basically, we are trying to make things faster by, uh, in parallel processing and sending this request which you might take. And then finally, for code generation, let's say you want to review some code for vulnerabilities. Um, and that's because, again, for the same code, we can just create multiple branches code, we can just create multiple branches and send code to each branch, and each branch is responsible to, um, figure out on its own.
+
+You
+16:25:18
+
+Out. So this is finalization.
+
+ByteByteGo
+16:25:20
+
+Finally, that get to be able to just find all of them and generate some final you know, items that code. So this is prioritization. Also, there are other patterns which we're not going to go into detail, but there is
+
+You
+16:25:21
+
+This website, published financial week.
+
+You
+16:25:26
+
+They're having also a good discussion over workflows versus agents, and they discussed most of their, um, patterns in workflows.
+
+You
+16:25:54
+
+And then finally, they have also these values to optimize optimizer, and then they talk about agents. So that's interesting, um, you know, particular to me. And then the other thing I want to share is that, um, are also lots of different, uh, good resources for links out there to build this. And this is you will see how some of these workflows. Um, so it's still under entropy code, and it talks about different workflows, and then there's
+
+ByteByteGo
+16:25:56
+
+And finally, they have also this value optimized optimizer and data collections. So that's interesting. Article read. And then the other thing I want to share is that, um, there are also lots of different good other to big days. And this is you would see how to use Slack in practice within some of these workflows. It's still under Android code book, and it talks about the different workflows, and then there's some actual code you can see basic workflow how I can build them.
+
+You
+16:26:06
+
+So that's all about workflows. In the next, uh, video, we'll switch our focus to the third, uh, level of agents, which is call recording or tools. Hey, everyone.
+
+ByteByteGo
+16:26:07
+
+So that's all about workflows. In the next, uh, video, we'll switch our focus to the third level of agency, which is QuickCometrics.
+

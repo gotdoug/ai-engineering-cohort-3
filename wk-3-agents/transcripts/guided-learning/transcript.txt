@@ -1,0 +1,2983 @@
+You
+15:56:34
+
+This week is probably going to be more exciting
+
+ByteByteGo
+15:56:39
+
+This week is probably going to be more exciting compared to the previous publish agents. And agents probably you've heard the term, uh, over the last year.
+
+You
+15:56:39
+
+to the previous two weeks, and that's because you're going to talk about agents. And agents probably you've heard the term, uh, over the last year. It's
+
+ByteByteGo
+15:57:06
+
+And then you talk about gateway protocol, and finally, we'll go over some available agent integrations that you can use to business.
+
+ByteByteGo
+15:57:22
+
+Okay. So what are agents? Before we define agents for me, basically, I want to point out our agents are everywhere.
+
+ByteByteGo
+15:57:46
+
+Basically, when you add more, um, capability to elements, then you have agents.
+
+You
+15:57:58
+
+have to make elements more out of. Because elements are as you saw in the previous
+
+You
+15:58:13
+
+So, um, they don't have really any autonomy or agency to plan or perform actions or break complex task into a success. And we know that these are all the things that we desire. If we have a system or agent at plan plan,
+
+ByteByteGo
+15:58:14
+
+So, um, don't have really any autonomy or agency to plan or perform actions or break complex task into sub tasks. And you know what? These are all the things that we desire. If you have system or agent that can plan or has autonomy or, uh, has more agency and you can plan,
+
+ByteByteGo
+15:58:24
+
+So now, um, basically, here's an example. Am with my boss to take one day off. Now some
+
+You
+15:58:24
+
+behalf of, um, users or humans. So now, um, basically, here is an example. Conflict quite an image, my boss to take one day off. Now something like this, if it goes to LML or SLM that they have
+
+You
+15:58:31
+
+However, if you ask
+
+ByteByteGo
+15:58:45
+
+certain things in order to answer this question. For example, we it needs to understand what our
+
+ByteByteGo
+15:58:49
+
+And and then after that, it has to analyze those reports and then find some trends. And after that,
+
+You
+15:58:51
+
+what are, uh, the product market tools, what are some reports, and and then after that, it has to analyze those reports, and then find some trends. And after that, share existing opportunities. So it's
+
+ByteByteGo
+15:58:58
+
+share existing opportunities. So it's simply a lot of work for an Ella, which is simply a next time predictor to do all these things. So it will fail. Now with agents, this prompt, when it goes to the agent, agents are basically built for aims so that they can address
+
+You
+15:59:05
+
+Now the agents the same prompt when it goes to data, the agents are basically built for names so that they can address these signed up complex prompts. So it's going to be very useful for Now we can easily want to make more complex tasks, and they can just, uh, complete those tasks on behalf of users.
+
+ByteByteGo
+15:59:06
+
+and they can just, um, complete the tasks on behalf of users. And there are lots of different examples of
+
+You
+15:59:08
+
+There are lots of different examples of agents these days. We have legal agents. Basically, they come in legal research, drafting, and and
+
+ByteByteGo
+15:59:09
+
+And
+
+ByteByteGo
+15:59:15
+
+We have
+
+You
+15:59:19
+
+We have phone agents that automate phone calls to handle customers' conversations anyway.
+
+ByteByteGo
+15:59:23
+
+agents
+
+You
+15:59:27
+
+End point. These agents are using computer to complete pass basically have access to a computer and a browser to to complete those tasks. And one of your example is open as operator. The house
+
+You
+15:59:50
+
+Before moving to formal definition of agents and more technical definition, let's go to, um, strategy. And here is, for instance, the code. And if you click on it, you would go to this specific environment, but now the difference is
+
+ByteByteGo
+15:59:53
+
+patients that can do, uh, can just take on complex complex tasks for their users. And open AI agent is one example. Before moving to the formal definition of pages and more technical definition, let's go to, um, ChitPT. So this is ChitPT UI, and here is for instance the codex. For instance the codex. And if you click on it, you would go to the but now the difference is that this environment is basically giving you an agent 67.
+
+ByteByteGo
+16:00:00
+
+Software development software development process. And then it can also send you a a full request.
+
+ByteByteGo
+16:00:05
+
+So those kind of things. You can see here it's synced to, uh, a repo, and then it has branches and, uh, has all the versions.
+
+You
+16:00:11
+
+and then it has branches and, uh, has also versions. So basically, I just you can just easily say, hey, there's a bug in this branch or it's got to this and find it and fix it. And then this agent will just take care of all of these things.
+
+ByteByteGo
+16:00:16
+
+And then this agent would just take care of all of these steps. Um, there's also this operator, which we just saw.
+
+You
+16:00:21
+
+Um, there's also this operator. You should just so and basically, this is an agent, um, that and use its own browser for for you. So here you can see an example, basically, there was some prompt here, and then
+
+ByteByteGo
+16:00:25
+
+So here you can see an example, basically, that was on prompt here, and then the agent is opening a browser, setting up the environment, searching the web, and then based on the web search results, it decides to, uh, search or going to more websites and continue searching or
+
+You
+16:00:42
+
+So that's interesting. And then, um, another agent that, um, provides is basically the generic agent. And here, we can just, um, choose agent thought, and its its name is recently produced.
+
+ByteByteGo
+16:00:43
+
+to, um, to basically browse on their own. So that's interesting. And then, um, another agent that, um, provides is basically the generic agent. And here we can just choose agent mode, and it's it's it's recently produced. And you can ask something, and you could do anything, and we just
+
+You
+16:00:46
+
+Here, we can have something, and it could be anything. And we just, um, decide what to do with a pan. We would search a bit. We would use a lot of
+
+You
+16:00:56
+
+and it would try to complete complete the task for us. So and it generally takes some time. For example, maybe there's something like, you know, plan or tree or something, it may take, um, minutes or ten minutes or twenty minutes or even more. For example, I search, um, just to see how it works. I search these agents. It's something
+
+You
+16:00:59
+
+we are planning a five day script
+
+ByteByteGo
+16:01:00
+
+So any generally takes some time. For example, when you hear something like, can you, uh, plan a treat or something, it may take even more. For example, by search, uh, just to see how it works. I search these agents, something like, can you release the five
+
+You
+16:01:20
+
+So here, I can see this agent for for ten minutes on my behalf. And this is is it is its results here on on Fios Hotels and it's been sharing all the highlights and features.
+
+ByteByteGo
+16:01:23
+
+So here I can see this agent for fourteen minutes on my behalf. And this is this is its results. Here are some even sharing all the highlights and features. And then after that it's giving me different options that I have
+
+You
+16:01:34
+
+And it's basically five searches, 44 sources. Now if I click here, I would see the five process.
+
+ByteByteGo
+16:01:35
+
+And it basically five searches 44 sources. Now if I click here, I would see the entire process. And basically it's it's
+
+You
+16:01:50
+
+So I think it's just very interesting. So here's just, um, it's basically here is showing how we how the agent is thinking and also some searches that are happening. In the background. So here is going to booking.com and then trying to search for hotels.
+
+ByteByteGo
+16:01:50
+
+So I think it's just very interesting. So here it just, uh, it's basically showing how how the agent is speaking and also some searches that are happening in the background. So here's going to booting.com and then trying to search for hotels. And then, you know, again, searching.
+
+You
+16:01:50
+
+And then, you know, again, searching.
+
+ByteByteGo
+16:02:03
+
+And then search again. So obviously, if you wanted to all of these,
+
+ByteByteGo
+16:02:11
+
+But this agent has just
+
+You
+16:02:18
+
+Rates and everything. So at least we get a very good starting point for me to, uh, do something. It just
+
+ByteByteGo
+16:02:29
+
+So these are some different examples that we've seen, but now let's switch to, uh, more technical definition of agents. So again, the goal of building agents is basically to make questions answered
+
+You
+16:02:31
+
+So these are some different examples that we've seen. But now let's switch to, uh, more technical definition of patients. So, again, the goal of integrations is basically to make
+
+ByteByteGo
+16:02:50
+
+Or if they are more, um, basically, uh, smart, they know that they're not able to answer these type of questions.
+
+You
+16:02:51
+
+Or if they are more, um, basically, uh, smart, they would know that they're not capable of answering this type of question.
+
+ByteByteGo
+16:02:53
+
+Of answering these type of questions. So they may say something like, hey. I'm an admin, and then I cannot just provide
+
+You
+16:03:09
+
+Then I'm going to choose the lemma 3.373. And if you want to ask the same question, let me just do 60. How is the better in San Francisco today?
+
+ByteByteGo
+16:03:09
+
+And then How is the weather in San Francisco today?
+
+ByteByteGo
+16:03:11
+
+So
+
+You
+16:03:13
+
+And
+
+ByteByteGo
+16:03:19
+
+Okay. This model is is capable enough, and it recognizes that it's kind of wrong. It's not
+
+ByteByteGo
+16:03:33
+
+And, um, for this, you know, one one
+
+You
+16:03:33
+
+And, um, for this, you know, one one pass to augment it with some
+
+You
+16:03:35
+
+external tickets
+
+You
+16:03:43
+
+Because, again, they
+
+ByteByteGo
+16:03:46
+
+Because again, they some learned weights, and then they use those weights to predict the tokens, and they have not really learned, uh, the instructions to make any change or multiply to be numbers.
+
+ByteByteGo
+16:04:01
+
+Or maybe have questions like, who scored in some game? It requires a search. So we can't find the search capability.
+
+You
+16:04:16
+
+But there are all these different types of questions
+
+ByteByteGo
+16:04:17
+
+But there are all these different parts of questions that they can
+
+You
+16:04:23
+
+before, uh, before going to, uh, the definition,
+
+ByteByteGo
+16:04:24
+
+Before, um, before going to, um, the the the the the the the the the the the the the the the
+
+ByteByteGo
+16:04:37
+
+calculation to better understand what that means. So again, this is the, um, the same model. Now if I ask a question like, what is three plus three? In this case, it's very likely that the model with six because, um, it's it's it has probably seen
+
+ByteByteGo
+16:04:38
+
+very similar
+
+ByteByteGo
+16:04:49
+
+And then the model has probably learned the core memorized it. So it's if we can't really answer Yes. You can answer it. Now if you ask more complex, uh, mathematical calculations, like, what is this, um, times, like, this,
+
+You
+16:04:54
+
+So, again, this is the, um, the same model. Now if I ask the question, like, what is three plus three? Case, it's very lucky that the model would have put six because, um, it's it's it has probably seen a very similar example in this training So let's see if we can really answer. Yes. We can answer it right. Now if you ask more complex, uh, mathematical calculations like what is this um, times like this. I know if this is really part of another view. My system had deliver, and this is the
+
+ByteByteGo
+16:05:00
+
+Alright. Don't know if this is really right or not gonna use my system keyboard. Again, this is a a okay. That's that's impressive. The model has also done breaking for this modification. Now let me make it more even complicated.
+
+You
+16:05:04
+
+make it more even more complicated. Let's see if we can answer this question.
+
+ByteByteGo
+16:05:05
+
+Let's see if we can answer this question.
+
+You
+16:05:15
+
+And let me use my copy it here, the correct answer, so we can compare it. So okay. So this time, the model we don't make it the
+
+ByteByteGo
+16:05:19
+
+Let me use my let me copy it here, the correct answer. So I can compare it. Okay. So this time, the method we're gonna make it and it's obviously incorrect. It's good enough but it's incorrect. What I wanted to show here is that these kind of questions are very simple for humans because we have some instructions. I also have some tools.
+
+ByteByteGo
+16:05:28
+
+I
+
+You
+16:05:29
+
+So these kind of questions are very easy if you are given access to technical
+
+You
+16:05:49
+
+So now let's go to the more, uh, technical definition of making data more capable. Alright. So what is an AI agent? If I search for data agent for what is an AI,
+
+ByteByteGo
+16:05:51
+
+So now let's go to the more, um, technical dimension of making balloons more stable. Alright. So what is an AI evidence? If I search for the AI evidence for what is an AI agent? Basically, there are lots of endings
+
+ByteByteGo
+16:06:03
+
+But all of them are basically talking about something similar. They're explaining something, um, similar.
+
+ByteByteGo
+16:06:15
+
+A. So
+
+You
+16:06:17
+
+So, again, there is not single
+
+You
+16:06:34
+
+And also it it, um, they basically can reason call tools and rely on memory to complete to complete those complex tasks.
+
+ByteByteGo
+16:06:37
+
+complete tasks on behalf of users, and the other is that it pertains some goals. And also it it basically plan reason, call tools, and rely on memory to complete to complete those complex tasks.
+
+You
+16:06:41
+
+And
+
+ByteByteGo
+16:06:43
+
+So this whole thing and they visualize something like this. Basically, there's agent. It is pink rectangle, this agent. And
+
+ByteByteGo
+16:06:54
+
+all that matters is that it's just some software sitting here in between different components so that they can complete tasks.
+
+ByteByteGo
+16:07:02
+
+Comment. So this element help the agent be planning and using.
+
+ByteByteGo
+16:07:14
+
+And then after, the agent just, um, coordinate with all these things and coordinate
+
+ByteByteGo
+16:07:17
+
+the agent
+
+You
+16:07:20
+
+And then after, the agent just, um, coordinate with all these things and coordinate um, coordinate with all these things and set up a sequence of tasks. Then once the final output is ready and the agent release, the task is complete, it would then send a response back to the user.
+
+You
+16:07:26
+
+And again, there are different
+
+You
+16:07:35
+
+if you are But this is basically an agent.
+
+You
+16:07:41
+
+Agent and ideally, these agents should give a lot of kind of an, uh, agents So but that can be very complex in the beginning.
+
+You
+16:07:44
+
+So
+
+You
+16:07:54
+
+So
+
+ByteByteGo
+16:07:58
+
+And because of that, there are different levels of agency that are defined. Basically, agents have autonomy, element the goal is that we slowly give elements more autonomy to complete tasks. And there are different levels of giving this autonomy or agency. Then
+
+You
+16:07:59
+
+So
+
+ByteByteGo
+16:08:07
+
+different, uh,
+
+You
+16:08:08
+
+five d's, different all these, uh, different, uh, agents levels in very detail. But basically, the lowest is single processor, and we have workloads.
+
+ByteByteGo
+16:08:16
+
+And there are a lot of arguments about
+
+You
+16:08:17
+
+Agents levels. And there are a lot of arguments about
+
+You
+16:08:23
+
+But, um, this is the overall, uh, feature of different agents that you can have developed. So in the next lecture, you will start a simple process, and then you'll switch to workforce.
+
+ByteByteGo
+16:08:28
+
+But But, um, this is overall, uh, picture of different agents So in the next lecture, we'll just stop it in the processor, and then we'll switch to workforce. Alright. So the lowest
+
+You
+16:08:30
+
+So the lowest agent in h m 67 is a single customer. And this way, in this case, we have the software
+
+ByteByteGo
+16:08:57
+
+So this is again it has a low latency level. It's not really capable of finding or handling complex prompts. It only handles basically, model these processes one is the process. Then whatever So this is not really considered an agent.
+
+ByteByteGo
+16:09:10
+
+Software, a simple software. So it's kind of system. It's more like, uh, it's not agent based system because it has the lowest agency. And remember, LLMs are just a model that predict the next token. So we have LLM here, and um, if you want to be precise, then something like this goes to LMs. Like, how is the data latency time? So
+
+You
+16:09:10
+
+It only samples basic model. This process is one is the process. Then whatever the So this is not really considered an agent. It's more like a software, a simple software. So this kind of system is more like, uh, it's not agent system because it has lowest agency. And remember, LLMs are just a model that predict the next token. So we have LLM here, and uh, if you want to be precise, then something like this goes to Elem, like, how is the
+
+You
+16:09:23
+
+the more things that are happening in software,
+
+ByteByteGo
+16:09:24
+
+would produce their probabilities, and then from the probabilities, you can pick the next. Okay. So based on all these all all that all the LN is just happening in the next token. So in practice, there is this loop where it doesn't match with the element and generate final response. And the more things that are happening in software right now by cog Cognition are to go from these text to sequence of values.
+
+ByteByteGo
+16:09:36
+
+So all this planning by this software. And, um, a lot of times in in the lecture before simplicity for visual simplicity, we make sure that So
+
+ByteByteGo
+16:09:49
+
+So this software looks at something like this. Again, it's a function, and it starts from the messages like the user prompt. And then create top
+
+You
+16:09:49
+
+this. So this software looks something like this. Again, it's just a function, and it starts from messages, like, the user prompt, and then create a
+
+ByteByteGo
+16:09:53
+
+And it just keeps doing this
+
+ByteByteGo
+16:10:01
+
+and then which way the user code return it. So that's the lowest
+
+You
+16:10:03
+
+which generates text token by token. And then it just keeps doing this, and then whenever the soft token is reached, basically it's breaking from this loop. And then finally, decode the IDs back into the generated text, and then we try to get user for return. So that's the lowest, um, agent scale, single pass two.
+
+ByteByteGo
+16:10:28
+
+next, we have workflows. So workflows, basically, the idea here is that, um, we basically, an air workflow is a fixed series of steps. So whatever the the specific task is, come up with a sequence of steps like this. And that's it's a predefined. It's basically just a predefined workflow. That is implemented by the developer. And this specifies how the how the information flows. So whenever the prompt prompts basically goes it follows these fixed set of sets and sequences.
+
+You
+16:10:29
+
+In order to make this set up, a little bit more complex and make this our agent system giving more agency, next we have workflows. So So workflows, basically, the idea here is that, um, we basically, an entire workflow is a fixed series of the steps. So whatever the the specific task is, it can come up with a sequence of steps like this. Is a predefined basically just a predefined workflow that is implemented by the developer. And this specifies how the how the information flows. So whenever the prompt prompts, basically goes it follows this fixed set of steps and sequences. Process.
+
+You
+16:10:47
+
+Basically, the developer designs a predefined code path and implements a participant to just participate this flow of information. And then at one time, there is no really, there is no planning involved. There's not an agent at times depending on the prompt. The plan is already
+
+ByteByteGo
+16:10:48
+
+And some of these might be items. So basically, the developer designs a predefined code path and implements an orchestration to just orchestrate this flow of information. And then at one time, there is no really, there is no planning involved. There is no The plan is already kind of predefined by the developer. All needs to happen is that an administrator just has the information.
+
+ByteByteGo
+16:11:05
+
+So this is workflows, and they are very powerful. And there are different patterns to create this So if you look at all different, um, is workflows that are available earlier, all of them can be categorized into, um, these five
+
+ByteByteGo
+16:11:09
+
+We have chunking. We have routing, parallelization, reflection, and vertex.
+
+You
+16:11:10
+
+different, um, these workloads that are available out there, all of them can be categorized into, uh, these five patterns mostly, and there might be some other patterns. But these are very popular patterns for workloads. You have chunking. You have routing, parallelization, replication, and focus tracker.
+
+ByteByteGo
+16:11:21
+
+A workflows. So and here's the idea. For complex tasks,
+
+You
+16:11:21
+
+So let's start with Panchain. The first pattern, I think, would explore is Panchain. A popular pattern to build a workflows. So and here's the idea. For complex tasks,
+
+ByteByteGo
+16:11:29
+
+It may
+
+ByteByteGo
+16:11:34
+
+task or context. We have the problem of error propagation. Mean that
+
+You
+16:11:36
+
+last four context. It covers the problem of error propagation, meaning that the
+
+ByteByteGo
+16:11:38
+
+the plan set is to address these tasks. There's a sequence of the sets or reasons that are required.
+
+You
+16:11:45
+
+during the generation, uh, if the answer is going to be too long just because if you guys want to take a reasonable steps,
+
+You
+16:11:48
+
+it requires steps, the errors would just provide an So by the time that their user would see final answer, there's a lot error. So
+
+You
+16:12:03
+
+Imagine one example. Let's say if you want to you want to do an agent system to do multiple search. And basically can is capable of, um, completing multiple multiple search tasks. They're common, um, like, a normal request or
+
+ByteByteGo
+16:12:10
+
+And, basically, it can it's capable of, um, completing multibee search tasks. So The common, um, like, a normal request or prompt time, something like this. Analyze topic market, summarize findings. So it's something very, uh, difficult if somebody wants to learn about certain market and find opportunities.
+
+ByteByteGo
+16:12:12
+
+This
+
+You
+16:12:15
+
+opportunities. So it's something very, um, difficult if somebody wants to learn about a certain market and find opportunities. However, this problem can be very, um, complex for reseller because there are lots of things that element needs to do.
+
+ByteByteGo
+16:12:28
+
+So something like this, it would be, uh, too much for the element. And that's the idea of branching. What branching purpose. K? So decompose this kind of task into a fixed simpler sub task. If we know and find that any
+
+You
+16:12:29
+
+Something like this, you would be, um, too much for that. And that's the idea of function. What function you propose is to decompose kind of tasks if we fix simpler sub tasks. Basically, instead of having one eleven, response, if we know at the time that initial of our tasks is about market features,
+
+ByteByteGo
+16:12:44
+
+And we're just keep doing this and following this workflow sequentially,
+
+You
+16:12:44
+
+And then for users that we have certain prompts, and they use those to just change the output of this into that prompt. Then we pass the new prompt to the seller. And we just keep doing this and following this, uh, workflow sequentially.
+
+ByteByteGo
+16:13:08
+
+So once we have that, basically, this this workflow is now capable of addressing more complex tasks. Let's see the same example. We had this prompt like analyzing past market and summarizing findings as well. Now in this workflow, we can easily answer those questions.
+
+You
+16:13:09
+
+So once you have that, basically, this this workflow is now capable of addressing more complex tasks. Let's see the same example. Had this all this step prompt like analyzing housing market and so on. Now in this workflow, we can easily answer those questions.
+
+You
+16:13:12
+
+Quaycom, which is supposed to be around some market research, around some topics.
+
+ByteByteGo
+16:13:12
+
+So whenever the user queries, which is supposed to be on doing some topic search, parent topics,
+
+You
+16:13:43
+
+Again, the software would construct these fonts and, um, change all these things and take it off.
+
+ByteByteGo
+16:13:44
+
+then we can construct a second prompt. We can have something that summarizes what needs in output which is output seven. Again, the software would construct the prompts and, uh, chain all these things and take care of constructing the setup for this workflow.
+
+You
+16:13:59
+
+So
+
+ByteByteGo
+16:14:16
+
+So again, by carefully design, uh, these kind of workflows and doing crunching,
+
+You
+16:14:17
+
+So, again, by carefully designing, uh, design of workflows and doing content for tasks
+
+ByteByteGo
+16:14:22
+
+for tasks that are possible to do punctuation, we can use some build some bigger workflows that. Now we have to use
+
+You
+16:14:23
+
+Now refuse
+
+ByteByteGo
+16:14:27
+
+uh, be decomposing fixed subtask. And remember, we are training efficiency for accuracy for accuracy.
+
+ByteByteGo
+16:14:40
+
+And also,
+
+You
+16:14:42
+
+And also, in cases where we want to enhance reliability because now we can easily
+
+You
+16:14:49
+
+and see if something goes wrong. We can see there the problem's happening. And in general, it's And the second example is that, um, functioning is typically used and the config
+
+You
+16:15:40
+
+so that's all about function.
+
+ByteByteGo
+16:15:53
+
+So that's on the background chain. Now the next thing that you're going to, uh, talk about is the router or routing pattern. So routing is the second pattern, um, that you would learn for AI workflows. Basically, the vision here is that for complex tasks, a single that may not be quick enough to handle different purposes or And here, in Racking, we want to go beyond just the
+
+You
+16:15:54
+
+Item. So wrapping is the second pattern, um, that you would learn for AI workloads. And, basically, the confusion here is that for complex tasks, a single element may not be good enough to handle different purposes or tasks. And here, in wrapping, you want to go beyond just the thermostat
+
+ByteByteGo
+16:15:58
+
+conditional logic. And the workflow has two steps.
+
+You
+16:16:01
+
+And
+
+ByteByteGo
+16:16:08
+
+Incoming query, which is the user term, to determine its intent or its nature. Once the wrapper determines the intent of the prompt, then it can generate it to the specialized branch.
+
+You
+16:16:08
+
+Once the router determines the intent of the prompt, then it can direct it to the specialized branch.
+
+You
+16:16:24
+
+Now let's talk a little bit more about this two and see how can we really build this tracker.
+
+ByteByteGo
+16:16:24
+
+Case. Now let's tracker.
+
+ByteByteGo
+16:16:27
+
+Wrapper.
+
+ByteByteGo
+16:16:50
+
+And then based on that machine learning model's output, we can then chose the correct branch. The third approach, which is a little bit more focused on semantic, um,
+
+You
+16:16:53
+
+And then based on that, machine learning models are good, and then chose the Python. The third approach, which is a little bit more, uh, focused on semantic routing is right here is we use something similar to what we're doing in the right.
+
+ByteByteGo
+16:16:53
+
+routing
+
+ByteByteGo
+16:17:11
+
+It can be based on the topic or the data logic this workflow logic we're having already implemented. And then once it's
+
+You
+16:17:11
+
+And then once it's
+
+You
+16:17:25
+
+um, to
+
+ByteByteGo
+16:17:34
+
+from the list of, let's say, given prompts, given, um, intents. So these are different ways that these raptors can be built. And also regarding these, the specialist branches
+
+You
+16:17:40
+
+given, um, intents. So these are different base that this matter can be built. And also, regarding these specializations, they can be elements, but they don't have to be element. They can be the traditional models, notional models, or good at
+
+You
+16:17:53
+
+So, again, this matches any evidence for any evidence. So this is Vowel. And then, um, the next thing is when to use Vowel.
+
+You
+16:17:57
+
+Routing. The routing pattern is typically preferred, then you have then you're dealing the tasks
+
+ByteByteGo
+16:17:57
+
+So, again, these branches can be evidence or can be evidence. So this is routing. And then, um, the next thing is when to use routing. The routing pattern is typically preferred, then you have then you're dealing with tasks.
+
+You
+16:18:06
+
+And also, for those tasks, we also need to make sure that we can classify the intent. So classification should be also handled accurately.
+
+ByteByteGo
+16:18:11
+
+And also for those tasks, we also need to make sure that we can classify data. So classification should be also handled accurately. And for those kind of complex tasks, grabbing workflow works very good. Some example are for trans building customer operations.
+
+ByteByteGo
+16:18:39
+
+And for hard or unneal questions, the RAVI can just send them to the most data model that we have.
+
+ByteByteGo
+16:19:05
+
+So that's all I wanted to share for. The next pattern that we would talk about is revision. So what is Reflection? It's also called evaluate optimizer.
+
+You
+16:19:10
+
+Us. So that's all I wanted to share for adding. The next pattern that we would talk about is research. So what is reflection? It's also called evaluator optimizer where you may see different, um, terminology here. But basically, the intuition is that the editing should not be optimal or accurate or incomplete.
+
+You
+16:19:24
+
+Workloads that you've seen, if LMM generates something that is not correct or that's not there is no way that the workload can fix that. The purpose of refreshment is to address that that limitation. Basically, reflection puts generation and evaluation in your loop. So there is this feedback loop and then there are two components.
+
+ByteByteGo
+16:19:25
+
+Or you may see different, um, terminology here. But, basically, the impression is that the LMS engine light might not be more accurate or it might be incomplete. In previous workload that you've seen, if LMM generates something that is not correct or that's not, um, popping on, there is no way that the workflow can fix that. Reflection is to address that that negation. Basically, reflection puts generation and evaluation loop. There is this feedback loop and the nodes components, a generator and evaluator where it's also called critic.
+
+You
+16:19:34
+
+So this loop
+
+ByteByteGo
+16:19:39
+
+So this loop
+
+You
+16:19:45
+
+In other words, this projection is a four month satisfaction for self improvement.
+
+ByteByteGo
+16:19:52
+
+So that's the idea behind reflection. It's more, um, it makes the workflow more dynamic instead of
+
+You
+16:19:54
+
+That's the idea of refinement. It's more, um, it makes the workflow more dynamic instead of
+
+You
+16:19:55
+
+following a various static fixed workflow. So this will post as long as needed, and a better mind to
+
+ByteByteGo
+16:20:03
+
+let's talk more about issues generate and predict. Again, you may see different terminologies on highlight.
+
+You
+16:20:03
+
+let's talk more about Higgs generate handprints. Again, you may see different technologies on online.
+
+ByteByteGo
+16:20:05
+
+Responsibility.
+
+You
+16:20:06
+
+So it has a very clear responsibility.
+
+You
+16:20:10
+
+It process the conversation and generate the correct solution at its score, at its final responsibility.
+
+ByteByteGo
+16:20:20
+
+Recent n minus one solution and feedback. So that basically creates a memory
+
+You
+16:20:22
+
+Feedback. So that basically creates a memory
+
+You
+16:20:36
+
+And identify the potential issues for last and provide a feedback. So basically, it checks for things like factual accuracy, coherence, confidence,
+
+ByteByteGo
+16:20:41
+
+basically checks for things like factual accuracy, coherence, completeness, um, following instruction, followings, like adherence to instruction as
+
+You
+16:21:00
+
+And that's because it basically, um, basically, there might be some bias if the same element of choice be value at its own proper solution.
+
+ByteByteGo
+16:21:00
+
+And that's because it basically, um, basically, there might be someone else if you're saying that in first to evaluate its own proposal.
+
+You
+16:21:14
+
+Also more robust. So this setup would generally lead to more robust responses. That's all about perfection and then we use perfection. Prefection is good in tasks where we have a clear evaluation criteria. And also, we know that this
+
+ByteByteGo
+16:21:15
+
+And also more robust. So instead of generally lead to more robust responses. So that's all about perfection and event to user perfection. Reflection is doing tasks where we have a clear evaluation criteria. And also, we know that these
+
+You
+16:21:18
+
+not
+
+You
+16:21:23
+
+So for those kind of tasks, reflection, reflection usually
+
+You
+16:21:25
+
+So
+
+ByteByteGo
+16:21:30
+
+And examples are for instance code generation. Evaluator run tests and identify errors in the generated code by the generator.
+
+You
+16:21:38
+
+Another very popular example is vendor task which require complex, um, searches.
+
+ByteByteGo
+16:21:41
+
+A lot of times we have tasks that
+
+You
+16:21:56
+
+Again, another example is creating data plans because
+
+You
+16:22:13
+
+But again, there are also other types of workflows. After this, we are going to talk about a parallelization.
+
+ByteByteGo
+16:22:15
+
+So parallelization is another, um, pattern in computer data workflows.
+
+You
+16:22:17
+
+So parallelization is another, um, pattern in compute data warehouses.
+
+ByteByteGo
+16:22:28
+
+So
+
+ByteByteGo
+16:22:41
+
+So this is more efficient because there's no, uh, sequential processing.
+
+ByteByteGo
+16:22:45
+
+No sequential processing. Basically, we don't have to wait on one task to be complete in order to start another task. Everything is happening in parallel. So
+
+You
+16:22:46
+
+This is a topic is more efficient because there's no, um, sequential process in the input. Basically, you don't have to wait on one
+
+You
+16:22:52
+
+And another value of that parallelization constraint is robustness.
+
+ByteByteGo
+16:22:53
+
+And another value
+
+You
+16:23:20
+
+And there are two variations in parallelization pattern. As I just explained, basically, one is sectioning and the other is
+
+ByteByteGo
+16:23:22
+
+And there are, um, two variations in parallelization. As I just explained, basically, one is section and the other is moving. Sectioning will be great to ask into independent tasks, and then run the.
+
+ByteByteGo
+16:23:41
+
+Basically, we have two RL, f of 21, one for gen f or one for. The faster.
+
+You
+16:23:42
+
+So
+
+ByteByteGo
+16:23:51
+
+Same prompt goes into two different branches. And each branch try to, uh, solve this task and
+
+ByteByteGo
+16:23:53
+
+this
+
+You
+16:24:13
+
+So it's faster. And for booking, basically, the same question. Let's say research and give me summary of current state of the. Now in this case, the same prompt goes into two different branch. And each branch try to solve this task and collect information and generate some responses. Wonderful. So the main the main of this voting setup is that if one branch is missing something or doing something wrong, the other branch might capture that or not miss that final information during this conversation. So these are two bijection top parallelization. And then last thing is going to use, uh, parallelization. Sorry. This has to be realization. Basically, we can use parallelization in tasks where we can divide them into sub tasks. The other, um, scenario of
+
+ByteByteGo
+16:24:14
+
+is that if one branch is missing something or doing something wrong, the other branch might capture that or not to miss that line of information during its own research. So these are evaluation top correlation. And then the last name is when to use parallization. Sorry. This has to be parallelization. Basically, we can use parallelization in tasks where we can divide them into sub tasks. And we can then paralyze them for speed. The other, um, scenario where.
+
+ByteByteGo
+16:24:38
+
+So
+
+ByteByteGo
+16:24:43
+
+generally for use cases like, information gathering or, uh, multi idea interactions were two points.
+
+You
+16:24:44
+
+Additionally, for use cases like information gathering or, uh, multi API interactions were two times.
+
+ByteByteGo
+16:25:09
+
+So let's say we have a prompt that requires a lot of, uh, requests to some external APIs for using a lot of, um, tools. So this request, this API request to external services might be, uh, slow and requires, uh, as latency. By parallelizing, you find out problems. Basically, we are trying to make things faster by And then finally for code generation, let's say you wanna review some code for one one while nearly a bit. Um, and that's because, again, for the same code, we can just create multiple branches and send the error abilities in that code.
+
+You
+16:25:09
+
+So let's say we have a prompt, and we request a lot of requests to some external APIs for using a lot of tools. So this request, this ticket request which channel services might be, um, slow and requires, uh, as maintenance. By parallelizing this kind of problems, basically, we are trying to make things faster by, uh, in parallel processing and sending this request which you might take. And then finally, for code generation, let's say you want to review some code for vulnerabilities. Um, and that's because, again, for the same code, we can just create multiple branches code, we can just create multiple branches and send code to each branch, and each branch is responsible to, um, figure out on its own.
+
+You
+16:25:18
+
+Out. So this is finalization.
+
+ByteByteGo
+16:25:20
+
+Finally, that get to be able to just find all of them and generate some final you know, items that code. So this is prioritization. Also, there are other patterns which we're not going to go into detail, but there is
+
+You
+16:25:21
+
+This website, published financial week.
+
+You
+16:25:26
+
+They're having also a good discussion over workflows versus agents, and they discussed most of their, um, patterns in workflows.
+
+You
+16:25:54
+
+And then finally, they have also these values to optimize optimizer, and then they talk about agents. So that's interesting, um, you know, particular to me. And then the other thing I want to share is that, um, are also lots of different, uh, good resources for links out there to build this. And this is you will see how some of these workflows. Um, so it's still under entropy code, and it talks about different workflows, and then there's
+
+ByteByteGo
+16:25:56
+
+And finally, they have also this value optimized optimizer and data collections. So that's interesting. Article read. And then the other thing I want to share is that, um, there are also lots of different good other to big days. And this is you would see how to use Slack in practice within some of these workflows. It's still under Android code book, and it talks about the different workflows, and then there's some actual code you can see basic workflow how I can build them.
+
+You
+16:26:06
+
+So that's all about workflows. In the next, uh, video, we'll switch our focus to the third, uh, level of agents, which is call recording or tools. Hey, everyone.
+
+ByteByteGo
+16:26:07
+
+So that's all about workflows. In the next, uh, video, we'll switch our focus to the third level of agency, which is QuickCometrics.
+
+ByteByteGo
+16:26:08
+
+Hey, everyone.
+
+ByteByteGo
+16:26:16
+
+And then the third
+
+You
+16:26:25
+
+However, still, it goes workflows, the models cannot
+
+You
+16:26:28
+
+answer certain types of questions. For example, we also saw that for questions like how's a better billing, some high school questions, for some questions which require light data, for example, with 14 parts a line in play.
+
+You
+16:26:41
+
+And then given it workflows, still they would fail answering these questions because given workflows is basically multibillion amounts. And different patterns including relation,
+
+You
+16:26:57
+
+So let's understand how that happens. Basically, we have this software here. This this is our in our previous agencies, um, agency systems,
+
+You
+16:27:14
+
+Now this is too abstract. We will talk more in more detail what does it mean to introduce those. But before that, let's say, real example.
+
+ByteByteGo
+16:27:19
+
+Now this is fast track. We we talk more in more detail. What does it mean to introduce tools? But before that, let's see. That, I see we're like, uh, for example, there is a question like, what is this number plus? It goes to the software. The software starts talking to the software.
+
+ByteByteGo
+16:27:25
+
+And after communicating with Eleventh, it believes that the calculator tool is the best tool.
+
+You
+16:27:26
+
+Then software would also recognize that this kind of prompt require, um, accessing certain tools. And after communicating with Telm, it could be that the calculator tool is the best tool for this kind of prompt.
+
+ByteByteGo
+16:28:01
+
+So all these questions, we will cover, uh, shortly. This is the two calling workflow.
+
+ByteByteGo
+16:28:06
+
+First step is define a tool. First of all, the first step is basically ensure that there is something out there that defines
+
+ByteByteGo
+16:28:08
+
+After that is when we let the LMM
+
+You
+16:28:27
+
+So, um, let's start. Let's use a really gentle. And, for example, let's say you want to introduce a single action ticket to
+
+ByteByteGo
+16:28:30
+
+start. Let's use a real example. And, ideally, what you wanna do is you wanna add
+
+You
+16:28:34
+
+and then make questions like this, like what is discussed that. Realize that
+
+ByteByteGo
+16:28:49
+
+do the the thing that you wanna do in this case is transaction. So we write a function that is if at and then
+
+You
+16:28:50
+
+then the function, we can, um, do the the thing that you want to do in this case. We write the function like is if had, and then it, uh, has two arguments, x and y.
+
+You
+16:29:03
+
+Calculating this attention. So it's not it's no longer an or, um, using some learn base to make a sign of vision. It's very accurate. Now we call this Python file, add the file, and there's this function, add, and it's purely adding to numbers. So that's the first. They define the two.
+
+ByteByteGo
+16:29:04
+
+So
+
+ByteByteGo
+16:29:06
+
+So
+
+You
+16:29:13
+
+So let's go back here. This is the step one, which is very straightforward.
+
+You
+16:29:23
+
+And in the past now, instead of saying what is, like, two eight plus numbers,
+
+ByteByteGo
+16:29:33
+
+between function calling or two calling because tools at their at their core are basically function. So so back here. This is the step one which is very straightforward. Now step two is when they have to let the element of two. Before before see this, let's go to a real example. Um, doing a call with this. Again, let's go to hydraulic views, the SQL lambda 2.18. And in the path now, instead of saying what is, like, 200 characters, So I don't know if this has a sorry or not. But now that's why let me introduce prompt as the user prompt. So instead you can use a rule called add to add to numbers.
+
+ByteByteGo
+16:29:36
+
+It turns their sum, use it like this.
+
+You
+16:29:41
+
+So I don't know really if it's necessary. It's quite or not. But now that's alright, let me introduce prompt as the user prompt. So it says you can use a tool called add to moments. Takes two inputs, number one and number two. If we change their sum, use it like this. We have this tool, special token tool or this kind of special format to for the element to
+
+You
+16:29:44
+
+And
+
+ByteByteGo
+16:29:45
+
+And then here is basically the name of the tool which we explained here. It's the name is hat.
+
+ByteByteGo
+16:29:52
+
+And after that, you basically close this the the tool tag.
+
+You
+16:30:11
+
+after that, it basically closes the the two time. Here we say just replace ten one and two with the numbers you want by. So now this is part of the prompt now. Basically, in the prompt, we are just explaining some tools to the algorithm and how to use it. And after that, then we include that first. So for example, here I can say now now what is discussed. Now what I expect is that Taylor M should learn from this kind of question that it can rely on its add tool. Also from this prompt, it should extract these two numbers and replace ten one and two with these numbers.
+
+ByteByteGo
+16:30:36
+
+Explaining some tools to the admin and how to use it. And after that, then we include that code. So for example, here I can say I will use this button. Now what I expect is that Lendly should learn from this kind of question that it can rely on its add to and the output something like this. And also from this prompt, it should extract these numbers and replace n one and n two with these numbers. Let's see if it really does that or not. And in the meantime, let me also find the correct number of this two from the calculator. So this is the correct number just for reference. So this one, this is incorrect. So initially, the model was, uh, outputting the addition. Right? This is not equal to this. Now with this new prompt, it says let me use the actual to calculate the song. Sorry. Currently, realize that I can use this tool. And then it says to add and then it's including those numbers. Then in this case, it does until you print something,
+
+You
+16:30:38
+
+And in the meantime, do you also find the correct number of this two on the calculator. This is the correct number, just by reference. So this was in this part. So initially, the model was outputting the addition byte. This is not equal to this. Now it is new prompt. Says let me use the act two if I feel like something. So it partly realized that it can use this tool. And then it says to app, and it's including those numbers. Again, in this case, you just continue printing something. But we talked about that how to self generation here, and
+
+ByteByteGo
+16:30:42
+
+And
+
+You
+16:30:44
+
+user tool, uh, has this inputs to the function that we want to buy. And
+
+You
+16:30:57
+
+Now if I ask if I include the same instructions here, then I ask something very relevant, like, how is it better?
+
+ByteByteGo
+16:30:58
+
+Now I ask if I include the same instructions here and then I ask something very relevant like how is it better?
+
+ByteByteGo
+16:31:16
+
+By the way, I'll use, oh, and by the way, I'll use at to answer your question Okay. This is something different and, uh, for a two weeks max. Okay. So it's just just going a good.
+
+You
+16:31:22
+
+Now
+
+ByteByteGo
+16:31:26
+
+Now we in previous week, we saw that there each prompt has two parts.
+
+ByteByteGo
+16:31:59
+
+Refresh again, and then I this is here, and we use this. And then I say what is, um, do we have it now? What is this? Plus this. Now even though there's no longer any explanation of tools in the in the user query or user prompt,
+
+You
+16:32:01
+
+have the system pump as part of as part of the system. Or actually, naturally, refresh again, and then I paste this here and reduce this. Then I say, what is, um, their habits now? What is this process? Now even though there is no longer any explanation of what's in the in the user query or user
+
+ByteByteGo
+16:32:10
+
+So let's now
+
+You
+16:32:11
+
+So let's now back to our lecture and see the second. They already started a real example.
+
+You
+16:32:21
+
+Answer.
+
+ByteByteGo
+16:32:29
+
+this is the same as Next is, uh, now when element wants to use it, we call it when we turn this switch once. So
+
+ByteByteGo
+16:32:54
+
+So at some point, it may produce this special token tool that is output. Then it says, okay. Call this function and these are the arguments. And then, uh, then it goes as uh, then it closes the back. At this point, the software would realize that, okay,
+
+You
+16:32:55
+
+So at some point, it may produce this special token tool as it's up to, and then it says, okay. Call this function, and these are documents. And then, uh, then it closes the tag. At this point, the software would realize that, okay. LMM is definitely meeting to call it to and gets it to
+
+You
+16:33:02
+
+And from this part, it's up there.
+
+ByteByteGo
+16:33:07
+
+recognizes which tool to call. In this case, it's ad. And it also knows about our arguments.
+
+You
+16:33:08
+
+Next software and basically call that, which is just a bottom part. It would call ad
+
+ByteByteGo
+16:33:11
+
+And
+
+ByteByteGo
+16:33:30
+
+So this is the third step of, um, calling functions and giving elements ability to call function. Augmenting automating them with tools.
+
+ByteByteGo
+16:33:31
+
+So these are all previous sets of to calling. Alright. We saw how easy it is.
+
+You
+16:33:33
+
+So this is the third step of calling functions and giving So we saw all previous steps of to call it. Alright. We saw how easy it is to introduce tools to LML. You can just take
+
+You
+16:33:55
+
+how they would use it. Now let me also add one more tool for getting better. So let me rerun this. And I have this already here. I guess it here. I guess it temporarily here so we can easily read it. So basically, here, I'm saying that you can use it. We call it as platform number. So this is basically the same one as before. So
+
+ByteByteGo
+16:33:55
+
+Now let me also add buttons for anything better. So let me rerun this. And I have this already here. I guess it temporarily here so we can easily read it. So basically, here I'm saying that you can use a tool called
+
+ByteByteGo
+16:33:57
+
+And now here, I'm also explaining the plain English that
+
+You
+16:34:06
+
+here, I'm basically saying,
+
+You
+16:34:21
+
+firstly, describe something very generic. Hi. How are you? Doing well. Thanks for asking. So it's not talking to anything about, uh, it's not really
+
+ByteByteGo
+16:34:21
+
+Hi. How are you? I'm doing well. Thanks for asking. So it's not talking to anything about, uh, it's not really
+
+You
+16:39:53
+
+So for generic questions, it's not designed to be used. Now let me say what is, um, is plus this.
+
+You
+16:39:57
+
+Piece. You can ask that you can use the app tool to calculate some.
+
+You
+16:40:08
+
+That generation would learn about this. It would run the add to add to add to, get the response back.
+
+You
+16:40:12
+
+Add to add to add to, get the response back, append it to here, something like this. This is the response. And then it passes this response and continue the generation to. So
+
+ByteByteGo
+16:40:12
+
+useful. Now let me say what is, um, is plus s. You can ask that you can use the add tool if you like this one. And if here it's just, um, I think it's easier to use this tool. At this point, again, it's just housing because it doesn't have access to tools. But if you have if you modify the generation group, it's usually one If after this part, that generation would we learn about this. It would run the add to add to get the response back, append it to here, something like this exit response. And then when it passes this response, continue the generation to.
+
+ByteByteGo
+16:40:19
+
+Now let me also chat ask a question about it. How is it better in San Francisco?
+
+ByteByteGo
+16:40:23
+
+So now again, this is tricky because the data tool usage was defined was based on 92.2, and here we're asking a question about our city.
+
+You
+16:40:24
+
+now
+
+You
+16:40:31
+
+Also, more capable models, they are generally able to go from some city or country or
+
+You
+16:40:46
+
+and I think it stopped, uh, the generation. So probably it's because it's 60. If I change this to, like, 90, ask this question again, it's probably going to complete the answer.
+
+ByteByteGo
+16:40:52
+
+And I think it stopped, um, generation. So probably it's because it's 60. If I change this to, like, 98, ask this question again, it's probably going to completely censor. Alright. So it says, hey. Use this tool. And, again, that's all we want because the generation can just use
+
+ByteByteGo
+16:40:57
+
+that's all we want because the generation can just use the tool. So now we are easily allowing this element to use two tools. But remember, this system prompt is becoming more and more complicated.
+
+You
+16:40:57
+
+Alright. So it says, hey. Use this tool. And, again, that's all we want. You guys end the generation. We can just use it that's all we want because in the generation, you can just use it. So now they are easily allowing this cell and to use tools. But remember, the system prompt is becoming more and more complicated.
+
+ByteByteGo
+16:41:06
+
+And then, um, it's just getting more and more and more complicated. I want to introduce the two or four two.
+
+You
+16:41:08
+
+And then, um, it's just getting more and more and more complicated as you want to introduce. Now imagine I want to introduce the tech to four four two.
+
+ByteByteGo
+16:41:19
+
+So it's not really, um, best practices. It's not it's it's, um, not a standard way to do this.
+
+You
+16:41:23
+
+It's, uh, not the standard way to do this. Now beside this example, and demo, now let's go to the lecture.
+
+ByteByteGo
+16:41:24
+
+Now besides example, and demo, now let's go over to the lecture. So we thought we had this all. Um, we have better idea.
+
+You
+16:41:26
+
+So before we set this up, uh, we have a better idea. So we can simply add this better idea and let us off every day already.
+
+You
+16:41:46
+
+And after we write these two functions, we can have this
+
+ByteByteGo
+16:42:04
+
+So
+
+ByteByteGo
+16:42:21
+
+And here is when this whole onset of standardization or standardizing this process come into play. Basically, the idea is manually creating the system prompt from each tool is not scalable. It's not effective, and it's not the standard.
+
+You
+16:42:26
+
+tool. And here is when this whole concept of standardization or standardizing is processed. So Basically, the idea is manually creating a system from each tool is not sustainable, it's not effective, and it's not a standard. So you may want to provide the element a 100 as opposed at some point and really explaining each tool in the system prompt and it's super annoying.
+
+You
+16:42:36
+
+And it's it's just not not really easy and scalable. So what can we do to make this more standard? Basically, there's this, uh, concept of auto phonetic.
+
+ByteByteGo
+16:42:40
+
+It's it's just not not really easy and scalable way of doing this. So what can we do to make this more standard? Basically, there's this, uh, concept of auto formatting, and it's very simple. The idea is
+
+ByteByteGo
+16:42:42
+
+very simple. The idea is that we all agree an often
+
+You
+16:42:50
+
+Explanation of
+
+ByteByteGo
+16:42:57
+
+And then I put a textural description or explanation of this function.
+
+You
+16:42:58
+
+extracted important information from this function. And then I could text you a description or explanation of this function.
+
+You
+16:42:59
+
+And this
+
+You
+16:43:17
+
+As long as these things are present,
+
+ByteByteGo
+16:43:41
+
+And you see this is now coming from Get Morecast, and it's calling the exact same structure.
+
+You
+16:43:52
+
+And you see this is now coming from this forecast, and it's following the exact same structure. So it's very it's a standard. And it says two name desk forecast description, we kinda full forecast is coming from here, and then it put up. So that's for the format. Now we can suddenly scale to, uh, 100 or even thousand of tools.
+
+ByteByteGo
+16:43:52
+
+So that's all the form factor. Now we can start this scale to, uh, 100 or even thousand of tools. To
+
+You
+16:43:53
+
+Have
+
+ByteByteGo
+16:44:35
+
+So automatically, you're going from thousands of, um, functions to a system prompt that is explaining each of those tools. So, um, this is awesome, but then still there is a problem. It requires, um, manual integration. So what that means is that I have this here. What manual integration means is that now let's say for the same For example, let's say I want to use the Slack API for as one of our tools. You know, different companies are providing these APIs.
+
+You
+16:44:38
+
+So automatically, we are going from thousands of, um, functions to a system prompt that is explaining each of those tools. So, um, is this awesome? But then, still, there is a problem. It requires, um, manual integration. So what that means is that I have this here. What manual integration means is that now let's say for the same use case. For example, let's say they call one to use a socket for as one of our tools. You know, different companies are providing these APIs, so we can use them. And then we can
+
+You
+16:44:45
+
+So now let's say they are a company one.
+
+ByteByteGo
+16:44:52
+
+So now let's say we are a company one, and divide this graphic, we call this And then we use all our automation, like, other format and everything to introduce these tools.
+
+ByteByteGo
+16:44:55
+
+This is called a manual integration because we write a wrapper or function to use those, um, write on some external APIs.
+
+You
+16:44:57
+
+And then we use all our automation, the auto format, and everything to introduce these tools, you know, in this Now this is called a manual integration because we write the wrapper function to use those on some external APIs, and then integrate it into our set of tools by
+
+You
+16:45:08
+
+And this data then would be able to generate generation. These would be able to use, uh, these things. Now, um, now the second thing
+
+ByteByteGo
+16:45:08
+
+And this way, Ellen would be able to generate These would be able to use, uh, these things. Now, um, now let's take a company to one
+
+ByteByteGo
+16:45:12
+
+Now in this case, um,
+
+You
+16:45:13
+
+Now in this case, um, company two also has to write their own letters, and then they call something different like tech
+
+ByteByteGo
+16:45:21
+
+So
+
+ByteByteGo
+16:45:30
+
+still not as efficient. I mean, they're they're successfully able to automate this here we are able to, uh, standardize this process of introducing tools to elements in the system prompt.
+
+You
+16:45:35
+
+So this is still not as efficient. And if they're if they're successfully able to automate this here, we're able to, uh, standardize this process of introducing tools to LMS in the system. Still, this integration part is not standard. Meaning that different people may write different better than Poly or slightly used.
+
+ByteByteGo
+16:45:48
+
+So if there are any different companies, there would be a different, uh, integration. Now the next topic we wanna talk about is, uh, MCP or module context virtual introduced by.
+
+You
+16:45:50
+
+Now the next topic we want to talk about is, um, MCP or model hunt is portable introduced by Humbert.
+
+ByteByteGo
+16:45:57
+
+This level at the at this
+
+You
+16:46:01
+
+Sorry. You had this, um, creating system on the integration. So we'll go over that in the next video.
+
+ByteByteGo
+16:46:03
+
+So we'll go over that in the next video. Hello, everyone.
+
+You
+16:46:07
+
+Previous session, we saw that, um, in order to add
+
+ByteByteGo
+16:46:09
+
+Let's continue our discussion and focus on MCP in this session. In the previous session, we saw that, um, in order to add tools,
+
+ByteByteGo
+16:46:21
+
+And
+
+You
+16:46:21
+
+And for each hour, it's basically showing one required indication.
+
+You
+16:46:23
+
+They would call data.
+
+You
+16:46:30
+
+So this was before.
+
+ByteByteGo
+16:46:35
+
+let's see what that is.
+
+You
+16:46:37
+
+But let's see what that is.
+
+You
+16:46:46
+
+And
+
+ByteByteGo
+16:46:46
+
+And also some initial, um, tutorial to get us started. But basically, I just scored right
+
+You
+16:46:47
+
+But basically, at this core, right, model context protocol is based on the definition piece.
+
+You
+16:46:52
+
+So we'll see what that means.
+
+ByteByteGo
+16:46:55
+
+So we'll see what that means. But basically, here, what it's saying is that is first is open standard is protocol. You connect
+
+You
+16:47:34
+
+And, um, it could be some other formats. But basically, the idea of NTP is to get simplify these process algorithms to certain services or tools for our database. So how does what what is the approach? Basically, the idea is instead of each company writing their own wrapper on top of external services for APIs, why not the, uh, the service provider writes some functions or some tools? Public. So basically, the idea is, let's say, company one wants to use this tag. Previously, they have to write a wrapper. Company one had to write a wrapper, and in their wrapper in the function, they have to call stack API. Now, Precansitive, what happens is that why not what basically is that?
+
+ByteByteGo
+16:47:36
+
+we can easily connect our LML hosts to certain services or tools or databases. So how does what is the approach? Basically, the idea is instead of each company, writing their own wrapper on top of external services or APIs, why not, uh, the service provider writes some functions or some tools? And then expose it as a server to the public. So basically the idea is, let's say, company one wants to use Slack. Previously, had to write a wrapper. Company one had to write a wrapper, and in their wrapper in the function, they have to call Slack API. Now we can see what happens is that why not what basically is Slack writes a bunch of functions,
+
+ByteByteGo
+16:47:50
+
+And then they for some protocol, essentially protocol to basically expose them as service. So what Slack does as a company is create these functions. And then expose them as, um, servers. So now these m six servers can be called by people from outside
+
+ByteByteGo
+16:47:56
+
+send a request. And the server would simply send your request or a company wants request to this function data response, and send it back to their company.
+
+You
+16:47:56
+
+Is that? There's a bunch of functions. For instance, being like a stack is channel, stack is channel is service on. And then they follow some protocol, which is sensible to basically expose them as servers. So what Slack does as a company is create these functions and then expose them as servers. So now these to send a request. And the server would simply, uh, send your request or a company one request to this function data response
+
+You
+16:47:57
+
+the
+
+You
+16:48:08
+
+the same thing happens by company. Basically, they also need to create an MCB client. It tell me their this is the company once host or ID or, uh, LLM or also tools. NTP client by following the same protocol.
+
+ByteByteGo
+16:48:10
+
+The Creates an MCD client by following the same protocol. Now this MCD client, an easy send request to this MCD server and get their
+
+ByteByteGo
+16:48:15
+
+and then send it back to to the software. So this way, company one does not need to worry about writing matters or writing
+
+You
+16:48:16
+
+This way, company one does not need to worry about writing back or writing, um, functions on top of available services.
+
+ByteByteGo
+16:48:23
+
+And here basically you can see
+
+ByteByteGo
+16:48:32
+
+and so on. And each of these services can create their own NCP server and then make it available to the public.
+
+You
+16:48:32
+
+That's the highlight idea of NCD. And here, basically, you can see after NTP, this is how life would look like. Basically, there are a bunch of different, um, services like, uh, Slack, Google Drive, and so on. And each of these services can create their own MCD server and then make it available to the public.
+
+You
+16:48:38
+
+Second
+
+You
+16:48:56
+
+So basically, automatically, this way, they can easily have use lots of different tools
+
+ByteByteGo
+16:48:57
+
+So basically, automatically, this way, they can easily have
+
+You
+16:48:59
+
+say they can easily have use lots of different tools that are available rather. They just need to, um, be aware of the server that is offering that service,
+
+ByteByteGo
+16:48:59
+
+and
+
+ByteByteGo
+16:49:09
+
+And you can see how now this part is simplified. That you need a lot of manual integrations. Basically, there is just one wrapper on top of Slack API which you develop by Slack, for instance.
+
+You
+16:49:19
+
+So that's MCD. And then I also searched Google MCD and here on their images.
+
+ByteByteGo
+16:49:20
+
+So that's MCP. And then I also searched Google MCP, and here under images,
+
+ByteByteGo
+16:49:22
+
+I
+
+You
+16:49:22
+
+Particular interesting because
+
+ByteByteGo
+16:49:29
+
+basically as client, m c p client. Now
+
+ByteByteGo
+16:49:35
+
+these are some other services that are external for example, the Gmail, we get that on. So what
+
+You
+16:49:37
+
+basically as client, MC client. Now got some other services that are external for Zendesk, um, Gmail, you get that as well. So what MCP does, MCP sees in between different laptops and, uh, different, uh, external services.
+
+ByteByteGo
+16:49:40
+
+and simplify the process and make it standard. So from now on, whenever any laptop and any
+
+ByteByteGo
+16:49:49
+
+So basically, Slack is here, and then it's it's it's itself as a server. And then any client also
+
+ByteByteGo
+16:49:51
+
+And
+
+You
+16:50:03
+
+Get the intuition better. Now back to our picture. Let's now see how the or
+
+ByteByteGo
+16:50:07
+
+instead of going over all different, uh, services. So I found that that this really interesting, so I just wanna make sure if it helps, um, get the information better. Now back to our lecture. Let's now see how the overall workflow looks like. When we want to use m c and create some rules for our layout. So
+
+You
+16:50:09
+
+So, um, basically, there are a bunch of remote remote repository your handset service.
+
+You
+16:50:16
+
+Any service that they have already developed and set the server for. These are, let's say,
+
+ByteByteGo
+16:50:22
+
+a bunch of remote remote remote repository services. These are the ones that are developed by external services or providers. It can be Slack. It can be, um, Deepgram. It can be Bitbucket. It can be Bitbucket. Any service that they have already developed and set set for you. These are available, let's say, instance servers. Now let's say you have some databases for example for
+
+You
+16:50:22
+
+instance service. Now let's say we have some databases, for example, for this.
+
+You
+16:50:33
+
+MTP servers and connect them to our database internal database.
+
+ByteByteGo
+16:50:34
+
+Because of that, we also need to, um, write some
+
+You
+16:50:53
+
+So that, um, everything is still let's say, we also implement three NTP servers, and we have three, uh, backers or function to connect into our database, and then expose them as servers. Now the third step is to introduce these tools now, which are a bunch of empty servers to the editor. And this is exactly when MCD shines.
+
+ByteByteGo
+16:50:53
+
+So let's say we also implement the HTTP service, and we have three, uh, brackets or functions we can handle to our database, and expose them as servers. Now the third step is to introduce these tools now, which are a bunch of MCP servers to the editor. And this is exactly when MCP shines.
+
+ByteByteGo
+16:50:54
+
+But
+
+ByteByteGo
+16:51:00
+
+All we need to do is we provide this JS file or JSON file. We call this server as a JSON.
+
+ByteByteGo
+16:51:08
+
+So for example, here we have MTP server, and one MTP server that you are including here is DeepHub.
+
+You
+16:51:14
+
+So once software basically, once the server, uh, that JSON is given
+
+ByteByteGo
+16:51:14
+
+And basically, here we are just thinking how to use it, how to, uh, how to use this server, how to send the request and get your response. So once software basically, once this server that Jason is given to the software,
+
+ByteByteGo
+16:51:22
+
+So that's it. We know you need to really, uh, change
+
+You
+16:51:27
+
+So that's it, but we no longer need to really, um, change code in our code base. Add new things in the software. All we need to do is we just write the software once to know how to deal with serverless JSON.
+
+ByteByteGo
+16:51:29
+
+software. All we need to do is we just write the software once to know how to deal with servers dot JSON.
+
+ByteByteGo
+16:51:43
+
+It will send a
+
+You
+16:51:44
+
+The
+
+ByteByteGo
+16:51:45
+
+So that's it. Everything becomes
+
+ByteByteGo
+16:51:56
+
+And finally, it's very easy to maintain, uh, the system because as we, um, decide to add more tools, SIP server to the system.
+
+You
+16:51:56
+
+And finally, very easy to maintain, uh, this system. Because as we, uh, decide to add more tools, uh, m six server to this list.
+
+ByteByteGo
+16:52:21
+
+Should be four. So that's about everything. Before we wrap up this, um, video, there are a couple of warnings I wanna show.
+
+You
+16:52:21
+
+Rely on it and use it for, um, sending request getting responses. And this should be for so that's about NTP. Before we wrap up this, um, there are couple more things I wanna show. First, we saw how LLMs know to
+
+ByteByteGo
+16:52:33
+
+Follow this format.
+
+You
+16:52:38
+
+Now this is not how this idea. If you think of the, uh, original elements that they've been trained,
+
+ByteByteGo
+16:52:47
+
+Trained, they're being trained on Internet data, and they rarely have those kind of function callings on the Internet data. It's basically a bunch of x and the element that are used. Now because of its, um, capabilities, it it learns from the future examples that we provide or section formats that we ask.
+
+You
+16:52:48
+
+Now because of its, um, capabilities, it it learns from their future examples that they
+
+ByteByteGo
+16:53:01
+
+It may not be as accurate. So one thing that a lot of Python do is they find you for function calling. So after they train the element, they also add some data to their data
+
+You
+16:53:04
+
+again, that's because if element is not trained to call functions or do those kind of things, it may not be as accurate. So one thing that a lot of companies do is they find you for function calling. So after they train the algorithm, they also add some data to their dataset, which this find out function calling whenever data. And then they just
+
+You
+16:53:21
+
+So I also wanted to say that, uh, this is moderation that a lot of, um, good advanced celebrities are are also being trained on. Basically, they're function for function calling, and, um, that's because they they want to tell them, basically,
+
+ByteByteGo
+16:53:21
+
+So I also wanted to say that, um, this is one direction that a lot of, um, good Admire celebrities are also being trained on. Basically, they're fine tuned for finding calling, and, um, that's because they we want the element basically, uh,
+
+ByteByteGo
+16:53:46
+
+Like, there's this protocol and I create this MVC service and, um, basically how to, um, how to show some how to basically write some tools and let everyone know about those tools. In practice, we really don't need to implement a lot of things and those are already implemented first.
+
+You
+16:53:46
+
+in case you want to get built in this. The other thing I want to share is that we talked about and they saw, like, there's this protocol and I create a system service and basically, how to, um, how to show some how to basically element know about those tools. In practice, you really don't need to implement a lot of things. A lot of those are already implemented first.
+
+ByteByteGo
+16:53:53
+
+In
+
+You
+16:53:55
+
+How to, you know,
+
+You
+16:54:07
+
+if you have the function that you want to use it as a tool and introduce it as a tool to get it done,
+
+You
+16:54:12
+
+so this may basically, um, later when during the generation process, when you generate
+
+ByteByteGo
+16:54:13
+
+generation process, when you're generating
+
+You
+16:54:15
+
+tokens from the element, and the element request some
+
+You
+16:54:21
+
+So it's basically my my whole point is that, um, there are a lot of detail in the theories,
+
+ByteByteGo
+16:54:23
+
+So it's basic. My my point is that, um, there there are a lot of detail in the theories.
+
+ByteByteGo
+16:54:24
+
+To
+
+You
+16:54:50
+
+And also, this is another documentation here for how to do tool or function calling. So I also want to show this if if you are interested in COVID. Again, we are just explaining how we can how easy it is to
+
+ByteByteGo
+16:54:53
+
+And also, this is another documentation here for how to do, uh, tool or function calling. So I also want to show this if if you guys decide you can cover it. Again, here is just explaining how how easy it is to writing functions. And then specify them as two and the later you're gonna
+
+ByteByteGo
+16:54:59
+
+So once you have those tools, see here it says my tools are add and multiply. And when it's creating the element, you specify the model.
+
+You
+16:55:04
+
+And then it says element point tools tools. Now this is a new element, but it's already aware of all the available tools, and it and it can be voted.
+
+You
+16:55:19
+
+Data tools that you can just use,
+
+ByteByteGo
+16:55:21
+
+So, um, actually, and this was another page. It shows options to use different tools. And it's interesting because you see a bunch of available tools that you can just use. Um, so
+
+ByteByteGo
+16:55:28
+
+for example, here we have search, like, in search and, um, Google search and a bunch of other searches, and, you know, we
+
+You
+16:55:37
+
+for example, here we have search, like b search, and, you know, like Google search and a bunch of other searches, and, you know, we have a code interpreter. We have productivity tools and so on. So most of these are available to be used, then everyone to use these libraries to build applications. Now that's it. I think I covered everything for a tool, functions tool calling
+
+ByteByteGo
+16:55:41
+
+with some applications. Now that's it. I think I covered everything for um, functions, tool calling, and importable. Now in the next lecture, we're going to switch to the next stage level, which is building multiservations.
+
+You
+16:55:51
+
+Now
+
+ByteByteGo
+16:55:58
+
+However, they have two major limitations. One limitation is that they are fixed. Meaning that this
+
+You
+16:56:00
+
+How do they have two major limitations? One limitation is that they are fixed. Meaning that this
+
+ByteByteGo
+16:56:02
+
+this, uh, expectation plan or this flow information is something fixed and it's pretty fine. So, um, that is the idea.
+
+You
+16:56:05
+
+So, um, that is not ideal.
+
+You
+16:56:13
+
+No matter how complex this workflow is, if you have to question, like, how's the better doing in San Francisco, it will still fail. Because they really kinda get, um, like like, live updates on live information even if their workflow is very complex.
+
+ByteByteGo
+16:56:18
+
+Limitation is that this workflow, they don't have access to live information. No matter how complex this workflow is, if you ask a question like how they're doing in San Francisco, it would become they really have it, um, like, live updates on live information even if their workflow is very complex. So, um,
+
+You
+16:56:19
+
+So, um,
+
+ByteByteGo
+16:56:38
+
+So when you come back to those three tools,
+
+You
+16:56:39
+
+So when we come back workflows with tools,
+
+ByteByteGo
+16:56:53
+
+Meaning that, um, the this, uh, flow information cannot be changed given the input prompt. Now this is exactly what multistep agents trying to fix.
+
+You
+16:56:57
+
+Now this is exactly what multiserv agent is trying to fix Basically, the idea is to go from this fixed workflow to a dynamic workflow.
+
+ByteByteGo
+16:57:06
+
+Going to pre find something. Right? We're just letting the, um, the system the agent decides
+
+ByteByteGo
+16:57:37
+
+And, dynamically, the agent can decide how to order the right steps. So, again, the ideal idea in agents is to plan, act, and then adapt. Basically, you're giving autonomy in decision making. You're planning today to the system. So these are the three main things that in this setup in agents, the agent is expected to perform. The agent understands the current situation and the goal. This is based on the prompt and any additional context I've included in that prompt. If it understands what is the request, what is the final goal, and then, um, it basically use all those information to plan. And then the next thing is
+
+You
+16:57:37
+
+So So these are the, uh, three main things that in this setup, in agents, the agent is expected to perform. Agent understands the point situation and the goal. Is it based on the prompt and initial context that include in the prompt? So if it understands what is the request, what is the final goal, and then, um, it basically use all those information to plan. And the the next thing is it plans.
+
+ByteByteGo
+16:57:45
+
+use, uh, in real time. And after they execute those, um, plans,
+
+You
+16:57:47
+
+Those
+
+You
+16:57:48
+
+plans and get app from the tools, it can reasons and handle errors for three step plan as needed.
+
+ByteByteGo
+16:57:53
+
+So we can visually be represented like this. The agent is here again as always,
+
+You
+16:57:54
+
+So we can visually be represented by this agent is here again as always.
+
+You
+16:58:05
+
+And
+
+ByteByteGo
+16:58:11
+
+and, um, all the outputs from the tools and keep them in the in context. And this is useful so that the agent can iterate if
+
+ByteByteGo
+16:58:32
+
+So this is other abstract. This is just a high level um, like, workflow of agents. Now let's make it more, um, concrete idea. So how agents really plan? Agents work in a continuous cycle. They have typically they tend to have three components, thinking or thought, acting or act, and observing. So let's just look here. Basically, the agent thinks for some component that the agent has access to things.
+
+You
+16:58:35
+
+all the outputs from the tools and keep them in the in the context. And this is useful so that the agent can iterate if and adapt. So this is all their abstract. This is just a high level like, workflow of agents. Now let's make it more, um, concrete and detailed. So how agents really plan? Agents work in a continuous cycle. Have typically we can think of it as three components, thinking or thought, acting or act, and observing. So there's this loop here. Basically, the agent thinks or some component that the agent attaches to things. Some action is happening. And then from action, there's a observations which we reflect, and those observations are
+
+ByteByteGo
+16:58:53
+
+Now this action module would, uh, parse this, run this, get output, send out to other page. Action would parse this, run this, get output, send output to observation. Now the observation would see something like I need to check
+
+You
+16:59:03
+
+So let's just think a little bit more about these three components.
+
+ByteByteGo
+16:59:07
+
+So let's just think a little bit more, uh, about these three components. Basically, you need to think the stage, the LLM, plans, and decides what the next steps should next step should be to solve the task.
+
+You
+16:59:30
+
+So this is very important. It's basically the main, like, the core of the agents.
+
+You
+16:59:44
+
+And then the agent takes care. Basically, first, request a function. Then it takes an action by calling the food with the provided arguments. This is the actions. And then observation is basically then then then the incorporating.
+
+ByteByteGo
+16:59:47
+
+This step is very important. Then we have actions. For actions, basically, the element request, um, to speak with the second tool with some arguments. And that agent takes care of it. Basically, um, parse the requested function. Then it takes an action by calling the provided documents. So this is actionist. Then observation is basically when when we incorporate the environment and then we edit them back again.
+
+You
+17:00:15
+
+And then finally, data now can use this strategy. It can update, um, your update or refine our different tiles and actions.
+
+You
+17:00:25
+
+So is still a little bit abstract. So let's see how this, um, like, really translates in practice.
+
+ByteByteGo
+17:00:31
+
+And these three assets are happening a loop. Basically, this is the which keeps happening until at some point, the element believes that it has the it accomplishes it as and it has the final So this is still a little abstract. So let's see how these, um, like, three modules we need translates in practice. So basically, this continuous loop, uh, in practice, it's just, um, a component using
+
+You
+17:00:32
+
+Basically, this continuous loop, uh, in practice, it's just, um, a combination reasoning and it's called it. It's a combination of. So
+
+You
+17:00:39
+
+which has the system and user prompt. The LLM resents and processes the prompt.
+
+You
+17:01:07
+
+Create, how to, um, think, and how to iteratively try to improve.
+
+ByteByteGo
+17:01:09
+
+and how to iteratively try to improve it. So assistant appears you're an AIS system joined up users,
+
+ByteByteGo
+17:01:19
+
+And then here is basically the part where we're defining that, uh, we want to we want you to operate in another step. As a
+
+ByteByteGo
+17:01:27
+
+And here we say
+
+You
+17:01:38
+
+If necessary call, it will be the proper JSON format thing, and then follow this format action, um, JSON block.
+
+ByteByteGo
+17:01:45
+
+So this is how really in practice these models.
+
+You
+17:01:45
+
+So this is how we really practice these models.
+
+You
+17:02:23
+
+And over over the years, there have been multiple competitors, and they were proposing different ways or different parts. To make this plan that that happen. So these are this is just a small, uh, but not comprehensive list. React, Reflection, uh, and some other methods. And this list is probably more. React is probably the most popular one to make this an act that happened. And, um, so we briefly go over React, uh, Reflection, and these two. After that, we would, um, basically wrap up this model estimation as we should, um, regulation. So React, basically, what it does is just a similar prompting ticket. Each combines reasoning connection.
+
+ByteByteGo
+17:02:26
+
+To make this plan. So these are this is just a small, uh, but not comprehensive list. React, perfection, um, and some other methods, and dismiss is probably more. React is probably the the most popular one. To make this plan act that happen. And, um, so we briefly go over React, uh, Reflection, and DSU. Basically wrap up this modalization and switch to, um, private. So React basically what it does is just it's a similar prompting technique. Which combines resending connection. Basically, in the video, they're saying that it's, um, they're adding resending connection. It's just a
+
+You
+17:02:29
+
+Saying that it's they are adding reasoning and acting a loop. It's just a loop, and then it has two steps. Reasoning which traces
+
+You
+17:02:56
+
+So and this is on your paper. Here, have the paper open. It was published in, um, '23. And you're just using a pumping technique to make this monetize the agent a, or basically creating this, um, multistep agent system. And they are following a certain day of creating the system prompt and then showing different examples to interleave, uh, thoughts and actions and observations. Um, they're also comparing it with different, uh, other setups, like standard, uh, COD recently. So only things and any passengers and also. So it it resource
+
+ByteByteGo
+17:02:59
+
+So and this is on the open. It was published in, um, twenty three. They're just using a hunting technique to make this a modified agent, um, or basically creating this we have thoughts and actions and observations. And, um, they're also pairing it to different, um, other setups like standard COT with only things and any answers. Also activity. So it it requests for some tools, see observation, and then it requests for some tools, see observation. And, finally, it
+
+ByteByteGo
+17:03:01
+
+So
+
+You
+17:03:13
+
+to to, um, build this loop that we saw here.
+
+You
+17:03:17
+
+So, um, back here. So, again, you're following something like this.
+
+ByteByteGo
+17:03:19
+
+So, um, back here. So, again, you're following something like this to the model.
+
+You
+17:03:33
+
+Of from the model. It just reasons, and then some actions are called by the agent then the result of this agent, um, to call is going back to element based observation. Agent, after this observation, element ticket, and plans, and request for more actions. Here, it says do more search.
+
+You
+17:03:36
+
+You can have observations that is the result of search, could not find, is similar, and so on. And then again, we think based on that,
+
+ByteByteGo
+17:03:40
+
+So It's just reasons, and then some actions are called by the agent. And then the result of this agent um, is going back to the element with this observation. So again, after this observation, the element thinking and plans. And request for more actions. Here it says do more search. And then you can have observations that this result search could not find it similar and so on. And then again, we think based on that, and you can see based on all these context now, top three
+
+You
+17:03:44
+
+and so on. And then again, if we think based on that, and then see this on all these findings now, three is clearly mistaken that front row is not found, and that's because observations that could not find. And then it says, I need to search, uh, front row software. And then if requested in the search tool, you get a new updated prompt.
+
+ByteByteGo
+17:03:47
+
+then it says, I need to search, uh, front row software. And then every question in the session, update it quick. And now beside the automation,
+
+ByteByteGo
+17:04:01
+
+So then it's ready to, um, produce final answer. So then here it says, so the answer is and then at four, finish keyboard function keys. So I took this. They have a lot other, uh, different examples and more details
+
+ByteByteGo
+17:04:03
+
+how it's
+
+You
+17:04:10
+
+So then here it says, so the answer is, in the next four, finish keyboard functions. So I took this. They have a lot better different examples and more details about and also evaluation, how it's configured in different models as one. So it's interesting. And, basically, it's one way to make this model estimation happens. Now there are also different papers after that. I mean, there's this classification. It's basically based on linguistic data.
+
+ByteByteGo
+17:04:17
+
+this, uh, monetize agent types. Now there are also different papers after I mean, there is this is friction is basically based on linguistic feedback. So now you have here's have improved agent to set friction. Feedback from natural language. So basically, ideas and whatever the fact is used to convert it, uh, to a natural language.
+
+You
+17:04:26
+
+Like, um, the natural language feedback or summary. And and it has some similarities to React, has also some differences, and
+
+You
+17:04:31
+
+again, I have the data here. Uh, open. It's interesting to take a look, and it's also comparing comparing this method to different methods.
+
+ByteByteGo
+17:04:33
+
+Again, I have the paper here, uh, open. It's interesting to take a look. And it's also comparing comparing this method with different methods.
+
+ByteByteGo
+17:04:41
+
+You may get some errors or, um, failures or some warnings. And then another thing we'll go over that and convert it to a nice
+
+ByteByteGo
+17:04:47
+
+agent.
+
+ByteByteGo
+17:05:06
+
+Basically, they are separating these two and allow two different models to get to, uh, do these different tasks. Basically, it hides the reasoning from the external observations. And you can look at the data again here. I think this is the one. Yes. They are proposing three components
+
+You
+17:05:07
+
+Basically, they are separating these two and allow two different models to get to, uh, do these different tasks. Basically, it has the resulting from the external observations. And if I look at the bigger again here, I think this is the Yes. They're proposing three components
+
+You
+17:05:42
+
+says that, you know, we can start with something, and then we can run DFS or some searchable way then to see, uh, which plans is
+
+You
+17:05:51
+
+strategies to create monetized agents. But at the core, they're they're all doing the same.
+
+ByteByteGo
+17:05:52
+
+strategies to create monetization agents. But at the core, they are they all are doing the same. Basically, uh, following something like React. They are having different components, and then all of them are put together in
+
+You
+17:06:03
+
+If in workflow and model set agents, not that they learn about. They have differences in different aspects. For example, in terms of predictability, workflow software, predictable, and more consistent. For example, in terms of
+
+ByteByteGo
+17:06:13
+
+outputs for relevant tasks. And that makes sense because for tasks that can easily define it and sum up with some predefined usually works there and more understand because the everyone does not have to, uh, now plan or come up with
+
+You
+17:06:13
+
+And that makes sense because for tasks that we can easily define it and some of it's some predefined path. Usually works there and we're not stand because they're telling us does not have to, uh, now plan or come up with
+
+ByteByteGo
+17:06:26
+
+some reason needs to plan. They already know what predefined, uh, workflow works for those kind of tasks, and they create those. But agents are there when we want more flexibility, and basically want the model to make decisions autonomously. And then how's that activity? It just can add to new situations, but workflow is not. For example, if there is a question and if if it
+
+ByteByteGo
+17:06:34
+
+But agents, they can, uh, they have autonomy. They can plan and make decisions at one time. So this is a quick
+
+You
+17:06:34
+
+But agents, they can, uh, they have autonomy. They can can make decisions. I find like So this is a quick, um,
+
+ByteByteGo
+17:06:57
+
+So, yeah, this is also another article I wanna show. Now the next thing, uh, that I have here is meant to use mother's day mother's day business.
+
+You
+17:06:58
+
+Now the next thing, uh, that I have here is meant to use, uh, multistate multistate maintenance.
+
+You
+17:07:04
+
+And also
+
+ByteByteGo
+17:07:06
+
+And also the other down or, um, complex
+
+You
+17:07:14
+
+unreliable. They can be logical where they make, uh, stuck in some infinite loops and so on.
+
+You
+17:07:16
+
+So
+
+ByteByteGo
+17:07:32
+
+have, like, um, very different range in terms of different questions may come, then agents might be more suitable because agents can be used for opening the property.
+
+You
+17:07:32
+
+have, like, um, very different range in terms of different questions may come, then agents might be might be more suitable because agents can use for more open ended problems.
+
+ByteByteGo
+17:07:37
+
+Which, um, it's not easy to predict a number of steps or the exact workflow ahead of time. It. So in
+
+You
+17:07:38
+
+Those cases usually agents work better. And then some companies that are
+
+ByteByteGo
+17:08:09
+
+used frequently is when they are dealing with the structured information synthesis. And a good example is when you want to, uh, you want to
+
+ByteByteGo
+17:08:11
+
+to
+
+You
+17:08:13
+
+So we saw on Typekit there is this tool called deep research.
+
+ByteByteGo
+17:08:27
+
+create a detailed report about that particular topic. So those are also, um, good problems and good fit for monetize the agents. Alright. So passing about modalized evidence. Um, we have some, um, coding examples in project
+
+ByteByteGo
+17:08:38
+
+some good coding practice there. And then the next thing I went to switch page which is modified. So let's go to modified settings here.
+
+You
+17:08:41
+
+So those are also, um, good problems and good fit for monetized meetings. Alright. So, Cassie, about. We have some, um, coding examples in project. And there we do practice how to really create some of these workflows and use them. So, um, so some good coding practices there. And then the next thing I want to switch you is the next level for the final development, which is stage. So let's go to Basically, it's going to be brief because you already learned about all the key components.
+
+ByteByteGo
+17:08:47
+
+There's the motivation is that the single agent may not be capable.
+
+You
+17:09:10
+
+And because of that, more agents can probably correlate data. They can validate each other. And the model agents simply use multiple agents, and they work together to complete the task. And this way, I hope is that it's going to be more reliable. And this is going to be some visual explanation of it. We have typically, there is a manager agent. This is responsible to coordinate between different agents. And then it has it has, of course, access to one element to reason and think and plan. Agent, uh, starts buying and talking to the seller to know why are the right agents activate,
+
+ByteByteGo
+17:09:11
+
+And because of that, more agents can probably correct or validate, um, they can validate each other. And in modern agents, we use multiple agents, and they work together to complete the task. And this way, the hope is that it's going to be more reliable. And this is going to be some visual explanation of it. We have, um, typically, there is a manager agent. This is responsible to coordinate between different agents. And then it has it has of course access to one element to a reason, I think, and plan. And then as soon as this manager agent, uh, starts planning and element to know whether the right agents to activate, then it will start tracking those
+
+ByteByteGo
+17:09:29
+
+So, um, setups are also very powerful and provide the the most latency to users. And, um, there's also one one, um, some challenges that I want to point out.
+
+You
+17:09:34
+
+And, um, there's also one one, um, some challenges that I want to point out. I want to point out. In fact, this building logic systems are not easy. A lot of, um, even, uh, advanced labs where companies are, um,
+
+ByteByteGo
+17:09:45
+
+Very building the systems with a lot of, um, caution and a lot of engineering force to make sure resolve. Some of the common challenges are coordination because now different patients, uh, have to communicate and share their results and, um, share their findings also. So it's not
+
+ByteByteGo
+17:09:50
+
+codition can be one channel in general. And then we're nice because all these agents have their own worry, and they're not
+
+You
+17:09:54
+
+Some of the common challenges are coordination because now different agents, uh, have to communicate and share their results and, um, share their findings also. So it's not quotation any one one channel in general. And because all these agents So
+
+You
+17:09:55
+
+not
+
+ByteByteGo
+17:09:55
+
+And they're also facing this
+
+You
+17:10:00
+
+facing this compounded errors because they can because they are
+
+ByteByteGo
+17:10:08
+
+amplify that and error might even more. So I have two links over here. One is, uh, from entropy.
+
+You
+17:10:08
+
+So I have two links open here. One is from entropy.
+
+ByteByteGo
+17:10:15
+
+And they're they have a very nice article about their their system.
+
+ByteByteGo
+17:10:19
+
+And in part of they are just starting sub agents, search sub agents.
+
+ByteByteGo
+17:10:34
+
+Interesting, um, use case that is relying on multiple agent setup to, um, set users. So this is a very interesting read, and then here they have the process system process.
+
+You
+17:10:38
+
+Relying on multiple agents set up to, uh, set up users. So this is a very interesting read, and then here they have the process system process, which is on the user, they send it to the system, and then all these steps that are involved in here. This is intuitive business process.
+
+ByteByteGo
+17:10:45
+
+And if you just look at this, um, they're also hinting about that they might be using and this is their prompt, the system prompt.
+
+You
+17:10:50
+
+And if you just look at this, uh, they're also in The US that they might be using. And this is their, uh, prompt, the system prompt. Supporting. Basically, this is also thinking that their deep research system is also based on a multichannel agent setup.
+
+ByteByteGo
+17:10:53
+
+And finally, here is a nice,
+
+ByteByteGo
+17:11:01
+
+So, yeah, they have different
+
+You
+17:11:03
+
+So, yeah, they have different they talk about different models, tools, instructions, and
+
+ByteByteGo
+17:11:16
+
+Now background lecture, very similar to, um, what you saw in tools that they have to communicate somehow with some portable. They have this similar need when you're building modular systems. You need ideally, you want to have a standard
+
+You
+17:11:16
+
+back to our lecture, very similar to, um, what you saw in tools that they have to communicate somehow with some vertical. They have to similarly when you're building magic systems. Ideally, you want to have If you do have basically
+
+ByteByteGo
+17:11:22
+
+protocol for that. It's called agent agent, and, um,
+
+You
+17:11:39
+
+and how this, uh, gateway works and how different agents can really speak with each other and discover each other. So this is, again, another, uh, way to define some protocols so that agents can talk with each other. Proposals, previous
+
+ByteByteGo
+17:11:40
+
+and how this, uh, eight way works and how different agents can really speak with each other and discover each other. So this is, again, another way to define some verticals so that agents can talk with each other. And, again, one thing I want to share here is that there has been other, uh, proposals that's previous
+
+You
+17:11:47
+
+you know,
+
+ByteByteGo
+17:11:51
+
+you know, um, proposals like MCP and gateway and what each of those are handling the MCP gateway and
+
+You
+17:11:51
+
+proposals like MCB and gateway and what each of those are handling the MCB gateway and
+
+You
+17:12:02
+
+So it has a very nice and comprehensive discussion around all these agents and protocols. I I suggest to take a look at the and they have these nice timelines.
+
+ByteByteGo
+17:12:02
+
+also other different proposals for protocols that are available. So it had a very nice and comprehensive discussion around all these agent and, um, protocols. I I suggest you go look at the mechanics and they have these nice timelines. So that's it. That's all about
+
+ByteByteGo
+17:12:09
+
+And, um, finally, the last thing I want to talk about is about valuation.
+
+You
+17:12:13
+
+And, um, finally, the last thing I wanna talk about is about evaluation. We learn how to build these agents, and they're very capable. A very important question, how can the question is how can you really compete
+
+You
+17:12:18
+
+So
+
+ByteByteGo
+17:12:18
+
+So I included some comment here, but, um, it can very good surveys for lots of evaluation metrics out there. But a couple of very important
+
+ByteByteGo
+17:12:31
+
+And that's important because it has, um, it affects the cost per request. Then there are more chance involved in the thinking process and and accomplishing the task. It means that it would be a high cost
+
+ByteByteGo
+17:12:51
+
+And finally, task task success. Right? So if you had a good benchmark with certain task, let's say, software development benchmarks,
+
+You
+17:12:51
+
+And finally, task task success rate. So if you have a good benchmark, certain task, let's say, software development benchmarks,
+
+ByteByteGo
+17:13:13
+
+for, um, agents. I have one open here. You can also take a look at their their voice and their different agents. We set it. So I think let's see. So if they have to have some just listen, uh, in different domains, and their different metrics. So now they could also different, um, your banking account, their insurance and
+
+You
+17:13:16
+
+And similar for, um, agents. I have one open here. You can also take a look at their leaderboards and their different agents we set. So I think let's see. So, yeah, they have to have some just listen, uh, in different domains and the different metrics. So it can also take a little bit of different, um, your banking, your their insurance, and, um, again, they're just leaderboards. And as we are getting more into agents and companies are starting to build these agents, it's important to have a leaderboard so we know
+
+You
+17:13:39
+
+and, uh, I took this screenshot from, uh, this website. And then there are giving an overview of the AI agent stack and some of the frameworks that can be used to build agents. So, um, again, the whole point is that there are lots of different tools, and frameworks are there can easily rely on those to create these agents
+
+You
+17:13:50
+
+But when it comes to, um, implementation, usually it is, um, libraries like Lightning are very easy to use, and we can implement these different modalities, multi agent systems easily. And there's also one has also this
+
+ByteByteGo
+17:13:50
+
+I and, uh, I took a screenshot from, uh, this website. And then there are giving an overview of the AI agent attack and some of the frameworks at NBU's to build agents. So, uh, again, the Holdpoint is that there are lots of different tools, and frameworks out there can easily rely on those to create these agent systems. In practice, it's usually simpler compared to theory. There are a lot of theories involved. Evaluation. But when it comes to, um, implementation, usually it's, um, libraries like NextGen are very easy to use and you can implement these different modalities agents, intelligent agents systems easily.
+
+ByteByteGo
+17:14:06
+
+So, yeah, these are lots of different, uh, Um, some are, um, giving more flexibility, some giving the set flexibility. But these are to some extent, to use these frameworks to build some multiservice against in our project. So that's it. That's all I wanted to cover for b three. So yeah.
+
+You
+17:14:08
+
+So, yeah, these are lots of different, um, libraries, and some of them are open source. Um, some are, um, giving more flexibility, some give you the set flexibility. But these are also some examples to use these frameworks to build some multiservations in our project. So that's it. That's all I wanted to cover for b three. So yeah.
+
+You
+17:18:17
+
+Okay. Bye. Okay. Goodbye.
+
+You
+17:18:25
+
+She told me one eighty five by the 02:10.
+
+You
+17:18:36
+
+I'm expecting a negotiation. We meet in the middle somewhere or somewhere you even one night. He just said, no. No. Don't worry. And then he told up. They said no no more. They hung up.
+
+You
+17:18:44
+
+Okay.
+
+You
+17:18:45
+
+Okay. I mean, I get it. I get it.
+
+You
+17:19:18
+
+Did you offer anything above what you No. No. Because he
+
+You
+17:19:27
+
+Yes.
+
+You
+17:19:41
+
+I need you to not lose this one. I'm not joking. I cannot lose
+
+You
+17:19:46
+
+him. Okay. Let me know when you can. Go above 200. Did offer 200.
+
+You
+17:19:54
+
+Then offer 200. Then offer 200 if he does think it'll have a talk with him.
+
+You
+17:20:20
+

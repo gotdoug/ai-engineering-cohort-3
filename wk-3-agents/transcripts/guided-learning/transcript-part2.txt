@@ -1,0 +1,300 @@
+You
+16:03:35
+
+external tickets
+
+You
+16:03:43
+
+Because, again, they
+
+ByteByteGo
+16:03:46
+
+Because again, they some learned weights, and then they use those weights to predict the tokens, and they have not really learned, uh, the instructions to make any change or multiply to be numbers.
+
+ByteByteGo
+16:04:01
+
+Or maybe have questions like, who scored in some game? It requires a search. So we can't find the search capability.
+
+You
+16:04:16
+
+But there are all these different types of questions
+
+ByteByteGo
+16:04:17
+
+But there are all these different parts of questions that they can
+
+You
+16:04:23
+
+before, uh, before going to, uh, the definition,
+
+ByteByteGo
+16:04:24
+
+Before, um, before going to, um, the the the the the the the the the the the the the the the
+
+ByteByteGo
+16:04:37
+
+calculation to better understand what that means. So again, this is the, um, the same model. Now if I ask a question like, what is three plus three? In this case, it's very likely that the model with six because, um, it's it's it has probably seen
+
+ByteByteGo
+16:04:38
+
+very similar
+
+ByteByteGo
+16:04:49
+
+And then the model has probably learned the core memorized it. So it's if we can't really answer Yes. You can answer it. Now if you ask more complex, uh, mathematical calculations, like, what is this, um, times, like, this,
+
+You
+16:04:54
+
+So, again, this is the, um, the same model. Now if I ask the question, like, what is three plus three? Case, it's very lucky that the model would have put six because, um, it's it's it has probably seen a very similar example in this training So let's see if we can really answer. Yes. We can answer it right. Now if you ask more complex, uh, mathematical calculations like what is this um, times like this. I know if this is really part of another view. My system had deliver, and this is the
+
+ByteByteGo
+16:05:00
+
+Alright. Don't know if this is really right or not gonna use my system keyboard. Again, this is a a okay. That's that's impressive. The model has also done breaking for this modification. Now let me make it more even complicated.
+
+You
+16:05:04
+
+make it more even more complicated. Let's see if we can answer this question.
+
+ByteByteGo
+16:05:05
+
+Let's see if we can answer this question.
+
+You
+16:05:15
+
+And let me use my copy it here, the correct answer, so we can compare it. So okay. So this time, the model we don't make it the
+
+ByteByteGo
+16:05:19
+
+Let me use my let me copy it here, the correct answer. So I can compare it. Okay. So this time, the method we're gonna make it and it's obviously incorrect. It's good enough but it's incorrect. What I wanted to show here is that these kind of questions are very simple for humans because we have some instructions. I also have some tools.
+
+ByteByteGo
+16:05:28
+
+I
+
+You
+16:05:29
+
+So these kind of questions are very easy if you are given access to technical
+
+You
+16:05:49
+
+So now let's go to the more, uh, technical definition of making data more capable. Alright. So what is an AI agent? If I search for data agent for what is an AI,
+
+ByteByteGo
+16:05:51
+
+So now let's go to the more, um, technical dimension of making balloons more stable. Alright. So what is an AI evidence? If I search for the AI evidence for what is an AI agent? Basically, there are lots of endings
+
+ByteByteGo
+16:06:03
+
+But all of them are basically talking about something similar. They're explaining something, um, similar.
+
+ByteByteGo
+16:06:15
+
+A. So
+
+You
+16:06:17
+
+So, again, there is not single
+
+You
+16:06:34
+
+And also it it, um, they basically can reason call tools and rely on memory to complete to complete those complex tasks.
+
+ByteByteGo
+16:06:37
+
+complete tasks on behalf of users, and the other is that it pertains some goals. And also it it basically plan reason, call tools, and rely on memory to complete to complete those complex tasks.
+
+You
+16:06:41
+
+And
+
+ByteByteGo
+16:06:43
+
+So this whole thing and they visualize something like this. Basically, there's agent. It is pink rectangle, this agent. And
+
+ByteByteGo
+16:06:54
+
+all that matters is that it's just some software sitting here in between different components so that they can complete tasks.
+
+ByteByteGo
+16:07:02
+
+Comment. So this element help the agent be planning and using.
+
+ByteByteGo
+16:07:14
+
+And then after, the agent just, um, coordinate with all these things and coordinate
+
+ByteByteGo
+16:07:17
+
+the agent
+
+You
+16:07:20
+
+And then after, the agent just, um, coordinate with all these things and coordinate um, coordinate with all these things and set up a sequence of tasks. Then once the final output is ready and the agent release, the task is complete, it would then send a response back to the user.
+
+You
+16:07:26
+
+And again, there are different
+
+You
+16:07:35
+
+if you are But this is basically an agent.
+
+You
+16:07:41
+
+Agent and ideally, these agents should give a lot of kind of an, uh, agents So but that can be very complex in the beginning.
+
+You
+16:07:44
+
+So
+
+You
+16:07:54
+
+So
+
+ByteByteGo
+16:07:58
+
+And because of that, there are different levels of agency that are defined. Basically, agents have autonomy, element the goal is that we slowly give elements more autonomy to complete tasks. And there are different levels of giving this autonomy or agency. Then
+
+You
+16:07:59
+
+So
+
+ByteByteGo
+16:08:07
+
+different, uh,
+
+You
+16:08:08
+
+five d's, different all these, uh, different, uh, agents levels in very detail. But basically, the lowest is single processor, and we have workloads.
+
+ByteByteGo
+16:08:16
+
+And there are a lot of arguments about
+
+You
+16:08:17
+
+Agents levels. And there are a lot of arguments about
+
+You
+16:08:23
+
+But, um, this is the overall, uh, feature of different agents that you can have developed. So in the next lecture, you will start a simple process, and then you'll switch to workforce.
+
+ByteByteGo
+16:08:28
+
+But But, um, this is overall, uh, picture of different agents So in the next lecture, we'll just stop it in the processor, and then we'll switch to workforce. Alright. So the lowest
+
+You
+16:08:30
+
+So the lowest agent in h m 67 is a single customer. And this way, in this case, we have the software
+
+ByteByteGo
+16:08:57
+
+So this is again it has a low latency level. It's not really capable of finding or handling complex prompts. It only handles basically, model these processes one is the process. Then whatever So this is not really considered an agent.
+
+ByteByteGo
+16:09:10
+
+Software, a simple software. So it's kind of system. It's more like, uh, it's not agent based system because it has the lowest agency. And remember, LLMs are just a model that predict the next token. So we have LLM here, and um, if you want to be precise, then something like this goes to LMs. Like, how is the data latency time? So
+
+You
+16:09:10
+
+It only samples basic model. This process is one is the process. Then whatever the So this is not really considered an agent. It's more like a software, a simple software. So this kind of system is more like, uh, it's not agent system because it has lowest agency. And remember, LLMs are just a model that predict the next token. So we have LLM here, and uh, if you want to be precise, then something like this goes to Elem, like, how is the
+
+You
+16:09:23
+
+the more things that are happening in software,
+
+ByteByteGo
+16:09:24
+
+would produce their probabilities, and then from the probabilities, you can pick the next. Okay. So based on all these all all that all the LN is just happening in the next token. So in practice, there is this loop where it doesn't match with the element and generate final response. And the more things that are happening in software right now by cog Cognition are to go from these text to sequence of values.
+
+ByteByteGo
+16:09:36
+
+So all this planning by this software. And, um, a lot of times in in the lecture before simplicity for visual simplicity, we make sure that So
+
+ByteByteGo
+16:09:49
+
+So this software looks at something like this. Again, it's a function, and it starts from the messages like the user prompt. And then create top
+
+You
+16:09:49
+
+this. So this software looks something like this. Again, it's just a function, and it starts from messages, like, the user prompt, and then create a
+
+ByteByteGo
+16:09:53
+
+And it just keeps doing this
+
+ByteByteGo
+16:10:01
+
+and then which way the user code return it. So that's the lowest
+
+You
+16:10:03
+
+which generates text token by token. And then it just keeps doing this, and then whenever the soft token is reached, basically it's breaking from this loop. And then finally, decode the IDs back into the generated text, and then we try to get user for return. So that's the lowest, um, agent scale, single pass two.
+
+ByteByteGo
+16:10:28
+
+next, we have workflows. So workflows, basically, the idea here is that, um, we basically, an air workflow is a fixed series of steps. So whatever the the specific task is, come up with a sequence of steps like this. And that's it's a predefined. It's basically just a predefined workflow. That is implemented by the developer. And this specifies how the how the information flows. So whenever the prompt prompts basically goes it follows these fixed set of sets and sequences.
+
+You
+16:10:29
+
+In order to make this set up, a little bit more complex and make this our agent system giving more agency, next we have workflows. So So workflows, basically, the idea here is that, um, we basically, an entire workflow is a fixed series of the steps. So whatever the the specific task is, it can come up with a sequence of steps like this. Is a predefined basically just a predefined workflow that is implemented by the developer. And this specifies how the how the information flows. So whenever the prompt prompts, basically goes it follows this fixed set of steps and sequences. Process.
+

@@ -1,0 +1,300 @@
+You
+16:46:37
+
+But let's see what that is.
+
+You
+16:46:46
+
+And
+
+ByteByteGo
+16:46:46
+
+And also some initial, um, tutorial to get us started. But basically, I just scored right
+
+You
+16:46:47
+
+But basically, at this core, right, model context protocol is based on the definition piece.
+
+You
+16:46:52
+
+So we'll see what that means.
+
+ByteByteGo
+16:46:55
+
+So we'll see what that means. But basically, here, what it's saying is that is first is open standard is protocol. You connect
+
+You
+16:47:34
+
+And, um, it could be some other formats. But basically, the idea of NTP is to get simplify these process algorithms to certain services or tools for our database. So how does what what is the approach? Basically, the idea is instead of each company writing their own wrapper on top of external services for APIs, why not the, uh, the service provider writes some functions or some tools? Public. So basically, the idea is, let's say, company one wants to use this tag. Previously, they have to write a wrapper. Company one had to write a wrapper, and in their wrapper in the function, they have to call stack API. Now, Precansitive, what happens is that why not what basically is that?
+
+ByteByteGo
+16:47:36
+
+we can easily connect our LML hosts to certain services or tools or databases. So how does what is the approach? Basically, the idea is instead of each company, writing their own wrapper on top of external services or APIs, why not, uh, the service provider writes some functions or some tools? And then expose it as a server to the public. So basically the idea is, let's say, company one wants to use Slack. Previously, had to write a wrapper. Company one had to write a wrapper, and in their wrapper in the function, they have to call Slack API. Now we can see what happens is that why not what basically is Slack writes a bunch of functions,
+
+ByteByteGo
+16:47:50
+
+And then they for some protocol, essentially protocol to basically expose them as service. So what Slack does as a company is create these functions. And then expose them as, um, servers. So now these m six servers can be called by people from outside
+
+ByteByteGo
+16:47:56
+
+send a request. And the server would simply send your request or a company wants request to this function data response, and send it back to their company.
+
+You
+16:47:56
+
+Is that? There's a bunch of functions. For instance, being like a stack is channel, stack is channel is service on. And then they follow some protocol, which is sensible to basically expose them as servers. So what Slack does as a company is create these functions and then expose them as servers. So now these to send a request. And the server would simply, uh, send your request or a company one request to this function data response
+
+You
+16:47:57
+
+the
+
+You
+16:48:08
+
+the same thing happens by company. Basically, they also need to create an MCB client. It tell me their this is the company once host or ID or, uh, LLM or also tools. NTP client by following the same protocol.
+
+ByteByteGo
+16:48:10
+
+The Creates an MCD client by following the same protocol. Now this MCD client, an easy send request to this MCD server and get their
+
+ByteByteGo
+16:48:15
+
+and then send it back to to the software. So this way, company one does not need to worry about writing matters or writing
+
+You
+16:48:16
+
+This way, company one does not need to worry about writing back or writing, um, functions on top of available services.
+
+ByteByteGo
+16:48:23
+
+And here basically you can see
+
+ByteByteGo
+16:48:32
+
+and so on. And each of these services can create their own NCP server and then make it available to the public.
+
+You
+16:48:32
+
+That's the highlight idea of NCD. And here, basically, you can see after NTP, this is how life would look like. Basically, there are a bunch of different, um, services like, uh, Slack, Google Drive, and so on. And each of these services can create their own MCD server and then make it available to the public.
+
+You
+16:48:38
+
+Second
+
+You
+16:48:56
+
+So basically, automatically, this way, they can easily have use lots of different tools
+
+ByteByteGo
+16:48:57
+
+So basically, automatically, this way, they can easily have
+
+You
+16:48:59
+
+say they can easily have use lots of different tools that are available rather. They just need to, um, be aware of the server that is offering that service,
+
+ByteByteGo
+16:48:59
+
+and
+
+ByteByteGo
+16:49:09
+
+And you can see how now this part is simplified. That you need a lot of manual integrations. Basically, there is just one wrapper on top of Slack API which you develop by Slack, for instance.
+
+You
+16:49:19
+
+So that's MCD. And then I also searched Google MCD and here on their images.
+
+ByteByteGo
+16:49:20
+
+So that's MCP. And then I also searched Google MCP, and here under images,
+
+ByteByteGo
+16:49:22
+
+I
+
+You
+16:49:22
+
+Particular interesting because
+
+ByteByteGo
+16:49:29
+
+basically as client, m c p client. Now
+
+ByteByteGo
+16:49:35
+
+these are some other services that are external for example, the Gmail, we get that on. So what
+
+You
+16:49:37
+
+basically as client, MC client. Now got some other services that are external for Zendesk, um, Gmail, you get that as well. So what MCP does, MCP sees in between different laptops and, uh, different, uh, external services.
+
+ByteByteGo
+16:49:40
+
+and simplify the process and make it standard. So from now on, whenever any laptop and any
+
+ByteByteGo
+16:49:49
+
+So basically, Slack is here, and then it's it's it's itself as a server. And then any client also
+
+ByteByteGo
+16:49:51
+
+And
+
+You
+16:50:03
+
+Get the intuition better. Now back to our picture. Let's now see how the or
+
+ByteByteGo
+16:50:07
+
+instead of going over all different, uh, services. So I found that that this really interesting, so I just wanna make sure if it helps, um, get the information better. Now back to our lecture. Let's now see how the overall workflow looks like. When we want to use m c and create some rules for our layout. So
+
+You
+16:50:09
+
+So, um, basically, there are a bunch of remote remote repository your handset service.
+
+You
+16:50:16
+
+Any service that they have already developed and set the server for. These are, let's say,
+
+ByteByteGo
+16:50:22
+
+a bunch of remote remote remote repository services. These are the ones that are developed by external services or providers. It can be Slack. It can be, um, Deepgram. It can be Bitbucket. It can be Bitbucket. Any service that they have already developed and set set for you. These are available, let's say, instance servers. Now let's say you have some databases for example for
+
+You
+16:50:22
+
+instance service. Now let's say we have some databases, for example, for this.
+
+You
+16:50:33
+
+MTP servers and connect them to our database internal database.
+
+ByteByteGo
+16:50:34
+
+Because of that, we also need to, um, write some
+
+You
+16:50:53
+
+So that, um, everything is still let's say, we also implement three NTP servers, and we have three, uh, backers or function to connect into our database, and then expose them as servers. Now the third step is to introduce these tools now, which are a bunch of empty servers to the editor. And this is exactly when MCD shines.
+
+ByteByteGo
+16:50:53
+
+So let's say we also implement the HTTP service, and we have three, uh, brackets or functions we can handle to our database, and expose them as servers. Now the third step is to introduce these tools now, which are a bunch of MCP servers to the editor. And this is exactly when MCP shines.
+
+ByteByteGo
+16:50:54
+
+But
+
+ByteByteGo
+16:51:00
+
+All we need to do is we provide this JS file or JSON file. We call this server as a JSON.
+
+ByteByteGo
+16:51:08
+
+So for example, here we have MTP server, and one MTP server that you are including here is DeepHub.
+
+You
+16:51:14
+
+So once software basically, once the server, uh, that JSON is given
+
+ByteByteGo
+16:51:14
+
+And basically, here we are just thinking how to use it, how to, uh, how to use this server, how to send the request and get your response. So once software basically, once this server that Jason is given to the software,
+
+ByteByteGo
+16:51:22
+
+So that's it. We know you need to really, uh, change
+
+You
+16:51:27
+
+So that's it, but we no longer need to really, um, change code in our code base. Add new things in the software. All we need to do is we just write the software once to know how to deal with serverless JSON.
+
+ByteByteGo
+16:51:29
+
+software. All we need to do is we just write the software once to know how to deal with servers dot JSON.
+
+ByteByteGo
+16:51:43
+
+It will send a
+
+You
+16:51:44
+
+The
+
+ByteByteGo
+16:51:45
+
+So that's it. Everything becomes
+
+ByteByteGo
+16:51:56
+
+And finally, it's very easy to maintain, uh, the system because as we, um, decide to add more tools, SIP server to the system.
+
+You
+16:51:56
+
+And finally, very easy to maintain, uh, this system. Because as we, uh, decide to add more tools, uh, m six server to this list.
+
+ByteByteGo
+16:52:21
+
+Should be four. So that's about everything. Before we wrap up this, um, video, there are a couple of warnings I wanna show.
+
+You
+16:52:21
+
+Rely on it and use it for, um, sending request getting responses. And this should be for so that's about NTP. Before we wrap up this, um, there are couple more things I wanna show. First, we saw how LLMs know to
+

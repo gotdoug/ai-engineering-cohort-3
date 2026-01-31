@@ -1,0 +1,300 @@
+ByteByteGo
+16:26:08
+
+Hey, everyone.
+
+ByteByteGo
+16:26:16
+
+And then the third
+
+You
+16:26:25
+
+However, still, it goes workflows, the models cannot
+
+You
+16:26:28
+
+answer certain types of questions. For example, we also saw that for questions like how's a better billing, some high school questions, for some questions which require light data, for example, with 14 parts a line in play.
+
+You
+16:26:41
+
+And then given it workflows, still they would fail answering these questions because given workflows is basically multibillion amounts. And different patterns including relation,
+
+You
+16:26:57
+
+So let's understand how that happens. Basically, we have this software here. This this is our in our previous agencies, um, agency systems,
+
+You
+16:27:14
+
+Now this is too abstract. We will talk more in more detail what does it mean to introduce those. But before that, let's say, real example.
+
+ByteByteGo
+16:27:19
+
+Now this is fast track. We we talk more in more detail. What does it mean to introduce tools? But before that, let's see. That, I see we're like, uh, for example, there is a question like, what is this number plus? It goes to the software. The software starts talking to the software.
+
+ByteByteGo
+16:27:25
+
+And after communicating with Eleventh, it believes that the calculator tool is the best tool.
+
+You
+16:27:26
+
+Then software would also recognize that this kind of prompt require, um, accessing certain tools. And after communicating with Telm, it could be that the calculator tool is the best tool for this kind of prompt.
+
+ByteByteGo
+16:28:01
+
+So all these questions, we will cover, uh, shortly. This is the two calling workflow.
+
+ByteByteGo
+16:28:06
+
+First step is define a tool. First of all, the first step is basically ensure that there is something out there that defines
+
+ByteByteGo
+16:28:08
+
+After that is when we let the LMM
+
+You
+16:28:27
+
+So, um, let's start. Let's use a really gentle. And, for example, let's say you want to introduce a single action ticket to
+
+ByteByteGo
+16:28:30
+
+start. Let's use a real example. And, ideally, what you wanna do is you wanna add
+
+You
+16:28:34
+
+and then make questions like this, like what is discussed that. Realize that
+
+ByteByteGo
+16:28:49
+
+do the the thing that you wanna do in this case is transaction. So we write a function that is if at and then
+
+You
+16:28:50
+
+then the function, we can, um, do the the thing that you want to do in this case. We write the function like is if had, and then it, uh, has two arguments, x and y.
+
+You
+16:29:03
+
+Calculating this attention. So it's not it's no longer an or, um, using some learn base to make a sign of vision. It's very accurate. Now we call this Python file, add the file, and there's this function, add, and it's purely adding to numbers. So that's the first. They define the two.
+
+ByteByteGo
+16:29:04
+
+So
+
+ByteByteGo
+16:29:06
+
+So
+
+You
+16:29:13
+
+So let's go back here. This is the step one, which is very straightforward.
+
+You
+16:29:23
+
+And in the past now, instead of saying what is, like, two eight plus numbers,
+
+ByteByteGo
+16:29:33
+
+between function calling or two calling because tools at their at their core are basically function. So so back here. This is the step one which is very straightforward. Now step two is when they have to let the element of two. Before before see this, let's go to a real example. Um, doing a call with this. Again, let's go to hydraulic views, the SQL lambda 2.18. And in the path now, instead of saying what is, like, 200 characters, So I don't know if this has a sorry or not. But now that's why let me introduce prompt as the user prompt. So instead you can use a rule called add to add to numbers.
+
+ByteByteGo
+16:29:36
+
+It turns their sum, use it like this.
+
+You
+16:29:41
+
+So I don't know really if it's necessary. It's quite or not. But now that's alright, let me introduce prompt as the user prompt. So it says you can use a tool called add to moments. Takes two inputs, number one and number two. If we change their sum, use it like this. We have this tool, special token tool or this kind of special format to for the element to
+
+You
+16:29:44
+
+And
+
+ByteByteGo
+16:29:45
+
+And then here is basically the name of the tool which we explained here. It's the name is hat.
+
+ByteByteGo
+16:29:52
+
+And after that, you basically close this the the tool tag.
+
+You
+16:30:11
+
+after that, it basically closes the the two time. Here we say just replace ten one and two with the numbers you want by. So now this is part of the prompt now. Basically, in the prompt, we are just explaining some tools to the algorithm and how to use it. And after that, then we include that first. So for example, here I can say now now what is discussed. Now what I expect is that Taylor M should learn from this kind of question that it can rely on its add tool. Also from this prompt, it should extract these two numbers and replace ten one and two with these numbers.
+
+ByteByteGo
+16:30:36
+
+Explaining some tools to the admin and how to use it. And after that, then we include that code. So for example, here I can say I will use this button. Now what I expect is that Lendly should learn from this kind of question that it can rely on its add to and the output something like this. And also from this prompt, it should extract these numbers and replace n one and n two with these numbers. Let's see if it really does that or not. And in the meantime, let me also find the correct number of this two from the calculator. So this is the correct number just for reference. So this one, this is incorrect. So initially, the model was, uh, outputting the addition. Right? This is not equal to this. Now with this new prompt, it says let me use the actual to calculate the song. Sorry. Currently, realize that I can use this tool. And then it says to add and then it's including those numbers. Then in this case, it does until you print something,
+
+You
+16:30:38
+
+And in the meantime, do you also find the correct number of this two on the calculator. This is the correct number, just by reference. So this was in this part. So initially, the model was outputting the addition byte. This is not equal to this. Now it is new prompt. Says let me use the act two if I feel like something. So it partly realized that it can use this tool. And then it says to app, and it's including those numbers. Again, in this case, you just continue printing something. But we talked about that how to self generation here, and
+
+ByteByteGo
+16:30:42
+
+And
+
+You
+16:30:44
+
+user tool, uh, has this inputs to the function that we want to buy. And
+
+You
+16:30:57
+
+Now if I ask if I include the same instructions here, then I ask something very relevant, like, how is it better?
+
+ByteByteGo
+16:30:58
+
+Now I ask if I include the same instructions here and then I ask something very relevant like how is it better?
+
+ByteByteGo
+16:31:16
+
+By the way, I'll use, oh, and by the way, I'll use at to answer your question Okay. This is something different and, uh, for a two weeks max. Okay. So it's just just going a good.
+
+You
+16:31:22
+
+Now
+
+ByteByteGo
+16:31:26
+
+Now we in previous week, we saw that there each prompt has two parts.
+
+ByteByteGo
+16:31:59
+
+Refresh again, and then I this is here, and we use this. And then I say what is, um, do we have it now? What is this? Plus this. Now even though there's no longer any explanation of tools in the in the user query or user prompt,
+
+You
+16:32:01
+
+have the system pump as part of as part of the system. Or actually, naturally, refresh again, and then I paste this here and reduce this. Then I say, what is, um, their habits now? What is this process? Now even though there is no longer any explanation of what's in the in the user query or user
+
+ByteByteGo
+16:32:10
+
+So let's now
+
+You
+16:32:11
+
+So let's now back to our lecture and see the second. They already started a real example.
+
+You
+16:32:21
+
+Answer.
+
+ByteByteGo
+16:32:29
+
+this is the same as Next is, uh, now when element wants to use it, we call it when we turn this switch once. So
+
+ByteByteGo
+16:32:54
+
+So at some point, it may produce this special token tool that is output. Then it says, okay. Call this function and these are the arguments. And then, uh, then it goes as uh, then it closes the back. At this point, the software would realize that, okay,
+
+You
+16:32:55
+
+So at some point, it may produce this special token tool as it's up to, and then it says, okay. Call this function, and these are documents. And then, uh, then it closes the tag. At this point, the software would realize that, okay. LMM is definitely meeting to call it to and gets it to
+
+You
+16:33:02
+
+And from this part, it's up there.
+
+ByteByteGo
+16:33:07
+
+recognizes which tool to call. In this case, it's ad. And it also knows about our arguments.
+
+You
+16:33:08
+
+Next software and basically call that, which is just a bottom part. It would call ad
+
+ByteByteGo
+16:33:11
+
+And
+
+ByteByteGo
+16:33:30
+
+So this is the third step of, um, calling functions and giving elements ability to call function. Augmenting automating them with tools.
+
+ByteByteGo
+16:33:31
+
+So these are all previous sets of to calling. Alright. We saw how easy it is.
+
+You
+16:33:33
+
+So this is the third step of calling functions and giving So we saw all previous steps of to call it. Alright. We saw how easy it is to introduce tools to LML. You can just take
+
+You
+16:33:55
+
+how they would use it. Now let me also add one more tool for getting better. So let me rerun this. And I have this already here. I guess it here. I guess it temporarily here so we can easily read it. So basically, here, I'm saying that you can use it. We call it as platform number. So this is basically the same one as before. So
+
+ByteByteGo
+16:33:55
+
+Now let me also add buttons for anything better. So let me rerun this. And I have this already here. I guess it temporarily here so we can easily read it. So basically, here I'm saying that you can use a tool called
+
+ByteByteGo
+16:33:57
+
+And now here, I'm also explaining the plain English that
+
+You
+16:34:06
+
+here, I'm basically saying,
+
+You
+16:34:21
+
+firstly, describe something very generic. Hi. How are you? Doing well. Thanks for asking. So it's not talking to anything about, uh, it's not really
+
+ByteByteGo
+16:34:21
+
+Hi. How are you? I'm doing well. Thanks for asking. So it's not talking to anything about, uh, it's not really
+

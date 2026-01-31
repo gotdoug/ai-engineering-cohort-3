@@ -1,0 +1,300 @@
+You
+15:56:34
+
+This week is probably going to be more exciting
+
+ByteByteGo
+15:56:39
+
+This week is probably going to be more exciting compared to the previous publish agents. And agents probably you've heard the term, uh, over the last year.
+
+You
+15:56:39
+
+to the previous two weeks, and that's because you're going to talk about agents. And agents probably you've heard the term, uh, over the last year. It's
+
+ByteByteGo
+15:57:06
+
+And then you talk about gateway protocol, and finally, we'll go over some available agent integrations that you can use to business.
+
+ByteByteGo
+15:57:22
+
+Okay. So what are agents? Before we define agents for me, basically, I want to point out our agents are everywhere.
+
+ByteByteGo
+15:57:46
+
+Basically, when you add more, um, capability to elements, then you have agents.
+
+You
+15:57:58
+
+have to make elements more out of. Because elements are as you saw in the previous
+
+You
+15:58:13
+
+So, um, they don't have really any autonomy or agency to plan or perform actions or break complex task into a success. And we know that these are all the things that we desire. If we have a system or agent at plan plan,
+
+ByteByteGo
+15:58:14
+
+So, um, don't have really any autonomy or agency to plan or perform actions or break complex task into sub tasks. And you know what? These are all the things that we desire. If you have system or agent that can plan or has autonomy or, uh, has more agency and you can plan,
+
+ByteByteGo
+15:58:24
+
+So now, um, basically, here's an example. Am with my boss to take one day off. Now some
+
+You
+15:58:24
+
+behalf of, um, users or humans. So now, um, basically, here is an example. Conflict quite an image, my boss to take one day off. Now something like this, if it goes to LML or SLM that they have
+
+You
+15:58:31
+
+However, if you ask
+
+ByteByteGo
+15:58:45
+
+certain things in order to answer this question. For example, we it needs to understand what our
+
+ByteByteGo
+15:58:49
+
+And and then after that, it has to analyze those reports and then find some trends. And after that,
+
+You
+15:58:51
+
+what are, uh, the product market tools, what are some reports, and and then after that, it has to analyze those reports, and then find some trends. And after that, share existing opportunities. So it's
+
+ByteByteGo
+15:58:58
+
+share existing opportunities. So it's simply a lot of work for an Ella, which is simply a next time predictor to do all these things. So it will fail. Now with agents, this prompt, when it goes to the agent, agents are basically built for aims so that they can address
+
+You
+15:59:05
+
+Now the agents the same prompt when it goes to data, the agents are basically built for names so that they can address these signed up complex prompts. So it's going to be very useful for Now we can easily want to make more complex tasks, and they can just, uh, complete those tasks on behalf of users.
+
+ByteByteGo
+15:59:06
+
+and they can just, um, complete the tasks on behalf of users. And there are lots of different examples of
+
+You
+15:59:08
+
+There are lots of different examples of agents these days. We have legal agents. Basically, they come in legal research, drafting, and and
+
+ByteByteGo
+15:59:09
+
+And
+
+ByteByteGo
+15:59:15
+
+We have
+
+You
+15:59:19
+
+We have phone agents that automate phone calls to handle customers' conversations anyway.
+
+ByteByteGo
+15:59:23
+
+agents
+
+You
+15:59:27
+
+End point. These agents are using computer to complete pass basically have access to a computer and a browser to to complete those tasks. And one of your example is open as operator. The house
+
+You
+15:59:50
+
+Before moving to formal definition of agents and more technical definition, let's go to, um, strategy. And here is, for instance, the code. And if you click on it, you would go to this specific environment, but now the difference is
+
+ByteByteGo
+15:59:53
+
+patients that can do, uh, can just take on complex complex tasks for their users. And open AI agent is one example. Before moving to the formal definition of pages and more technical definition, let's go to, um, ChitPT. So this is ChitPT UI, and here is for instance the codex. For instance the codex. And if you click on it, you would go to the but now the difference is that this environment is basically giving you an agent 67.
+
+ByteByteGo
+16:00:00
+
+Software development software development process. And then it can also send you a a full request.
+
+ByteByteGo
+16:00:05
+
+So those kind of things. You can see here it's synced to, uh, a repo, and then it has branches and, uh, has all the versions.
+
+You
+16:00:11
+
+and then it has branches and, uh, has also versions. So basically, I just you can just easily say, hey, there's a bug in this branch or it's got to this and find it and fix it. And then this agent will just take care of all of these things.
+
+ByteByteGo
+16:00:16
+
+And then this agent would just take care of all of these steps. Um, there's also this operator, which we just saw.
+
+You
+16:00:21
+
+Um, there's also this operator. You should just so and basically, this is an agent, um, that and use its own browser for for you. So here you can see an example, basically, there was some prompt here, and then
+
+ByteByteGo
+16:00:25
+
+So here you can see an example, basically, that was on prompt here, and then the agent is opening a browser, setting up the environment, searching the web, and then based on the web search results, it decides to, uh, search or going to more websites and continue searching or
+
+You
+16:00:42
+
+So that's interesting. And then, um, another agent that, um, provides is basically the generic agent. And here, we can just, um, choose agent thought, and its its name is recently produced.
+
+ByteByteGo
+16:00:43
+
+to, um, to basically browse on their own. So that's interesting. And then, um, another agent that, um, provides is basically the generic agent. And here we can just choose agent mode, and it's it's it's recently produced. And you can ask something, and you could do anything, and we just
+
+You
+16:00:46
+
+Here, we can have something, and it could be anything. And we just, um, decide what to do with a pan. We would search a bit. We would use a lot of
+
+You
+16:00:56
+
+and it would try to complete complete the task for us. So and it generally takes some time. For example, maybe there's something like, you know, plan or tree or something, it may take, um, minutes or ten minutes or twenty minutes or even more. For example, I search, um, just to see how it works. I search these agents. It's something
+
+You
+16:00:59
+
+we are planning a five day script
+
+ByteByteGo
+16:01:00
+
+So any generally takes some time. For example, when you hear something like, can you, uh, plan a treat or something, it may take even more. For example, by search, uh, just to see how it works. I search these agents, something like, can you release the five
+
+You
+16:01:20
+
+So here, I can see this agent for for ten minutes on my behalf. And this is is it is its results here on on Fios Hotels and it's been sharing all the highlights and features.
+
+ByteByteGo
+16:01:23
+
+So here I can see this agent for fourteen minutes on my behalf. And this is this is its results. Here are some even sharing all the highlights and features. And then after that it's giving me different options that I have
+
+You
+16:01:34
+
+And it's basically five searches, 44 sources. Now if I click here, I would see the five process.
+
+ByteByteGo
+16:01:35
+
+And it basically five searches 44 sources. Now if I click here, I would see the entire process. And basically it's it's
+
+You
+16:01:50
+
+So I think it's just very interesting. So here's just, um, it's basically here is showing how we how the agent is thinking and also some searches that are happening. In the background. So here is going to booking.com and then trying to search for hotels.
+
+ByteByteGo
+16:01:50
+
+So I think it's just very interesting. So here it just, uh, it's basically showing how how the agent is speaking and also some searches that are happening in the background. So here's going to booting.com and then trying to search for hotels. And then, you know, again, searching.
+
+You
+16:01:50
+
+And then, you know, again, searching.
+
+ByteByteGo
+16:02:03
+
+And then search again. So obviously, if you wanted to all of these,
+
+ByteByteGo
+16:02:11
+
+But this agent has just
+
+You
+16:02:18
+
+Rates and everything. So at least we get a very good starting point for me to, uh, do something. It just
+
+ByteByteGo
+16:02:29
+
+So these are some different examples that we've seen, but now let's switch to, uh, more technical definition of agents. So again, the goal of building agents is basically to make questions answered
+
+You
+16:02:31
+
+So these are some different examples that we've seen. But now let's switch to, uh, more technical definition of patients. So, again, the goal of integrations is basically to make
+
+ByteByteGo
+16:02:50
+
+Or if they are more, um, basically, uh, smart, they know that they're not able to answer these type of questions.
+
+You
+16:02:51
+
+Or if they are more, um, basically, uh, smart, they would know that they're not capable of answering this type of question.
+
+ByteByteGo
+16:02:53
+
+Of answering these type of questions. So they may say something like, hey. I'm an admin, and then I cannot just provide
+
+You
+16:03:09
+
+Then I'm going to choose the lemma 3.373. And if you want to ask the same question, let me just do 60. How is the better in San Francisco today?
+
+ByteByteGo
+16:03:09
+
+And then How is the weather in San Francisco today?
+
+ByteByteGo
+16:03:11
+
+So
+
+You
+16:03:13
+
+And
+
+ByteByteGo
+16:03:19
+
+Okay. This model is is capable enough, and it recognizes that it's kind of wrong. It's not
+
+ByteByteGo
+16:03:33
+
+And, um, for this, you know, one one
+
+You
+16:03:33
+
+And, um, for this, you know, one one pass to augment it with some
+

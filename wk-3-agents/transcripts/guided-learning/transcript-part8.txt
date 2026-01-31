@@ -1,0 +1,300 @@
+ByteByteGo
+16:52:33
+
+Follow this format.
+
+You
+16:52:38
+
+Now this is not how this idea. If you think of the, uh, original elements that they've been trained,
+
+ByteByteGo
+16:52:47
+
+Trained, they're being trained on Internet data, and they rarely have those kind of function callings on the Internet data. It's basically a bunch of x and the element that are used. Now because of its, um, capabilities, it it learns from the future examples that we provide or section formats that we ask.
+
+You
+16:52:48
+
+Now because of its, um, capabilities, it it learns from their future examples that they
+
+ByteByteGo
+16:53:01
+
+It may not be as accurate. So one thing that a lot of Python do is they find you for function calling. So after they train the element, they also add some data to their data
+
+You
+16:53:04
+
+again, that's because if element is not trained to call functions or do those kind of things, it may not be as accurate. So one thing that a lot of companies do is they find you for function calling. So after they train the algorithm, they also add some data to their dataset, which this find out function calling whenever data. And then they just
+
+You
+16:53:21
+
+So I also wanted to say that, uh, this is moderation that a lot of, um, good advanced celebrities are are also being trained on. Basically, they're function for function calling, and, um, that's because they they want to tell them, basically,
+
+ByteByteGo
+16:53:21
+
+So I also wanted to say that, um, this is one direction that a lot of, um, good Admire celebrities are also being trained on. Basically, they're fine tuned for finding calling, and, um, that's because they we want the element basically, uh,
+
+ByteByteGo
+16:53:46
+
+Like, there's this protocol and I create this MVC service and, um, basically how to, um, how to show some how to basically write some tools and let everyone know about those tools. In practice, we really don't need to implement a lot of things and those are already implemented first.
+
+You
+16:53:46
+
+in case you want to get built in this. The other thing I want to share is that we talked about and they saw, like, there's this protocol and I create a system service and basically, how to, um, how to show some how to basically element know about those tools. In practice, you really don't need to implement a lot of things. A lot of those are already implemented first.
+
+ByteByteGo
+16:53:53
+
+In
+
+You
+16:53:55
+
+How to, you know,
+
+You
+16:54:07
+
+if you have the function that you want to use it as a tool and introduce it as a tool to get it done,
+
+You
+16:54:12
+
+so this may basically, um, later when during the generation process, when you generate
+
+ByteByteGo
+16:54:13
+
+generation process, when you're generating
+
+You
+16:54:15
+
+tokens from the element, and the element request some
+
+You
+16:54:21
+
+So it's basically my my whole point is that, um, there are a lot of detail in the theories,
+
+ByteByteGo
+16:54:23
+
+So it's basic. My my point is that, um, there there are a lot of detail in the theories.
+
+ByteByteGo
+16:54:24
+
+To
+
+You
+16:54:50
+
+And also, this is another documentation here for how to do tool or function calling. So I also want to show this if if you are interested in COVID. Again, we are just explaining how we can how easy it is to
+
+ByteByteGo
+16:54:53
+
+And also, this is another documentation here for how to do, uh, tool or function calling. So I also want to show this if if you guys decide you can cover it. Again, here is just explaining how how easy it is to writing functions. And then specify them as two and the later you're gonna
+
+ByteByteGo
+16:54:59
+
+So once you have those tools, see here it says my tools are add and multiply. And when it's creating the element, you specify the model.
+
+You
+16:55:04
+
+And then it says element point tools tools. Now this is a new element, but it's already aware of all the available tools, and it and it can be voted.
+
+You
+16:55:19
+
+Data tools that you can just use,
+
+ByteByteGo
+16:55:21
+
+So, um, actually, and this was another page. It shows options to use different tools. And it's interesting because you see a bunch of available tools that you can just use. Um, so
+
+ByteByteGo
+16:55:28
+
+for example, here we have search, like, in search and, um, Google search and a bunch of other searches, and, you know, we
+
+You
+16:55:37
+
+for example, here we have search, like b search, and, you know, like Google search and a bunch of other searches, and, you know, we have a code interpreter. We have productivity tools and so on. So most of these are available to be used, then everyone to use these libraries to build applications. Now that's it. I think I covered everything for a tool, functions tool calling
+
+ByteByteGo
+16:55:41
+
+with some applications. Now that's it. I think I covered everything for um, functions, tool calling, and importable. Now in the next lecture, we're going to switch to the next stage level, which is building multiservations.
+
+You
+16:55:51
+
+Now
+
+ByteByteGo
+16:55:58
+
+However, they have two major limitations. One limitation is that they are fixed. Meaning that this
+
+You
+16:56:00
+
+How do they have two major limitations? One limitation is that they are fixed. Meaning that this
+
+ByteByteGo
+16:56:02
+
+this, uh, expectation plan or this flow information is something fixed and it's pretty fine. So, um, that is the idea.
+
+You
+16:56:05
+
+So, um, that is not ideal.
+
+You
+16:56:13
+
+No matter how complex this workflow is, if you have to question, like, how's the better doing in San Francisco, it will still fail. Because they really kinda get, um, like like, live updates on live information even if their workflow is very complex.
+
+ByteByteGo
+16:56:18
+
+Limitation is that this workflow, they don't have access to live information. No matter how complex this workflow is, if you ask a question like how they're doing in San Francisco, it would become they really have it, um, like, live updates on live information even if their workflow is very complex. So, um,
+
+You
+16:56:19
+
+So, um,
+
+ByteByteGo
+16:56:38
+
+So when you come back to those three tools,
+
+You
+16:56:39
+
+So when we come back workflows with tools,
+
+ByteByteGo
+16:56:53
+
+Meaning that, um, the this, uh, flow information cannot be changed given the input prompt. Now this is exactly what multistep agents trying to fix.
+
+You
+16:56:57
+
+Now this is exactly what multiserv agent is trying to fix Basically, the idea is to go from this fixed workflow to a dynamic workflow.
+
+ByteByteGo
+16:57:06
+
+Going to pre find something. Right? We're just letting the, um, the system the agent decides
+
+ByteByteGo
+16:57:37
+
+And, dynamically, the agent can decide how to order the right steps. So, again, the ideal idea in agents is to plan, act, and then adapt. Basically, you're giving autonomy in decision making. You're planning today to the system. So these are the three main things that in this setup in agents, the agent is expected to perform. The agent understands the current situation and the goal. This is based on the prompt and any additional context I've included in that prompt. If it understands what is the request, what is the final goal, and then, um, it basically use all those information to plan. And then the next thing is
+
+You
+16:57:37
+
+So So these are the, uh, three main things that in this setup, in agents, the agent is expected to perform. Agent understands the point situation and the goal. Is it based on the prompt and initial context that include in the prompt? So if it understands what is the request, what is the final goal, and then, um, it basically use all those information to plan. And the the next thing is it plans.
+
+ByteByteGo
+16:57:45
+
+use, uh, in real time. And after they execute those, um, plans,
+
+You
+16:57:47
+
+Those
+
+You
+16:57:48
+
+plans and get app from the tools, it can reasons and handle errors for three step plan as needed.
+
+ByteByteGo
+16:57:53
+
+So we can visually be represented like this. The agent is here again as always,
+
+You
+16:57:54
+
+So we can visually be represented by this agent is here again as always.
+
+You
+16:58:05
+
+And
+
+ByteByteGo
+16:58:11
+
+and, um, all the outputs from the tools and keep them in the in context. And this is useful so that the agent can iterate if
+
+ByteByteGo
+16:58:32
+
+So this is other abstract. This is just a high level um, like, workflow of agents. Now let's make it more, um, concrete idea. So how agents really plan? Agents work in a continuous cycle. They have typically they tend to have three components, thinking or thought, acting or act, and observing. So let's just look here. Basically, the agent thinks for some component that the agent has access to things.
+
+You
+16:58:35
+
+all the outputs from the tools and keep them in the in the context. And this is useful so that the agent can iterate if and adapt. So this is all their abstract. This is just a high level like, workflow of agents. Now let's make it more, um, concrete and detailed. So how agents really plan? Agents work in a continuous cycle. Have typically we can think of it as three components, thinking or thought, acting or act, and observing. So there's this loop here. Basically, the agent thinks or some component that the agent attaches to things. Some action is happening. And then from action, there's a observations which we reflect, and those observations are
+
+ByteByteGo
+16:58:53
+
+Now this action module would, uh, parse this, run this, get output, send out to other page. Action would parse this, run this, get output, send output to observation. Now the observation would see something like I need to check
+
+You
+16:59:03
+
+So let's just think a little bit more about these three components.
+
+ByteByteGo
+16:59:07
+
+So let's just think a little bit more, uh, about these three components. Basically, you need to think the stage, the LLM, plans, and decides what the next steps should next step should be to solve the task.
+
+You
+16:59:30
+
+So this is very important. It's basically the main, like, the core of the agents.
+
+You
+16:59:44
+
+And then the agent takes care. Basically, first, request a function. Then it takes an action by calling the food with the provided arguments. This is the actions. And then observation is basically then then then the incorporating.
+
+ByteByteGo
+16:59:47
+
+This step is very important. Then we have actions. For actions, basically, the element request, um, to speak with the second tool with some arguments. And that agent takes care of it. Basically, um, parse the requested function. Then it takes an action by calling the provided documents. So this is actionist. Then observation is basically when when we incorporate the environment and then we edit them back again.
+
+You
+17:00:15
+
+And then finally, data now can use this strategy. It can update, um, your update or refine our different tiles and actions.
+
+You
+17:00:25
+
+So is still a little bit abstract. So let's see how this, um, like, really translates in practice.
+

@@ -1,0 +1,300 @@
+You
+16:10:47
+
+Basically, the developer designs a predefined code path and implements a participant to just participate this flow of information. And then at one time, there is no really, there is no planning involved. There's not an agent at times depending on the prompt. The plan is already
+
+ByteByteGo
+16:10:48
+
+And some of these might be items. So basically, the developer designs a predefined code path and implements an orchestration to just orchestrate this flow of information. And then at one time, there is no really, there is no planning involved. There is no The plan is already kind of predefined by the developer. All needs to happen is that an administrator just has the information.
+
+ByteByteGo
+16:11:05
+
+So this is workflows, and they are very powerful. And there are different patterns to create this So if you look at all different, um, is workflows that are available earlier, all of them can be categorized into, um, these five
+
+ByteByteGo
+16:11:09
+
+We have chunking. We have routing, parallelization, reflection, and vertex.
+
+You
+16:11:10
+
+different, um, these workloads that are available out there, all of them can be categorized into, uh, these five patterns mostly, and there might be some other patterns. But these are very popular patterns for workloads. You have chunking. You have routing, parallelization, replication, and focus tracker.
+
+ByteByteGo
+16:11:21
+
+A workflows. So and here's the idea. For complex tasks,
+
+You
+16:11:21
+
+So let's start with Panchain. The first pattern, I think, would explore is Panchain. A popular pattern to build a workflows. So and here's the idea. For complex tasks,
+
+ByteByteGo
+16:11:29
+
+It may
+
+ByteByteGo
+16:11:34
+
+task or context. We have the problem of error propagation. Mean that
+
+You
+16:11:36
+
+last four context. It covers the problem of error propagation, meaning that the
+
+ByteByteGo
+16:11:38
+
+the plan set is to address these tasks. There's a sequence of the sets or reasons that are required.
+
+You
+16:11:45
+
+during the generation, uh, if the answer is going to be too long just because if you guys want to take a reasonable steps,
+
+You
+16:11:48
+
+it requires steps, the errors would just provide an So by the time that their user would see final answer, there's a lot error. So
+
+You
+16:12:03
+
+Imagine one example. Let's say if you want to you want to do an agent system to do multiple search. And basically can is capable of, um, completing multiple multiple search tasks. They're common, um, like, a normal request or
+
+ByteByteGo
+16:12:10
+
+And, basically, it can it's capable of, um, completing multibee search tasks. So The common, um, like, a normal request or prompt time, something like this. Analyze topic market, summarize findings. So it's something very, uh, difficult if somebody wants to learn about certain market and find opportunities.
+
+ByteByteGo
+16:12:12
+
+This
+
+You
+16:12:15
+
+opportunities. So it's something very, um, difficult if somebody wants to learn about a certain market and find opportunities. However, this problem can be very, um, complex for reseller because there are lots of things that element needs to do.
+
+ByteByteGo
+16:12:28
+
+So something like this, it would be, uh, too much for the element. And that's the idea of branching. What branching purpose. K? So decompose this kind of task into a fixed simpler sub task. If we know and find that any
+
+You
+16:12:29
+
+Something like this, you would be, um, too much for that. And that's the idea of function. What function you propose is to decompose kind of tasks if we fix simpler sub tasks. Basically, instead of having one eleven, response, if we know at the time that initial of our tasks is about market features,
+
+ByteByteGo
+16:12:44
+
+And we're just keep doing this and following this workflow sequentially,
+
+You
+16:12:44
+
+And then for users that we have certain prompts, and they use those to just change the output of this into that prompt. Then we pass the new prompt to the seller. And we just keep doing this and following this, uh, workflow sequentially.
+
+ByteByteGo
+16:13:08
+
+So once we have that, basically, this this workflow is now capable of addressing more complex tasks. Let's see the same example. We had this prompt like analyzing past market and summarizing findings as well. Now in this workflow, we can easily answer those questions.
+
+You
+16:13:09
+
+So once you have that, basically, this this workflow is now capable of addressing more complex tasks. Let's see the same example. Had this all this step prompt like analyzing housing market and so on. Now in this workflow, we can easily answer those questions.
+
+You
+16:13:12
+
+Quaycom, which is supposed to be around some market research, around some topics.
+
+ByteByteGo
+16:13:12
+
+So whenever the user queries, which is supposed to be on doing some topic search, parent topics,
+
+You
+16:13:43
+
+Again, the software would construct these fonts and, um, change all these things and take it off.
+
+ByteByteGo
+16:13:44
+
+then we can construct a second prompt. We can have something that summarizes what needs in output which is output seven. Again, the software would construct the prompts and, uh, chain all these things and take care of constructing the setup for this workflow.
+
+You
+16:13:59
+
+So
+
+ByteByteGo
+16:14:16
+
+So again, by carefully design, uh, these kind of workflows and doing crunching,
+
+You
+16:14:17
+
+So, again, by carefully designing, uh, design of workflows and doing content for tasks
+
+ByteByteGo
+16:14:22
+
+for tasks that are possible to do punctuation, we can use some build some bigger workflows that. Now we have to use
+
+You
+16:14:23
+
+Now refuse
+
+ByteByteGo
+16:14:27
+
+uh, be decomposing fixed subtask. And remember, we are training efficiency for accuracy for accuracy.
+
+ByteByteGo
+16:14:40
+
+And also,
+
+You
+16:14:42
+
+And also, in cases where we want to enhance reliability because now we can easily
+
+You
+16:14:49
+
+and see if something goes wrong. We can see there the problem's happening. And in general, it's And the second example is that, um, functioning is typically used and the config
+
+You
+16:15:40
+
+so that's all about function.
+
+ByteByteGo
+16:15:53
+
+So that's on the background chain. Now the next thing that you're going to, uh, talk about is the router or routing pattern. So routing is the second pattern, um, that you would learn for AI workflows. Basically, the vision here is that for complex tasks, a single that may not be quick enough to handle different purposes or And here, in Racking, we want to go beyond just the
+
+You
+16:15:54
+
+Item. So wrapping is the second pattern, um, that you would learn for AI workloads. And, basically, the confusion here is that for complex tasks, a single element may not be good enough to handle different purposes or tasks. And here, in wrapping, you want to go beyond just the thermostat
+
+ByteByteGo
+16:15:58
+
+conditional logic. And the workflow has two steps.
+
+You
+16:16:01
+
+And
+
+ByteByteGo
+16:16:08
+
+Incoming query, which is the user term, to determine its intent or its nature. Once the wrapper determines the intent of the prompt, then it can generate it to the specialized branch.
+
+You
+16:16:08
+
+Once the router determines the intent of the prompt, then it can direct it to the specialized branch.
+
+You
+16:16:24
+
+Now let's talk a little bit more about this two and see how can we really build this tracker.
+
+ByteByteGo
+16:16:24
+
+Case. Now let's tracker.
+
+ByteByteGo
+16:16:27
+
+Wrapper.
+
+ByteByteGo
+16:16:50
+
+And then based on that machine learning model's output, we can then chose the correct branch. The third approach, which is a little bit more focused on semantic, um,
+
+You
+16:16:53
+
+And then based on that, machine learning models are good, and then chose the Python. The third approach, which is a little bit more, uh, focused on semantic routing is right here is we use something similar to what we're doing in the right.
+
+ByteByteGo
+16:16:53
+
+routing
+
+ByteByteGo
+16:17:11
+
+It can be based on the topic or the data logic this workflow logic we're having already implemented. And then once it's
+
+You
+16:17:11
+
+And then once it's
+
+You
+16:17:25
+
+um, to
+
+ByteByteGo
+16:17:34
+
+from the list of, let's say, given prompts, given, um, intents. So these are different ways that these raptors can be built. And also regarding these, the specialist branches
+
+You
+16:17:40
+
+given, um, intents. So these are different base that this matter can be built. And also, regarding these specializations, they can be elements, but they don't have to be element. They can be the traditional models, notional models, or good at
+
+You
+16:17:53
+
+So, again, this matches any evidence for any evidence. So this is Vowel. And then, um, the next thing is when to use Vowel.
+
+You
+16:17:57
+
+Routing. The routing pattern is typically preferred, then you have then you're dealing the tasks
+
+ByteByteGo
+16:17:57
+
+So, again, these branches can be evidence or can be evidence. So this is routing. And then, um, the next thing is when to use routing. The routing pattern is typically preferred, then you have then you're dealing with tasks.
+
+You
+16:18:06
+
+And also, for those tasks, we also need to make sure that we can classify the intent. So classification should be also handled accurately.
+
+ByteByteGo
+16:18:11
+
+And also for those tasks, we also need to make sure that we can classify data. So classification should be also handled accurately. And for those kind of complex tasks, grabbing workflow works very good. Some example are for trans building customer operations.
+
+ByteByteGo
+16:18:39
+
+And for hard or unneal questions, the RAVI can just send them to the most data model that we have.
+

@@ -1,0 +1,283 @@
+ByteByteGo
+17:08:47
+
+There's the motivation is that the single agent may not be capable.
+
+You
+17:09:10
+
+And because of that, more agents can probably correlate data. They can validate each other. And the model agents simply use multiple agents, and they work together to complete the task. And this way, I hope is that it's going to be more reliable. And this is going to be some visual explanation of it. We have typically, there is a manager agent. This is responsible to coordinate between different agents. And then it has it has, of course, access to one element to reason and think and plan. Agent, uh, starts buying and talking to the seller to know why are the right agents activate,
+
+ByteByteGo
+17:09:11
+
+And because of that, more agents can probably correct or validate, um, they can validate each other. And in modern agents, we use multiple agents, and they work together to complete the task. And this way, the hope is that it's going to be more reliable. And this is going to be some visual explanation of it. We have, um, typically, there is a manager agent. This is responsible to coordinate between different agents. And then it has it has of course access to one element to a reason, I think, and plan. And then as soon as this manager agent, uh, starts planning and element to know whether the right agents to activate, then it will start tracking those
+
+ByteByteGo
+17:09:29
+
+So, um, setups are also very powerful and provide the the most latency to users. And, um, there's also one one, um, some challenges that I want to point out.
+
+You
+17:09:34
+
+And, um, there's also one one, um, some challenges that I want to point out. I want to point out. In fact, this building logic systems are not easy. A lot of, um, even, uh, advanced labs where companies are, um,
+
+ByteByteGo
+17:09:45
+
+Very building the systems with a lot of, um, caution and a lot of engineering force to make sure resolve. Some of the common challenges are coordination because now different patients, uh, have to communicate and share their results and, um, share their findings also. So it's not
+
+ByteByteGo
+17:09:50
+
+codition can be one channel in general. And then we're nice because all these agents have their own worry, and they're not
+
+You
+17:09:54
+
+Some of the common challenges are coordination because now different agents, uh, have to communicate and share their results and, um, share their findings also. So it's not quotation any one one channel in general. And because all these agents So
+
+You
+17:09:55
+
+not
+
+ByteByteGo
+17:09:55
+
+And they're also facing this
+
+You
+17:10:00
+
+facing this compounded errors because they can because they are
+
+ByteByteGo
+17:10:08
+
+amplify that and error might even more. So I have two links over here. One is, uh, from entropy.
+
+You
+17:10:08
+
+So I have two links open here. One is from entropy.
+
+ByteByteGo
+17:10:15
+
+And they're they have a very nice article about their their system.
+
+ByteByteGo
+17:10:19
+
+And in part of they are just starting sub agents, search sub agents.
+
+ByteByteGo
+17:10:34
+
+Interesting, um, use case that is relying on multiple agent setup to, um, set users. So this is a very interesting read, and then here they have the process system process.
+
+You
+17:10:38
+
+Relying on multiple agents set up to, uh, set up users. So this is a very interesting read, and then here they have the process system process, which is on the user, they send it to the system, and then all these steps that are involved in here. This is intuitive business process.
+
+ByteByteGo
+17:10:45
+
+And if you just look at this, um, they're also hinting about that they might be using and this is their prompt, the system prompt.
+
+You
+17:10:50
+
+And if you just look at this, uh, they're also in The US that they might be using. And this is their, uh, prompt, the system prompt. Supporting. Basically, this is also thinking that their deep research system is also based on a multichannel agent setup.
+
+ByteByteGo
+17:10:53
+
+And finally, here is a nice,
+
+ByteByteGo
+17:11:01
+
+So, yeah, they have different
+
+You
+17:11:03
+
+So, yeah, they have different they talk about different models, tools, instructions, and
+
+ByteByteGo
+17:11:16
+
+Now background lecture, very similar to, um, what you saw in tools that they have to communicate somehow with some portable. They have this similar need when you're building modular systems. You need ideally, you want to have a standard
+
+You
+17:11:16
+
+back to our lecture, very similar to, um, what you saw in tools that they have to communicate somehow with some vertical. They have to similarly when you're building magic systems. Ideally, you want to have If you do have basically
+
+ByteByteGo
+17:11:22
+
+protocol for that. It's called agent agent, and, um,
+
+You
+17:11:39
+
+and how this, uh, gateway works and how different agents can really speak with each other and discover each other. So this is, again, another, uh, way to define some protocols so that agents can talk with each other. Proposals, previous
+
+ByteByteGo
+17:11:40
+
+and how this, uh, eight way works and how different agents can really speak with each other and discover each other. So this is, again, another way to define some verticals so that agents can talk with each other. And, again, one thing I want to share here is that there has been other, uh, proposals that's previous
+
+You
+17:11:47
+
+you know,
+
+ByteByteGo
+17:11:51
+
+you know, um, proposals like MCP and gateway and what each of those are handling the MCP gateway and
+
+You
+17:11:51
+
+proposals like MCB and gateway and what each of those are handling the MCB gateway and
+
+You
+17:12:02
+
+So it has a very nice and comprehensive discussion around all these agents and protocols. I I suggest to take a look at the and they have these nice timelines.
+
+ByteByteGo
+17:12:02
+
+also other different proposals for protocols that are available. So it had a very nice and comprehensive discussion around all these agent and, um, protocols. I I suggest you go look at the mechanics and they have these nice timelines. So that's it. That's all about
+
+ByteByteGo
+17:12:09
+
+And, um, finally, the last thing I want to talk about is about valuation.
+
+You
+17:12:13
+
+And, um, finally, the last thing I wanna talk about is about evaluation. We learn how to build these agents, and they're very capable. A very important question, how can the question is how can you really compete
+
+You
+17:12:18
+
+So
+
+ByteByteGo
+17:12:18
+
+So I included some comment here, but, um, it can very good surveys for lots of evaluation metrics out there. But a couple of very important
+
+ByteByteGo
+17:12:31
+
+And that's important because it has, um, it affects the cost per request. Then there are more chance involved in the thinking process and and accomplishing the task. It means that it would be a high cost
+
+ByteByteGo
+17:12:51
+
+And finally, task task success. Right? So if you had a good benchmark with certain task, let's say, software development benchmarks,
+
+You
+17:12:51
+
+And finally, task task success rate. So if you have a good benchmark, certain task, let's say, software development benchmarks,
+
+ByteByteGo
+17:13:13
+
+for, um, agents. I have one open here. You can also take a look at their their voice and their different agents. We set it. So I think let's see. So if they have to have some just listen, uh, in different domains, and their different metrics. So now they could also different, um, your banking account, their insurance and
+
+You
+17:13:16
+
+And similar for, um, agents. I have one open here. You can also take a look at their leaderboards and their different agents we set. So I think let's see. So, yeah, they have to have some just listen, uh, in different domains and the different metrics. So it can also take a little bit of different, um, your banking, your their insurance, and, um, again, they're just leaderboards. And as we are getting more into agents and companies are starting to build these agents, it's important to have a leaderboard so we know
+
+You
+17:13:39
+
+and, uh, I took this screenshot from, uh, this website. And then there are giving an overview of the AI agent stack and some of the frameworks that can be used to build agents. So, um, again, the whole point is that there are lots of different tools, and frameworks are there can easily rely on those to create these agents
+
+You
+17:13:50
+
+But when it comes to, um, implementation, usually it is, um, libraries like Lightning are very easy to use, and we can implement these different modalities, multi agent systems easily. And there's also one has also this
+
+ByteByteGo
+17:13:50
+
+I and, uh, I took a screenshot from, uh, this website. And then there are giving an overview of the AI agent attack and some of the frameworks at NBU's to build agents. So, uh, again, the Holdpoint is that there are lots of different tools, and frameworks out there can easily rely on those to create these agent systems. In practice, it's usually simpler compared to theory. There are a lot of theories involved. Evaluation. But when it comes to, um, implementation, usually it's, um, libraries like NextGen are very easy to use and you can implement these different modalities agents, intelligent agents systems easily.
+
+ByteByteGo
+17:14:06
+
+So, yeah, these are lots of different, uh, Um, some are, um, giving more flexibility, some giving the set flexibility. But these are to some extent, to use these frameworks to build some multiservice against in our project. So that's it. That's all I wanted to cover for b three. So yeah.
+
+You
+17:14:08
+
+So, yeah, these are lots of different, um, libraries, and some of them are open source. Um, some are, um, giving more flexibility, some give you the set flexibility. But these are also some examples to use these frameworks to build some multiservations in our project. So that's it. That's all I wanted to cover for b three. So yeah.
+
+You
+17:18:17
+
+Okay. Bye. Okay. Goodbye.
+
+You
+17:18:25
+
+She told me one eighty five by the 02:10.
+
+You
+17:18:36
+
+I'm expecting a negotiation. We meet in the middle somewhere or somewhere you even one night. He just said, no. No. Don't worry. And then he told up. They said no no more. They hung up.
+
+You
+17:18:44
+
+Okay.
+
+You
+17:18:45
+
+Okay. I mean, I get it. I get it.
+
+You
+17:19:18
+
+Did you offer anything above what you No. No. Because he
+
+You
+17:19:27
+
+Yes.
+
+You
+17:19:41
+
+I need you to not lose this one. I'm not joking. I cannot lose
+
+You
+17:19:46
+
+him. Okay. Let me know when you can. Go above 200. Did offer 200.
+
+You
+17:19:54
+
+Then offer 200. Then offer 200 if he does think it'll have a talk with him.
+
+You
+17:20:20
+
